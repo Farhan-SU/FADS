@@ -1,0 +1,65 @@
+@import 'colors'; 
+
+.agency-home{
+    background: url('../images/halfcircle.svg') no-repeat 0% 10%, url('../images/halfcircle-right.svg') no-repeat 100% 120%;
+    background-size: 620px;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    margin-bottom: 5rem;
+}
+
+.intro-a{
+    height: 90vh;
+    color: $text;
+
+    h1{
+        font-size: 9rem;
+        text-transform: uppercase;
+        position: relative;
+        top: 10rem;
+        left: 8rem;
+        letter-spacing: 15px;
+        width: 50%;
+        line-height: 8rem;
+    }
+}
+.agency{
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 1rem;
+    width: 99vw;
+    margin-left: 0.5rem;
+    padding: auto 3rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-items: center;
+
+    .box{
+        height: 200px;
+        max-width: 300px;
+        width: 300px;
+        margin: 2rem 6rem;
+        text-align: center;
+        background-color: $muave;
+        border-radius: 5px;
+        box-shadow: 4px 7px 3px  #eeeeee;
+       
+        h3{
+            color: $heading;
+            font-size: 2rem;
+            font-weight: 400;
+            position: relative;
+            top: 5rem;
+
+            &:hover{
+                transition: all 600ms ease-in-out;
+                -webkit-text-stroke: 1px $heading;
+                -webkit-text-fill-color: transparent; 
+              }
+        }
+    }
+   
+}

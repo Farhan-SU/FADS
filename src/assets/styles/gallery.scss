@@ -1,0 +1,45 @@
+@import 'colors'; 
+
+.wrapper {
+  background-color: black;
+  height: 80vh;
+  width: 101vw;
+  margin-top: 1.2rem;
+
+
+  .linkbox{
+    position: relative;
+    top: 19rem;
+    text-align: center;
+
+    h1{
+      font-size: 7.5rem;
+      color: $heading;
+      letter-spacing: 3px;
+
+      &:hover{
+        transition: all 800ms ease-out;
+        -webkit-text-stroke: 3px $heading;
+        -webkit-text-fill-color: transparent; 
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.editorial{
+  background: url('../images/surya.webp') no-repeat 70% 40%;
+  height: 100vh;
+  background-size: cover;
+}
+
+  .shows {
+    background: linear-gradient( rgba(31, 31, 31, 0.3), rgba(0, 0, 0, 0.5) ), url('../images/fadsshow.webp') no-repeat 50% 40%;
+    height: 100vh;
+    background-size: 200%;
+  }
+
+/*Editorial*/
+
+
+
