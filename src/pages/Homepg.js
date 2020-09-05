@@ -2,6 +2,8 @@ import React, {useRef,useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import locomotiveScroll from "locomotive-scroll";
+import Scrollbar from 'smooth-scrollbar';
 import {motion} from 'framer-motion';
 import Galimg1 from '../assets/images/fuzzyhat.png';
 import Galimg2 from '../assets/images/homegal.png';
@@ -9,17 +11,16 @@ import Aboutpic from '../assets/images/fadsfam.png';
 import Text from '../components/Textani';
 import Footer from '../components/Footer';
 import '../assets/styles/pages.scss';
+import SEO from '../components/SEO';
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
   gsap.core.globals('ScrollTrigger', ScrollTrigger)
   } 
 
-const Homepg = () => {
-
+const Homepg = () => {  
   const tl = useRef();
   const pinthis = useRef();
-
   const fadsbio = useRef(null);
   const biotxt = useRef(null);
   const biocover = useRef(null);
@@ -27,6 +28,7 @@ const Homepg = () => {
   useEffect(() => {
     tl.current = gsap.timeline({
        scrollTrigger: {
+        
          trigger: fadsbio.current,
          start: "top top",
          end: '+=950',
@@ -34,14 +36,11 @@ const Homepg = () => {
          pinReparent: true,
          markers: {startColor: "blue", endColor: "yellow", fontSize: "12px"},
          toggleActions: "play none none reverse"
+         
        }
      }) 
-     .fromTo(biocover.current, {y: 0}, {duration: 1, y: 900, ease: 'sine.in'})
-     .add('reveal', '-=0.5')
-     .to(fadsbio.current, {duration: 0.5, backgroundColor: '#1A2632'}, "reveal")
-     .fromTo(biotxt.current, { autoAlpha: 0, duration: 1, ease: 'sine.in'}, {autoAlpha: 1, duration: 1,  ease: 'sine.in'}, "reveal");
-
-     ScrollTrigger.refresh();
+     .fromTo(biocover.current, {y: 0}, {duration: 1.3, y: 900, ease: 'sine.in'})
+     .from(biotxt.current, { opacity: 0, duration: 0.7, x: 10 , ease: 'back.inOut(1.4)'});
  }, []);
             
               
@@ -57,6 +56,7 @@ const Homepg = () => {
     useEffect(() =>{
       tl.current = gsap.timeline({
         scrollTrigger: {
+          
           trigger: containerRef.current,
           scrub: true,
           start: "top top" ,
@@ -65,11 +65,11 @@ const Homepg = () => {
         }
       })
       .from(containerRef.current, {duration: 1.5, autoAlpha: 0, ease: 'power2.inOut'}, "-=1")
-      .add('nowstart', "+=0.5")
-      .from(galleryRef1.current, {duration: 1.5, autoAlpha: 0, y: 15,  ease: 'sine.in'}, "nowstart")
-      .from(image1.current, {duration: 1.9, autoAlpha: 0 , x: -350, ease: 'sine.in'})
-      .from(galleryRef2.current, {duration: 1.6, autoAlpha: 0, y: 15,  ease: 'sine.in'})
-      .from(image2.current, {duration: 1.4, autoAlpha: 0 , x: 350, delay: 0.5, ease: 'power2.inOut'})
+      .add('nowstart', "+=0.3")
+      .from(galleryRef1.current, {duration: 1.5, autoAlpha: 0, y: 40,ease: 'back.inOut(1.4)'}, "nowstart")
+      .from(image1.current, {duration: 1.9, autoAlpha: 0 , x: -350, ease: "circ.out",})
+      .from(galleryRef2.current, {duration: 1.5, autoAlpha: 0, y: 40,  ease: 'back.inOut(1.4)'})
+      .from(image2.current, {duration: 1.3, autoAlpha: 0 , x: 350, ease: "circ.out",})
       .from(textRef.current, {duration: 3, autoAlpha: 0, delay: 0.8});
 
       
@@ -88,17 +88,17 @@ const Homepg = () => {
         scrollTrigger: {
           trigger: AboutRef.current,
           scrub: true,
-          start: "top 10%" ,
+          start: "top 5%" ,
           end: "bottom bottom",
           markers: {startColor: "green", endColor: "red", fontSize: "12px"}
         }
       })
-      .to(AboutRef.current, {duration: 0.4, ease: 'power1.inOut', autoAlpha: 1} )
-      .fromTo(overlayref.current, {duration: 2, y: 0, autoAlpha: 1, ease: 'sine.in', backgroundColor: "#907597"}, 
+      .to(AboutRef.current, {duration: 1, ease: 'power1.inOut', autoAlpha: 1} )
+      .fromTo(overlayref.current, {duration: 2, y: 0, autoAlpha: 1, backgroundColor: "#907597"}, 
       {duration: 2, y: 900, autoAlpha: 1, ease: 'sine.in',backgroundColor: "#907597"})
       .add("reveal", "+=1")
-      .from(abRef.current, {duration: 0.7, autoAlpha: 0, y: 18, ease: 'power1.inOut'})
-      .from(imgabout.current, {duration: 1, autoAlpha: 0, scale: 1.3, ease: 'sine.in'}, 'reveal')
+      .from(abRef.current, {duration: 0.7, autoAlpha: 0, y: 18, ease: 'sine.in'})
+      .from(imgabout.current, {duration: 1, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"}, 'reveal')
       .from(abtextref.current, {duration: 0.7, autoAlpha: 0, yPercent: 10, transformOrigin:"0% 100%", ease: 'power1.inOut', delay: 0.3});
     }, []);
 
@@ -116,6 +116,7 @@ const Homepg = () => {
           pin: agencyhead.current,
           pinReparent: true,
           pinSpacing: false,
+          
           markers: {startColor: "blue", endColor: "yellow", fontSize: "12px"},
           toggleActions: "play none none reverse"
         }
@@ -133,6 +134,7 @@ const Homepg = () => {
  useEffect(() =>{
       tl.current = gsap.timeline({
         scrollTrigger: {
+          
           trigger: JoinRef.current,
           scrub: true,
           start: "top 10%" ,
@@ -140,23 +142,20 @@ const Homepg = () => {
           markers: {startColor: "green", endColor: "red", fontSize: "12px"}
         }
       })
-      .from(JoinRef.current, {duration: 1, ease: 'power1.inOut', backgroundColor: '#1A2632'} )
-      .from(joinhead1.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'sine.in'}, '-=0.5')
-      .from(joinhead2.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'power1.inOut'},'-=0.5');
+      .from(JoinRef.current, {duration: 1, ease: 'sine.in', backgroundColor: '#1A2632'} )
+      .from(joinhead1.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'back.inOut(1.4)'}, '-=0.5')
+      .from(joinhead2.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'back.inOut(1.4)'},'-=0.5');
     }, []);
     
-    useEffect(() => {
-      ScrollTrigger.getAll().forEach(tl => tl.disable());
-   },[]);
+  /*kill when the user navigates away*/
+  ScrollTrigger.getAll().forEach(tl => tl.kill());
 
     useEffect(() => {
       ScrollTrigger.getAll().forEach(tl => tl.refresh());
    },[]);
    
-   useEffect(() => {
-    ScrollTrigger.getAll().forEach(tl => tl.enable());
-    },[]);
-      
+   /*enable once the pages loads*/
+   ScrollTrigger.getAll().forEach(tl => tl.enable());
 
     const layerone = {
       hidden: { opacity: 0 },
@@ -177,6 +176,12 @@ const Homepg = () => {
     }
     return (
     <>
+    <SEO
+    pageMeta={{
+      title: "Home",
+      keywords: ["Fashion", "Gallery", "Agency"],
+      description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major"
+    }}>
       <>
       <motion.div
        className='layerone'
@@ -192,6 +197,8 @@ const Homepg = () => {
         </motion.div>
       </motion.div>
       </>
+      <div className="scrollable" data-scrollbar>
+      <div className="wrap-overflow">
       <>
       <div ref={fadsbio} className="layertwo">
         <div> 
@@ -214,18 +221,18 @@ const Homepg = () => {
 
         <div className="gallery">
           <h2 ref={galleryRef1}>Check Out</h2>
-          <h2 ref={galleryRef2}>Our work</h2>
+          <h2  ref={galleryRef2}>Our work</h2>
           <Link to="/Gallery">
             <h3 className="visit" ref={textRef}>Visit our Gallery</h3>
           </Link>
         </div>
 
-          <div ref={image2}className='gallery-images'>
+          <div  ref={image2}className='gallery-images'>
             <img src={Galimg2} alt="gallery images" className="img2"/>
           </div>
       </div>
         <div className="aboutuswrapper"  ref={AboutRef}>
-          <div className="ab-img-con">
+          <div  className="ab-img-con">
               <img src={Aboutpic} alt="FADS board members" className='aboutpic'/>
               <div ref={overlayref} className='overlay'/>
           </div>
@@ -237,7 +244,7 @@ const Homepg = () => {
           </div>
         </div>
 
-        <div ref={agency} className="layerseven">
+        <div  ref={agency} className="layerseven">
         <div className="agencylist">
             <h3>Our team</h3>
             <ul>
@@ -269,9 +276,12 @@ const Homepg = () => {
               <Text/>
             </div>
         </div>
-        <div>
+        <>
         <Footer/>
-        </div>
+        </>
+      </div>
+      </div>
+      </SEO>
     </>
     );
   };

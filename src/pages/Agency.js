@@ -4,8 +4,9 @@ import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/agency.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Footer from '../components/Footer';
-
+import FooterSM from '../components/FooterSM';
+import SEO from '../components/SEO';
+   
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Agency() {
@@ -23,7 +24,8 @@ export default function Agency() {
           y: 0,
           stagger: { each: 0.20},
           overwrite: true,
-          ease: 'sine.in'
+          ease: 'sine.in',
+          markers: {startColor: "green", endColor: "red", fontSize: "12px"}
         }),
       onLeave: batch => gsap.set(batch, { duration: 1, opacity: 0, y: -150, overwrite: true, ease: 'sine.in' }),
       onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, y: 0, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
@@ -31,11 +33,20 @@ export default function Agency() {
     });
   }, []);
 
-  ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".box", {y: 0, duration: 1, ease: "sine.in"}));
-  
+   useEffect(() => {
+    ScrollTrigger.addEventListener("refreshInit", () => gsap.set(agencyReveal.current.children, {y: 0, duration: 1, ease: "sine.in"}));
+   })
+
+
 
   return (
     <>
+     <SEO
+      pageMeta={{
+      title: "Agency",
+      keywords: ["Fashion", "Gallery", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
+      description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
+    }}>
     <div className="agency-home">
       <div className="intro-a">
         <h1>Our Expertise</h1>
@@ -71,8 +82,9 @@ export default function Agency() {
         </Row>
     </div>
     <footer>
-    <Footer/>
+    <FooterSM/>
     </footer>
+    </SEO>
     </>
   );
 }

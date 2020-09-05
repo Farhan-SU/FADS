@@ -5,7 +5,7 @@
   width: 100vw;
   overflow: hidden;
   padding-bottom: 3rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 3rem; }
 
 .intro-a {
   height: 90vh;
@@ -21,9 +21,10 @@
     line-height: 8rem; }
 
 .agency {
-  overflow: hidden;
   height: 100%;
-  margin-bottom: 1rem;
+  position: relative;
+  top: -2rem;
+  margin-bottom: 2rem;
   width: 99vw;
   margin-left: 0.5rem;
   padding: auto 3rem;
@@ -41,12 +42,12 @@
     border-radius: 5px;
     box-shadow: 4px 7px 3px  #eeeeee; }
     .agency .box h3 {
-      color: #fff7ea;
+      color: #ffefd7;
       font-size: 2rem;
       font-weight: 400;
       position: relative;
       top: 5rem; }
       .agency .box h3:hover {
         transition: all 600ms ease-in-out;
-        -webkit-text-stroke: 1px #fff7ea;
+        -webkit-text-stroke: 1px #ffefd7;
         -webkit-text-fill-color: transparent; }

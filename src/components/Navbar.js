@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link, withRouter} from "react-router-dom";
+import {Link, withRouter, useHistory} from "react-router-dom";
 import {Row, Col} from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav';
 import '../assets/styles/layout.scss';
@@ -7,6 +7,12 @@ import useDocumentScrollThrottled from './useDocumentScrollThrottled';
 
 
 function Navbar() {
+
+  let history = useHistory();
+
+  function goHome() {
+    history.goBack("/");
+  }
 
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
@@ -33,7 +39,7 @@ function Navbar() {
       <Row>
        <div className='navwrapper'>
         <div className={`header ${shadowStyle} ${hiddenStyle}`}>
-          <Link to="/">
+          <Link to="/" onClick={goHome}>
             <Col md={5}>
               <video autoPlay loop  className='logo'> 
               <source src={require('../assets/images/logoonly.mp4')} type='video/mp4'/>

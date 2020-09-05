@@ -5,8 +5,6 @@ import { createBrowserHistory } from "history";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const history = createBrowserHistory()
 

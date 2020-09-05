@@ -11,9 +11,46 @@ import './App.css';
 
 const Aboutus = lazy(() => import('./pages/Aboutus'));
 const Gallery = lazy(() => import('./pages/Gallery'));
+const Editorial = lazy(() => import('./pages/Editorial'));
+const Shows = lazy(() => import('./pages/Shows'));
 const Homepg = lazy(() => import('./pages/Homepg'));
 const Agency = lazy(() => import('./pages/Agency'));
 const Press = lazy(() => import('./pages/Press'));
+
+const routes = [
+  {
+    path: "/",
+    component: Homepg,
+    routes: [
+      {
+        path: "/Gallery" ,
+        component: Gallery,
+        routes: [
+          {
+            path: "/gallery/editorial",
+            component: Editorial
+          },
+          {
+            path: "/gallery/shows",
+            component: Shows
+          }
+        ]
+      },
+      {
+        path: "/Agency",
+        component: Agency
+      },
+      {
+        path: "/Press",
+        component: Press
+      },
+      {
+        path: "/Aboutus",
+        component: Aboutus
+      }
+    ]
+  }
+];
 
 
 function App () {
@@ -47,7 +84,7 @@ function App () {
               <animated.div key={key} style={props}>
     
                 <Suspense fallback={<div>
-                                      <Spinner animation="border" role="status">
+                                      <Spinner className="spinner" animation="border" role="status">
                                         <span className="sr-only">Loading...</span>
                                       </Spinner>
                                     </div>}>

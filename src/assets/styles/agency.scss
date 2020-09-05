@@ -7,7 +7,7 @@
     width: 100vw;
     overflow: hidden;
     padding-bottom: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .intro-a{
@@ -26,9 +26,10 @@
     }
 }
 .agency{
-    overflow: hidden;
     height: 100%;
-    margin-bottom: 1rem;
+    position: relative;
+    top: -2rem;
+    margin-bottom: 2rem;
     width: 99vw;
     margin-left: 0.5rem;
     padding: auto 3rem;

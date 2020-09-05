@@ -1,9 +1,23 @@
 @import 'colors'; 
 
+%gallerycontent {
+  height: 100vh;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+%circle {
+  height: 500px;
+  background: url('../images/gallery-circle.svg') no-repeat center center;
+  background-size: 90%;
+}
+
+
 .wrapper {
   background-color: black;
-  height: 80vh;
-  width: 101vw;
+  height: 100vh;
+  width: 101.2vw;
   margin-top: 1.2rem;
 
 
@@ -41,5 +55,104 @@
 
 /*Editorial*/
 
+.editorialwrapper{
+  height: 100%;
+  width: 100vw;
+
+  .left, .right{
+    height: 90%;
+    overflow: hidden;
+  }
+
+  img{
+    width: 73%;
+    position: relative;
+    left: 3.7rem;
+    border-radius: 5px;
+    box-shadow: 8px 5px 14px #ada9a993;
+  }
+  .img1{
+    position: relative;
+    top: 1rem;
+  }
+  .img2{
+    position: relative;
+    top: 8rem;
+  }
+  .description{
+    height: 500px;
+    background: url('../images/gallery-circle.svg') no-repeat center center;
+    background-size: 90%;
+    margin-top: 1rem;
+    h1{
+      color: $text;
+      font-size: 3.4rem;
+      letter-spacing: 0.5rem;
+      text-align: center;
+      margin-top: 0.5rem;
+
+      &:hover{
+          transition: all 400ms ease-in-out;
+          -webkit-text-stroke: 2px $text;
+          -webkit-text-fill-color: transparent; 
+        }
+      }
+    h3{
+      font-weight: 400;
+      font-size: 1.7rem;
+      margin-top: 1rem;
+    }
+  }
+  
+  .jerk{
+    @extend %gallerycontent;
+    margin-top: 1rem;
+    .svg-line{
+      position: relative;
+      top: 4rem;
+    }
+    .jerk-header{
+      padding: 2rem;
+      position: relative;
+      top: -1rem;
+      margin: 9rem 2.2rem;
+      text-align: center;
+      width: 85%;
+
+      h1{
+        letter-spacing: 0;
+        width: 450px;
+        position: relative;
+        left: -5rem;
+      }
+      .svg-line{
+        margin-top: 8rem;
+      }
+    }
+  }
+  .circus{
+    @extend %gallerycontent;
+    .svg-line{
+      position: relative;
+      top: 9.7rem;
+    }
+
+    .circus-header{
+      padding: 2rem;
+      position: relative;
+      margin: 7rem auto;
+      top: 1.5rem;
+      text-align: center;
+      width: 85%;
+
+      h3{
+        margin-top: 1rem;
+      }
+      .svg-line{
+        margin-top: 2rem;
+      }
+    }
+  }
+}
 
 

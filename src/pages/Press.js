@@ -6,13 +6,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Editorial from './Editorial';
 
 
-gsap.registerPlugin(ScrollTrigger);
-
 const News = () => {
 
   return (
     <>
+    <div style={{height: '100%'}}>
     <Editorial/>
+    </div>
     </>
   );
 };
