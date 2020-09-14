@@ -13,9 +13,14 @@
   .wrapper .linkbox {
     position: relative;
     top: 19rem;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
     .wrapper .linkbox h1 {
-      font-size: 7.5rem;
+      font-size: 5.2rem;
+      text-shadow: 2px 2px #1b1b1b;
       color: #ffefd7;
       letter-spacing: 3px; }
       .wrapper .linkbox h1:hover {

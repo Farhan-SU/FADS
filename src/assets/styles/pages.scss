@@ -15,7 +15,7 @@
   }
 
 %headingstyle{
-  font-size: 12rem;
+  font-size: 10rem;
   position: relative;
   text-transform: uppercase;
   color: $heading;
@@ -196,9 +196,10 @@
     background-blend-mode: screen;
   }
     .img1{
-      height: 60%;
+      height: 55%;
       position: relative;
-      top: -2.4rem;
+      top: -5%;
+      left: -1rem;
       box-shadow: 0 8px 6px -6px rgb(102, 102, 102);
       border-radius: 8px;
     }
@@ -230,14 +231,14 @@
 
     h2{
       @extend %headingstyle;
-      font-size: 14rem;
-      top: 4rem;
+      left: 4%;
+      top: 9%;
       color:#f5e2d7;
     }
     h3{
       position: relative;
-      top: 1rem;
-      left: 6rem;
+      top: 8.5%;
+      left: 10%;
       font-size: 1.8rem;
       letter-spacing: 0.3rem;
       line-height: 2.6rem; 
@@ -287,7 +288,7 @@
     max-width: 100%;
     width: 70%;
     left: 3rem;
-    top: 4rem;
+    top: 6%;
 
     h2{
       @extend %headingstyle;
@@ -303,7 +304,7 @@
     height: 70%;
     width: 70%;
     position: relative;
-    top: -14rem;
+    top: -23%;
     left: 2.5rem;
     float: right;
     
@@ -328,26 +329,24 @@
     flex: 1;
 
     h2{
-      font-size: 12rem;
+      font-size: 4.6rem;
+      line-height: 8rem;
+      letter-spacing: 6px;
       position: relative;
       text-transform: uppercase;
-      color: $heading;
-      letter-spacing: 9px;
-      padding: 1.3rem;
-      margin-top: 3rem 2rem;
-      top: 9rem;
-      left: 0.5rem;
-      font-size: 5.3rem;
-      line-height: 8rem;
-      letter-spacing: 8px;
+      color: $background;
+      padding: 1rem;
+      top: 7%;
+      left: 2%;
+      right: 2%;
       border-bottom: 5px solid #333C45 ;
       border-top: 5px solid #333C45 ;
-      color: $background;
+      border: 1px solid red;
     }
     p{
       position: relative;
-      left: 1.5rem;
-      top: 74.5rem;
+      left: 8%;
+      top: 73rem;
       font-size: 2.5rem;
       font-weight: 600;
       color: $background;

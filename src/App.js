@@ -17,41 +17,6 @@ const Homepg = lazy(() => import('./pages/Homepg'));
 const Agency = lazy(() => import('./pages/Agency'));
 const Press = lazy(() => import('./pages/Press'));
 
-const routes = [
-  {
-    path: "/",
-    component: Homepg,
-    routes: [
-      {
-        path: "/Gallery" ,
-        component: Gallery,
-        routes: [
-          {
-            path: "/gallery/editorial",
-            component: Editorial
-          },
-          {
-            path: "/gallery/shows",
-            component: Shows
-          }
-        ]
-      },
-      {
-        path: "/Agency",
-        component: Agency
-      },
-      {
-        path: "/Press",
-        component: Press
-      },
-      {
-        path: "/Aboutus",
-        component: Aboutus
-      }
-    ]
-  }
-];
-
 
 function App () {
 
@@ -90,6 +55,7 @@ function App () {
                                     </div>}>
     
                   <Switch location={location}>
+                  <Route path="/Gallery/Editorial" component={Editorial} exact/>
                     <Route exact path="/" component={Homepg} />
                     <Route path="/Gallery" component={Gallery} />
                     <Route path="/Aboutus" component={Aboutus} />

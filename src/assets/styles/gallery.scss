@@ -25,9 +25,14 @@
     position: relative;
     top: 19rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
     h1{
-      font-size: 7.5rem;
+      font-size: 5.2rem;
+      text-shadow: 2px 2px #1b1b1b;
       color: $heading;
       letter-spacing: 3px;
 
@@ -45,6 +50,11 @@
   background: url('../images/surya.webp') no-repeat 70% 40%;
   height: 100vh;
   background-size: cover;
+
+  h1{
+   
+  }
+
 }
 
   .shows {
