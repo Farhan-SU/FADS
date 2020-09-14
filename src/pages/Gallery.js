@@ -46,7 +46,7 @@ const Gallery = () => {
     </>
     <Suspense>
     <Switch location={location}>
-    <Route path="/Gallery/Editorial" component={Editorial} exact/>
+    <Route path="/gallery/editorial" component={Editorial} exact/>
         <Route path="/Shows" component={Shows}/>
     </Switch>
     </Suspense>

@@ -58,7 +58,7 @@ function App () {
                 
                     <Route exact path="/" component={Homepg} />
                     <Route path="/Gallery" component={Gallery} />  
-                    <Route path="/Gallery/Editorial" component={Editorial} exact/>
+                    <Route path="/gallery/editorial" component={Editorial} exact/>
                     <Route path="/Aboutus" component={Aboutus} />
                     <Route path="/Agency" component={Agency} />
                     <Route path="/Press" component={Press} />
