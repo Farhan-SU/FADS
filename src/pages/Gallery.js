@@ -6,8 +6,8 @@ import { Route, Link, Switch, useLocation} from 'react-router-dom';
 import SEO from '../components/SEO';
 import FooterSM from '../components/FooterSM';
 
-const Editorial = lazy(() => import('./Editorial'));
-const Shows = lazy(() => import('./Shows'));
+const Editorial = lazy(() => import('./editorial'));
+const Shows = lazy(() => import('./shows'));
  
 const Gallery = () => {
   

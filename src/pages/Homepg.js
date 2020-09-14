@@ -30,6 +30,7 @@ const Homepg = () => {
        scrollTrigger: {
         
          trigger: fadsbio.current,
+         id: "hometl",
          start: "top top",
          end: '+=950',
          pin: biotxt.current,
@@ -40,7 +41,17 @@ const Homepg = () => {
        }
      }) 
      .fromTo(biocover.current, {y: 0}, {duration: 1.3, y: 900, ease: 'sine.in'})
-     .from(biotxt.current, { opacity: 0, duration: 0.7, x: 10 , ease: 'back.inOut(1.4)'});
+     .from(biotxt.current, { opacity: 0, duration: 0.7, x: 10 , ease: 'back.inOut(1.4)'})
+
+     return () => {
+      if (ScrollTrigger.getById('hometl')) {
+        ScrollTrigger.getById('hometl').kill();
+      }
+      
+      tl.current.kill();
+    };
+  
+  
  }, []);
             
               
@@ -56,7 +67,7 @@ const Homepg = () => {
     useEffect(() =>{
       tl.current = gsap.timeline({
         scrollTrigger: {
-          
+          id: 'container-ref',
           trigger: containerRef.current,
           scrub: true,
           start: "top top" ,
@@ -72,6 +83,13 @@ const Homepg = () => {
       .from(image2.current, {duration: 1.3, autoAlpha: 0 , x: 350, ease: "circ.out",})
       .from(textRef.current, {duration: 3, autoAlpha: 0, delay: 0.8});
 
+      return () => {
+        if (ScrollTrigger.getById('container-ref')) {
+          ScrollTrigger.getById('container-ref').kill();
+        }
+        
+        tl.current.kill();
+      };
       
     }, []);
 
@@ -86,6 +104,7 @@ const Homepg = () => {
  useEffect(() =>{
       tl.current = gsap.timeline({
         scrollTrigger: {
+          id: 'about-ref',
           trigger: AboutRef.current,
           scrub: true,
           start: "top 5%" ,
@@ -100,6 +119,14 @@ const Homepg = () => {
       .from(abRef.current, {duration: 0.7, autoAlpha: 0, y: 18, ease: 'sine.in'})
       .from(imgabout.current, {duration: 1, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"}, 'reveal')
       .from(abtextref.current, {duration: 0.7, autoAlpha: 0, yPercent: 10, transformOrigin:"0% 100%", ease: 'power1.inOut', delay: 0.3});
+
+      return () => {
+        if (ScrollTrigger.getById('about-ref')) {
+          ScrollTrigger.getById('about-ref').kill();
+        }
+        
+        tl.current.kill();
+      };
     }, []);
 
     const agency = useRef(null);
@@ -146,16 +173,7 @@ const Homepg = () => {
       .from(joinhead1.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'back.inOut(1.4)'}, '-=0.5')
       .from(joinhead2.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'back.inOut(1.4)'},'-=0.5');
     }, []);
-    
-  /*kill when the user navigates away*/
-  ScrollTrigger.getAll().forEach(tl => tl.kill());
-
-    useEffect(() => {
-      ScrollTrigger.getAll().forEach(tl => tl.refresh());
-   },[]);
-   
-   /*enable once the pages loads*/
-   ScrollTrigger.getAll().forEach(tl => tl.enable());
+  
 
     const layerone = {
       hidden: { opacity: 0 },
@@ -200,7 +218,7 @@ const Homepg = () => {
       <div className="scrollable" data-scrollbar>
       <div className="wrap-overflow">
       <>
-      <div ref={fadsbio} className="layertwo">
+      <div ref={fadsbio} id="hometl" className="layertwo">
         <div> 
           <div ref={biocover} className="bioreveal"/> 
           <div className="text">
@@ -214,7 +232,7 @@ const Homepg = () => {
         
       </div>
       </>
-      <div className="layerfour" ref={containerRef}>
+      <div className="layerfour" id="container-ref" ref={containerRef}>
           <div ref={image1} className='gallery-images'>
               <img src={Galimg1} alt="gallery images" className="img1"/>
           </div>
@@ -231,7 +249,7 @@ const Homepg = () => {
             <img src={Galimg2} alt="gallery images" className="img2"/>
           </div>
       </div>
-        <div className="aboutuswrapper"  ref={AboutRef}>
+        <div className="aboutuswrapper" id="about-ref" ref={AboutRef}>
           <div  className="ab-img-con">
               <img src={Aboutpic} alt="FADS board members" className='aboutpic'/>
               <div ref={overlayref} className='overlay'/>

@@ -103,6 +103,9 @@ html, body {
   transform: translateY(-127%); }
 
 /*************FOOTER**********************/
+/*************FOOTER**********************/
+/*************FOOTER**********************/
+/*************FOOTER**********************/
 .container {
   background: url("../images/footerbg.svg") no-repeat left top;
   background-size: 1450px;
@@ -190,6 +193,9 @@ html, body {
   font-weight: 400; }
 
 /*************FOOTER SMALL**********************/
+/*************FOOTER SMALL**********************/
+/*************FOOTER SMALL**********************/
+/*************FOOTER SMALL**********************/
 .container-sm {
   background: url("../images/footer-small.svg") no-repeat left top;
   background-size: 1500px;
@@ -207,8 +213,7 @@ html, body {
   margin-top: 0.5rem;
   justify-content: center;
   align-content: space-between;
-  align-items: center;
-  border: 1px solid red; }
+  align-items: center; }
 
 .first-sm {
   height: 100%;
