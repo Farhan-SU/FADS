@@ -11,7 +11,6 @@ const News = () => {
   return (
     <>
     <div style={{height: '100%'}}>
-    <Editorial/>
     </div>
     </>
   );

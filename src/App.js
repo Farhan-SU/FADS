@@ -55,9 +55,10 @@ function App () {
                                     </div>}>
     
                   <Switch location={location}>
-                  <Route path="/Gallery/Editorial" component={Editorial} exact/>
+                
                     <Route exact path="/" component={Homepg} />
-                    <Route path="/Gallery" component={Gallery} />
+                    <Route path="/Gallery" component={Gallery} />  
+                    <Route path="/Gallery/Editorial" component={Editorial} exact/>
                     <Route path="/Aboutus" component={Aboutus} />
                     <Route path="/Agency" component={Agency} />
                     <Route path="/Press" component={Press} />
