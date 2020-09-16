@@ -26,7 +26,7 @@ export default function Gallery () {
         <Col md={6} className='editorial'>
         <Link to="/Editorial">
           <div className="linkbox">
-          <h1 className="">EDITORIAL</h1>
+          <h1>EDITORIAL</h1>
           </div>
         </Link>
         </Col>
@@ -34,7 +34,7 @@ export default function Gallery () {
         <Col md={6} className="shows">
         <Link to="/Shows">
         <div className="linkbox">
-          <h1 className="expand-column-content">SHOWS</h1>
+          <h1>SHOWS</h1>
         </div>
         </Link>
         </Col>
