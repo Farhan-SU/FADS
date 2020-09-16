@@ -3,17 +3,18 @@ import Layout from '../components/Layout';
 import '../assets/styles/pages.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Editorial from './editorial';
 
 
-const News = () => {
+
+const press = () => {
 
   return (
     <>
     <div style={{height: '100%'}}>
+      <h1>Still working on it</h1>
     </div>
     </>
   );
 };
   
-export default News;
+export default press;

@@ -9,7 +9,7 @@ import SEO from '../components/SEO';
    
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Agency() {
+function Agency() {
 
   const sl = useRef();
   const agencyReveal = React.createRef();
@@ -87,4 +87,5 @@ export default function Agency() {
     </SEO>
     </>
   );
-}
+};
+export default Agency;

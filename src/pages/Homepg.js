@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import locomotiveScroll from "locomotive-scroll";
 import Scrollbar from 'smooth-scrollbar';
 import {motion} from 'framer-motion';
-import Galimg1 from '../assets/images/fuzzyhat.png';
+import Galimg1 from '../assets/images/workwear/fuzzyhat.png';
 import Galimg2 from '../assets/images/homegal.png';
 import Aboutpic from '../assets/images/fadsfam.png';
 import Text from '../components/Textani';
@@ -18,7 +18,7 @@ if (typeof window !== `undefined`) {
   gsap.core.globals('ScrollTrigger', ScrollTrigger)
   } 
 
-const Homepg = () => {  
+  export default function Homepg ()  {  
   const tl = useRef();
   const pinthis = useRef();
   const fadsbio = useRef(null);
@@ -302,6 +302,4 @@ const Homepg = () => {
       </SEO>
     </>
     );
-  };
-
-export default Homepg;
+};

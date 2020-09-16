@@ -3,6 +3,7 @@
 %gallerycontent {
   height: 100vh;
   padding: 0 1rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -50,11 +51,6 @@
   background: url('../images/surya.webp') no-repeat 70% 40%;
   height: 100vh;
   background-size: cover;
-
-  h1{
-   
-  }
-
 }
 
   .shows {
@@ -63,13 +59,16 @@
     background-size: 200%;
   }
 
-/*Editorial*/
+/***************Editorial/Shows****************/
+/***************Editorial/Shows****************/
+/***************Editorial/Shows****************/
 
-.editorialwrapper{
+.editorialwrapper, .show-wrapper{
   height: 100%;
   width: 100vw;
+  overflow-x: hidden;
 
-  .left, .right{
+  .left, .right, .sleft, .sright{
     height: 90%;
     overflow: hidden;
   }
@@ -79,7 +78,6 @@
     position: relative;
     left: 3.7rem;
     border-radius: 5px;
-    box-shadow: 8px 5px 14px #ada9a993;
   }
   .img1{
     position: relative;
@@ -87,19 +85,22 @@
   }
   .img2{
     position: relative;
-    top: 8rem;
+    top: 7rem;
   }
   .description{
     height: 500px;
     background: url('../images/gallery-circle.svg') no-repeat center center;
     background-size: 90%;
     margin-top: 1rem;
+    align-self: auto;
+
     h1{
       color: $text;
       font-size: 3.4rem;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.3rem;
       text-align: center;
       margin-top: 0.5rem;
+      width: 100%;
 
       &:hover{
           transition: all 400ms ease-in-out;
@@ -112,57 +113,58 @@
       font-size: 1.7rem;
       margin-top: 1rem;
     }
+    .svg-line{
+      position: absolute;
+      left: 50%;
+      top: 93%
+    }
+    .header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      position: relative;
+      top: 35%;
+      left: 14%;
+      text-align: center;
+      border-radius: 30%;
+      width: 80%;
+    }
   }
   
-  .jerk{
+  .aline, .jerk,.winter, .thegallery, .circus{
     @extend %gallerycontent;
-    margin-top: 1rem;
-    .svg-line{
-      position: relative;
-      top: 4rem;
-    }
-    .jerk-header{
-      padding: 2rem;
-      position: relative;
-      top: -1rem;
-      margin: 9rem 2.2rem;
-      text-align: center;
-      width: 85%;
+  }
+  .vintage{
+    @extend %gallerycontent;
 
-      h1{
-        letter-spacing: 0;
-        width: 450px;
+      .vintage-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
         position: relative;
-        left: -5rem;
-      }
-      .svg-line{
-        margin-top: 8rem;
+        top: 21%;
+        left: 13%;
+        text-align: center;
+        border-radius: 30%;
+        width: 80%;
+        
+        h1{
+          flex-wrap: wrap;
+          font-size: 3.1rem;
+        }
       }
     }
-  }
-  .circus{
+  .land{
     @extend %gallerycontent;
-    .svg-line{
-      position: relative;
-      top: 9.7rem;
-    }
-
-    .circus-header{
-      padding: 2rem;
-      position: relative;
-      margin: 7rem auto;
-      top: 1.5rem;
-      text-align: center;
-      width: 85%;
-
-      h3{
-        margin-top: 1rem;
+        h1{
+          flex-wrap: wrap;
+          position: relative;
+          font-size: 2.7rem;
+          left: -4%;
+        }
       }
-      .svg-line{
-        margin-top: 2rem;
-      }
-    }
-  }
 }
 
 

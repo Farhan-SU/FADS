@@ -9,13 +9,13 @@ import Splash from './components/Splash';
 import './assets/styles/layout.scss';
 import './App.css';
 
-const Aboutus = lazy(() => import('./pages/aboutus'));
-const Gallery = lazy(() => import('./pages/gallery'));
-const Editorial = lazy(() => import('./pages/editorial'));
-const Shows = lazy(() => import('./pages/shows'));
-const Homepg = lazy(() => import('./pages/homepg'));
-const Agency = lazy(() => import('./pages/agency'));
-const Press = lazy(() => import('./pages/press'));
+const aboutus = lazy(() => import('./pages/aboutus'));
+const gallery = lazy(() => import('./pages/gallery'));
+const editorial = lazy(() => import('./pages/gallery/editorialpg'));
+const shows = lazy(() => import('./pages/gallery/showspg'));
+const homepg = lazy(() => import('./pages/homepg'));
+const agency = lazy(() => import('./pages/agency'));
+const press = lazy(() => import('./pages/press'));
 
 
 function App () {
@@ -56,12 +56,13 @@ function App () {
     
                   <Switch location={location}>
                 
-                    <Route exact path="/" component={Homepg} />
-                    <Route path="/gallery" component={Gallery} />  
-                    <Route path="/gallery/editorial" component={Editorial} exact/>
-                    <Route path="/aboutus" component={Aboutus} />
-                    <Route path="/agency" component={Agency} />
-                    <Route path="/press" component={Press} />
+                    <Route exact path="/" component={homepg} />
+                    <Route path="/gallery" component={gallery} />  
+                    <Route path="/gallery/editorialpg" component={editorial} exact/>
+                    <Route path="/gallery/showspg" component={shows} exact/>
+                    <Route path="/aboutus" component={aboutus} />
+                    <Route path="/agency" component={agency} />
+                    <Route path="/press" component={press} />
                   </Switch>
                 </Suspense>
               </animated.div>

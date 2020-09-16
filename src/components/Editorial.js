@@ -1,12 +1,20 @@
 import React, { useRef, useEffect } from "react";
 import {Row, Col, Collapse} from 'react-bootstrap';
-import JerkLeft from "../assets/images/jerk.png";
-import JerkRight from "../assets/images/jerkfads.png";
-import Line from '../assets/images/gallery-line.svg'
 import '../assets/styles/gallery.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SEO from '../components/SEO';
+import SEO from './SEO';
+
+/**Images*/
+import AlineLeft from '../assets/images/aline/nojacket.png';
+import AlineRight from '../assets/images/aline/jacket.png';
+import JerkLeft from "../assets/images/jerk/solei.png";
+import JerkRight from "../assets/images/jerk/jerkfads.png";
+import VintageLeft from '../assets/images/workwear/fuzzyhat.png';
+import VintageRight from '../assets/images/workwear/suit.png';
+import WinterLeft from "../assets/images/winter/sky.png";
+import WinterRight from "../assets/images/winter/curve.png";
+
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -19,12 +27,12 @@ const Editorial = () => {
     const line = React.createRef();
 
     useEffect(() => {
-      gsap.set(line.current.children, { opacity: 0.5, duration: 1, ease: 'sine.in' });
+      gsap.to(line.current.children, { autoAlpha: 1, duration: 2, ease: 'sine.in' });
       edtl.current = ScrollTrigger.batch(line.current.children, {
         scrub: true,
         onEnter: batch =>
           gsap.to(batch, {
-            autoAlpha: 1,
+            opacity: 1, 
             duration: 1,
             stagger: { each: 0.20},
             overwrite: true,
@@ -50,6 +58,7 @@ const Editorial = () => {
           y: 0,
           ease: "circ.out",
           scrollTrigger: {
+            id: 'edit-left',
             trigger: ".left",
             trigger: el,
             start: 'top top+=500',
@@ -80,6 +89,7 @@ const Editorial = () => {
           y: 0,
           ease: "circ.out",
           scrollTrigger: {
+            id: 'edit-right',
             trigger: ".right",
             trigger: al,
             start: 'top top+=100',
@@ -108,6 +118,7 @@ const Editorial = () => {
           autoAlpha: 1,
           ease: 'none',
           scrollTrigger: {
+            id: 'edit-txt',
             trigger: ".description",
             trigger: text,
             start: 'top top+=600',
@@ -138,61 +149,96 @@ const Editorial = () => {
         }}>
       <>
       <div ref={line} className="editorialwrapper">
-      <Row className="jerk">
+      <Row as="section" className="aline">
         <Col md={4}className="left">
-          <img src={JerkLeft} alt="jerkphotos" className="img1"/>
+          <img src={AlineLeft} alt="jerkphotos" className="img1"/>
         </Col>
         <Col md={4} className="description">
-        <div className="jerk-header">
+        <Row className="header">
+          <Col noGutter={true} xs={12}>
           <h3>April 2018</h3>
+          </Col>
+          <Col xs={12}>
+          <h1>Aline</h1>
+          </Col>
+        </Row>
+          <div className="svg-line">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
+              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </Col>
+        <Col md={4} className="right">
+          <img src={AlineRight} alt="jerkphotos" className="img2"/>
+        </Col>
+      </Row>
+
+      <Row as="section" className="jerk">
+        <Col md={4}className="left">
+          <img src={JerkLeft} ref={addToRefs} alt="jerkphotos" className="img1"/>
+        </Col>
+        <Col md={4} className="description">
+        <Row ref={addToRefstext} className="header">
+          <Col noGutter={true} xs={12}>
+          <h3>April 2018</h3>
+          </Col>
+          <Col xs={12}>
           <h1>JERK X FADS</h1>
-          <div className="svg-line">
+          </Col>
+        </Row>
+        <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
               <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
-        </div>
         </Col>
         <Col md={4} className="right">
-          <img src={JerkRight} alt="jerkphotos" className="img2"/>
+          <img src={JerkRight}  ref={addToRefsright} alt="jerkphotos" className="img2"/>
         </Col>
       </Row>
-      <Row className="circus">
+
+      <Row as='section' className="vintage">
         <Col md={4}className="left">
-          <img ref={images} src={JerkLeft} alt="jerkphotos" ref={addToRefs} className="img1"/>
+          <img ref={images} src={VintageLeft} alt="jerkphotos" ref={addToRefs} className="img1"/>
         </Col>
         <Col md={4} className="description">
-        <div ref={addToRefstext} className="circus-header">
-        <h3>Feb 2019</h3>
-          <h1>CIRCUS</h1>
-          <div className="svg-line">
+        <Row ref={addToRefstext} className="vintage-header">
+          <Col noGutter={true} xs={12}>
+           <h3>Sept 2019</h3>
+          </Col>
+          <Col noGutter={true} xs={12}>
+          <h1>Work<br/>wear Vintage</h1>
+          </Col>
+        </Row>
+        <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
               <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
-        </div>
         </Col>
         <Col md={4} className="right">
-          <img src={JerkRight} alt="jerkphotos" ref={addToRefsright} className="img2"/>
+          <img src={VintageRight} alt="jerkphotos" ref={addToRefsright} className="img2"/>
         </Col>
       </Row>
-      <Row className="circus">
+
+      <Row className="winter">
         <Col md={4}className="left">
-          <img src={JerkLeft} alt="jerkphotos" ref={addToRefs}className="img1"/>
+          <img src={WinterLeft} alt="jerkphotos" ref={addToRefs}className="img1"/>
         </Col>
-        <Col md={4} className="description">
-        <div ref={addToRefstext} className="circus-header">
-        <h3>Feb 2019</h3>
-          <h1>CIRCUS</h1>
-          {/* <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
-            </svg>
-          </div> */}
-        </div>
+        <Col md={4}>
+        <Row className="description">
+        <Row ref={addToRefstext} className="header">
+        <Col noGutter={true} xs={12}>
+          <h3>December 2019</h3>
+        </Col>
+        <Col noGutter={true} xs={12}>
+          <h1>Winter</h1>
+        </Col>
+        </Row>
+        </Row>
         </Col>
         <Col md={4} className="right">
-          <img src={JerkRight} alt="jerkphotos" ref={addToRefsright} className="img2"/>
+          <img src={WinterRight} alt="jerkphotos" ref={addToRefsright} className="img2"/>
         </Col>
       </Row>
       </div>

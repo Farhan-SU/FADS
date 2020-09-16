@@ -6,10 +6,10 @@ import { Route, Link, Switch, useLocation} from 'react-router-dom';
 import SEO from '../components/SEO';
 import FooterSM from '../components/FooterSM';
 
-const Editorial = lazy(() => import('./editorial'));
-const Shows = lazy(() => import('./shows'));
+const editorial = lazy(() => import('./gallery/editorialpg'));
+const shows = lazy(() => import('./gallery/showspg'));
  
-const Gallery = () => {
+export default function Gallery () {
   
   const location = useLocation();
 
@@ -46,8 +46,8 @@ const Gallery = () => {
     </>
     <Suspense>
     <Switch location={location}>
-    <Route path="/gallery/editorial" component={Editorial} exact/>
-        <Route path="/Shows" component={Shows}/>
+        <Route path="/gallery/editorialpg" component={editorial} exact/>
+        <Route path="/gallery/editorialpg" component={shows} exact/>
     </Switch>
     </Suspense>
   </>
@@ -56,4 +56,3 @@ const Gallery = () => {
   );
 };
  
-export default Gallery; 

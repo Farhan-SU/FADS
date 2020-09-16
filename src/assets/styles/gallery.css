@@ -1,6 +1,7 @@
-.editorialwrapper .jerk, .editorialwrapper .circus {
+.editorialwrapper .aline, .editorialwrapper .jerk, .editorialwrapper .winter, .editorialwrapper .thegallery, .editorialwrapper .circus, .show-wrapper .aline, .show-wrapper .jerk, .show-wrapper .winter, .show-wrapper .thegallery, .show-wrapper .circus, .editorialwrapper .vintage, .show-wrapper .vintage, .editorialwrapper .land, .show-wrapper .land {
   height: 100vh;
   padding: 0 1rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   align-content: center; }
@@ -39,74 +40,79 @@
   height: 100vh;
   background-size: 200%; }
 
-/*Editorial*/
-.editorialwrapper {
+/***************Editorial/Shows****************/
+/***************Editorial/Shows****************/
+/***************Editorial/Shows****************/
+.editorialwrapper, .show-wrapper {
   height: 100%;
-  width: 100vw; }
-  .editorialwrapper .left, .editorialwrapper .right {
+  width: 100vw;
+  overflow-x: hidden; }
+  .editorialwrapper .left, .editorialwrapper .right, .editorialwrapper .sleft, .editorialwrapper .sright, .show-wrapper .left, .show-wrapper .right, .show-wrapper .sleft, .show-wrapper .sright {
     height: 90%;
     overflow: hidden; }
-  .editorialwrapper img {
+  .editorialwrapper img, .show-wrapper img {
     width: 73%;
     position: relative;
     left: 3.7rem;
-    border-radius: 5px;
-    box-shadow: 8px 5px 14px #ada9a993; }
-  .editorialwrapper .img1 {
+    border-radius: 5px; }
+  .editorialwrapper .img1, .show-wrapper .img1 {
     position: relative;
     top: 1rem; }
-  .editorialwrapper .img2 {
+  .editorialwrapper .img2, .show-wrapper .img2 {
     position: relative;
-    top: 8rem; }
-  .editorialwrapper .description {
+    top: 7rem; }
+  .editorialwrapper .description, .show-wrapper .description {
     height: 500px;
     background: url("../images/gallery-circle.svg") no-repeat center center;
     background-size: 90%;
-    margin-top: 1rem; }
-    .editorialwrapper .description h1 {
+    margin-top: 1rem;
+    align-self: auto; }
+    .editorialwrapper .description h1, .show-wrapper .description h1 {
       color: #1A2632;
       font-size: 3.4rem;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.3rem;
       text-align: center;
-      margin-top: 0.5rem; }
-      .editorialwrapper .description h1:hover {
+      margin-top: 0.5rem;
+      width: 100%; }
+      .editorialwrapper .description h1:hover, .show-wrapper .description h1:hover {
         transition: all 400ms ease-in-out;
         -webkit-text-stroke: 2px #1A2632;
         -webkit-text-fill-color: transparent; }
-    .editorialwrapper .description h3 {
+    .editorialwrapper .description h3, .show-wrapper .description h3 {
       font-weight: 400;
       font-size: 1.7rem;
       margin-top: 1rem; }
-  .editorialwrapper .jerk {
-    margin-top: 1rem; }
-    .editorialwrapper .jerk .svg-line {
+    .editorialwrapper .description .svg-line, .show-wrapper .description .svg-line {
+      position: absolute;
+      left: 50%;
+      top: 93%; }
+    .editorialwrapper .description .header, .show-wrapper .description .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
       position: relative;
-      top: 4rem; }
-    .editorialwrapper .jerk .jerk-header {
-      padding: 2rem;
-      position: relative;
-      top: -1rem;
-      margin: 9rem 2.2rem;
+      top: 35%;
+      left: 14%;
       text-align: center;
-      width: 85%; }
-      .editorialwrapper .jerk .jerk-header h1 {
-        letter-spacing: 0;
-        width: 450px;
-        position: relative;
-        left: -5rem; }
-      .editorialwrapper .jerk .jerk-header .svg-line {
-        margin-top: 8rem; }
-  .editorialwrapper .circus .svg-line {
+      border-radius: 30%;
+      width: 80%; }
+  .editorialwrapper .vintage .vintage-header, .show-wrapper .vintage .vintage-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     position: relative;
-    top: 9.7rem; }
-  .editorialwrapper .circus .circus-header {
-    padding: 2rem;
-    position: relative;
-    margin: 7rem auto;
-    top: 1.5rem;
+    top: 21%;
+    left: 13%;
     text-align: center;
-    width: 85%; }
-    .editorialwrapper .circus .circus-header h3 {
-      margin-top: 1rem; }
-    .editorialwrapper .circus .circus-header .svg-line {
-      margin-top: 2rem; }
+    border-radius: 30%;
+    width: 80%; }
+    .editorialwrapper .vintage .vintage-header h1, .show-wrapper .vintage .vintage-header h1 {
+      flex-wrap: wrap;
+      font-size: 3.1rem; }
+  .editorialwrapper .land h1, .show-wrapper .land h1 {
+    flex-wrap: wrap;
+    position: relative;
+    font-size: 2.7rem;
+    left: -4%; }
