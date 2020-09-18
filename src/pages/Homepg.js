@@ -4,14 +4,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import locomotiveScroll from "locomotive-scroll";
 import Scrollbar from 'smooth-scrollbar';
-import {motion} from 'framer-motion';
 import Galimg1 from '../assets/images/workwear/fuzzyhat.png';
 import Galimg2 from '../assets/images/homegal.png';
 import Aboutpic from '../assets/images/fadsfam.png';
 import Text from '../components/Textani';
-import Footer from '../components/Footer';
 import '../assets/styles/pages.scss';
 import SEO from '../components/SEO';
+import Layout from '../components/Layout';
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -19,6 +18,7 @@ if (typeof window !== `undefined`) {
   } 
 
   export default function Homepg ()  {  
+
   const tl = useRef();
   const pinthis = useRef();
   const fadsbio = useRef(null);
@@ -28,14 +28,12 @@ if (typeof window !== `undefined`) {
   useEffect(() => {
     tl.current = gsap.timeline({
        scrollTrigger: {
-        
          trigger: fadsbio.current,
          id: "hometl",
          start: "top top",
          end: '+=950',
          pin: biotxt.current,
          pinReparent: true,
-         markers: {startColor: "blue", endColor: "yellow", fontSize: "12px"},
          toggleActions: "play none none reverse"
          
        }
@@ -47,11 +45,8 @@ if (typeof window !== `undefined`) {
       if (ScrollTrigger.getById('hometl')) {
         ScrollTrigger.getById('hometl').kill();
       }
-      
       tl.current.kill();
-    };
-  
-  
+    }
  }, []);
             
               
@@ -71,8 +66,7 @@ if (typeof window !== `undefined`) {
           trigger: containerRef.current,
           scrub: true,
           start: "top top" ,
-          end: "bottom bottom",
-          markers: {startColor: "green", endColor: "red", fontSize: "12px"}
+          end: "bottom bottom"
         }
       })
       .from(containerRef.current, {duration: 1.5, autoAlpha: 0, ease: 'power2.inOut'}, "-=1")
@@ -108,8 +102,7 @@ if (typeof window !== `undefined`) {
           trigger: AboutRef.current,
           scrub: true,
           start: "top 5%" ,
-          end: "bottom bottom",
-          markers: {startColor: "green", endColor: "red", fontSize: "12px"}
+          end: "bottom bottom"
         }
       })
       .to(AboutRef.current, {duration: 1, ease: 'power1.inOut', autoAlpha: 1} )
@@ -136,6 +129,7 @@ if (typeof window !== `undefined`) {
     useEffect(() =>{
       tl.current = gsap.timeline({
         scrollTrigger: {
+          id: "agency",
           trigger: agency.current,
           scrub: true,
           start: "top top",
@@ -143,13 +137,17 @@ if (typeof window !== `undefined`) {
           pin: agencyhead.current,
           pinReparent: true,
           pinSpacing: false,
-          
-          markers: {startColor: "blue", endColor: "yellow", fontSize: "12px"},
           toggleActions: "play none none reverse"
         }
       })
       .from(agency.current, {duration: 0.5})
       .from(agencytxt.current, {duration: 1.5, autoAlpha: 0, ease: 'sine.in'});
+
+      return () => {
+        if (ScrollTrigger.getById('agency')) {
+          ScrollTrigger.getById('agency').kill();
+        }tl.current.kill();
+      };    
     }, []);
 
 
@@ -161,37 +159,26 @@ if (typeof window !== `undefined`) {
  useEffect(() =>{
       tl.current = gsap.timeline({
         scrollTrigger: {
-          
           trigger: JoinRef.current,
           scrub: true,
           start: "top 10%" ,
-          end: "bottom bottom",
-          markers: {startColor: "green", endColor: "red", fontSize: "12px"}
+          end: "bottom bottom"
         }
       })
       .from(JoinRef.current, {duration: 1, ease: 'sine.in', backgroundColor: '#1A2632'} )
       .from(joinhead1.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'back.inOut(1.4)'}, '-=0.5')
       .from(joinhead2.current, {duration: 1, autoAlpha: 0, y: 50, ease: 'back.inOut(1.4)'},'-=0.5');
     }, []);
-  
 
-    const layerone = {
-      hidden: { opacity: 0 },
-      show: {
-        opacity: 1,
-        transition: {
-          delayChildren: 0.6,
-          duration: 0.3
-        }
+    useEffect(() => () => {
+      // all garbage cleanup all goes in a single useEffect for when component leaves
+      if (tl.current) {
+        tl.current.kill();
       }
-    }
-    const item = {
-      hidden: { 
-        opacity: 0,
-        transition: { ease: 'backIn' } 
-        },
-      show: { opacity: 1, transition: { duration: 1.4 }}
-    }
+    });
+    
+    
+
     return (
     <>
     <SEO
@@ -201,19 +188,11 @@ if (typeof window !== `undefined`) {
       description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major"
     }}>
       <>
-      <motion.div
-       className='layerone'
-        variants={layerone}
-        initial="hidden"
-        animate="show"
-        >
-        <motion.div
-          className="fadsintro"
-          variants={item}
-        >
+      <div className="layerone">
+        <div className="fadsintro">
           <h1>Fashion and Design Society</h1>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
       </>
       <div className="scrollable" data-scrollbar>
       <div className="wrap-overflow">
@@ -262,7 +241,7 @@ if (typeof window !== `undefined`) {
           </div>
         </div>
 
-        <div  ref={agency} className="layerseven">
+        <div  ref={agency} className="layerseven" id="agency">
         <div className="agencylist">
             <h3>Our team</h3>
             <ul>
@@ -294,9 +273,6 @@ if (typeof window !== `undefined`) {
               <Text/>
             </div>
         </div>
-        <>
-        <Footer/>
-        </>
       </div>
       </div>
       </SEO>

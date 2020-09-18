@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import Layout from '../components/Layout';
+import React from "react";
 import '../assets/styles/pages.scss';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 
 
@@ -10,8 +8,8 @@ const press = () => {
 
   return (
     <>
-    <div style={{height: '100%'}}>
-      <h1>Still working on it</h1>
+    <div style={{height: '100vh'}}>
+      WHOOP THIS IS STILL IN PROGRESS
     </div>
     </>
   );

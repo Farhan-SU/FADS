@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import {Row, Col, Collapse} from 'react-bootstrap';
+import { Route, Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
 import '../assets/styles/gallery.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -22,6 +23,9 @@ if (typeof window !== `undefined`) {
   } 
 
 const Editorial = () => {
+  
+  let { path, url } = useRouteMatch();
+  console.log({url, path});
  
     const edtl = useRef();
     const line = React.createRef();
@@ -155,7 +159,7 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-          <Col noGutter={true} xs={12}>
+          <Col xs={12}>
           <h3>April 2018</h3>
           </Col>
           <Col xs={12}>
@@ -179,7 +183,7 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
-          <Col noGutter={true} xs={12}>
+          <Col xs={12}>
           <h3>April 2018</h3>
           </Col>
           <Col xs={12}>
@@ -203,10 +207,10 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="vintage-header">
-          <Col noGutter={true} xs={12}>
+          <Col xs={12}>
            <h3>Sept 2019</h3>
           </Col>
-          <Col noGutter={true} xs={12}>
+          <Col xs={12}>
           <h1>Work<br/>wear Vintage</h1>
           </Col>
         </Row>
@@ -228,10 +232,10 @@ const Editorial = () => {
         <Col md={4}>
         <Row className="description">
         <Row ref={addToRefstext} className="header">
-        <Col noGutter={true} xs={12}>
+        <Col xs={12}>
           <h3>December 2019</h3>
         </Col>
-        <Col noGutter={true} xs={12}>
+        <Col xs={12}>
           <h1>Winter</h1>
         </Col>
         </Row>

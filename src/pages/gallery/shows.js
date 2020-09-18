@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Shows from '../../components/Editorial';
 
 
-const showspg = () => {
+const shows = () => {
 
   return (
     <>
@@ -13,4 +13,4 @@ const showspg = () => {
   );
 };
   
-export default showspg;
+export default shows;

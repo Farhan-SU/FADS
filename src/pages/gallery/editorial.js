@@ -1,7 +1,7 @@
 import React from "react";
 import Editorial from '../../components/Editorial';
 
-const editorialpg = () => {
+const editorial = () => {
     return(
         <>
         <div style={{height: '100%'}}>
@@ -11,4 +11,4 @@ const editorialpg = () => {
     )
 }
 
-export default editorialpg;
+export default editorial;

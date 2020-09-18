@@ -1,17 +1,17 @@
 import React, { useRef, useEffect, lazy, Suspense} from 'react';
 import {Row, Col} from 'react-bootstrap';
-import Layout from '../components/Layout'
 import '../assets/styles/gallery.scss';
-import { Route, Link, Switch, useLocation} from 'react-router-dom';
+import { Route, Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
 import SEO from '../components/SEO';
 import FooterSM from '../components/FooterSM';
+import Layout from '../components/Layout';
 
-const editorial = lazy(() => import('./gallery/editorialpg'));
-const shows = lazy(() => import('./gallery/showspg'));
+const editorial = lazy(() => import('./gallery/editorial'));
+const shows = lazy(() => import('./gallery/shows'));
  
 export default function Gallery () {
-  
-  const location = useLocation();
+  let { path, url } = useRouteMatch();
+  console.log({url, path});
 
   return (
   <>
@@ -24,7 +24,7 @@ export default function Gallery () {
   <>
       <Row className="wrapper">
         <Col md={6} className='editorial'>
-        <Link to="/Editorial">
+        <Link to="./gallery/editorial">
           <div className="linkbox">
           <h1>EDITORIAL</h1>
           </div>
@@ -32,24 +32,13 @@ export default function Gallery () {
         </Col>
       
         <Col md={6} className="shows">
-        <Link to="/Shows">
+        <Link to="./gallery/shows">
         <div className="linkbox">
           <h1>SHOWS</h1>
         </div>
         </Link>
         </Col>
-    </Row>
-    <>
-      <footer style={{marginTop: '-1.6rem'}}>
-      <FooterSM/>
-      </footer>
-    </>
-    <Suspense>
-    <Switch location={location}>
-        <Route path="/gallery/editorialpg" component={editorial} exact/>
-        <Route path="/gallery/editorialpg" component={shows} exact/>
-    </Switch>
-    </Suspense>
+    </Row>   
   </>
   </SEO>
   </>

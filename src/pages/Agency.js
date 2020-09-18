@@ -33,12 +33,6 @@ function Agency() {
     });
   }, []);
 
-   useEffect(() => {
-    ScrollTrigger.addEventListener("refreshInit", () => gsap.set(agencyReveal.current.children, {y: 0, duration: 1, ease: "sine.in"}));
-   })
-
-
-
   return (
     <>
      <SEO
@@ -81,9 +75,6 @@ function Agency() {
         </Col>
         </Row>
     </div>
-    <footer>
-    <FooterSM/>
-    </footer>
     </SEO>
     </>
   );
