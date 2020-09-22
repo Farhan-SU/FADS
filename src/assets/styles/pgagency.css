@@ -1,0 +1,14 @@
+.eboardwrapper {
+  border: 1px solid red;
+  height: 1000px;
+  margin-top: 4rem; }
+
+.eboardwrapper h1 {
+  border: 1px solid red;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  -webkit-text-stroke: 2px #1A2632;
+  -webkit-text-fill-color: transparent; }

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAA;EACV,MAAM,EAAE,aAAa;EACrB,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,IAAI;CAYnB;;AAfD,AAKI,cALU,CAKV,EAAE,CAAA;EACE,MAAM,EAAE,aAAa;EACrB,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,aAAa,EAAE,MAAM;EACrB,mBAAmB,EAAE,GAAG,CCPzB,OAAO;EDQN,uBAAuB,EAAE,WAAW;CACvC",
+    "sources": [
+        "pgagency.scss",
+        "_colors.scss"
+    ],
+    "names": [],
+    "file": "pgagency.css"
+}

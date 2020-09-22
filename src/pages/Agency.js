@@ -1,5 +1,5 @@
 import React, { useRef, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/agency.scss';
 import {gsap} from "gsap";
@@ -10,6 +10,9 @@ import SEO from '../components/SEO';
 gsap.registerPlugin(ScrollTrigger);
 
 function Agency() {
+
+  let { path, url } = useRouteMatch();
+  console.log({url, path});
 
   const sl = useRef();
   const agencyReveal = React.createRef();
@@ -47,22 +50,22 @@ function Agency() {
       </div>
       <Row className='agency'ref={agencyReveal}> 
         <Col className="box">
-          <Link to="/Aboutus"><h3>E-Board</h3></Link>
+          <Link to="./agency/eboard"><h3>E-Board</h3></Link>
         </Col>
         <Col className="box">
-          <Link to="/Aboutus"><h3>Models</h3></Link>
+          <Link to="./agency/models"><h3>Models</h3></Link>
         </Col>
         <Col className="box">
-          <Link to="/Aboutus"><h3 style={{marginTop: '-1.5rem'}}>Fashion Designers</h3></Link>
+          <Link to="./agency/fashionDesigners"><h3 style={{marginTop: '-1.5rem'}}>Fashion Designers</h3></Link>
         </Col>
         <Col className="box">
-          <Link to="/Aboutus"><h3 style={{marginTop: '-1.5rem'}}>Graphic Designers</h3></Link>
+          <Link to="./agency/graphicDesigners"><h3 style={{marginTop: '-1.5rem'}}>Graphic Designers</h3></Link>
         </Col>
         <Col className="box">
-          <Link to="/Aboutus"><h3 style={{marginTop: '-2.3rem'}}>Videographers & Photographers</h3></Link>
+          <Link to="./agency/videoPhoto"><h3 style={{marginTop: '-2.3rem'}}>Videographers & Photographers</h3></Link>
         </Col>
         <Col className="box">
-          <Link to="/Aboutus"><h3>Makeup Artists</h3></Link>
+          <Link to="./agency/makeupArtists"><h3>Makeup Artists</h3></Link>
         </Col>
         <Col className="box">
           <Link to="/Aboutus"><h3>Stylists</h3></Link>

@@ -2,8 +2,7 @@
 
 :root{
     overflow-x: hidden;
-    scroll-behavior: smooth; 
-    color: $background;
+    scroll-behavior: smooth;
 }
 
 /***Homepage********/
@@ -82,7 +81,7 @@
 
       h1{
           color: $purple;
-          font-size: 5rem;
+          font-size: 4.7rem;
           position: relative;
           top: -1rem;
           font-family: "Vipnagorgialla", "Raleway", sans-serif; 
@@ -170,7 +169,7 @@
      
      .visit{
       position: relative;
-      left: 2rem;
+      left: 5rem;
       top: 10rem;
       font-weight: 300;
       font-size: 2rem;
@@ -205,10 +204,10 @@
     }
 
     .img2{
-      height: 55%;
+      height: 49%;
       position: relative;
-      top: 6rem;
-      right: 9rem;
+      top: 8rem;
+      right: 10rem;
       box-shadow: 8px 8px 5px rgb(105, 105, 105);
       border-radius: 3px;
     }

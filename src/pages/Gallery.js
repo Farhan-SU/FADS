@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, lazy, Suspense} from 'react';
+import React, {lazy, Suspense} from 'react';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/gallery.scss';
-import { Route, Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
+import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
 import SEO from '../components/SEO';
-import FooterSM from '../components/FooterSM';
-import Layout from '../components/Layout';
+
 
 const editorial = lazy(() => import('./gallery/editorial'));
 const shows = lazy(() => import('./gallery/shows'));

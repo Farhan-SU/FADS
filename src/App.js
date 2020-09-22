@@ -16,6 +16,10 @@ const shows = lazy(() => import('./pages/gallery/shows'));
 const homepg = lazy(() => import('./pages/homepg'));
 const agency = lazy(() => import('./pages/agency'));
 const press = lazy(() => import('./pages/press'));
+const eboard = lazy(() => import('./pages/agency/eboard'));
+const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
+const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
+const makeupArtists = lazy(() => import('./pages/agency/makeupArtists'));
 
 
 function App () {
@@ -76,13 +80,17 @@ function App () {
                                     </div>}>
     
                   <Switch location={location}>
-                    <RouteHome key="1" exact path="/" component={homepg} />
-                    <RouteWithLayout key="2" exact path="/gallery" component={gallery} />  
-                    <RouteWithLayout key="3" exact path="/gallery/editorial" component={editorial}/>
-                    <RouteWithLayout key="4" exact path="/gallery/shows" component={shows}/>
-                    <RouteWithLayout key="5" path="/aboutus" component={aboutus} />
-                    <RouteWithLayout key="6" path="/agency" component={agency} />
-                    <RouteWithLayout key="7" path="/press" component={press} />
+                    <RouteHome exact path="/" component={homepg} />
+                    <RouteWithLayout exact path="/gallery" component={gallery} />  
+                    <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
+                    <RouteWithLayout exact path="/gallery/shows" component={shows}/>
+                    <RouteWithLayout exact path="/agency/eboard" component={eboard}/>
+                    <RouteWithLayout exact path="/agency/fashionDesigners" component={fashionD}/>
+                    <RouteWithLayout exact path="/agency/graphicDesigners" component={graphicD}/>
+                    <RouteWithLayout exact path="/agency/makeupArtists" component={makeupArtists}/>
+                    <RouteWithLayout path="/aboutus" component={aboutus} />
+                    <RouteWithLayout path="/agency" component={agency} />
+                    <RouteWithLayout path="/press" component={press} />
                   </Switch>
                 </Suspense>
               </animated.div>

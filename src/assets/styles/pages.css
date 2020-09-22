@@ -1,7 +1,6 @@
 :root {
   overflow-x: hidden;
-  scroll-behavior: smooth;
-  color: #F9F6FD; }
+  scroll-behavior: smooth; }
 
 /***Homepage********/
 .layerfour .gallery h2, .ab-text h2, .layersix .jointxt h2 {
@@ -60,7 +59,7 @@
 
 .layerone .fadsintro h1 {
   color: #41076d;
-  font-size: 5rem;
+  font-size: 4.7rem;
   position: relative;
   top: -1rem;
   font-family: "Vipnagorgialla", "Raleway", sans-serif; }
@@ -149,7 +148,7 @@
 
 .layerfour .gallery .visit {
   position: relative;
-  left: 2rem;
+  left: 5rem;
   top: 10rem;
   font-weight: 300;
   font-size: 2rem;
@@ -196,10 +195,10 @@
   border-radius: 8px; }
 
 .layerfour .img2 {
-  height: 55%;
+  height: 49%;
   position: relative;
-  top: 6rem;
-  right: 9rem;
+  top: 8rem;
+  right: 10rem;
   -webkit-box-shadow: 8px 8px 5px dimgray;
   box-shadow: 8px 8px 5px dimgray;
   border-radius: 3px; }

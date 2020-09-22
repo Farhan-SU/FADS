@@ -2,15 +2,12 @@ import React, {useRef,useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import locomotiveScroll from "locomotive-scroll";
-import Scrollbar from 'smooth-scrollbar';
 import Galimg1 from '../assets/images/workwear/fuzzyhat.png';
 import Galimg2 from '../assets/images/homegal.png';
 import Aboutpic from '../assets/images/fadsfam.png';
 import Text from '../components/Textani';
 import '../assets/styles/pages.scss';
 import SEO from '../components/SEO';
-import Layout from '../components/Layout';
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -20,7 +17,6 @@ if (typeof window !== `undefined`) {
   export default function Homepg ()  {  
 
   const tl = useRef();
-  const pinthis = useRef();
   const fadsbio = useRef(null);
   const biotxt = useRef(null);
   const biocover = useRef(null);
@@ -176,8 +172,7 @@ if (typeof window !== `undefined`) {
         tl.current.kill();
       }
     });
-    
-    
+  
 
     return (
     <>

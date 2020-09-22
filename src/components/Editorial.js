@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import {Row, Col, Collapse} from 'react-bootstrap';
-import { Route, Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
+import {Row, Col} from 'react-bootstrap';
+import { Link, useRouteMatch} from 'react-router-dom';
 import '../assets/styles/gallery.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -36,15 +36,15 @@ const Editorial = () => {
         scrub: true,
         onEnter: batch =>
           gsap.to(batch, {
-            opacity: 1, 
+            autoAlpha: 1, 
             duration: 1,
             stagger: { each: 0.20},
             overwrite: true,
             ease: 'sine.in'
           }),
-        onLeave: batch => gsap.set(batch, { duration: 0.5, opacity: 0.3, overwrite: true, ease: 'sine.in' }, '-=1.5'),
+        onLeave: batch => gsap.set(batch, { duration: 1, autoAlpha: 0.1, overwrite: true, ease: 'sine.in' }, '-=1.5'),
         onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
-        onLeaveBack: batch =>  gsap.set(batch, { duration: 1, opacity: 0.5, overwrite: true, ease: 'sine.in'})  
+        onLeaveBack: batch =>  gsap.set(batch, { duration: 1,  autoAlpha: 0.1, overwrite: true, ease: 'sine.in'})  
       });
     }, []);
 
@@ -52,7 +52,7 @@ const Editorial = () => {
     images.current = [];
 
     useEffect(() => {
-      edtl.current = images.current.forEach((el, index) => {
+      edtl.current = images.current.forEach((el) => {
         gsap.fromTo(el, {
           opacity: 0,
           y: 300,
@@ -63,11 +63,9 @@ const Editorial = () => {
           ease: "circ.out",
           scrollTrigger: {
             id: 'edit-left',
-            trigger: ".left",
             trigger: el,
             start: 'top top+=500',
-            toggleActions: 'play none none reverse',
-            markers: {startColor: "blue", endColor: "yellow", fontSize: "12px"}
+            toggleActions: 'play none none reverse'
           }
         });
       });
@@ -83,7 +81,7 @@ const Editorial = () => {
     imagesright.current = [];
 
     useEffect(() => {
-      edtl.current = imagesright.current.forEach((al, index) => {
+      edtl.current = imagesright.current.forEach((al) => {
         gsap.fromTo(al, {
           y: -300,
           opacity: 0
@@ -94,11 +92,9 @@ const Editorial = () => {
           ease: "circ.out",
           scrollTrigger: {
             id: 'edit-right',
-            trigger: ".right",
             trigger: al,
             start: 'top top+=100',
-            toggleActions: 'play none none reverse',
-            markers: {startColor: "red", endColor: "green", fontSize: "12px"}
+            toggleActions: 'play none none reverse'
           }
         });
       });
@@ -114,7 +110,7 @@ const Editorial = () => {
     textRef.current = [];
 
     useEffect(() => {
-      edtl.current = textRef.current.forEach((text, index) => {
+      edtl.current = textRef.current.forEach((text) => {
         gsap.fromTo(text, {
           autoAlpha: 0,
         }, {
@@ -123,11 +119,9 @@ const Editorial = () => {
           ease: 'none',
           scrollTrigger: {
             id: 'edit-txt',
-            trigger: ".description",
             trigger: text,
             start: 'top top+=600',
             toggleActions: 'play none none reverse',
-            markers: {startColor: "orange", endColor: "gray", fontSize: "12px"}
           }
         });
       });
@@ -147,9 +141,9 @@ const Editorial = () => {
       <>
         <SEO
         pageMeta={{
-          title: "Agency",
-          keywords: ["Fashion", "Gallery", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
-          description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
+          title: "Editorial | FADS Gallery",
+          keywords: ["Fashion", "Gallery", "Editorial" ],
+          description: "Here at FADS, we have montly photoshoots with our Models and crew"
         }}>
       <>
       <div ref={line} className="editorialwrapper">
@@ -203,7 +197,7 @@ const Editorial = () => {
 
       <Row as='section' className="vintage">
         <Col md={4}className="left">
-          <img ref={images} src={VintageLeft} alt="jerkphotos" ref={addToRefs} className="img1"/>
+          <img src={VintageLeft} alt="jerkphotos" ref={addToRefs} className="img1"/>
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="vintage-header">
@@ -221,7 +215,7 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <img src={VintageRight} alt="jerkphotos" ref={addToRefsright} className="img2"/>
+          <img src={VintageRight} alt="jerkphotos" ref={addToRefsright} className="exception-img2"/>
         </Col>
       </Row>
 
