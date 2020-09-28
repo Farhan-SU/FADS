@@ -1,12 +1,10 @@
 @import 'colors'; 
 
 .eboardwrapper{
-    border: 1px solid red;
-    height: 1000px;
-    margin-top: 4rem;
-
+    height: 100%;
+    margin: 4rem auto 2.5rem auto;
+  
     h1{
-        border: 1px solid red;
         font-size: 5rem;
         display: flex;
         justify-content: center;
@@ -14,5 +12,35 @@
         align-content: center;
         -webkit-text-stroke: 2px $text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .members{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5rem 3rem 0 3rem;
+        text-align: center;
+        flex-wrap: wrap;
+
+        .member-intro{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 30%;
+            padding: 1.2rem;
+            margin: 2rem 0;
+        }
+        h2{
+            letter-spacing: 0.2rem;
+            color: $text;
+        }
+        h4{
+            line-height: 2.3rem;
+            margin-top: 0.5rem;
+        }
+        img{
+         max-width: 80%;
+         margin: 0 auto 2rem auto;
+        }
     }
 }

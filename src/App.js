@@ -69,6 +69,7 @@ function App () {
     } else {
         return (
           <>
+          <main>
             <div className="routes">
             {transitions.map(({ item : location, props, key }) => (
               <animated.div key={key} style={props}>
@@ -96,6 +97,7 @@ function App () {
               </animated.div>
             ))}
             </div>
+            </main>
         </>
         );
     };

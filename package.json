@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^10.4.0",
     "apollo-boost": "^0.4.9",
     "bootstrap": "^4.5.0",
+    "graphcms-image": "^1.1.0-beta4",
     "graphql": "^15.3.0",
     "gsap": "^3.4.2",
     "install": "^0.13.0",

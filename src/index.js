@@ -8,17 +8,17 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';
 
 const client = new ApolloClient({
-  link: new HttpLink({ uri: 'https://api-us-east-1.graphcms.com/v2/ckf9qzcqu08cb01wf2wtlbco8/master' }),
+  link: new HttpLink({ uri: 'https://api-us-east-1.graphcms.com/v2/ckf8z1uao08mm01wghz4k17at/master' }),
   cache: new InMemoryCache()
 });
 
 ReactDOM.render(
   <React.StrictMode>
-  <BrowserRouter>
   <ApolloProvider client={client}>
+  <BrowserRouter>
     <App/>  
-  </ApolloProvider>
   </BrowserRouter>
+  </ApolloProvider>
   </React.StrictMode>, 
   document.getElementById('root')
 );

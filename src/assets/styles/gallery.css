@@ -73,6 +73,7 @@
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
+  margin-bottom: 2rem;
 }
 
 .editorialwrapper .left, .editorialwrapper .right, .editorialwrapper .sleft, .editorialwrapper .sright, .show-wrapper .left, .show-wrapper .right, .show-wrapper .sleft, .show-wrapper .sright {

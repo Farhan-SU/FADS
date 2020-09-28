@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Shows from '../../components/Editorial';
-
+import Shows from '../../components/Shows';
 
 const shows = () => {
 

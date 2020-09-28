@@ -58,8 +58,7 @@ const Shows = () => {
             trigger: ".sleft",
             trigger: el,
             start: 'top top+=500',
-            toggleActions: 'play none none reverse',
-            markers: {startColor: "blue", endColor: "yellow", fontSize: "12px"}
+            toggleActions: 'play none none reverse'
           }
         });
       });
@@ -88,8 +87,7 @@ const Shows = () => {
             trigger: ".sright",
             trigger: al,
             start: 'top top+=100',
-            toggleActions: 'play none none reverse',
-            markers: {startColor: "red", endColor: "green", fontSize: "12px"}
+            toggleActions: 'play none none reverse'
           }
         });
       });
@@ -116,8 +114,7 @@ const Shows = () => {
             trigger: ".description",
             trigger: text,
             start: 'top top+=600',
-            toggleActions: 'play none none reverse',
-            markers: {startColor: "orange", endColor: "gray", fontSize: "12px"}
+            toggleActions: 'play none none reverse'
           }
         });
       });

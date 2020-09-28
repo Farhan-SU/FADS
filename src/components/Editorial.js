@@ -36,6 +36,7 @@ const Editorial = () => {
         scrub: true,
         onEnter: batch =>
           gsap.to(batch, {
+            id: "boxs",
             autoAlpha: 1, 
             duration: 1,
             stagger: { each: 0.20},
@@ -44,7 +45,7 @@ const Editorial = () => {
           }),
         onLeave: batch => gsap.set(batch, { duration: 1, autoAlpha: 0.1, overwrite: true, ease: 'sine.in' }, '-=1.5'),
         onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
-        onLeaveBack: batch =>  gsap.set(batch, { duration: 1,  autoAlpha: 0.1, overwrite: true, ease: 'sine.in'})  
+        onLeaveBack: batch =>  gsap.set(batch, { duration: 1,  autoAlpha: 0.1, overwrite: true, ease: 'sine.in'}) 
       });
     }, []);
 
