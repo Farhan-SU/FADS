@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
-import {Switch, Route, useLocation, BrowserRouter } from "react-router-dom";
-import { useTransition, animated } from "react-spring";
+import {Switch, Route, useLocation, withRouter} from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';
 import Footer from './components/Footer';
 import FooterSM from './components/FooterSM';
@@ -10,16 +9,28 @@ import './assets/styles/layout.scss';
 import './App.css';
 
 const aboutus = lazy(() => import('./pages/aboutus'));
+const homepg = lazy(() => import('./pages/homepg'));
+
+/*Gallery Routes*/
 const gallery = lazy(() => import('./pages/gallery'));
 const editorial = lazy(() => import('./pages/gallery/editorial'));
 const shows = lazy(() => import('./pages/gallery/shows'));
-const homepg = lazy(() => import('./pages/homepg'));
+const aline = lazy(() => import('./pages/gallery/editorials/aline'));
+const jerkFads = lazy(() => import('./pages/gallery/editorials/jerk-fads'));
+const winter = lazy(() => import('./pages/gallery/editorials/winter'));
+const workWear = lazy(() => import('./pages/gallery/editorials/work-wear-vintage'));
+const circus = lazy(() => import('./pages/gallery/shows/circus'));
+const thegallery = lazy(() => import('./pages/gallery/shows/thegallery'));
+const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
+
+/*Agency Routes*/
 const agency = lazy(() => import('./pages/agency'));
 const press = lazy(() => import('./pages/press'));
 const eboard = lazy(() => import('./pages/agency/eboard'));
 const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
 const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
 const makeupArtists = lazy(() => import('./pages/agency/makeupArtists'));
+const bio = lazy(() => import('./pages/agency/bio'));
 
 
 function App () {
@@ -28,7 +39,7 @@ function App () {
     return (
       <>
         <Layout/>
-        <Route {...rest} render={ () => React.createElement(component) } />
+        <Route {...rest} component={component} />
         <footer>
         <FooterSM/>
         </footer>
@@ -39,7 +50,7 @@ function App () {
     return (
       <>
         <Layout/>
-        <Route render={ () => React.createElement(component) } />
+        <Route component={component} />
         <footer>
         <Footer/>
         </footer>
@@ -50,7 +61,7 @@ function App () {
   const [TimePassed, setTimePassed] = useState(false);
 
   useEffect(() => {
-    let timer = setTimeout(() => setTimePassed(true), 6000)
+    let timer = setTimeout(() => setTimePassed(true), 300)
  
     return () => clearTimeout(timer);  
   },[TimePassed]);
@@ -58,51 +69,46 @@ function App () {
 
   const location = useLocation();
 
-  const transitions = useTransition(location, location => location.pathname, {
-    from: { opacity: 0, transform: 'translate3d(100% ,0, 0)' },
-    enter: { opacity: 1, transform: 'translate3d(0% ,0, 0)' },
-    leave: { opacity: 0, transform: 'translate3d(-50% ,0, 0)' }
-  })
-
     if (!TimePassed) {
         return <Splash/>
     } else {
         return (
           <>
-          <main>
             <div className="routes">
-            {transitions.map(({ item : location, props, key }) => (
-              <animated.div key={key} style={props}>
-    
-                <Suspense fallback={<div>
-                                      <Spinner className="spinner" animation="border" role="status">
-                                        <span className="sr-only">Loading...</span>
-                                      </Spinner>
-                                    </div>}>
-    
+            <Suspense fallback={<div>
+                      <Spinner className="spinner" animation="border" role="status">
+                          <span className="sr-only">Loading...</span>
+                      </Spinner>
+                              </div>}>
+                  
                   <Switch location={location}>
-                    <RouteHome exact path="/" component={homepg} />
+                    <RouteHome exact path="/" component={homepg}/>
                     <RouteWithLayout exact path="/gallery" component={gallery} />  
                     <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
+                    <RouteWithLayout path="/gallery/editorials/aline" component={aline}/>
+                    <RouteWithLayout exact path="/gallery/editorials/jerk-fads" component={jerkFads}/>
+                    <RouteWithLayout exact path="/gallery/editorials/winter" component={winter}/>
+                    <RouteWithLayout exact path="/gallery/editorials/work-wear-vintage" component={workWear}/>
                     <RouteWithLayout exact path="/gallery/shows" component={shows}/>
+                    <RouteWithLayout exact path="/gallery/shows/circus" component={circus}/>
+                    <RouteWithLayout exact path="/gallery/shows/thegallery" component={thegallery}/>
+                    <RouteWithLayout exact path="/gallery/shows/tomorrow-land" component={tomorrow}/>
+                    <RouteWithLayout exact path="/agency" component={agency} />
                     <RouteWithLayout exact path="/agency/eboard" component={eboard}/>
                     <RouteWithLayout exact path="/agency/fashionDesigners" component={fashionD}/>
                     <RouteWithLayout exact path="/agency/graphicDesigners" component={graphicD}/>
                     <RouteWithLayout exact path="/agency/makeupArtists" component={makeupArtists}/>
+                    <RouteWithLayout path="/agency/bio/:slug" component={bio}/>
                     <RouteWithLayout path="/aboutus" component={aboutus} />
-                    <RouteWithLayout path="/agency" component={agency} />
                     <RouteWithLayout path="/press" component={press} />
                   </Switch>
                 </Suspense>
-              </animated.div>
-            ))}
             </div>
-            </main>
         </>
         );
     };
  
 }
 
-export default App;
+export default withRouter(App);
 

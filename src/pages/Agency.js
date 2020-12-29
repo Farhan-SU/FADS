@@ -15,7 +15,7 @@ function Agency() {
   console.log({url, path});
 
   const sl = useRef();
-  const agencyReveal = React.createRef();
+  const agencyReveal = useRef();
 
   useEffect(() => {
     gsap.set(agencyReveal.current.children, { y: 150 });
@@ -46,7 +46,13 @@ function Agency() {
     }}>
     <div className="agency-home">
       <div className="intro-a">
-        <h1>Our Expertise</h1>
+        <div className="experts">
+        <h1 contentEditable="false" role='textbox' aria-multiline='true'>Our Expertise</h1>
+        <h3>We are more than just, we are also a fashion and digital creative agency. 
+          We have some of the most talented individuals on our team. From designers, 
+          photographers, models, and more. Meet the members of each team and get to 
+          know them and their work. </h3>
+        </div>
       </div>
       <Row className='agency'ref={agencyReveal}> 
         <Col className="box">

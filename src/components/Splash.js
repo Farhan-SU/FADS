@@ -1,21 +1,23 @@
 import React from 'react';
 import '../assets/styles/layout.scss';
 import {Container, Row} from 'react-bootstrap'
+import ImgWepb from './ImgWebp';
+import navLogo from '../assets/images/navLogo.gif';
+import navLogoWeb from '../assets/images/navLogo.webp';
 
 export default class SplashScreen extends React.PureComponent {
     
     render() {
         return (
         <Container fluid="true">
-           <div className="splashwrapper">
-            <Row>
-                <div>
-                    <video className="splash" autoPlay loop muted>
-                    <source src={require('../assets/images/FadsLogo.mp4')} type="video/mp4" alt="logo"/>
-                </video>
-                </div>
+            <Row className="splashwrapper">
+                <ImgWepb
+                src={navLogoWeb}
+                fallback={navLogo}
+                alt="FADS Logo"
+                style={{width: '100%'}}
+              />
             </Row>
-           </div>
         </Container>
         );
     }

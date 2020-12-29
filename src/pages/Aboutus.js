@@ -1,14 +1,12 @@
-import React from 'react';
-import gsap from "gsap";
+import React, {useRef, useEffect, useMemo, createRef } from 'react';
+import AboutFADS from '../components/AboutFADS';
 
-const aboutus = () => {
+  
+export default function Aboutus () {
 
     return (
         <>
-      <div style={{height: '100%'}}>
-        <h1>IDk what belongs here</h1>
-    </div>
+      <AboutFADS/>
         </>
     )
-}
-export default aboutus;
+};

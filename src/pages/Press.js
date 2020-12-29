@@ -1,16 +1,34 @@
 import React from "react";
-import '../assets/styles/pages.scss';
+import { Col, Row, CardDeck, Card } from "react-bootstrap";
+/*import '../assets/styles/press.scss';*/
+import SEO from '../components/SEO';
+import F4Speakers from '../components/F4speakers';
+import NewsDeck from '../components/NewsCard';
+import Circus from "../components/Circus";
+import Tomorrow from "../components/Tomorrow";
+import TheGallery from "../components/TheGallery";
 
+  function press() {
 
-const press = () => {
-
-  return (
-    <>
-    <div style={{height: '100vh'}}>
-      WHOOP THIS IS STILL IN PROGRESS
-    </div>
-    </>
-  );
-};
+    return (
+      <>
+      <TheGallery/>
+      {/***
+      <SEO
+      pageMeta={{
+        title: "Press",
+        keywords: ["Fashion", "F4 Speakers", "Agency", "Interviews", "Alumni"],
+        description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major."
+      }}>
+      <>
+      <div className="pressPage">
+      <F4Speakers/>
+      <NewsDeck/>
+      </div>
+      </>
+    </SEO>***/}
+      </>
+    );
+  }
   
 export default press;

@@ -5,26 +5,32 @@ import '../assets/styles/pages.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Reveal = (props) => {
+const Reveal = ({ children, className }) => {
+            
+  const revealRef = useRef(null);
 
-    const wrapperRef = useRef();
-    const tl = React.createRefRef();
-    
-    useEffect(() =>{
-      tl.current = gsap.timeline({
-        scrollTrigger: {
-          trigger: wrapperRef.current,
-          scrub: true,
-          start: "top 30%" ,
-          end: "bottom 100%",
-        }
-      })
-      .from(wrapperRef.current, {duration: 1, autoAlpha: 0, transformOrigin: '200px left'})
-      .to(wrapperRef.current, { duration: 1, autoAlpha: 1, transformOrigin: '200px left'})
-    }, []);
-    
-    return <div ref={wrapperRef}>{props.children}</div>
+  useEffect(() => {
+  gsap.from(revealRef.current, {
+      id: "reveal",
+      scrollTrigger: revealRef.current,
+      y: 150,
+      scrub: true,
+      autoAlpha: 1, 
+      ease: "expo", 
+      duration: 1.25,
+      stagger: { each: 0.30},
+      start: "5% center"
+  });
 
-}
+  return () => {
+    if (ScrollTrigger.getById('reveal')) {
+      ScrollTrigger.getById('reveal').kill();
+    }
+  };
+  }, []);
+
+  return <div className={className} ref={revealRef}>{children}</div>;
+};
+
 export default Reveal;
 

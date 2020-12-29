@@ -4,10 +4,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Galimg1 from '../assets/images/workwear/fuzzyhat.png';
 import Galimg2 from '../assets/images/homegal.png';
-import Aboutpic from '../assets/images/fadsfam.png';
+import Aboutpic from '../assets/images/fadsfam.gif';
 import Text from '../components/Textani';
 import '../assets/styles/pages.scss';
 import SEO from '../components/SEO';
+import Button from '../components/Button'
+import {Row, Col} from 'react-bootstrap'
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -21,17 +23,17 @@ if (typeof window !== `undefined`) {
   const biotxt = useRef(null);
   const biocover = useRef(null);
 
+
   useEffect(() => {
     tl.current = gsap.timeline({
        scrollTrigger: {
          trigger: fadsbio.current,
          id: "hometl",
          start: "top top",
-         end: '+=950',
+         end: '+=850',
          pin: biotxt.current,
          pinReparent: true,
-         toggleActions: "play none none reverse"
-         
+         toggleActions: "play pause resume reverse"
        }
      }) 
      .fromTo(biocover.current, {y: 0}, {duration: 1.3, y: 900, ease: 'sine.in'})
@@ -60,9 +62,9 @@ if (typeof window !== `undefined`) {
         scrollTrigger: {
           id: 'container-ref',
           trigger: containerRef.current,
-          scrub: true,
-          start: "top top" ,
-          end: "bottom bottom"
+          scrub: 0.1,
+          start: "0 0" ,
+          end: "+400",
         }
       })
       .from(containerRef.current, {duration: 1.5, autoAlpha: 0, ease: 'power2.inOut'}, "-=1")
@@ -70,7 +72,7 @@ if (typeof window !== `undefined`) {
       .from(galleryRef1.current, {duration: 1.5, autoAlpha: 0, y: 40,ease: 'back.inOut(1.4)'}, "nowstart")
       .from(image1.current, {duration: 1.9, autoAlpha: 0 , x: -350, ease: "circ.out",})
       .from(galleryRef2.current, {duration: 1.5, autoAlpha: 0, y: 40,  ease: 'back.inOut(1.4)'})
-      .from(image2.current, {duration: 1.3, autoAlpha: 0 , x: 350, ease: "circ.out",})
+      .from(image2.current, {duration: 1.3, autoAlpha: 0 , x: 350, ease: "circ.out"})
       .from(textRef.current, {duration: 3, autoAlpha: 0, delay: 0.8});
 
       return () => {
@@ -97,13 +99,12 @@ if (typeof window !== `undefined`) {
           id: 'about-ref',
           trigger: AboutRef.current,
           scrub: true,
-          start: "top 5%" ,
+          start: "top 9%" ,
           end: "bottom bottom"
         }
       })
-      .to(AboutRef.current, {duration: 1, ease: 'power1.inOut', autoAlpha: 1} )
-      .fromTo(overlayref.current, {duration: 2, y: 0, autoAlpha: 1, backgroundColor: "#907597"}, 
-      {duration: 2, y: 900, autoAlpha: 1, ease: 'sine.in',backgroundColor: "#907597"})
+      .fromTo(overlayref.current, {duration: 2, y: 0, autoAlpha: 1, backgroundColor: "#AC9FB2"}, 
+      {duration: 2, x: -1700, autoAlpha: 1, ease: 'sine.in',backgroundColor: "#AC9FB2"})
       .add("reveal", "+=1")
       .from(abRef.current, {duration: 0.7, autoAlpha: 0, y: 18, ease: 'sine.in'})
       .from(imgabout.current, {duration: 1, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"}, 'reveal')
@@ -113,7 +114,6 @@ if (typeof window !== `undefined`) {
         if (ScrollTrigger.getById('about-ref')) {
           ScrollTrigger.getById('about-ref').kill();
         }
-        
         tl.current.kill();
       };
     }, []);
@@ -182,13 +182,17 @@ if (typeof window !== `undefined`) {
       keywords: ["Fashion", "Gallery", "Agency"],
       description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major"
     }}>
-      <>
       <div className="layerone">
-        <div className="fadsintro">
-          <h1>Fashion and Design Society</h1>
-        </div>
+        <Row className="fadsintro">
+          <Col className="firstcol" md={8}>
+          <h1>Fashion and <br/>Design <br/>Society</h1>
+          </Col>
+          <Col className="secondcol" md={4}>
+          <Button/>
+          </Col>
+        </Row>
       </div>
-      </>
+  
       <div className="scrollable" data-scrollbar>
       <div className="wrap-overflow">
       <>
@@ -196,7 +200,8 @@ if (typeof window !== `undefined`) {
         <div> 
           <div ref={biocover} className="bioreveal"/> 
           <div className="text">
-          <h3 ref={biotxt}><em>FADS offers students a space to pursue fashion
+          <h3 ref={biotxt} contentEditable="false" role='textbox' aria-multiline='true'>
+            <em>FADS offers students a space to pursue fashion
                 related interests outside of their major, with
                 the opportunities and professional environment
                 to prepare them for creative careers.</em>
@@ -229,7 +234,7 @@ if (typeof window !== `undefined`) {
               <div ref={overlayref} className='overlay'/>
           </div>
           <div className="ab-text">
-            <h2 ref={abRef}>ABOUT US</h2>
+            <h2 ref={abRef} contentEditable="false" role='textbox' aria-multiline='false'>ABOUT US</h2>
             <h3 ref={abtextref}>Meet the diverse group of career minded 
             individuals at Syracuse University who share 
             a passion for creativity, design, and fashion.</h3>

@@ -4,21 +4,23 @@ import {Row, Col} from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav';
 import '../assets/styles/layout.scss';
 import useDocumentScrollThrottled from './useDocumentScrollThrottled';
+import ImgWepb from './ImgWebp';
+import navLogo from '../assets/images/navLogo.gif';
+import navLogoWeb from '../assets/images/navLogo.webp';
 
 
 function Navbar() {
-
-  let history = useHistory();
+  const history = useHistory();
 
   function goHome() {
-    history.goBack("/");
+  history.goBack("/");
   }
 
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
-  const MINIMUM_SCROLL = 100;
-  const TIMEOUT_DELAY = 500;
+  const MINIMUM_SCROLL = 150;
+  const TIMEOUT_DELAY = 400;
 
   useDocumentScrollThrottled(callbackData => {
     const { previousScrollTop, currentScrollTop } = callbackData;
@@ -35,37 +37,39 @@ function Navbar() {
   const shadowStyle = shouldShowShadow ? 'shadow' : '';
   const hiddenStyle = shouldHideHeader ? 'hidden' : '';
 
+
   return (
-      <Row>
-       <div className='navwrapper'>
+      <Row className='navwrapper'>
         <div className={`header ${shadowStyle} ${hiddenStyle}`}>
-          <Link to="/" onClick={goHome}>
-            <Col md={5}>
-              <video autoPlay loop  className='logo'> 
-              <source src={require('../assets/images/logoonly.mp4')} type='video/mp4'/>
-              </video>
+          <Link to="/" exact onClick={goHome}>
+            <Col md={true} md={5} className="logoCol">
+              <ImgWepb
+                src={navLogoWeb}
+                fallback={navLogo}
+                alt="FADS Logo"
+                style={{width: '50%'}}
+              />
             </Col>
           </Link>
-          <Col md={7}>
-          <Nav className='nav' activeKey="/home">
+          <Col md={true} md={5} className="linkList">
+          <Nav className='nav'>
             <Nav.Item>
-                 <Link to="/Gallery" className="navlinks" >Gallery</Link>
+                 <Link to="/Gallery" exact className="navlinks">Gallery</Link>
             </Nav.Item>
 
             <Nav.Item>
-                  <Link to="/Aboutus"  className="navlinks">About Us</Link>
+                  <Link to="/Aboutus" exact className="navlinks">About Us</Link>
             </Nav.Item>
             
             <Nav.Item>
                   <Link to="/Agency" className="navlinks">Agency</Link>
             </Nav.Item>
-
+            
             <Nav.Item>
-                  <Link to="/Press" className="navlinks">Press</Link>
+                  <Link to="/Press" exact className="navlinks">Press</Link>
             </Nav.Item>
           </Nav>
           </Col>
-          </div>
           </div>
           </Row>
   );

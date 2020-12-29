@@ -6,6 +6,7 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from './SEO';
 
+
 /**Images*/
 import AlineLeft from '../assets/images/aline/nojacket.png';
 import AlineRight from '../assets/images/aline/jacket.png';
@@ -24,9 +25,6 @@ if (typeof window !== `undefined`) {
 
 const Editorial = () => {
   
-  let { path, url } = useRouteMatch();
-  console.log({url, path});
- 
     const edtl = useRef();
     const line = React.createRef();
 
@@ -134,10 +132,6 @@ const Editorial = () => {
       }
     };
 
-    useEffect(() => {
-      ScrollTrigger.getAll().forEach(edtl => edtl.refresh());
-    },[]);
-
     return(
       <>
         <SEO
@@ -154,12 +148,14 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row className="header">
+        <Link to="/gallery/editorials/aline">
           <Col xs={12}>
-          <h3>April 2018</h3>
+          <h3>May 2019</h3>
           </Col>
           <Col xs={12}>
           <h1>Aline</h1>
           </Col>
+          </Link>
         </Row>
           <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
@@ -178,12 +174,14 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
+        <Link to="/gallery/editorials/jerk-fads">
           <Col xs={12}>
-          <h3>April 2018</h3>
+          <h3>April 2019</h3>
           </Col>
           <Col xs={12}>
           <h1>JERK X FADS</h1>
           </Col>
+          </Link>
         </Row>
         <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
@@ -202,12 +200,14 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="vintage-header">
+        <Link to="/gallery/editorials/work-wear-vintage">
           <Col xs={12}>
            <h3>Sept 2019</h3>
           </Col>
           <Col xs={12}>
           <h1>Work<br/>wear Vintage</h1>
           </Col>
+        </Link>
         </Row>
         <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
@@ -227,12 +227,14 @@ const Editorial = () => {
         <Col md={4}>
         <Row className="description">
         <Row ref={addToRefstext} className="header">
-        <Col xs={12}>
-          <h3>December 2019</h3>
-        </Col>
-        <Col xs={12}>
-          <h1>Winter</h1>
-        </Col>
+          <Link to="/gallery/editorials/winter">
+            <Col xs={12}>
+              <h3>December 2018</h3>
+            </Col>
+            <Col xs={12}>
+              <h1>Winter</h1>
+            </Col>
+          </Link>
         </Row>
         </Row>
         </Col>

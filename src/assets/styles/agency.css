@@ -1,28 +1,38 @@
 .agency-home {
-  background: url("../images/halfcircle.svg") no-repeat 0% 10%, url("../images/halfcircle-right.svg") no-repeat 100% 120%;
-  background-size: 620px;
+  background: url("../images/agencyBgT2.gif") no-repeat 60px;
+  background-color: #e2e2e2;
+  background-size: cover;
   height: 100%;
   width: 100vw;
   overflow: hidden;
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
-}
+  padding-bottom: 4rem; }
 
 .intro-a {
-  height: 90vh;
+  height: 100vh;
   color: #1A2632;
-}
+  margin-top: 6rem;
+  margin-bottom: 3rem; }
 
-.intro-a h1 {
-  font-size: 9rem;
-  text-transform: uppercase;
+.intro-a .experts {
   position: relative;
-  top: 10rem;
-  left: 8rem;
+  top: 8rem;
+  left: 6rem;
+  word-break: break-word;
+  width: 90%; }
+
+.intro-a .experts h1 {
+  font-size: 8rem;
+  padding-right: 3rem;
+  text-transform: uppercase;
   letter-spacing: 15px;
-  width: 50%;
   line-height: 8rem;
-}
+  mix-blend-mode: hard-light; }
+
+.intro-a .experts h3 {
+  width: 54%;
+  margin-top: 2rem;
+  line-height: 2.3rem;
+  font-size: 1.5rem; }
 
 .agency {
   height: 100%;
@@ -33,40 +43,37 @@
   margin-left: 0.5rem;
   padding: auto 3rem;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-align: center;
   align-items: center;
-}
+  -ms-flex-line-pack: center;
+  align-content: center;
+  align-items: center; }
 
 .agency .box {
   height: 200px;
   max-width: 300px;
   width: 300px;
-  margin: 2rem 6rem;
+  margin: 2rem 5.4rem;
   text-align: center;
-  background-color: #907597;
+  background-color: #61526d;
   border-radius: 5px;
   -webkit-box-shadow: 4px 7px 3px  #47474717;
-          box-shadow: 4px 7px 3px  #47474717;
-}
+  box-shadow: 4px 7px 3px  #47474717; }
+
+.agency .box:hover {
+  background-color: #a57daf;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  cursor: pointer; }
 
 .agency .box h3 {
   color: #ffefd7;
   font-size: 2rem;
   font-weight: 400;
   position: relative;
-  top: 5rem;
-}
+  top: 5rem; }
 
-.agency .box h3:hover {
-  -webkit-transition: all 600ms ease-in-out;
-  transition: all 600ms ease-in-out;
-  -webkit-text-stroke: 1px #ffefd7;
-  -webkit-text-fill-color: transparent;
-}
 /*# sourceMappingURL=agency.css.map */

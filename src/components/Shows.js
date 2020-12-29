@@ -1,17 +1,19 @@
 import React, { useRef, useEffect } from "react";
-import {Row, Col, Collapse} from 'react-bootstrap';
+import {withRouter} from 'react-router-dom';
+import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/gallery.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from './SEO';
 
 /**images**/
-import TheGalLeft from "../assets/images/the_gallery/closeup.jpg";
+import TheGalLeft from "../assets/images/the_gallery/closeup.png";
 import TheGalRight from "../assets/images/the_gallery/arch.png";
 import CircusLeft from '../assets/images/circus/bw.png';
-import CircusRight from '../assets/images/circus/gold.jpg';
-import TlandLeft from '../assets/images/tomorrowland/fashionline.jpeg';
-import TlandRight from '../assets/images/tomorrowland/mask.jpeg';
+import CircusRight from '../assets/images/circus/gold.png';
+import TlandLeft from '../assets/images/tomorrowland/fashionline.png';
+import TlandRight from '../assets/images/tomorrowland/mask.png';
+import { Link } from "react-router-dom";
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -146,12 +148,14 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row className="header">
+          <Link to="/gallery/shows/thegallery">
           <Col noGutter={true} xs={12}>
           <h3>Spring 2020</h3>
           </Col>
           <Col xs={12}>
           <h1>The Gallery</h1>
           </Col>
+          </Link>
         </Row>
           <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
@@ -170,12 +174,14 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
+        <Link exact to="/gallery/shows/circus">
           <Col noGutter={true} xs={12}>
           <h3>Spring 2019</h3>
           </Col>
           <Col xs={12}>
-          <h1>Circus</h1>
+          <h1>Night Circus</h1>
           </Col>
+          </Link>
         </Row>
         <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
@@ -194,12 +200,14 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
+        <Link exact to="/gallery/shows/tomorrow-land">
           <Col noGutter={true} xs={12}>
            <h3>Spring 2018</h3>
           </Col>
           <Col noGutter={true} xs={12}>
           <h1>Tomorrow<br/>Land</h1>
           </Col>
+        </Link>
         </Row>
         </Col>
         <Col md={4} className="sright">
@@ -213,4 +221,4 @@ const Shows = () => {
     )
 }
 
-export default Shows;
+export default withRouter(Shows);
