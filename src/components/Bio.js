@@ -112,8 +112,6 @@ const pictures = [
   };
 
 export default function Bio() {
-
-
     const sliderRef = useRef(null);
 
     useEffect(() => {

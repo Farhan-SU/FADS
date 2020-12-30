@@ -18,19 +18,23 @@
 .biowrapper{
     height: 100%;
     overflow-x: hidden;
-    margin-top: 2rem;
+    margin-top: 8rem;
 
     .bio-header{
         margin-top: 4rem;
         text-align: center;
 
         h1{
-            font-size: 4.5rem;
+            font-size: 5rem;
             letter-spacing: 0.3rem;
             margin-bottom: 1rem;
+            color: $bluegray;
         }
         h4{
             font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            color: $bluegray;
         }
         .bannerBio{
             margin: 3rem 0;

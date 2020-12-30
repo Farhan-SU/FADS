@@ -4,15 +4,13 @@ import { Col, Row, CardDeck, Card } from "react-bootstrap";
 import SEO from '../components/SEO';
 import F4Speakers from '../components/F4speakers';
 import NewsDeck from '../components/NewsCard';
-import Circus from "../components/Circus";
-import Tomorrow from "../components/Tomorrow";
-import TheGallery from "../components/TheGallery";
+import Bio from "../components/Bio";
 
   function press() {
 
     return (
       <>
-      <TheGallery/>
+      <Bio/>
       {/***
       <SEO
       pageMeta={{

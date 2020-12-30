@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState} from 'react';
 import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
 import {Row, Col, Container} from 'react-bootstrap';
-import '../../assets/styles/bio.scss';
 import SEO from "../../components/SEO";
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import Banner from '../../assets/images/bannerFarhan.png';
 import BioPic from '../../assets/images/imgBiosample.png';
+import '../../assets/styles/bio.scss';
 import {ReactComponent as Facebook} from '../../assets/images/facebook.svg';
 import {ReactComponent as IG} from '../../assets/images/instagram.svg';
 import {ReactComponent as Linkedin} from '../../assets/images/linkedin.svg';
