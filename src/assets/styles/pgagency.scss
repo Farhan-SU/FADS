@@ -2,26 +2,29 @@
 
 .error-bio{
     height: 100vh;
+    padding-top: 3rem;
     background-color: $bluegray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
      h1{
        font-size: 4rem;
        color: $heading;
        letter-spacing: 0.4rem;
        position: relative;
-       top: 20%;
-       left: 18%;
        line-height: 4rem;
-       width: 60%;
+       width: 100%;
        text-align: center;
      }
   }
   
 .eboardwrapper{
     height: 100%;
-    margin: 4rem auto 7.5rem auto;
+    margin: 9rem auto 5rem auto;
   
     h1{
-        font-size: 12rem;
+        font-size: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;

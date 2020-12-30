@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../assets/styles/galleryDetail.scss';
 import WebpG from './ImgWebp';
+import SEO from './SEO';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -37,7 +38,6 @@ function Circus () {
                     end: () => xendvalue
                 }
             })
-            .to(parallaxRef.current,{x: 80, duration: 0.4, opacity: 0.3, ease: 'sine.in'})
             .to(panelSRef.current, {x : () => panelend}, 0);
 
         } else {
@@ -73,7 +73,6 @@ function Circus () {
             if (ScrollTrigger.getById('panelsJerk')) {
             ScrollTrigger.getById('panelsJerk').kill();
             };
-            fashiontl.current.kill();
         };
     }, []);
 
@@ -85,6 +84,12 @@ function Circus () {
 
     return (
         <>
+        <SEO  
+          pageMeta={{
+          title: "Night Circus - Fall 2019 | FADS",
+          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          description: "Night Circus is our Spring 2019 show"
+        }}>
         <div className="yearlyShows">
          <div className="spacer">
              <div className="circusSpacer">
@@ -101,9 +106,8 @@ function Circus () {
                         <WebpG
                             src={require('../assets/images/circus/bw.webp')}
                             fallback={require('../assets/images/circus/bw.png')}
-                            alt="FADS Logo"
+                            alt="picture from Night Circus shoots"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                         </div>
                     </div>
@@ -112,9 +116,8 @@ function Circus () {
                     <WebpG
                             src={require('../assets/images/circus/redboots.webp')}
                             fallback={require('../assets/images/circus/redboots.png')}
-                            alt="FADS Logo"
+                            alt="picture from Night Circus shoots"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -123,9 +126,8 @@ function Circus () {
                     <WebpG
                             src={require('../assets/images/circus/gold.webp')}
                             fallback={require('../assets/images/circus/gold.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            style={{width: '100%'}}
+                            alt="picture from Night Circus shoots"
+                            className="panel_img" 
                         />
                     </div>
                 </div>
@@ -134,9 +136,8 @@ function Circus () {
                     <WebpG
                             src={require('../assets/images/circus/reddress.webp')}
                             fallback={require('../assets/images/circus/reddress.png')}
-                            alt="FADS Logo"
+                            alt="picture from Night Circus shoots"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -145,9 +146,8 @@ function Circus () {
                     <WebpG
                             src={require('../assets/images/circus/pins.webp')}
                             fallback={require('../assets/images/circus/pins.png')}
-                            alt="FADS Logo"
+                            alt="picture from Night Circus shoots"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -156,9 +156,8 @@ function Circus () {
                     <WebpG
                             src={require('../assets/images/circus/magic.webp')}
                             fallback={require('../assets/images/circus/magic.png')}
-                            alt="FADS Logo"
+                            alt="picture from Night Circus shoots"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -179,7 +178,8 @@ function Circus () {
             </div>
         </div>
     </div>
-        </>
+    </SEO>
+    </>
     )
 };
 

@@ -101,7 +101,8 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   height: 100vh;
-  background: url("../images/blklines.gif") no-repeat center center/cover;
+  /*Credits to @hdksjskdh on instagram for the background picture*/
+  background: url("../images/splashbg.jpg") no-repeat top center/cover;
   background-color: #7c6597;
   background-blend-mode: soft-light;
   -webkit-transition: all 3s ease-in-out;
@@ -122,10 +123,40 @@ html, body {
   width: 100%;
   margin: -2rem auto 1rem auto; }
 
-.spinner {
-  position: relative;
-  width: 40%;
-  top: 20rem; }
+.svgLoader {
+  -webkit-animation: spin 0.5s linear infinite;
+  animation: spin 0.5s linear infinite;
+  margin: auto; }
+
+.divLoader {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 9999; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 /*************FOOTER**********************/
 /*************FOOTER**********************/

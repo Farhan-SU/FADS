@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../assets/styles/galleryDetail.scss';
 import WebpG from './ImgWebp';
+import SEO from './SEO';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -20,7 +21,7 @@ function TheGallery () {
 
     useEffect(() => {  
     
-        const xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.1;
+        const xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.05;
         const panelend =  Math.abs(xendvalue) * -1;
     
         if (portfolioSRef.current) {
@@ -37,7 +38,6 @@ function TheGallery () {
                     end: () => xendvalue
                 }
             })
-            .to(parallaxRef.current,{x: 80, duration: 0.4, opacity: 0.3, ease: 'sine.in'})
             .to(panelSRef.current, {x : () => panelend}, 0);
 
         } else {
@@ -47,7 +47,7 @@ function TheGallery () {
             return () => {
                 if (ScrollTrigger.getById('circusShow')) {
                 ScrollTrigger.getById('circusShow').kill();
-                }; 
+                };
             };
     },[]);
 
@@ -84,6 +84,12 @@ function TheGallery () {
 
     return (
         <>
+        <SEO  
+          pageMeta={{
+          title: "The Gallery - Fall 2019",
+          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          description: "The Gallery is our Fall 2019 show"
+        }}>
         <div className="yearlyShows">
          <div className="spacer">
              <div className="gallerySpacer">
@@ -102,7 +108,6 @@ function TheGallery () {
                             fallback={require('../assets/images/the_gallery/arch.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -113,7 +118,7 @@ function TheGallery () {
                             fallback={require('../assets/images/the_gallery/teal.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -124,7 +129,7 @@ function TheGallery () {
                             fallback={require('../assets/images/the_gallery/jeans.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -135,7 +140,7 @@ function TheGallery () {
                            fallback={require('../assets/images/the_gallery/blackdress.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -146,7 +151,7 @@ function TheGallery () {
                             fallback={require('../assets/images/the_gallery/denim.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -157,7 +162,7 @@ function TheGallery () {
                            fallback={require('../assets/images/the_gallery/glitter.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -168,7 +173,7 @@ function TheGallery () {
                             fallback={require('../assets/images/the_gallery/design.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                         </div>
                     </div>
@@ -179,7 +184,7 @@ function TheGallery () {
                            fallback={require('../assets/images/the_gallery/contjacket.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -190,7 +195,7 @@ function TheGallery () {
                             fallback={require('../assets/images/the_gallery/whitedress.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                         </div>
                     </div>
@@ -201,7 +206,7 @@ function TheGallery () {
                            fallback={require('../assets/images/the_gallery/closeup.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -222,6 +227,7 @@ function TheGallery () {
             </div>
         </div>
     </div>
+        </SEO>
         </>
     )
 };

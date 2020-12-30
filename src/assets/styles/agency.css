@@ -12,27 +12,24 @@
   color: #1A2632;
   margin-top: 6rem;
   margin-bottom: 3rem; }
-
-.intro-a .experts {
-  position: relative;
-  top: 8rem;
-  left: 6rem;
-  word-break: break-word;
-  width: 90%; }
-
-.intro-a .experts h1 {
-  font-size: 8rem;
-  padding-right: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 15px;
-  line-height: 8rem;
-  mix-blend-mode: hard-light; }
-
-.intro-a .experts h3 {
-  width: 54%;
-  margin-top: 2rem;
-  line-height: 2.3rem;
-  font-size: 1.5rem; }
+  .intro-a .experts {
+    position: relative;
+    top: 8rem;
+    left: 6rem;
+    word-break: break-word;
+    width: 90%; }
+    .intro-a .experts h1 {
+      font-size: 8rem;
+      padding-right: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+      line-height: 8rem;
+      mix-blend-mode: hard-light; }
+    .intro-a .experts h3 {
+      width: 54%;
+      margin-top: 2rem;
+      line-height: 2.3rem;
+      font-size: 1.5rem; }
 
 .agency {
   height: 100%;
@@ -42,38 +39,26 @@
   width: 99vw;
   margin-left: 0.5rem;
   padding: auto 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   align-items: center; }
-
-.agency .box {
-  height: 200px;
-  max-width: 300px;
-  width: 300px;
-  margin: 2rem 5.4rem;
-  text-align: center;
-  background-color: #61526d;
-  border-radius: 5px;
-  -webkit-box-shadow: 4px 7px 3px  #47474717;
-  box-shadow: 4px 7px 3px  #47474717; }
-
-.agency .box:hover {
-  background-color: #a57daf;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  cursor: pointer; }
-
-.agency .box h3 {
-  color: #ffefd7;
-  font-size: 2rem;
-  font-weight: 400;
-  position: relative;
-  top: 5rem; }
-
-/*# sourceMappingURL=agency.css.map */
+  .agency .box {
+    height: 200px;
+    max-width: 300px;
+    width: 300px;
+    margin: 2rem 5.4rem;
+    text-align: center;
+    background-color: #61526d;
+    border-radius: 5px;
+    box-shadow: 4px 7px 3px  #47474717; }
+    .agency .box:hover {
+      background-color: #a57daf;
+      transition: all 500ms ease-in-out;
+      cursor: pointer; }
+    .agency .box h3 {
+      color: #ffefd7;
+      font-size: 2rem;
+      font-weight: 400;
+      position: relative;
+      top: 5rem; }

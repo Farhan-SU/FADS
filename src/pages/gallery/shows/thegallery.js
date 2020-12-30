@@ -1,15 +1,15 @@
 import React from "react";
-import AlineEd from '../../../components/AlineEd';
+import TheGallery from '../../../components/TheGallery';
 
 
-const aline = () => {
+const thegallery = () => {
     return(
         <>
         <div style={{height: '100%'}}>
-        <AlineEd/>
+        <TheGallery/>
         </div>
         </>
     )
 }
 
-export default aline;
+export default thegallery;

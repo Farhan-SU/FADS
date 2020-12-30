@@ -1,5 +1,6 @@
 import React, { useRef, useEffect} from 'react';
 import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
+import Reveal from '../components/Reveal';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/agency.scss';
 import {gsap} from "gsap";
@@ -48,10 +49,10 @@ function Agency() {
       <div className="intro-a">
         <div className="experts">
         <h1 contentEditable="false" role='textbox' aria-multiline='true'>Our Expertise</h1>
-        <h3>We are more than just, we are also a fashion and digital creative agency. 
+        <Reveal><h3>We are more than just, we are also a fashion and digital creative agency. 
           We have some of the most talented individuals on our team. From designers, 
-          photographers, models, and more. Meet the members of each team and get to 
-          know them and their work. </h3>
+          photographers, models, to set designers, makeup artists, and more. Meet the members of each of our team and get to 
+          know them and their work.</h3></Reveal>
         </div>
       </div>
       <Row className='agency'ref={agencyReveal}> 

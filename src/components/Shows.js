@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import {withRouter} from 'react-router-dom';
+import {withRouter, useHistory} from 'react-router-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/gallery.scss';
 import {gsap} from "gsap";
@@ -21,6 +21,8 @@ if (typeof window !== `undefined`) {
   } 
 
 const Shows = () => {
+
+    const history = useHistory();
  
     const showtl = useRef();
     const line = React.createRef();
@@ -136,9 +138,9 @@ const Shows = () => {
       <>
         <SEO
         pageMeta={{
-          title: "Agency",
+          title: "Shows | FADS Gallery",
           keywords: ["Fashion", "Gallery", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
-          description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
+          description: "Our bi-annual fashion shows. All the pieces are made from scratch by our fashion and design students"
         }}>
       <>
       <div ref={line} className="show-wrapper">
@@ -174,7 +176,7 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
-        <Link exact to="/gallery/shows/circus">
+        <Link exact to="/gallery/shows/circus" onClick={() => history.push('/gallery/shows/circus')}>
           <Col noGutter={true} xs={12}>
           <h3>Spring 2019</h3>
           </Col>
@@ -204,7 +206,7 @@ const Shows = () => {
           <Col noGutter={true} xs={12}>
            <h3>Spring 2018</h3>
           </Col>
-          <Col noGutter={true} xs={12}>
+          <Col noGutter={true} xs={12} style={{marginLeft:'1rem'}}>
           <h1>Tomorrow<br/>Land</h1>
           </Col>
         </Link>

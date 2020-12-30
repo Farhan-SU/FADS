@@ -7,6 +7,7 @@ import WebpG from './ImgWebp';
 import { Row } from 'react-bootstrap';
 import jerkEnd from '../assets/images/jerkEnd.png';
 import jerkEndWeb from '../assets/images/jerkEnd.webp';
+import SEO from "./SEO";
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -30,8 +31,8 @@ function JerkEd () {
             gshowtl.current = gsap.timeline({
                 scrollTrigger: {
                     id: "containerJerk",
-                    duration: 2,
-                    scrub: 1.5,
+                    duration: 3,
+                    scrub: 2,
                     trigger: portfolioRef.current,
                     pin: true,
                     pinReparent: true,
@@ -40,7 +41,6 @@ function JerkEd () {
                     end: () => xendvalue
                 }
             })
-            .to(parallaxRef.current,{x: 80, duration: 0.4, opacity: 0.7, ease: 'sine.in'})
             .to(panelRef.current, {x : () => panelend}, 0);
 
         } else {
@@ -50,7 +50,7 @@ function JerkEd () {
             return () => {
                 if (ScrollTrigger.getById('containerJerk')) {
                 ScrollTrigger.getById('containerJerk').kill();
-                };
+                }  gshowtl.current.kill();
             };
     },[]);
 
@@ -75,7 +75,7 @@ function JerkEd () {
           return () => {
             if (ScrollTrigger.getById('panelsJerk')) {
             ScrollTrigger.getById('panelsJerk').kill();
-            };
+            } gshowtl.current.kill();
         };
     }, []);
 
@@ -105,16 +105,22 @@ function JerkEd () {
         return () => {
           if (ScrollTrigger.getById('arrow')) {
             ScrollTrigger.getById('arrow').kill();
-          }
+          } gshowtl.current.kill();
         };    
       }, []);
   
 
     return (
         <>
+        <SEO  
+          pageMeta={{
+          title: "Jerk X Fads | Editorial",
+          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          description: "Our April 2019 editorial photoshoot in collaboration with Jerk Magazine"
+        }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 contentEditable="false" role='textbox' aria-multiline='false'>April <br/>2018</h1>
+            <h1 contentEditable="false" role='textbox' aria-multiline='false'>April <br/>2019</h1>
             <h3></h3>
          </div>
         <section className="section">
@@ -127,10 +133,21 @@ function JerkEd () {
                             fallback={require('../assets/images/jerk/solei.webp')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                         </div>
                     </div>
+
+                    <div className="panel" id="landscape" ref={addPanels}>
+                    <div className="panel_item">
+                    <WebpG
+                            src={require('../assets/images/jerk/flowers.webp')}
+                            fallback={require('../assets/images/jerk/flowers.png')}
+                            alt="FADS Logo"
+                            className="panel_img"  
+                        />
+                    </div>
+                    </div>
+
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
@@ -138,10 +155,23 @@ function JerkEd () {
                             fallback={require('../assets/images/jerk/flower2.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
+                        />
+                    </div>
+                    </div>
+
+                <div className="panel" id="landscape" ref={addPanels}>
+                    <div className="panel_item">
+                    <WebpG
+                            src={require('../assets/images/jerk/skull.webp')}
+                            fallback={require('../assets/images/jerk/skull.png')}
+                            alt="FADS Logo"
+                            className="panel_img"
+                            
                         />
                     </div>
                 </div>
+
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
@@ -149,10 +179,23 @@ function JerkEd () {
                             fallback={require('../assets/images/jerk/jerkfads.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
+
+                <div className="panel" id="landscape" ref={addPanels}>
+                    <div className="panel_item">
+                    <WebpG
+                            src={require('../assets/images/jerk/threeppl.webp')}
+                            fallback={require('../assets/images/jerk/threeppl.png')}
+                            alt="FADS Logo"
+                            className="panel_img"
+                            
+                        />
+                    </div>
+                </div>
+
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
@@ -160,32 +203,23 @@ function JerkEd () {
                             fallback={require('../assets/images/jerk/jerkshirtless.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
-                <div className="panel" ref={addPanels}>
+                
+                <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../assets/images/jerk/skull.webp')}
-                            fallback={require('../assets/images/jerk/skull.png')}
+                            src={require('../assets/images/jerk/tree3.webp')}
+                            fallback={require('../assets/images/jerk/tree3.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
-                <div className="panel" ref={addPanels}>
-                    <div className="panel_item">
-                    <WebpG
-                            src={require('../assets/images/jerk/flowers.webp')}
-                            fallback={require('../assets/images/jerk/flowers.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            style={{width: '100%'}}
-                        />
-                    </div>
-                </div>
+
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
@@ -193,7 +227,7 @@ function JerkEd () {
                             fallback={require('../assets/images/jerk/jolly.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -204,18 +238,7 @@ function JerkEd () {
                             fallback={require('../assets/images/jerk/pinkpants.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
-                        />
-                    </div>
-                </div>
-                <div className="panel" ref={addPanels}>
-                    <div className="panel_item">
-                    <WebpG
-                            src={require('../assets/images/jerk/threeppl.webp')}
-                            fallback={require('../assets/images/jerk/threeppl.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -226,18 +249,7 @@ function JerkEd () {
                             fallback={require('../assets/images/jerk/twopants.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
-                        />
-                    </div>
-                </div>
-                <div className="panel" ref={addPanels}>
-                    <div className="panel_item">
-                    <WebpG
-                            src={require('../assets/images/jerk/tree3.webp')}
-                            fallback={require('../assets/images/jerk/tree3.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            style={{width: '100%'}}
+                            
                         />
                     </div>
                 </div>
@@ -263,7 +275,8 @@ function JerkEd () {
             </div>
         </div>
     </div>
-        </>
+    </SEO>
+    </>
     )
 };
 

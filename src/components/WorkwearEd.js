@@ -7,6 +7,7 @@ import WebpG from './ImgWebp';
 import { Row } from 'react-bootstrap';
 import workEnd from '../assets/images/workEnd.png';
 import workEndWeb from '../assets/images/workEnd.webp';
+import SEO from './SEO';
 
 
 if (typeof window !== `undefined`) {
@@ -41,7 +42,6 @@ export default function JerkEd () {
                     end: () => xendvalue
                 }
             })
-            .to(parallaxRef.current, {x: 100, duration: 0.5, opacity: 0.8, ease: 'sine.in'})
             .to(panelRef.current, {x : () => panelend}, 0);
 
         } else {
@@ -51,7 +51,8 @@ export default function JerkEd () {
             return () => {
                 if (ScrollTrigger.getById('containerWork')) {
                 ScrollTrigger.getById('containerWork').kill();
-                };
+                }
+                gshowtl.current.kill();
             };
     },[]);
 
@@ -76,7 +77,7 @@ export default function JerkEd () {
           return () => {
             if (ScrollTrigger.getById('panelsWork')) {
             ScrollTrigger.getById('panelsWork').kill();
-            };
+            } gshowtl.current.kill();
         };
     }, []);
 
@@ -106,13 +107,19 @@ export default function JerkEd () {
         return () => {
           if (ScrollTrigger.getById('arrow')) {
             ScrollTrigger.getById('arrow').kill();
-          }gshowtl.current.kill();
+          } gshowtl.current.kill();
         };    
       }, []);
   
 
     return (
         <>
+          <SEO  
+          pageMeta={{
+          title: "Work Wear Vintage | Editorial",
+          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          description: "Our May 2019 editorial photoshoot"
+        }}>
         <div className="galleryShows">
          <div className="spacer">
             <h1 contentEditable role='textbox' aria-multiline='false'>September<br/>2019</h1>
@@ -128,7 +135,6 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/doubles.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                         </div>
                     </div>
@@ -139,7 +145,6 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/fuzzyhat.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                     </div>
                 </div>
@@ -150,7 +155,6 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/blazer.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                     </div>
                 </div>
@@ -161,7 +165,6 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/stripes.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                     </div>
                 </div>
@@ -172,7 +175,6 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/fullshot.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                     </div>
                 </div>
@@ -183,7 +185,6 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/plaid.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                     </div>
                 </div>
@@ -194,7 +195,6 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/suit.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                     </div>
                 </div>
@@ -205,18 +205,16 @@ export default function JerkEd () {
                             fallback={require('../assets/images/workwear/student.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '90%'}}
                         />
                     </div>
                 </div>
-                <div className="panel" ref={addPanels}>
+                <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
                             src={require('../assets/images/workwear/plaidshoot.webp')}
                             fallback={require('../assets/images/workwear/plaidshoot.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -244,6 +242,7 @@ export default function JerkEd () {
             </div>
         </div>
     </div>
+    </SEO>
         </>
     )
 };

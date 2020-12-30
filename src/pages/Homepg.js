@@ -23,6 +23,9 @@ if (typeof window !== `undefined`) {
   const biotxt = useRef(null);
   const biocover = useRef(null);
 
+/*useEffect(() => {      
+    gsap.from('.fadsintro', {duration:4, autoAlpha: 0})
+}, []);*/
 
   useEffect(() => {
     tl.current = gsap.timeline({

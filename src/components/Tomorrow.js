@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../assets/styles/galleryDetail.scss';
 import WebpG from './ImgWebp';
+import SEO from './SEO';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -37,17 +38,17 @@ function Tomorrow () {
                     end: () => xendvalue
                 }
             })
-            .to(parallaxRef.current,{x: 80, duration: 0.4, opacity: 0.3, ease: 'sine.in'})
             .to(panelSRef.current, {x : () => panelend}, 0);
 
         } else {
             console.log("OOPS doesnt exist");
+            alert("Something went wrong! Please refresh the page")
         };
 
             return () => {
                 if (ScrollTrigger.getById('circusShow')) {
                 ScrollTrigger.getById('circusShow').kill();
-                }; 
+                } 
             };
     },[]);
 
@@ -72,8 +73,7 @@ function Tomorrow () {
           return () => {
             if (ScrollTrigger.getById('panelsJerk')) {
             ScrollTrigger.getById('panelsJerk').kill();
-            };
-            fashiontl.current.kill();
+            } 
         };
     }, []);
 
@@ -85,6 +85,12 @@ function Tomorrow () {
 
     return (
         <>
+        <SEO  
+          pageMeta={{
+          title: "Tomorrow Land - Fall 2018",
+          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          description: "Tomorrow Land is our Fall 2018 show"
+        }}></SEO>
         <div className="yearlyShows">
          <div className="spacer">
              <div className="circusSpacer">
@@ -107,7 +113,7 @@ function Tomorrow () {
                         />
                     </div>
                 </div>
-                <div className="panel" ref={addPanels}>
+                <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
                              src={require('../assets/images/tomorrowland/space.webp')}
@@ -118,7 +124,7 @@ function Tomorrow () {
                         />
                     </div>
                 </div>
-                <div className="panel" ref={addPanels}>
+                <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
                              src={require('../assets/images/tomorrowland/people.webp')}
@@ -132,19 +138,19 @@ function Tomorrow () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../assets/images/tomorrowland/walk.webp')}
-                           fallback={require('../assets/images/tomorrowland/walk.png')}
+                           src={require('../assets/images/tomorrowland/netmask.webp')}
+                           fallback={require('../assets/images/tomorrowland/mask.png')}
                             alt="FADS Logo"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
                     </div>
                 </div>
-                <div className="panel" ref={addPanels}>
+                <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../assets/images/tomorrowland/netmask.webp')}
-                           fallback={require('../assets/images/tomorrowland/mask.png')}
+                           src={require('../assets/images/tomorrowland/walk.webp')}
+                           fallback={require('../assets/images/tomorrowland/walk.png')}
                             alt="FADS Logo"
                             className="panel_img"
                             style={{width: '100%'}}

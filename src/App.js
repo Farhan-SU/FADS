@@ -58,28 +58,31 @@ function App () {
     );
   };
 
-  const [TimePassed, setTimePassed] = useState(false);
+  const [TimePassed, setTimePassed] = useState(true);
 
   useEffect(() => {
-    let timer = setTimeout(() => setTimePassed(true), 300)
- 
+    let timer = setTimeout(() => setTimePassed(false), 4000)
     return () => clearTimeout(timer);  
-  },[TimePassed]);
+  },[]);
 
 
   const location = useLocation();
 
-    if (!TimePassed) {
+    if (TimePassed) {
         return <Splash/>
     } else {
         return (
           <>
             <div className="routes">
-            <Suspense fallback={<div>
-                      <Spinner className="spinner" animation="border" role="status">
-                          <span className="sr-only">Loading...</span>
-                      </Spinner>
-                              </div>}>
+            <Suspense fallback={
+              <div class="divLoader">
+                <svg class="svgLoader" viewBox="0 0 100 100" width="10em" height="10em">
+                  <path ng-attr-d="{{config.pathCmd}}" ng-attr-fill="{{config.color}}" stroke="none" d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#51CACC" transform="rotate(179.719 50 51)">
+                    <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51;360 50 51" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite">
+                    </animateTransform>
+                  </path>
+                </svg>
+              </div>}>
                   
                   <Switch location={location}>
                     <RouteHome exact path="/" component={homepg}/>

@@ -1,15 +1,15 @@
 import React from "react";
-import AlineEd from '../../../components/AlineEd';
+import Circus from '../../../components/Circus';
 
 
-const aline = () => {
+const circus = () => {
     return(
         <>
         <div style={{height: '100%'}}>
-        <AlineEd/>
+        <Circus/>
         </div>
         </>
     )
 }
 
-export default aline;
+export default circus;

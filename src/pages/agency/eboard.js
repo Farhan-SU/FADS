@@ -29,7 +29,7 @@ query{
 export default function Eboard() {
  
   const { loading, error, data } = useQuery(MEMBERS);
-  const [ Eboard, setEboard ] = useState(undefined);
+  const [ Eboard, setEboard ] = useState();
 
 
   useEffect(() => {

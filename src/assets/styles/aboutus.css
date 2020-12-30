@@ -2,162 +2,130 @@
   height: 100%;
   width: 100%;
   overflow-x: hidden; }
-
-.wrapabtjoin p {
-  color: #ffefd7;
-  font-size: 1.9rem;
-  font-weight: 500;
-  white-space: normal;
-  line-height: 2.7rem; }
-
-.wrapabtjoin h4 {
-  font-size: 10rem;
-  font-weight: 900;
-  text-transform: uppercase; }
-
-.wrapabtjoin .revealBox {
-  overflow: hidden;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content; }
-
-.wrapabtjoin .firstsec {
-  background: url("../images/aboutus/part1.png") no-repeat top center;
-  background-size: cover;
-  height: 1805px;
-  padding: 0 4.5rem; }
-
-.wrapabtjoin .firstsec h1 {
-  font-size: 12rem;
-  text-transform: uppercase;
-  color: #a284c9;
-  width: 80%;
-  padding: 11.7rem 0 4rem 0;
-  mix-blend-mode: hard-light; }
-
-.wrapabtjoin .firstsec .topright {
-  padding: 0.75rem;
-  position: relative;
-  width: 39%;
-  float: right;
-  height: 100%; }
-
-.wrapabtjoin .firstsec .topright p {
-  text-align: right; }
-
-.wrapabtjoin .secondsec {
-  background: url("../images/aboutus/part2.png") no-repeat top center;
-  background-size: cover;
-  height: 1805px;
-  padding: 2rem 4.5rem; }
-
-.wrapabtjoin .secondsec .bottomleft {
-  padding: 0.5rem 1rem;
-  position: relative;
-  margin-top: 1rem;
-  width: 41%;
-  overflow: hidden;
-  height: 50%; }
-
-.wrapabtjoin .secondsec .joinHeader {
-  position: relative;
-  top: 19%;
-  left: -3rem;
-  overflow: hidden; }
-
-.wrapabtjoin .secondsec .joinHeader h1 {
-  font-size: 14rem;
-  text-transform: uppercase;
-  color: #6b728d;
-  padding: 2rem 1rem;
-  position: relative;
-  top: 1rem;
-  mix-blend-mode: screen; }
-
-.wrapabtjoin .thirdsec {
-  background: url("../images/aboutus/part3.png") no-repeat top center;
-  height: 1800px;
-  background-size: cover;
-  padding: 1rem 4.5rem;
-  position: relative;
-  top: -0.24rem; }
-
-.wrapabtjoin .thirdsec .joinusText {
-  margin-top: 1rem;
-  position: relative;
-  top: -14rem; }
-
-.wrapabtjoin .thirdsec .joinusText p {
-  position: relative;
-  width: 35%;
-  line-height: 3rem; }
-
-.wrapabtjoin .thirdsec .revealBox1 {
-  position: relative;
-  top: 15%;
-  padding-bottom: 4rem;
-  height: 100%; }
-
-.wrapabtjoin .thirdsec .revealBox1 .exmember {
-  text-align: right; }
-
-.wrapabtjoin .thirdsec .revealBox1 .exmember h4 {
-  color: #231242;
-  margin-bottom: 0.5rem;
-  opacity: 0.9; }
-
-.wrapabtjoin .thirdsec .revealBox1 .exmember p {
-  width: 57%;
-  float: right;
-  letter-spacing: 3px; }
-
-.wrapabtjoin .fourthsec {
-  background: url("../images/aboutus/part4.png") no-repeat top center;
-  height: 1790px;
-  padding: 1rem 4.5rem;
-  position: relative;
-  top: -0.55rem; }
-
-.wrapabtjoin .fourthsec .designers {
-  margin-bottom: 2rem;
-  overflow: hidden; }
-
-.wrapabtjoin .fourthsec .designers h4 {
-  color: #f5915e;
-  position: relative;
-  left: 0.5rem;
-  mix-blend-mode: screen;
-  opacity: 0.7; }
-
-.wrapabtjoin .fourthsec .designers p {
-  width: 75%;
-  position: relative;
-  left: 1rem; }
-
-.wrapabtjoin .fourthsec .models {
-  float: right;
-  text-align: right;
-  margin: 2rem 0; }
-
-.wrapabtjoin .fourthsec .models h4 {
-  color: #5A95B4;
-  position: relative; }
-
-.wrapabtjoin .fourthsec .models p {
-  float: right;
-  width: 58%;
-  position: relative; }
-
-.wrapabtjoin .fourthsec .committee {
-  margin-top: 3rem; }
-
-.wrapabtjoin .fourthsec .committee h4 {
-  color: #DEB69F;
-  position: relative; }
-
-.wrapabtjoin .fourthsec .committee p {
-  width: 68%;
-  position: relative;
-  left: 1rem; }
-
-/*# sourceMappingURL=aboutus.css.map */
+  .wrapabtjoin p {
+    color: #ffefd7;
+    font-size: 1.9rem;
+    font-weight: 500;
+    white-space: normal;
+    line-height: 2.7rem; }
+  .wrapabtjoin h4 {
+    font-size: 10rem;
+    font-weight: 900;
+    text-transform: uppercase; }
+  .wrapabtjoin .revealBox {
+    overflow: hidden;
+    width: fit-content; }
+  .wrapabtjoin .firstsec {
+    background: url("../images/aboutus/part1.png") no-repeat top center;
+    background-size: cover;
+    height: 1805px;
+    padding: 0 4.5rem; }
+    .wrapabtjoin .firstsec h1 {
+      font-size: 12rem;
+      text-transform: uppercase;
+      color: #a284c9;
+      width: 80%;
+      padding: 11.7rem 0 4rem 0;
+      mix-blend-mode: hard-light; }
+    .wrapabtjoin .firstsec .topright {
+      padding: 0.75rem;
+      position: relative;
+      width: 39%;
+      float: right;
+      height: 100%; }
+      .wrapabtjoin .firstsec .topright p {
+        text-align: right; }
+  .wrapabtjoin .secondsec {
+    background: url("../images/aboutus/part2.png") no-repeat top center;
+    background-size: cover;
+    height: 1805px;
+    padding: 2rem 4.5rem; }
+    .wrapabtjoin .secondsec .bottomleft {
+      padding: 0.5rem 1rem;
+      position: relative;
+      margin-top: 1rem;
+      width: 41%;
+      overflow: hidden;
+      height: 50%; }
+    .wrapabtjoin .secondsec .joinHeader {
+      position: relative;
+      top: 19%;
+      left: -3rem;
+      overflow: hidden; }
+      .wrapabtjoin .secondsec .joinHeader h1 {
+        font-size: 14rem;
+        text-transform: uppercase;
+        color: #6b728d;
+        padding: 2rem 1rem;
+        position: relative;
+        top: 1rem;
+        mix-blend-mode: screen; }
+  .wrapabtjoin .thirdsec {
+    background: url("../images/aboutus/part3.png") no-repeat top center;
+    height: 1800px;
+    background-size: cover;
+    padding: 1rem 4.5rem;
+    position: relative;
+    top: -0.24rem; }
+    .wrapabtjoin .thirdsec .joinusText {
+      margin-top: 1rem;
+      position: relative;
+      top: -14rem; }
+      .wrapabtjoin .thirdsec .joinusText p {
+        position: relative;
+        width: 35%;
+        line-height: 3rem; }
+    .wrapabtjoin .thirdsec .revealBox1 {
+      position: relative;
+      top: 15%;
+      padding-bottom: 4rem;
+      height: 100%; }
+      .wrapabtjoin .thirdsec .revealBox1 .exmember {
+        text-align: right; }
+        .wrapabtjoin .thirdsec .revealBox1 .exmember h4 {
+          color: #231242;
+          margin-bottom: 0.5rem;
+          opacity: 0.9; }
+        .wrapabtjoin .thirdsec .revealBox1 .exmember p {
+          width: 57%;
+          float: right;
+          letter-spacing: 3px; }
+  .wrapabtjoin .fourthsec {
+    background: url("../images/aboutus/part4.png") no-repeat top center;
+    height: 1790px;
+    padding: 1rem 4.5rem;
+    position: relative;
+    top: -0.55rem; }
+    .wrapabtjoin .fourthsec .designers {
+      margin-bottom: 2rem;
+      overflow: hidden; }
+      .wrapabtjoin .fourthsec .designers h4 {
+        color: #f5915e;
+        position: relative;
+        left: 0.5rem;
+        mix-blend-mode: screen;
+        opacity: 0.7; }
+      .wrapabtjoin .fourthsec .designers p {
+        width: 75%;
+        position: relative;
+        left: 1rem; }
+    .wrapabtjoin .fourthsec .models {
+      float: right;
+      text-align: right;
+      margin: 2rem 0; }
+      .wrapabtjoin .fourthsec .models h4 {
+        color: #5A95B4;
+        position: relative; }
+      .wrapabtjoin .fourthsec .models p {
+        float: right;
+        width: 58%;
+        position: relative; }
+    .wrapabtjoin .fourthsec .committee {
+      margin-top: 3rem; }
+      .wrapabtjoin .fourthsec .committee h4 {
+        color: #DEB69F;
+        position: relative; }
+      .wrapabtjoin .fourthsec .committee p {
+        width: 68%;
+        position: relative;
+        left: 1rem; }

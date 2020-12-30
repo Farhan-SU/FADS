@@ -1,15 +1,15 @@
 import React from "react";
-import AlineEd from '../../../components/AlineEd';
+import Tomorrow from "../../../components/Tomorrow";
 
 
-const aline = () => {
+const tomorrow = () => {
     return(
         <>
         <div style={{height: '100%'}}>
-        <AlineEd/>
+        <Tomorrow/>
         </div>
         </>
     )
 }
 
-export default aline;
+export default tomorrow;

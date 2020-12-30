@@ -7,6 +7,7 @@ import WebpG from './ImgWebp';
 import { Row } from 'react-bootstrap';
 import alineEnd from '../assets/images/alineEnd.png';
 import alineEndWeb from '../assets/images/alineEnd.webp';
+import SEO from './SEO';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -14,6 +15,7 @@ if (typeof window !== `undefined`) {
 };
   
 function AlineEd () {
+
     const gshowtl = useRef();
     const portfolioRef = useRef();
     const parallaxRef = useRef();
@@ -111,6 +113,12 @@ function AlineEd () {
 
     return (
         <>
+        <SEO  
+          pageMeta={{
+          title: "Aline | Editorial",
+          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          description: "Our May 2019 editorial photoshoot"
+        }}>
         <div className="galleryShows">
          <div className="spacer">
             <h1 contentEditable role='textbox' aria-multiline='false'>MAY <br/>2019</h1>
@@ -123,7 +131,7 @@ function AlineEd () {
                         <WebpG
                             src={require('../assets/images/aline/nojacket.webp')}
                             fallback={require('../assets/images/aline/nojacket.png')}
-                            alt="FADS Logo"
+                            alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -134,7 +142,7 @@ function AlineEd () {
                     <WebpG
                             src={require('../assets/images/aline/fulljacket.webp')}
                             fallback={require('../assets/images/aline/fulljacket.png')}
-                            alt="FADS Logo"
+                            alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -145,7 +153,7 @@ function AlineEd () {
                     <WebpG
                             src={require('../assets/images/aline/red.webp')}
                             fallback={require('../assets/images/aline/red.png')}
-                            alt="FADS Logo"
+                            alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -156,7 +164,7 @@ function AlineEd () {
                     <WebpG
                             src={require('../assets/images/aline/jacket.webp')}
                             fallback={require('../assets/images/aline/jacket.png')}
-                            alt="FADS Logo"
+                            alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -167,7 +175,7 @@ function AlineEd () {
                     <WebpG
                             src={require('../assets/images/aline/standred.webp')}
                             fallback={require('../assets/images/aline/standred.png')}
-                            alt="FADS Logo"
+                            alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -180,7 +188,7 @@ function AlineEd () {
             <WebpG
                 src={alineEndWeb}
                 fallback={alineEnd}
-                alt="FADS Logo"
+                alt="navigation button to aline end"
                 style={{width: '75%'}}
                 />
         </div>
@@ -195,7 +203,8 @@ function AlineEd () {
             </div>
         </div>
     </div>
-        </>
+    </SEO>
+    </>
     )
 };
 

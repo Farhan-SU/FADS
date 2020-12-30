@@ -7,6 +7,7 @@ import WebpG from './ImgWebp';
 import { Row } from 'react-bootstrap';
 import winterEndWeb from '../assets/images/winterEnd.webp';
 import winterEnd from '../assets/images/winterEnd.png';
+import SEO from './SEO';
 
 
 if (typeof window !== `undefined`) {
@@ -24,7 +25,7 @@ function WinterEd () {
 
     useEffect(() => {  
     
-        const xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.1;
+        const xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
         const panelend =  Math.abs(xendvalue) * -1;
     
         if (portfolioRef.current) {
@@ -41,7 +42,6 @@ function WinterEd () {
                     end: () => xendvalue
                 }
             })
-            .to(parallaxRef.current, {x: 150, duration: 0.5, opacity: 1})
             .to(panelRef.current, {x : () => panelend}, 0);
 
         } else {
@@ -51,7 +51,8 @@ function WinterEd () {
             return () => {
                 if (ScrollTrigger.getById('containerWinter')) {
                 ScrollTrigger.getById('containerWinter').kill();
-                };
+                }
+                gshowtl.current.kill();
             };
     },[]);
 
@@ -76,7 +77,7 @@ function WinterEd () {
           return () => {
             if (ScrollTrigger.getById('panels')) {
             ScrollTrigger.getById('panels').kill();
-            }; 
+            }
             gshowtl.current.kill();
         };
     }, []);
@@ -115,6 +116,12 @@ function WinterEd () {
 
     return (
         <>
+           <SEO  
+          pageMeta={{
+          title: "Winter | Editorial",
+          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          description: "Our December 2018 editorial photoshoot"
+        }}>
         <div className="galleryShows">
          <div className="spacer">
             <h1 contentEditable role='textbox' aria-multiline='false'>December<br/>2018</h1>
@@ -130,7 +137,6 @@ function WinterEd () {
                             fallback={require('../assets/images/winter/curve.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                         </div>
                     </div>
@@ -141,7 +147,7 @@ function WinterEd () {
                             fallback={require('../assets/images/winter/trees.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
+                           
                         />
                     </div>
                 </div>
@@ -152,7 +158,6 @@ function WinterEd () {
                             fallback={require('../assets/images/winter/sky.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -163,18 +168,16 @@ function WinterEd () {
                             fallback={require('../assets/images/winter/cone.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
-                <div className="panel" ref={addPanels}>
+                <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
                             src={require('../assets/images/winter/snow.webp')}
                             fallback={require('../assets/images/winter/snow.png')}
                             alt="FADS Logo"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                     </div>
                 </div>
@@ -204,6 +207,7 @@ function WinterEd () {
             </div>
         </div>
     </div>
+    </SEO>
         </>
     )
 };

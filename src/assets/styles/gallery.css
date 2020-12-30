@@ -1,16 +1,9 @@
 .editorialwrapper .aline, .editorialwrapper .jerk, .editorialwrapper .winter, .editorialwrapper .thegallery, .editorialwrapper .circus, .show-wrapper .aline, .show-wrapper .jerk, .show-wrapper .winter, .show-wrapper .thegallery, .show-wrapper .circus, .editorialwrapper .vintage, .show-wrapper .vintage, .editorialwrapper .land, .show-wrapper .land {
   height: 100vh;
   padding: 0 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-line-pack: center;
   align-content: center; }
 
 .wrapper {
@@ -22,30 +15,22 @@
   position: relative;
   top: 19rem;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   overflow: hidden; }
 
 .wrapper .linkbox h1 {
   font-size: 5.2rem;
+  opacity: 0.9;
   color: #ffefd7;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   mix-blend-mode: normal; }
 
 .wrapper .linkbox h1:hover {
-  -webkit-transition: all 800ms ease-out;
-  transition: all 800ms ease-out;
-  -webkit-text-stroke: 3px #ffefd7;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline;
-  text-shadow: none; }
+  transition: all 800ms ease-in-out;
+  -webkit-text-stroke: 2px #ffefd7;
+  -webkit-text-fill-color: transparent; }
 
 .editorial {
   background: url("../images/surya.webp") no-repeat 70% 40%;
@@ -53,7 +38,6 @@
   background-size: cover; }
 
 .shows {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(31, 31, 31, 0.3)), to(rgba(0, 0, 0, 0.5))), url("../images/fadsshow.webp") no-repeat 50% 38%;
   background: linear-gradient(rgba(31, 31, 31, 0.3), rgba(0, 0, 0, 0.5)), url("../images/fadsshow.webp") no-repeat 50% 38%;
   height: 110vh;
   background-size: 200%; }
@@ -91,20 +75,18 @@
   background: url("../images/gallery-circle.svg") no-repeat center center;
   background-size: 90%;
   margin-top: 1rem;
-  -ms-flex-item-align: auto;
-  -ms-grid-row-align: auto;
-  align-self: auto; }
+  align-self: center; }
 
 .editorialwrapper .description h1, .show-wrapper .description h1 {
   color: #1A2632;
-  font-size: 3.4rem;
-  letter-spacing: 0.3rem;
+  font-size: 3.3rem;
+  letter-spacing: 0.2rem;
   text-align: center;
   margin-top: 0.5rem;
-  width: 100%; }
+  width: 100%;
+  mix-blend-mode: darken; }
 
 .editorialwrapper .description h1:hover, .show-wrapper .description h1:hover {
-  -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
   -webkit-text-stroke: 1.5px #41076d;
   -webkit-text-fill-color: transparent; }
@@ -120,16 +102,9 @@
   top: 93%; }
 
 .editorialwrapper .description .header, .show-wrapper .description .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   position: relative;
   top: 35%;
@@ -139,16 +114,9 @@
   width: 80%; }
 
 .editorialwrapper .vintage .vintage-header, .show-wrapper .vintage .vintage-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   position: relative;
   top: 21%;
@@ -158,7 +126,6 @@
   width: 80%; }
 
 .editorialwrapper .vintage .vintage-header h1, .show-wrapper .vintage .vintage-header h1 {
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-size: 3.1rem; }
 
@@ -168,10 +135,7 @@
   width: 80%; }
 
 .editorialwrapper .land h1, .show-wrapper .land h1 {
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
   font-size: 2.7rem;
   left: -4%; }
-
-/*# sourceMappingURL=gallery.css.map */

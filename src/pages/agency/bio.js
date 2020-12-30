@@ -8,7 +8,6 @@ import { useQuery } from '@apollo/react-hooks';
 import Banner from '../../assets/images/bannerFarhan.png';
 import BioPic from '../../assets/images/imgBiosample.png';
 import {ReactComponent as Facebook} from '../../assets/images/facebook.svg';
-import {ReactComponent as Twitter} from '../../assets/images/twitter.svg';
 import {ReactComponent as IG} from '../../assets/images/instagram.svg';
 import {ReactComponent as Linkedin} from '../../assets/images/linkedin.svg';
 import {gsap} from 'gsap';
