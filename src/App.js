@@ -7,11 +7,11 @@ import Splash from './components/Splash';
 import './assets/styles/layout.scss';
 import './App.scss';
 
-const aboutus = lazy(() => import('./pages/aboutus'));
-const homepg = lazy(() => import('./pages/homepg'));
+const aboutus = lazy(() => import('./pages/Aboutus'));
+const homepg = lazy(() => import('./pages/Homepg'));
 
 /*Gallery Routes*/
-const gallery = lazy(() => import('./pages/gallery'));
+const gallery = lazy(() => import('./pages/Gallery'));
 const editorial = lazy(() => import('./pages/gallery/editorial'));
 const shows = lazy(() => import('./pages/gallery/shows'));
 const aline = lazy(() => import('./pages/gallery/editorials/aline'));
@@ -23,8 +23,8 @@ const thegallery = lazy(() => import('./pages/gallery/shows/thegallery'));
 const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
 
 /*Agency Routes*/
-const agency = lazy(() => import('./pages/agency'));
-const press = lazy(() => import('./pages/press'));
+const agency = lazy(() => import('./pages/Agency'));
+const press = lazy(() => import('./pages/Press'));
 const eboard = lazy(() => import('./pages/agency/eboard'));
 const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
 const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
