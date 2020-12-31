@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link, withRouter, useHistory} from "react-router-dom";
+import {NavLink, Link, withRouter, useHistory} from "react-router-dom";
 import {Row, Col} from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav';
 import '../assets/styles/layout.scss';
@@ -54,19 +54,19 @@ function Navbar() {
           <Col md={true} md={5} className="linkList">
           <Nav className='nav'>
             <Nav.Item>
-                 <Link to="/Gallery" exact className="navlinks">Gallery</Link>
+                 <NavLink to="/Gallery" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "red"}}>Gallery</NavLink>
             </Nav.Item>
 
             <Nav.Item>
-                  <Link to="/Aboutus" exact className="navlinks">About Us</Link>
+                  <NavLink to="/Aboutus" exact className="navlinks">About Us</NavLink>
             </Nav.Item>
             
             <Nav.Item>
-                  <Link to="/Agency" className="navlinks">Agency</Link>
+                  <NavLink to="/Agency" className="navlinks">Agency</NavLink>
             </Nav.Item>
             
             <Nav.Item>
-                  <Link to="/Press" exact className="navlinks">Press</Link>
+                  <NavLink to="/Press" exact className="navlinks">Press</NavLink>
             </Nav.Item>
           </Nav>
           </Col>

@@ -1,12 +1,11 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import {Switch, Route, useLocation, withRouter} from "react-router-dom";
-import Spinner from 'react-bootstrap/Spinner';
 import Footer from './components/Footer';
 import FooterSM from './components/FooterSM';
 import Layout from './components/Layout';
 import Splash from './components/Splash';
 import './assets/styles/layout.scss';
-import './App.css';
+import './App.scss';
 
 const aboutus = lazy(() => import('./pages/aboutus'));
 const homepg = lazy(() => import('./pages/homepg'));
@@ -64,8 +63,7 @@ function App () {
     let timer = setTimeout(() => setTimePassed(false), 4000)
     return () => clearTimeout(timer);  
   },[]);
-
-
+  
   const location = useLocation();
 
     if (TimePassed) {
@@ -113,5 +111,5 @@ function App () {
  
 }
 
-export default withRouter(App);
+export default App;
 
