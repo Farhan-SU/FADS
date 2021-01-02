@@ -4,14 +4,15 @@ import Footer from './components/Footer';
 import FooterSM from './components/FooterSM';
 import Layout from './components/Layout';
 import Splash from './components/Splash';
+import LoadingScreen from './components/LoadingScreen';
 import './assets/styles/layout.scss';
 import './App.scss';
 
-const aboutus = lazy(() => import('./pages/Aboutus'));
-const homepg = lazy(() => import('./pages/Homepg'));
+const aboutus = lazy(() => import('./pages/aboutus'));
+const homepg = lazy(() => import('./pages/homepg'));
 
 /*Gallery Routes*/
-const gallery = lazy(() => import('./pages/Gallery'));
+const gallery = lazy(() => import('./pages/gallery'));
 const editorial = lazy(() => import('./pages/gallery/editorial'));
 const shows = lazy(() => import('./pages/gallery/shows'));
 const aline = lazy(() => import('./pages/gallery/editorials/aline'));
@@ -23,8 +24,8 @@ const thegallery = lazy(() => import('./pages/gallery/shows/thegallery'));
 const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
 
 /*Agency Routes*/
-const agency = lazy(() => import('./pages/Agency'));
-const press = lazy(() => import('./pages/Press'));
+const agency = lazy(() => import('./pages/agency'));
+const press = lazy(() => import('./pages/press'));
 const eboard = lazy(() => import('./pages/agency/eboard'));
 const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
 const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
@@ -57,31 +58,19 @@ function App () {
     );
   };
 
-  const [TimePassed, setTimePassed] = useState(true);
+  /*const [TimePassed, setTimePassed] = useState(true);
 
   useEffect(() => {
     let timer = setTimeout(() => setTimePassed(false), 4000)
     return () => clearTimeout(timer);  
-  },[]);
+  },[]);*/
   
   const location = useLocation();
 
-    if (TimePassed) {
-        return <Splash/>
-    } else {
         return (
           <>
             <div className="routes">
-            <Suspense fallback={
-              <div class="divLoader">
-                <svg class="svgLoader" viewBox="0 0 100 100" width="10em" height="10em">
-                  <path ng-attr-d="{{config.pathCmd}}" ng-attr-fill="{{config.color}}" stroke="none" d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#51CACC" transform="rotate(179.719 50 51)">
-                    <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51;360 50 51" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite">
-                    </animateTransform>
-                  </path>
-                </svg>
-              </div>}>
-                  
+            <Suspense fallback={<LoadingScreen/>}>
                   <Switch location={location}>
                     <RouteHome exact path="/" component={homepg}/>
                     <RouteWithLayout exact path="/gallery" component={gallery} />  
@@ -107,7 +96,6 @@ function App () {
             </div>
         </>
         );
-    };
  
 }
 

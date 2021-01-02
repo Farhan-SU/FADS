@@ -1,19 +1,18 @@
 .error-bio {
-  height: 100vh;
-  padding-top: 3rem;
-  background-color: #6b728d;
+  background: #dfdcee url("../images/loading3.gif") no-repeat center center/contain;
+  background-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center; }
+  align-content: center;
+  height: 100vh; }
   .error-bio h1 {
     font-size: 4rem;
-    color: #ffefd7;
-    letter-spacing: 0.4rem;
-    position: relative;
-    line-height: 4rem;
-    width: 100%;
-    text-align: center; }
+    text-align: center;
+    width: 80%;
+    color: #666e9c;
+    margin-top: 4rem;
+    mix-blend-mode: multiply; }
 
 .eboardwrapper {
   height: 100%;
@@ -46,7 +45,7 @@
       height: 600px;
       padding: 1.2rem;
       margin: 2rem 0;
-      transition: filter 300ms; }
+      transition: filter 300ms ease-in-out; }
       .eboardwrapper .members .member-intro img {
         height: 420px;
         border-radius: 5px;

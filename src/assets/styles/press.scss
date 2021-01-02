@@ -7,6 +7,7 @@
 .pressWrapper{
     background-color: #e0cdc5;
     height: 100%;
+    padding-top: 5rem;
 
     .pressHeader{
         height: 1000px;
@@ -22,7 +23,7 @@
 
     .F4speakers{
        height: 140%;
-       padding: 8rem 2rem 2rem 2rem; 
+       padding: 5rem 2rem 2rem 2rem; 
        margin: 0 2rem 2rem 2rem;
     }
     
@@ -59,9 +60,10 @@
 
                 h2{
                 text-align: center;
-                font-size: 3rem;
+                font-size: 3.6rem;
                 position: relative;
-                top: 20%;
+                top: 12%;
+                color: $heading;
                 }
             }
         }

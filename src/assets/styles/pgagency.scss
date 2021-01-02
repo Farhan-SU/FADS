@@ -1,24 +1,23 @@
 @import 'colors'; 
 
 .error-bio{
-    height: 100vh;
-    padding-top: 3rem;
-    background-color: $bluegray;
+    background: #dfdcee url('../images/loading3.gif') no-repeat center center / contain;
+    background-blend-mode: multiply;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    height: 100vh;
      h1{
-       font-size: 4rem;
-       color: $heading;
-       letter-spacing: 0.4rem;
-       position: relative;
-       line-height: 4rem;
-       width: 100%;
-       text-align: center;
+        font-size: 4rem;
+        text-align: center;
+        width: 80%;
+        color: #666e9c;
+        margin-top: 4rem;
+        mix-blend-mode: multiply;
      }
   }
-  
+ 
 .eboardwrapper{
     height: 100%;
     margin: 9rem auto 5rem auto;
@@ -56,7 +55,7 @@
             height: 600px;
             padding: 1.2rem;
             margin: 2rem 0;
-            transition: filter 300ms;
+            transition: filter 300ms ease-in-out;
             
             img{
                 height: 420px;

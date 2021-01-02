@@ -14,10 +14,8 @@
     justify-content: center;
     align-content: center;
     padding: 15rem 3rem 4rem 3rem;
-    background: url("../images/floating.gif") no-repeat center center;
-    background-color: rgba(172, 172, 172, 0.479);
-    background-blend-mode: darken;
-    background-size: cover; }
+    background: #acacac7a url("../images/floating.gif") no-repeat center center/cover;
+    background-blend-mode: darken; }
   .galleryShows .endsec {
     height: 110vh;
     background-color: rgba(164, 157, 177, 0.712);
@@ -37,11 +35,9 @@
 
 h1 {
   font-size: 7rem;
-  color: white;
   opacity: 0.9;
   letter-spacing: 0.5rem;
-  mix-blend-mode: exclusion;
-  text-align: center; }
+  mix-blend-mode: exclusion; }
 
 .yearlyShows {
   position: relative;
@@ -66,33 +62,27 @@ h1 {
     height: 100%;
     width: 100%;
     padding: 15rem 3rem 4rem 3rem;
-    background: url("../images/circusShowBg.gif") no-repeat center center;
-    background-color: rgba(172, 172, 172, 0.479);
+    background: #acacac7a url("../images/circusShowBg.gif") no-repeat center center/cover;
     background-blend-mode: darken;
-    background-size: cover;
     text-align: center; }
   .yearlyShows .gallerySpacer {
     height: 100%;
     width: 100%;
     padding: 15rem 3rem 4rem 3rem;
-    background: url("../images/thegalleryBg2.gif") no-repeat center center;
-    background-color: #c97ea1bb;
-    background-blend-mode: darken;
-    background-size: cover; }
+    background: #c97ea1bb url("../images/thegalleryBg2.gif") no-repeat center center/cover;
+    background-blend-mode: darken; }
     .yearlyShows .gallerySpacer h1 {
       mix-blend-mode: exclusion;
       color: #c97ea1;
       text-align: center; }
   .yearlyShows .endsec {
     height: 100vh;
-    overflow: hidden;
-    background-color: #9786a3;
-    background: url("../images/prevshow.svg") no-repeat center center, #9786a3;
-    background-blend-mode: color-burn;
-    background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden;
+    background: #9786a3 url("../images/prevshow.svg") no-repeat center center/cover;
+    background-blend-mode: color-burn; }
   .yearlyShows .secContent h1 {
     top: 30%;
     mix-blend-mode: normal;

@@ -4,188 +4,143 @@ import {Row, Col, Container} from 'react-bootstrap';
 import SEO from "../../components/SEO";
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
-import Banner from '../../assets/images/bannerFarhan.png';
-import BioPic from '../../assets/images/imgBiosample.png';
-import '../../assets/styles/bio.scss';
 import {ReactComponent as Facebook} from '../../assets/images/facebook.svg';
 import {ReactComponent as IG} from '../../assets/images/instagram.svg';
 import {ReactComponent as Linkedin} from '../../assets/images/linkedin.svg';
 import {gsap} from 'gsap';
 import { Draggable } from "gsap/Draggable";
+import LoadingScreen from '../../components/LoadingScreen';
+import '../../assets/styles/bio.scss';
 
-gsap.registerPlugin(Draggable);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(Draggable); 
+};
 
 const MEMBER = gql`
-  query Member ($slug: String) {
-    member(where : {slug: $slug}) {
-      id
-      name
-      position
-      description
-      slug
-      img {
-        url
+query Member($slug: String) {
+  member(where: {slug: $slug}) {
+    id
+    memberName
+    memberPosition
+    slug
+    bio {
+      ... on Bio {
+        description
+        bannerimg {
+          url
+        }
+        position
+        facebook
+        linkedIn
+        portfolioLink
+        ig
+        showcase {
+          url
+        }
       }
-      bannerimg{
-        url
-      }
-    showcase{
+    }
+    agencyImg {
+      handle
+      fileName
       url
     }
-    }
   }
+}
 `;
 
-const pictures = [ 
-    {
-      source:
-        "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
-      content: {
-        date: "04.29.2020",
-        desc: "Behind the leaves. "
-      }
-    },
-    {
-      source:
-        "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      content: {
-        date: "04.28.2020",
-        desc: "Minimal eucalyptus leaves"
-      }
-    },
-    {
-      source:
-        "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80",
-      content: {
-        date: "04.28.2020",
-        desc: "Rubber Plant"
-      }
-    },
-    {
-      source:
-        "https://images.unsplash.com/photo-1506543277633-99deabfcd722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=623&q=80",
-      content: {
-        date: "04.27.2020",
-        desc: "Person holding leaf plant"
-      }
-    },
-    {
-      source:
-        "https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      content: {
-        date: "04.23.2020",
-        desc: "Green leafed plant photography"
-      }
-    },
-    {
-      source:
-        "https://images.unsplash.com/photo-1517848568502-d03fa74e1964?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      content: {
-        date: "04.21.2020",
-        desc: "Gree leafed plant in focus photography"
-      }
-    },
-    {
-      source:
-        "https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
-      content: {
-        date: "04.23.2020",
-        desc: "I took the shot at home with Sigma 105 mm"
-      }
-    },
-    {
-      source:
-        "https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      content: {
-        date: "04.21.2020",
-        desc: "Cheese plant leaf in clear glass vase"
-      }
-    }
-  ];
-
-  const Slide = ({ imageSource, content }) => {
-    return (
-      <div className="slide">
-        <div className="preview">
-          <img src={imageSource} alt="The Plant" draggable="false" />
-        </div>
-        <div className="infos">
-          <h3>{content.date}</h3>
-          <h2>{content.desc}</h2>
-        </div>
+const Slide = ({ imageSource }) => {
+  return (
+    <div className="slide">
+      <div className="preview">
+        <img src={imageSource} alt="Some work done by this person" draggable="true" />
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default function Bio(props) {
+ 
 
-    const sliderRef = useRef(null);
+   const sliderRef = useRef();
 
-    useEffect(() => {
-        Draggable.create(sliderRef.current, {
-          type: "x"
-          /*bounds: {
-            minX: -sliderRef.current.clientWidth + window.innerWidth * 0.88,
-            maxX: 0
-          }*/
-        });
-      }, []);
-    
-    console.log(props)
+   useEffect(() => {
+    console.log(sliderRef.current);
+    Draggable.create(sliderRef.current, {
+      type: "x, y",
+      dragClickables:true
+      /*bounds: {
+        minX: -sliderRef.current.clientWidth + window.innerWidth * 1.1,
+        maxX: 0
+      }*/
+    });
+  }, []);
 
     const { loading, error, data } = useQuery(MEMBER, {
             variables: { slug: props.match.params.slug},
           });
     
-    if (loading) return <p>Loading ...</p>;
+    if (loading) return <LoadingScreen/>;
     if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
 
     const member = data.member;
+    let bio = null;
 
+    if (member.bio.length > 0) {
+      bio = member.bio[0];
+    }
       return (
         <SEO
         pageMeta={{
-        title: "E-Boards | Agency",
-        keywords: ["Fashion", "Gallery", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
-        description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
+        title: ''+ member.memberName +' | E-Board',
+        keywords: ["Fashion", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
+        description: bio.description
       }}>
         <div className="biowrapper">
             <div className="bio-header">
                 <h1>{member.memberName}</h1>
                 <h4>{member.memberPosition}</h4>
                 <div className="bannerBio">
-                    <img src={Banner} className="banner-img" alt=""/>
+                    <img src={bio.bannerimg.url} className="banner-img" alt={"Cropped picture only showing the eyes of" + member.memberName}/>
                 </div>
             </div>
             <>
                 <Row className="actualbio">
                     <Col md={6} className="bioPic">
-                        <img src={BioPic}/>
+                        <img src={member.agencyImg.url}/>
                     </Col>
                     <Col md={5} className="biocontent">
-                        <h2>Information Management and Technology</h2>
                         <div className="desBio">
-                        <p>stiuffvjdfvkjvnevlnvnldnvlndlnvl
-                            dnvndlvndlvnldnvndf lvnldfvnldfnvd
-                            lvndlnvlvndlvnvlndlvndldddnvdlvnl
-                            dnvldnvdlfnvldnvdddd</p>
+                        <p>{ bio.description }</p>
                         </div>
-                        <Row style={{width: '84%'}}>
-                            <a className='not' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Facebook/></a>
-                            <a href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><IG/></a>
-                            <a href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Linkedin/></a>
+                        <Row style={{width: '84%', height: '100%'}}>
+                            <a className='not' href={ bio.facebook } target="_blank" rel="noopener noreferrer" ><Facebook/></a>
+                            <a href={bio.ig} target="_blank" rel="noopener noreferrer" ><IG/></a>
+                            <a href={ bio.linkedIn } target="_blank" rel="noopener noreferrer" ><Linkedin/></a>
                         </Row>
                     </Col>
                 </Row>
+                <div className="portfolioTxt">
+                    <h2>Some of my most memorable work</h2>
+                    <a href={bio.portfolioLink} target="_blank" rel="noopener noreferrer">
+                    <div className="bioBttn">
+                      <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                      </div> 
+                      <span class="link__text"><p>View my full portfolio</p></span>
+                    </div>
+                    </a>
+                </div>
                 <div className="showcase">
-                <div id="slider" className="slider" ref={sliderRef}>
-                    {pictures.map((item, index) => {
+                  <div className="slider" ref={sliderRef}>
+                    {bio.showcase.map((item, index) => {
                         return (
-                        <Slide key={index} imageSource={item.source} content={item.content} />
+                        <Slide key={index} imageSource={item.url} />
                         );
                     })}
-                    </div>
+                  </div>
                 </div>
+                
             </>
         </div>
         </SEO>

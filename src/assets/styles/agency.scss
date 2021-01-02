@@ -7,7 +7,7 @@
     height: 100%;
     width: 100vw;
     overflow: hidden;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
 }
 
 .intro-a{
@@ -42,24 +42,20 @@
     height: 100%;
     position: relative;
     top: -2rem;
-    margin-bottom: 2rem;
     width: 99vw;
-    margin-left: 0.5rem;
-    padding: auto 3rem;
+    padding: auto 2rem;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    align-items: center;
+    align-content: space-around;
 
     .box{
         height: 200px;
-        max-width: 300px;
-        width: 300px;
-        margin: 2rem 5.4rem;
+        width: 150px;
+        margin: 2rem 2.3rem;
         text-align: center;
         background-color: $darkpurple;
         border-radius: 5px;
-        box-shadow: 4px 7px 3px  #47474717;
+        align-self: center;
 
         &:hover{
             background-color: $muave;

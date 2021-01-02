@@ -19,20 +19,20 @@ function Navbar() {
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
-  const MINIMUM_SCROLL = 150;
-  const TIMEOUT_DELAY = 400;
+  const MINIMUM_SCROLL = 100;
+  const TIMEOUT_DELAY = 600;
 
   useDocumentScrollThrottled(callbackData => {
     const { previousScrollTop, currentScrollTop } = callbackData;
     const isScrolledDown = previousScrollTop < currentScrollTop;
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
 
-    setShouldShowShadow(currentScrollTop > 2);
+    setShouldShowShadow(currentScrollTop > 4);
 
     setTimeout(() => {
       setShouldHideHeader(isScrolledDown && isMinimumScrolled);
     }, TIMEOUT_DELAY);
-  });
+  }, []);
 
   const shadowStyle = shouldShowShadow ? 'shadow' : '';
   const hiddenStyle = shouldHideHeader ? 'hidden' : '';
@@ -54,19 +54,19 @@ function Navbar() {
           <Col md={true} md={5} className="linkList">
           <Nav className='nav'>
             <Nav.Item>
-                 <NavLink to="/Gallery" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "red"}}>Gallery</NavLink>
+                 <NavLink to="/Gallery" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>Gallery</NavLink>
             </Nav.Item>
 
             <Nav.Item>
-                  <NavLink to="/Aboutus" exact className="navlinks">About Us</NavLink>
+                  <NavLink to="/Aboutus" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>About Us</NavLink>
             </Nav.Item>
             
             <Nav.Item>
-                  <NavLink to="/Agency" className="navlinks">Agency</NavLink>
+                  <NavLink to="/Agency" className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>Agency</NavLink>
             </Nav.Item>
             
             <Nav.Item>
-                  <NavLink to="/Press" exact className="navlinks">Press</NavLink>
+                  <NavLink to="/Press" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>Press</NavLink>
             </Nav.Item>
           </Nav>
           </Col>

@@ -1,4 +1,3 @@
- 
 html, body {
   height: 100%;
   scrollbar-width: none;
@@ -86,6 +85,25 @@ html, body {
     margin: -2rem auto 1rem auto;
   }
 }
+/****/
+.bgLoading{
+  background: #dfdcee url('../images/loading3.gif') no-repeat center center / contain;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  h1{
+    font-size: 4rem;
+    text-align: center;
+    width: 80%;
+    color: #666e9c;
+    margin-top: 4rem;
+    mix-blend-mode: multiply;
+  }
+}
+/***Spinner***/
 .svgLoader {
   animation: spin 0.5s linear infinite;
   margin: auto;

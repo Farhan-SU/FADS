@@ -4,14 +4,13 @@ import { Col, Row, CardDeck, Card } from "react-bootstrap";
 import SEO from '../components/SEO';
 import F4Speakers from '../components/F4speakers';
 import NewsDeck from '../components/NewsCard';
-import Bio from "../components/Bio";
+import LoadingScreen from '../components/LoadingScreen';
+
 
   function press() {
 
     return (
       <>
-      <Bio/>
-      {/***
       <SEO
       pageMeta={{
         title: "Press",
@@ -24,7 +23,7 @@ import Bio from "../components/Bio";
       <NewsDeck/>
       </div>
       </>
-    </SEO>***/}
+    </SEO>
       </>
     );
   }

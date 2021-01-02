@@ -19,15 +19,17 @@ body {
   scrollbar-width: none; }
 
 body {
-  background-color: #F8F7FA;
-  color: #1E2630;
+  background-color: #F9F6FD;
+  color: #1A2632;
   cursor: default; }
 
 .active {
   color: #301930; }
 
 p, h3, h4, h5 {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  white-space: normal;
+  overflow-wrap: break-word; }
 
 h1, h2 {
   font-family: "Vipnagorgialla", "Raleway", sans-serif;

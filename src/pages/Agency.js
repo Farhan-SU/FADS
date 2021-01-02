@@ -1,11 +1,10 @@
 import React, { useRef, useEffect} from 'react';
-import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
+import { Link, useRouteMatch} from 'react-router-dom';
 import Reveal from '../components/Reveal';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/agency.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import FooterSM from '../components/FooterSM';
 import SEO from '../components/SEO';
    
 gsap.registerPlugin(ScrollTrigger);
@@ -24,6 +23,7 @@ function Agency() {
       scrub: true,
       onEnter: batch =>
         gsap.to(batch, {
+          id: "agencyref",
           opacity: 1,
           y: 0,
           stagger: { each: 0.20},
@@ -33,9 +33,15 @@ function Agency() {
         }),
       onLeave: batch => gsap.set(batch, { duration: 1, opacity: 0, y: -150, overwrite: true, ease: 'sine.in' }),
       onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, y: 0, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
-      onLeaveBack: batch =>  gsap.set(batch, { duration: 1, opacity: 0.5, y: 150, overwrite: true, ease: 'sine.in', delay: 1 })  
-    });
+      onLeaveBack: batch =>  gsap.set(batch, { duration: 1, opacity: 0.5, y: 150, overwrite: true, ease: 'sine.in', delay: 1 })
+    } 
+    );
   }, []);
+
+    if (ScrollTrigger.getById('agencyref')) {
+      ScrollTrigger.getById('agencyref').kill();
+      sl.current.kill();
+    }
 
   return (
     <>
@@ -56,31 +62,31 @@ function Agency() {
         </div>
       </div>
       <Row className='agency'ref={agencyReveal}> 
-        <Col className="box">
+        <Col md={3}className="box">
           <Link to="./agency/eboard"><h3>E-Board</h3></Link>
         </Col>
-        <Col className="box">
+        <Col md={3}className="box">
           <Link to="./agency/models"><h3>Models</h3></Link>
         </Col>
-        <Col className="box">
-          <Link to="./agency/fashionDesigners"><h3 style={{marginTop: '-1.5rem'}}>Fashion Designers</h3></Link>
+        <Col md={3}className="box">
+          <Link to="./agency/fashionDesigners"><h3>Fashion Designers</h3></Link>
         </Col>
-        <Col className="box">
-          <Link to="./agency/graphicDesigners"><h3 style={{marginTop: '-1.5rem'}}>Graphic Designers</h3></Link>
+        <Col md={3}className="box">
+          <Link to="./agency/graphicDesigners"><h3>Graphic Designers</h3></Link>
         </Col>
-        <Col className="box">
-          <Link to="./agency/videoPhoto"><h3 style={{marginTop: '-2.3rem'}}>Videographers & Photographers</h3></Link>
+        <Col md={3}className="box">
+          <Link to="./agency/videoPhoto"><h3>Videographers & Photographers</h3></Link>
         </Col>
-        <Col className="box">
+        <Col md={3}className="box">
           <Link to="./agency/makeupArtists"><h3>Makeup Artists</h3></Link>
         </Col>
-        <Col className="box">
+        <Col md={3}className="box">
           <Link to="/Aboutus"><h3>Stylists</h3></Link>
         </Col>
-        <Col className="box">
+        <Col md={3}className="box">
           <Link to="/Aboutus"><h3>Communication</h3></Link>
         </Col>
-        <Col className="box">
+        <Col md={3}className="box">
           <Link to="/Aboutus"><h3>Set Design</h3></Link>
         </Col>
         </Row>

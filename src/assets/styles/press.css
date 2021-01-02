@@ -4,7 +4,8 @@
 
 .pressWrapper {
   background-color: #e0cdc5;
-  height: 100%; }
+  height: 100%;
+  padding-top: 5rem; }
   .pressWrapper .pressHeader {
     height: 1000px;
     background: url("../images/pressHeader.svg") no-repeat center top;
@@ -16,7 +17,7 @@
     top: -0.55rem; }
   .pressWrapper .F4speakers {
     height: 140%;
-    padding: 8rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 2rem 2rem;
     margin: 0 2rem 2rem 2rem; }
   .pressWrapper h4 {
     font-size: 7rem;
@@ -45,9 +46,10 @@
         padding: 4rem; }
         .pressWrapper .speakerposters .poster .tuned h2 {
           text-align: center;
-          font-size: 3rem;
+          font-size: 3.6rem;
           position: relative;
-          top: 20%; }
+          top: 12%;
+          color: #ffefd7; }
   .pressWrapper .otherNews {
     padding: 1rem 5rem 6rem 5rem;
     position: relative;
