@@ -20,17 +20,16 @@ const Footer = () => {
                 <span><i>Syracuse, NY</i></span>
             </div>
             <Row style={{width: '84%'}}>
-            <a className='social not' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Facebook/></a>
-            <a className='social' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Twitter/></a>
-            <a className='social' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><IG/></a>
-            <a className='social' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Linkedin/></a>
+            <a className='social not' href="https://www.facebook.com/syracusefads" target="_blank" rel="noopener noreferrer" ><Facebook/></a>
+            <a className='social' href="https://www.instagram.com/fashiondesignsociety/" target="_blank" rel="noopener noreferrer" ><IG/></a>
+            <a className='social' href="https://www.linkedin.com/company/fashion-and-design-society/" target="_blank" rel="noopener noreferrer" ><Linkedin/></a>
             </Row>
             </Col>
             <Col md={7} className='second'>
             <h1><i>SO HOW CAN WE HELP YOU SHINE?</i></h1>
             <div className="emailus">
                 <h3>INQUIRES at</h3>
-                <a key="Email" component="a" href="syracusefads@gmail.com" target="_top">syracusefads@gmail.com</a>
+                <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank">syracusefads@gmail.com</a>
             </div>
             </Col>
         </Row>

@@ -24,6 +24,14 @@ overflow-x: hidden;
     padding: 15rem 3rem 4rem 3rem;
     background: #acacac7a url('../images/floating.gif') no-repeat center center/ cover;
     background-blend-mode: darken;
+
+    h1 {
+      font-size: 7rem;
+      opacity: 0.9;
+      letter-spacing: 0.5rem;
+      mix-blend-mode: exclusion;
+      color: $heading;
+    }
   }   
   .endsec {
     height: 110vh;
@@ -49,25 +57,25 @@ overflow-x: hidden;
   } 
 }
 
-h1 {
-  font-size: 7rem;
-  opacity: 0.9;
-  letter-spacing: 0.5rem;
-  mix-blend-mode: exclusion;
-}
 
 .yearlyShows{
   position: relative;
   overflow-x: hidden;
   .spacer {
     height: 110vh;
+    width: 100vw;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     align-content: center;
     h1{
+      padding: 15rem 3rem 4rem 3rem;
+      font-size: 7rem;
+      opacity: 0.9;
+      letter-spacing: 0.5rem;
+      mix-blend-mode: hard-light;
       text-transform: uppercase;
       text-align: center;
+      color: $heading;
     }
     span{
       font-family: 'Montserrat', sans-serif;
@@ -76,28 +84,17 @@ h1 {
     }
   }  
   .circusSpacer{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    width: 100%;
-    padding: 15rem 3rem 4rem 3rem;
     background: #acacac7a url('../images/circusShowBg.gif') no-repeat center center/ cover;
     background-blend-mode: darken;
-    text-align: center;
   }
   .gallerySpacer{
-    height: 100%;
-    width: 100%;
-    padding: 15rem 3rem 4rem 3rem;
-    background: #c97ea1bb url('../images/thegalleryBg2.gif') no-repeat center center/ cover;
+    background: #fcfcfcce url('../images/thegalleryBg1.gif') repeat top center/ contain;
     background-blend-mode: darken;
-
-    h1{
-      mix-blend-mode: exclusion;
-      color: #c97ea1;
-      text-align: center;
-    }
+    width: 100vw;
+  }
+  .tomorrowSpacer{
+    background: #4b4146bb url('../images/tomorrowBg.gif') no-repeat center center/ cover;
+    background-blend-mode: soft-light;
   }
     .endsec {
     height: 100vh;
@@ -110,6 +107,7 @@ h1 {
   } 
   .secContent{
     h1{
+      font-size: 7vw;
       top: 30%;
       mix-blend-mode: normal;
       color: $lightergraypurple;

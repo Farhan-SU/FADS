@@ -1,5 +1,5 @@
 import React from "react";
-import Circus from '../../../components/Circus';
+import Circus from '../../../components/GalleryCom/Circus';
 
 
 const circus = () => {

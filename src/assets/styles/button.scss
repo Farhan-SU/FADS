@@ -1,5 +1,5 @@
-@import 'colors'; 
-/*Button animation credit to Paul @ https://codepen.io/bypavel/pen/jAXpgq*/
+@import 'colors', 'breakpoints'; ; 
+/*Button animation inspired by Paul @ https://codepen.io/bypavel/pen/jAXpgq*/
 
   #scroll-down {
       display: block;
@@ -16,10 +16,10 @@
   .arrow-down:after {
       content: '';
       display: block;
-      margin: 0;
+      margin: 7px 0 0 -0.5px;
       padding: 0;
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       border-top: 2px solid #fd9824;
       border-right: 2px solid #fd9824;
       -moz-transform: rotate(135deg);
@@ -34,7 +34,15 @@
     color: #f1a853;
     font-size: 14px;
     font-weight: bold;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
+       
+    @include media ("screen", "<=phone") {
+       font-size: 6px;
+       position: relative;
+       left: 0.8rem;
+       top: -5.1rem;
+       transform: rotate(90deg);  
+      }
   }
   #scroll-down::before {
       -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
@@ -50,7 +58,7 @@
       top: 14.6px;
       left: 49.3%;
       width: 2px;
-      height: 70px;
+      height: 80px;
       background: #fd9824;
       content: ' ';
   }

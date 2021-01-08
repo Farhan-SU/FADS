@@ -1,45 +1,39 @@
 .error-bio {
   height: 100vh;
   background-color: #6b728d; }
-
-.error-bio h1 {
-  font-size: 4rem;
-  color: #ffefd7;
-  letter-spacing: 0.4rem;
-  position: relative;
-  top: 20%;
-  left: 18%;
-  line-height: 4rem;
-  width: 60%;
-  text-align: center; }
+  .error-bio h1 {
+    font-size: 4rem;
+    color: #ffefd7;
+    letter-spacing: 0.4rem;
+    position: relative;
+    top: 20%;
+    left: 18%;
+    line-height: 4rem;
+    width: 60%;
+    text-align: center; }
 
 .biowrapper {
   height: 100%;
   overflow-x: hidden;
   margin-top: 8rem; }
-
-.biowrapper .bio-header {
-  margin-top: 4rem;
-  text-align: center; }
-
-.biowrapper .bio-header h1 {
-  font-size: 5rem;
-  letter-spacing: 0.3rem;
-  margin-bottom: 1rem;
-  color: #6b728d; }
-
-.biowrapper .bio-header h4 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-  color: #6b728d; }
-
-.biowrapper .bio-header .bannerBio {
-  margin: 3rem 0;
-  width: 100vw; }
-
-.biowrapper .bio-header .bannerBio .banner-img {
-  width: 100vw; }
+  .biowrapper .bio-header {
+    margin-top: 4rem;
+    text-align: center; }
+    .biowrapper .bio-header h1 {
+      font-size: 5rem;
+      letter-spacing: 0.3rem;
+      margin-bottom: 1rem;
+      color: #6b728d; }
+    .biowrapper .bio-header h4 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #6b728d; }
+    .biowrapper .bio-header .bannerBio {
+      margin: 3rem 0;
+      width: 100vw; }
+      .biowrapper .bio-header .bannerBio .banner-img {
+        width: 100vw; }
 
 .actualbio {
   height: 100%;
@@ -49,129 +43,108 @@
   align-content: center;
   overflow: scroll;
   margin-bottom: 3rem; }
-
-.actualbio .bioPic {
-  padding: 0; }
-
-.actualbio .bioPic img {
-  width: 100%;
-  height: 100%; }
-
-.actualbio .biocontent {
-  min-height: 100%;
-  height: 100%;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  padding: 2rem; }
-
-.actualbio .biocontent .desBio {
-  min-height: 100%;
-  margin-top: 2.5rem; }
-
-.actualbio .biocontent .desBio p {
-  font-size: 1.5rem;
-  line-height: 2.4rem;
-  color: #1d1d3a;
-  font-weight: 400;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: break-word; }
-
-.actualbio .biocontent a {
-  display: flex;
-  flex: 1;
-  justify-content: space-evenly;
-  align-self: space-between;
-  align-content: space-between;
-  margin: 3rem 0.3rem 0 0.5rem;
-  transition: all 300ms ease-in-out; }
-
-.actualbio .biocontent a:not(.not) {
-  border-left: 0.5px solid #be9dd4; }
-
-.actualbio .biocontent a:hover {
-  scale: 1.1; }
+  .actualbio .bioPic {
+    padding: 0; }
+    .actualbio .bioPic img {
+      width: 100%;
+      height: 100%; }
+  .actualbio .biocontent {
+    min-height: 100%;
+    height: 100%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    padding: 2rem; }
+    .actualbio .biocontent .desBio {
+      min-height: 100%;
+      margin-top: 2.5rem; }
+      .actualbio .biocontent .desBio p {
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: #1d1d3a;
+        font-weight: 400;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word; }
+    .actualbio .biocontent a {
+      display: flex;
+      flex: 1;
+      justify-content: space-evenly;
+      align-self: space-between;
+      align-content: space-between;
+      margin: 3rem 0.3rem 0 0.5rem;
+      transition: all 300ms ease-in-out; }
+      .actualbio .biocontent a:not(.not) {
+        border-left: 0.5px solid #be9dd4; }
+      .actualbio .biocontent a:hover {
+        scale: 1.1; }
 
 .portfolioTxt {
   padding: 1rem 4rem;
   margin-top: 5rem; }
-
-.portfolioTxt h2 {
-  font-size: 2.8vw;
-  color: #58446e;
-  opacity: 0.9;
-  text-transform: uppercase; }
+  .portfolioTxt h2 {
+    font-size: 2.8vw;
+    color: #58446e;
+    opacity: 0.9;
+    text-transform: uppercase; }
 
 .slide {
   width: 100%; }
-
-.slide:not(:first-child) {
-  margin-left: 6vw; }
-
-.slide .preview {
-  height: 100%;
-  flex-basis: 100%;
-  width: 400px;
-  background: transparent;
-  overflow: hidden; }
-
-.slide .preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  z-index: 1; }
+  .slide:not(:first-child) {
+    margin-left: 6vw; }
+  .slide .preview {
+    height: 100%;
+    flex-basis: 100%;
+    width: 400px;
+    background: transparent;
+    overflow: hidden; }
+    .slide .preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      z-index: 1; }
 
 .showcase {
   width: 100%;
   margin: 2rem 1rem 6rem 1rem;
   overflow: hidden; }
-
-.showcase .slider {
-  width: 100%;
-  position: relative;
-  top: 50%;
-  left: 1%;
-  display: flex;
-  margin-left: 1.8rem; }
+  .showcase .slider {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 1%;
+    display: flex;
+    margin-left: 1.8rem; }
 
 .bioBttn {
   margin: 2rem 0 0 0.5rem; }
-
-.bioBttn p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #6b728d;
-  transition: color 300ms ease-in-out; }
-
-.bioBttn p:hover {
-  color: #a02313; }
-
-.bioBttn .arrow {
-  height: 20px;
-  left: 21.5%;
-  position: absolute;
-  width: 20px; }
-
-.bioBttn .arrow-top, .bioBttn .arrow-bottom {
-  background-color: #5f4179;
-  height: 2px;
-  position: absolute;
-  top: 70%;
-  width: 60%; }
-
-.bioBttn .arrow-top {
-  transform: rotate(45deg);
-  transform-origin: bottom right; }
-
-.bioBttn .arrow-top:after {
-  left: 100%;
-  right: 0; }
-
-.bioBttn .arrow-bottom {
-  transform: rotate(-45deg);
-  transform-origin: top right; }
-
-.bioBttn .arrow-bottom:after {
-  left: 0;
-  right: 100%; }
+  .bioBttn p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6b728d;
+    transition: color 300ms ease-in-out; }
+    .bioBttn p:hover {
+      color: #a02313; }
+  .bioBttn .arrow {
+    height: 20px;
+    left: 21.5%;
+    position: absolute;
+    width: 20px; }
+    .bioBttn .arrow-top, .bioBttn .arrow-bottom {
+      background-color: #5f4179;
+      height: 2px;
+      position: absolute;
+      top: 70%;
+      width: 60%; }
+    .bioBttn .arrow-top {
+      transform: rotate(45deg);
+      transform-origin: bottom right; }
+      .bioBttn .arrow-top:after {
+        left: 100%;
+        right: 0; }
+    .bioBttn .arrow-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top right; }
+      .bioBttn .arrow-bottom:after {
+        left: 0;
+        right: 100%; }

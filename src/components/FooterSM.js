@@ -20,16 +20,15 @@ const FooterSM = () => {
                 <span><i>Syracuse, NY</i></span>
             </div>
             <Row className="media">
-            <a className='social-sm except' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Facebook/></a>
-            <a className='social-sm' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Twitter/></a>
-            <a className='social-sm' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><IG/></a>
-            <a className='social-sm' href="https://www.instagram.com/syracusefads/" target="_blank" rel="noopener noreferrer" ><Linkedin/></a>
+            <a className='social-sm except' href="https://www.facebook.com/syracusefads" target="_blank" rel="noopener noreferrer" ><Facebook/></a>
+            <a className='social-sm' href="https://www.instagram.com/fashiondesignsociety/" target="_blank" rel="noopener noreferrer" ><IG/></a>
+            <a className='social-sm' href="https://www.linkedin.com/company/fashion-and-design-society/" target="_blank" rel="noopener noreferrer" ><Linkedin/></a>
             </Row>
             </Col>
             <Col md={6} className='second-sm'>
             <div className="contact">
                 <h3>INQUIRIES at</h3>
-                <a key="Email" component="a" href="syracusefads@gmail.com" target="_top">syracusefads@gmail.com</a>
+                <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank">syracusefads@gmail.com</a>
             </div>
             </Col>
         </Row>

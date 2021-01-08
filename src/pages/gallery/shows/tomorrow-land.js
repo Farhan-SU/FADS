@@ -1,5 +1,5 @@
 import React from "react";
-import Tomorrow from "../../../components/Tomorrow";
+import Tomorrow from "../../../components/GalleryCom/Tomorrow";
 
 
 const tomorrow = () => {

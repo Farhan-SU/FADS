@@ -1,5 +1,5 @@
 import React from "react";
-import WinterEd from '../../../components/WinterEd';
+import WinterEd from '../../../components/GalleryCom/WinterEd';
 
 const winter = () => {
     return(

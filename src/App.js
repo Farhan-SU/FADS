@@ -38,21 +38,11 @@ function App () {
   const RouteWithLayout = ({ component, ...rest }) => {
     return (
       <>
-        <Layout/>
+        <Layout>
         <Route {...rest} component={component} />
+        </Layout>
         <footer>
         <FooterSM/>
-        </footer>
-      </>
-    );
-  };
-  const RouteHome = ({ component}) => {
-    return (
-      <>
-        <Layout/>
-        <Route component={component} />
-        <footer>
-        <Footer/>
         </footer>
       </>
     );
@@ -72,7 +62,7 @@ function App () {
             <div className="routes">
             <Suspense fallback={<LoadingScreen/>}>
                   <Switch location={location}>
-                    <RouteHome exact path="/" component={homepg}/>
+                    <RouteWithLayout exact path="/" component={homepg}/>
                     <RouteWithLayout exact path="/gallery" component={gallery} />  
                     <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
                     <RouteWithLayout path="/gallery/editorials/aline" component={aline}/>

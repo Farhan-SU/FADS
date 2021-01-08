@@ -1,12 +1,12 @@
-@import 'colors'; 
-
-:root{
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
+@import 'colors';
+@import 'breakpoints'; 
 
 /***Homepage********/
-
+.wrapMobileStyle{
+  @include media ("screen", "<=phone") {
+    overflow-x: hidden;
+  }
+}
 %headingstyle{
   font-size: 9rem;
   position: relative;
@@ -39,27 +39,23 @@
       transition: width 1s;
     }
 }
-.container-scroll {
-  width:100vw;
-  height:100vh;
-  overflow: auto;
-}
-.wrap-overflow {
-  position: relative;
-  overflow: hidden;
-  height:100%;
-}
+
 .layerone{
   display: flex;
-  padding: 2rem;
   height: 105vh;
-  padding: 7rem 2rem 1.5rem 6rem;
+  padding: 4rem 2rem 1rem 5rem;
   justify-content: flex-start;
   align-items: flex-start;
   align-self: flex-start;
-  background: $background url('../images/weare.svg') no-repeat top left;
-  background-size: cover;
+  background: $background url('../images/weare.svg') no-repeat top left/ cover;
 
+  @include media ("screen", "<=phone") {
+    height: 70vh;
+    background: rgb(78, 61, 109) url('../images/weareSM3.svg') no-repeat top center/ cover;
+    background-blend-mode: multiply;
+    padding: 2rem;
+
+  }
 
     .fadsintro{
       position: relative;
@@ -67,17 +63,37 @@
       align-items: flex-end;
       align-content: flex-end;
 
+      @include media ("screen", "<=phone") {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      
+
       .firstcol{
         padding: 3rem 1rem;
-        z-index: 10;
         display: flex;
         flex-direction: column;
         position: relative;
+        z-index: 1;
+
+        @include media ("screen", "<=phone") {
+          padding: 1rem;
+          position: relative;
+          top: 3.5rem;
+        }
       
         h1{
           color: $purple;
           font-size: 6rem;
           letter-spacing: 0.3rem;
+          text-transform: capitalize;
+
+          @include media ("screen", "<=phone") {
+            font-size: 2.6rem;
+            margin-left: 0.4rem;
+            color: $lightergraypurple;
+          }
       }
       }
       .secondcol{
@@ -85,63 +101,66 @@
         flex-direction: column;
         position: relative;
         padding: 1rem 3rem 3.8rem 3rem;
+        top: -4rem;
+
+        @include media ("screen", "<=phone") {
+          padding: 0;
+          top: 3rem;
+        }
       }
   }
 }
 
 
 .layertwo{ 
+  position: relative;
+  overflow: hidden;
   height: 140vh;
-  background-image: url('../images/bio-purple.png');
-  background-color: #90758a;
-  background-repeat: no-repeat;
-  background-position: 104% 2%;
-  background-size: 800px;
+  background: $darkpurple url('../images/biotriangle.png') no-repeat  110% 7%/ cover;
+  background-blend-mode: soft-light;
   z-index: -1;
 
-  .bioreveal{
-    height: 1000px;
-    background-image: url('../images/biotriangle.png');
-    background-repeat: no-repeat;
-    background-size: 800px;
-    background-position: 104% 7%;
-    background-color: $text;
-    background-blend-mode: luminosity;
-    position: relative;
-    z-index: 1;
+  @include media ("screen", "<=phone") {
+    background-size: cover;
+    height: 80vh;
   }
 
-  .text{
-    position: relative;
-    left: 6rem;
-    top: -55.5rem;  
-
+  .text{ 
+    width: 90%;
+    height: 500px;
+    margin: auto 6rem;
+  
+    @include media ("screen", "<=phone") {
+      margin: 2rem 1.5rem;
+    }
     h3{
-      padding-top: 2rem;
+      visibility: hidden;
+      display: flex;
       position: relative;
+      top: -2rem;
+      z-index: 2;
       width: 70%;
       font-size: 3rem;
       font-weight: 500;
       line-height: 3.8rem;
       letter-spacing: 0.7;
       color: #fff2ce;
-      z-index: 2;
-      mix-blend-mode: overlay;
+      mix-blend-mode: luminosity;
 
+        @include media ("screen", "<=phone") {
+          width: 85%;
+          padding: 1rem;
+          top: 4rem;
+          font-size: 1.5rem;
+          letter-spacing: 0.5;
+          line-height: 2.2rem;
+        }
       }
   }
-    
-    .biocontainer{
-      width: 37%;
-      position: relative;
-      top: -6rem;
-      right: 4rem;
-      rotate: 90deg;
-    }
-  }
+}
 
 .layerfour{
-    height: 165vh;
+    height: 145vh;
     display: flex;
     justify-content: space-between;
     align-content: space-around;
@@ -154,8 +173,8 @@
      display: flex;
      flex-direction: column;
      flex: 1;
-     margin-top: 7.5rem;
      margin-left: 1.4rem;
+     border: 1px solid red;
 
      h2{
       @extend %headingstyle;
@@ -164,11 +183,15 @@
        margin-bottom: 1.5rem;
        z-index: 1;
        top: 9rem;
-
        span{
          mix-blend-mode: color-dodge;
          border: 1px solid red;
        }
+       @include media ("screen", "<=phone") {
+        font-size: 3rem; 
+        line-height: 3.2rem;
+        margin-bottom: 1.5rem;
+      }
      }
      
      .visit{
@@ -196,12 +219,16 @@
     align-items: center;
     justify-content: center;
     align-self: center;
-    background-blend-mode: screen;
+    @include media ("screen", "<=phone") {
+      img{
+        height: 20%;
+      }
+    }
   }
     .img1{
-      height: 55%;
+      height: 58%;
       position: relative;
-      top: -5%;
+      top: -13%;
       left: -1rem;
       border-radius: 8px;
     }
@@ -267,9 +294,14 @@
     width: 100%;
     height: 100%;
   }
+  .video{
+    width: 100vw;
+    border: 1px solid red;
+    object-fit: cover;
+  }
 
     .aboutpic {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
   }
 
@@ -391,3 +423,5 @@
     }
   }
 }
+
+

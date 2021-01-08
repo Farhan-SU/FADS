@@ -1,28 +1,18 @@
-import React, {useRef,useEffect} from 'react';
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 import '../assets/styles/pages.scss';
 import SEO from '../components/SEO';
 import {Row, Col} from 'react-bootstrap'
-import HFadsBio from '../components/HFadsBio';
-import HGallery from '../components/HGallery';
-import HAboutus from '../components/HAboutus';
-import HAgency from '../components/HAgency';
-import HJoinus from '../components/HJoinus';
+import HFadsBio from '../components/HomeCom/HFadsBio';
+import HGallery from '../components/HomeCom/HGallery';
+import HAboutus from '../components/HomeCom/HAboutus';
+import HAgency from '../components/HomeCom/HAgency';
+import HJoinus from '../components/HomeCom/HJoinus';
 import Button from '../components/Button';
 
 
-
-if (typeof window !== `undefined`) {
-  gsap.registerPlugin(ScrollTrigger)
-  gsap.core.globals('ScrollTrigger', ScrollTrigger)
-}; 
-
 export default function Homepg ()  {  
-
   
-
-    return (
+ return (
     <>
     <SEO
     pageMeta={{
@@ -31,6 +21,7 @@ export default function Homepg ()  {
       description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major"
     }}>
     <>
+    <div className="wrapMobileStyle">
     <div className="layerone">
         <Row className="fadsintro">
           <Col className="firstcol" md={8}>
@@ -46,6 +37,7 @@ export default function Homepg ()  {
     <HAboutus/>
     <HAgency/>
     <HJoinus/>
+    </div>
     </>  
     </SEO>
     </>

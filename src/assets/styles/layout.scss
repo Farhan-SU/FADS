@@ -64,30 +64,9 @@ html, body {
     }
   }
 }
-.splashwrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /*Credits to @hdksjskdh on instagram for the background picture*/
-  background: url('../images/splashbg.jpg') no-repeat top center/ cover; 
-  background-color: rgb(124, 101, 151);
-  background-blend-mode: soft-light;
-  transition: all 3s ease-in-out;
-  overflow: hidden;
-
-  .splash{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 93vh;
-    width: 100%;
-    margin: -2rem auto 1rem auto;
-  }
-}
 /****/
 .bgLoading{
-  background: #dfdcee url('../images/loading3.gif') no-repeat center center / contain;
+  background: #dfdcee url('../images/loading1.gif') no-repeat center center / contain;
   background-blend-mode: multiply;
   display: flex;
   justify-content: center;

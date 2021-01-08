@@ -1,0 +1,85 @@
+.mobilenavWrapper {
+  position: fixed;
+  transform: translateX(0);
+  z-index: 150;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: start;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; }
+  .mobilenavWrapper .smLogo {
+    margin: 1.5rem;
+    position: fixed;
+    z-index: 100; }
+    .mobilenavWrapper .smLogo img {
+      width: 23%; }
+  .mobilenavWrapper .nav {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: #917d9b;
+    backdrop-filter: blur(20px); }
+  .mobilenavWrapper .nav-content {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff4e4;
+    backdrop-filter: blur(10); }
+    .mobilenavWrapper .nav-content .nav-inner {
+      margin: 5rem 1rem 1rem 0.5rem; }
+    .mobilenavWrapper .nav-content .nav-item {
+      list-style: none;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #eae0fd;
+      font-family: "Vipnagorgialla", "Raleway", sans-serif; }
+      .mobilenavWrapper .nav-content .nav-item li {
+        margin-bottom: 1.2rem;
+        text-decoration: underline;
+        text-decoration-color: #ffe4d8; }
+    .mobilenavWrapper .nav-content .nav-info {
+      margin: 4rem auto; }
+    .mobilenavWrapper .nav-content .nav-info-item {
+      color: #d2c5eb;
+      list-style: none;
+      font-size: 1rem; }
+      .mobilenavWrapper .nav-content .nav-info-item a {
+        color: #e7b6f3;
+        font-size: 0.9rem; }
+    .mobilenavWrapper .nav-content .smNavsocial {
+      margin: 0 auto auto 2.6rem;
+      width: 65%; }
+      .mobilenavWrapper .nav-content .smNavsocial .smSocial {
+        margin-right: 3rem; }
+
+.burger {
+  margin-top: 2.5rem;
+  right: 2.5rem;
+  display: grid;
+  justify-self: end;
+  position: fixed;
+  z-index: 200;
+  cursor: pointer; }
+  .burger__line {
+    margin-bottom: 5px;
+    width: 30px;
+    height: 3px;
+    background: #2f1772;
+    border-radius: 2px;
+    transform-origin: left center;
+    transition: all 0.4s ease-in-out; }
+    .open .burger__line:first-of-type {
+      transform: rotate(44deg) translate3d(-2px, 0, 0);
+      background-color: #eae0fd;
+      opacity: 0.5; }
+    .burger__line:nth-of-type(2) {
+      width: 18px; }
+      .open .burger__line:nth-of-type(2) {
+        opacity: 0; }
+    .open .burger__line:last-of-type {
+      transform: rotate(-44deg) translate3d(-4px, 0, 0);
+      background-color: #eae0fd;
+      opacity: 0.5; }

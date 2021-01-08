@@ -13,7 +13,7 @@ function Navbar() {
   const history = useHistory();
 
   function goHome() {
-  history.goBack("/");
+  history.push("/");
   }
 
   const [shouldHideHeader, setShouldHideHeader] = useState(false);

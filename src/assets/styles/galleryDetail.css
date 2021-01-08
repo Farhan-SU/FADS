@@ -16,6 +16,12 @@
     padding: 15rem 3rem 4rem 3rem;
     background: #acacac7a url("../images/floating.gif") no-repeat center center/cover;
     background-blend-mode: darken; }
+    .galleryShows .spacer h1 {
+      font-size: 7rem;
+      opacity: 0.9;
+      letter-spacing: 0.5rem;
+      mix-blend-mode: exclusion;
+      color: #ffefd7; }
   .galleryShows .endsec {
     height: 110vh;
     background-color: rgba(164, 157, 177, 0.712);
@@ -33,48 +39,38 @@
     .galleryShows .endsec .winterEndarrow {
       margin-top: 5rem; }
 
-h1 {
-  font-size: 7rem;
-  opacity: 0.9;
-  letter-spacing: 0.5rem;
-  mix-blend-mode: exclusion; }
-
 .yearlyShows {
   position: relative;
   overflow-x: hidden; }
   .yearlyShows .spacer {
     height: 110vh;
+    width: 100vw;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     align-content: center; }
     .yearlyShows .spacer h1 {
+      padding: 15rem 3rem 4rem 3rem;
+      font-size: 7rem;
+      opacity: 0.9;
+      letter-spacing: 0.5rem;
+      mix-blend-mode: hard-light;
       text-transform: uppercase;
-      text-align: center; }
+      text-align: center;
+      color: #ffefd7; }
     .yearlyShows .spacer span {
       font-family: 'Montserrat', sans-serif;
       font-size: 5rem;
       font-weight: 600; }
   .yearlyShows .circusSpacer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    width: 100%;
-    padding: 15rem 3rem 4rem 3rem;
     background: #acacac7a url("../images/circusShowBg.gif") no-repeat center center/cover;
-    background-blend-mode: darken;
-    text-align: center; }
-  .yearlyShows .gallerySpacer {
-    height: 100%;
-    width: 100%;
-    padding: 15rem 3rem 4rem 3rem;
-    background: #c97ea1bb url("../images/thegalleryBg2.gif") no-repeat center center/cover;
     background-blend-mode: darken; }
-    .yearlyShows .gallerySpacer h1 {
-      mix-blend-mode: exclusion;
-      color: #c97ea1;
-      text-align: center; }
+  .yearlyShows .gallerySpacer {
+    background: #fcfcfcce url("../images/thegalleryBg1.gif") repeat top center/contain;
+    background-blend-mode: darken;
+    width: 100vw; }
+  .yearlyShows .tomorrowSpacer {
+    background: #4b4146bb url("../images/tomorrowBg.gif") no-repeat center center/cover;
+    background-blend-mode: soft-light; }
   .yearlyShows .endsec {
     height: 100vh;
     display: flex;
@@ -84,6 +80,7 @@ h1 {
     background: #9786a3 url("../images/prevshow.svg") no-repeat center center/cover;
     background-blend-mode: color-burn; }
   .yearlyShows .secContent h1 {
+    font-size: 7vw;
     top: 30%;
     mix-blend-mode: normal;
     color: #d9cedf;

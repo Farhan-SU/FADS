@@ -1,3 +1,6 @@
+a.navlinks {
+  color: #a3b3c7; }
+
 .wrapabtjoin {
   height: 100%;
   width: 100%;
@@ -18,14 +21,16 @@
   .wrapabtjoin .firstsec {
     background: url("../images/aboutus/part1.png") no-repeat top center;
     background-size: cover;
-    height: 1805px;
-    padding: 0 4.5rem; }
+    height: 1820px;
+    padding: 0 4.5rem;
+    margin-top: -10rem; }
     .wrapabtjoin .firstsec h1 {
+      position: relative;
+      top: 11%;
       font-size: 12rem;
       text-transform: uppercase;
       color: #a284c9;
       width: 80%;
-      padding: 11.7rem 0 4rem 0;
       mix-blend-mode: hard-light; }
     .wrapabtjoin .firstsec .topright {
       padding: 0.75rem;
@@ -49,7 +54,7 @@
       height: 50%; }
     .wrapabtjoin .secondsec .joinHeader {
       position: relative;
-      top: 19%;
+      top: 11%;
       left: -3rem;
       overflow: hidden; }
       .wrapabtjoin .secondsec .joinHeader h1 {

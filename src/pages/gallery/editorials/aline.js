@@ -1,5 +1,5 @@
 import React from "react";
-import AlineEd from '../../../components/AlineEd';
+import AlineEd from '../../../components/GalleryCom/AlineEd';
 
 
 const aline = () => {

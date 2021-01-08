@@ -1,5 +1,5 @@
 import React from "react";
-import TheGallery from '../../../components/TheGallery';
+import TheGallery from '../../../components/GalleryCom/TheGallery';
 
 
 const thegallery = () => {

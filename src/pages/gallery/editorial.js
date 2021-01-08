@@ -1,5 +1,5 @@
 import React from "react";
-import Editorial from '../../components/Editorial';
+import Editorial from '../../components/GalleryCom/Editorial';
 
 const editorial = () => {
     return(
