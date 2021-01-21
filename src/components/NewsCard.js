@@ -17,7 +17,6 @@ const NewsCard = () => {
         keywords: ["Fashion", "F4 Speakers", "Agency", "Interviews", "Alumni"],
         description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major."
       }}>
-    <div className="pressWrapper">
         <div className="otherNews">
         <div className="latest">
             <h4>Latest Article</h4>
@@ -157,8 +156,6 @@ const NewsCard = () => {
         </CardDeck>
         </div>
         </div>
-
-    </div>
     </SEO>
     </>
   );

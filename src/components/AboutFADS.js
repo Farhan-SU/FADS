@@ -34,8 +34,15 @@ export default function AboutTest () {
             <div className="secondsec">
                 <Reveal className="bottomleft">
                     <p>
-                    We give a chance for students to gain real-time experience in fields that 
-                    might be career avenues for them in the future.
+                    FADS is an open environment for the discussion of
+                    new ideas that brings important concerns of the
+                    global fashion industry and the changing social
+                    climate to the forefront of dialogue at SU.
+                    </p>
+                    <p>
+                    We give our committed members an opportunity
+                    to gain real-time experience in fields that are
+                    potential career avenues for them in their future.
                     FADS has general member meetings, model training, and fashion design meetings 
                     each week to collaborate with on our work for our shows, photo shoots, and events.
                     </p>
@@ -86,6 +93,9 @@ export default function AboutTest () {
                     <p>Learn about and apply the aspect of fashion they are interested into the organization and production of a fashion show.</p>
                 </Reveal>
                 </div>
+            </div>
+            <div className="lastsec">
+
             </div>
         </div>
         </SEO>

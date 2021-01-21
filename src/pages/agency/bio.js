@@ -127,7 +127,7 @@ export default function Bio(props) {
                         <div class="arrow-top"></div>
                         <div class="arrow-bottom"></div>
                       </div> 
-                      <span class="link__text"><p>View my full portfolio</p></span>
+                      <span class="linktext">View my full portfolio</span>
                     </div>
                     </a>
                 </div>

@@ -45,6 +45,7 @@
   .yearlyShows .spacer {
     height: 110vh;
     width: 100vw;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-content: center; }
@@ -62,7 +63,7 @@
       font-size: 5rem;
       font-weight: 600; }
   .yearlyShows .circusSpacer {
-    background: #acacac7a url("../images/circusShowBg.gif") no-repeat center center/cover;
+    background: #acacac7a url("../images/circusShowBg.gif") no-repeat center center/1500px;
     background-blend-mode: darken; }
   .yearlyShows .gallerySpacer {
     background: #fcfcfcce url("../images/thegalleryBg1.gif") repeat top center/contain;
@@ -87,8 +88,8 @@
     text-align: center; }
   .yearlyShows .secContent .showNxt {
     position: relative;
-    top: 12rem;
-    left: -8rem; }
+    top: 9rem;
+    left: -9rem; }
 
 /***Credits to https://codepen.io/sego/pen/bQZKwP for button effect**/
 .link {

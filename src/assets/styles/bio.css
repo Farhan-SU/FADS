@@ -118,20 +118,20 @@
 
 .bioBttn {
   margin: 2rem 0 0 0.5rem; }
-  .bioBttn p {
+  .bioBttn .linktext {
     font-size: 1.2rem;
     font-weight: 500;
     color: #6b728d;
     transition: color 300ms ease-in-out; }
-    .bioBttn p:hover {
-      color: #a02313; }
+    .bioBttn .linktext:hover {
+      color: #ae28cf; }
   .bioBttn .arrow {
-    height: 20px;
+    height: 22px;
     left: 21.5%;
     position: absolute;
     width: 20px; }
     .bioBttn .arrow-top, .bioBttn .arrow-bottom {
-      background-color: #5f4179;
+      background-color: #7d56a0;
       height: 2px;
       position: absolute;
       top: 70%;

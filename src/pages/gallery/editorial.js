@@ -1,12 +1,10 @@
 import React from "react";
-import Editorial from '../../components/GalleryCom/Editorial';
+import WrapEditorial from '../../components/GalleryCom/WrapEditorial';
 
 const editorial = () => {
     return(
         <>
-        <div style={{height: '100%'}}>
-        <Editorial/>
-        </div>
+        <WrapEditorial/>
         </>
     )
 }

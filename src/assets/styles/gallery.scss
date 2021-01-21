@@ -1,4 +1,5 @@
 @import 'colors'; 
+@import 'breakpoints'; 
 
 %gallerycontent {
   height: 100vh;
@@ -14,11 +15,24 @@
   background-size: 90%;
 }
 
+%centeralignMobile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/*****Gallery home****/
 
 .wrapper {
   background-color: black;
   height: 110vh;
   width: 101.2vw;
+
+  @include media ("screen", "<=phone") {
+    height: 100%;
+    width: 105vw;
+  }
 
 
   .linkbox{
@@ -30,12 +44,24 @@
     align-items: center;
     overflow: hidden;
 
+    @include media ("screen", "<=phone") {
+      top: 1em;
+      left: 0.2em;
+  
+    }
+
     h1{
       font-size: 5.2rem;
       opacity: 0.9;
       color: $heading;
       letter-spacing: 2px;
       mix-blend-mode: normal;
+
+      @include media ("screen", "<=phone") {
+        font-size: 3rem;
+        mix-blend-mode: hard-light;
+        text-decoration: underline;
+      }
 
       &:hover{
         transition: all 800ms ease-in-out;
@@ -50,12 +76,22 @@
   background: url('../images/surya.webp') no-repeat 70% 40%;
   height: 110vh;
   background-size: cover;
+
+  @include media ("screen", "<=phone") {
+    height: 100%;
+    padding: 10rem 0;
+  }
 }
 
 .shows {
   background: linear-gradient( rgba(31, 31, 31, 0.3), rgba(0, 0, 0, 0.5) ), url('../images/fadsshow.webp') no-repeat 50% 38%;
   height: 110vh;
   background-size: 200%;
+
+   @include media ("screen", "<=phone") {
+    height: 100%;
+    padding: 10rem 0;
+  }
 }
 
 /***************Editorial/Shows****************/
@@ -172,6 +208,118 @@
           left: -4%;
         }
       }
+}
+
+/*******Mobile Editorial/Shows**********/
+/*******Mobile Editorial/Shows**********/
+/*******Mobile Editorial/Shows**********/
+
+.editorialwrapperSM, .show-wrapperSM{
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  padding: 7rem 0 0 0;
+  background: lighten($lightergraypurple, 8%);
+
+  .introE{
+    @extend %centeralignMobile;
+    text-align: center;
+    width: 95vw;
+    margin-left: 0.5rem;
+    color: $darkpurple;
+    position: relative;
+    top: -1rem;
+    h1{
+      font-size: 3.5rem;
+    }
+    p{
+      font-size: 1.3rem;
+      position: relative;
+      top: -1.8rem;
+    }
+  }
+
+  .editorialSection{
+    @extend %centeralignMobile;
+    height: 100%;
+  }
+  .imgContainer{
+    position: relative;
+    z-index: 1;
+    img{
+      height: 480px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .circleGallery{
+    height: 215px;
+    width: 215px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    background-color: #FFD6BE;
+    mix-blend-mode: exclusion;
+  } 
+  .title{
+    position: absolute;
+    z-index: 3;
+    border: 2.5px solid $graypurple;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    padding: 1.5rem 0.5rem;
+    overflow: hidden;
+  }  
+  .titleHeader{
+    @extend %centeralignMobile;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    h1, h3{
+      color: $heading;
+      mix-blend-mode: normal;
+    }
+    h3{
+      position: relative;
+      top: 0.8rem;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    h1{
+      font-size: 2rem;
+      position: relative;
+      top: -0.5rem;
+
+    }
+  }
+  .tlLine{
+    border: 1px solid $graypurple;
+    background-color: $graypurple;
+    position: absolute;
+    transform: translate(0, 240px);
+    width: 3px;
+    height: 180px;
+    padding: 8.82rem 0;
+    z-index: 2;
+  }
+  .navEdShow{
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: center;
+    padding: 3rem 0;
+
+    .nvLinkbox{
+      padding: 3rem;
+    
+    }
+      h5{
+        font-size: 1rem;
+        color: $muave;
+      }  
+  }
+
 }
 
 

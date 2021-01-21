@@ -1,12 +1,12 @@
-import React, {useRef, useEffect, useMemo, createRef } from 'react';
-import AboutFADS from '../components/AboutFADS';
+import React from 'react';
+import WrapAboutPg from '../components/WrapAboutPg';
 
   
 export default function Aboutus () {
 
     return (
         <>
-      <AboutFADS/>
+      <WrapAboutPg/>
         </>
     )
 };

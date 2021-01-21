@@ -165,9 +165,9 @@ function Circus () {
         </section>
         <div className="endsec">
             <div className="secContent">
-            <h1>The Gallery</h1>   
+            <h1>Tomorrow Land</h1>   
             <div className="showNxt">
-            <Link className="link" to="/gallery/shows/thegallery.js">
+            <Link className="link" to="/gallery/shows/tomorrow-land">
             <span className="link__arrow">
                 <span></span>
                 <span></span>

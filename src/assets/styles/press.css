@@ -1,33 +1,96 @@
-.pressPage {
-  height: 100%;
-  background-color: #e0cdc5; }
-
 .pressWrapper {
   background-color: #e0cdc5;
   height: 100%;
-  padding-top: 5rem; }
+  border: 1px solid rgba(253, 253, 253, 0); }
   .pressWrapper .pressHeader {
-    height: 1000px;
-    background: url("../images/pressHeader.svg") no-repeat center top;
-    background-size: cover; }
+    padding: 6rem;
+    margin-top: 4rem; }
+    @media screen and (max-width: 430px) {
+      .pressWrapper .pressHeader {
+        padding: 3rem;
+        margin-top: 6rem; } }
+    .pressWrapper .pressHeader .introH1 {
+      font-size: 3rem;
+      color: #ffefd7; }
+      @media screen and (max-width: 430px) {
+        .pressWrapper .pressHeader .introH1 {
+          font-size: 1.8rem; } }
+  .pressWrapper .headerContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .pressWrapper .headerContent .headerLeftpress {
+      align-self: flex-start; }
+      .pressWrapper .headerContent .headerLeftpress .f4h1 {
+        font-size: 14rem;
+        transform: rotate(-90deg);
+        color: #ed2759;
+        position: relative;
+        left: -5rem; }
+        @media screen and (max-width: 430px) {
+          .pressWrapper .headerContent .headerLeftpress .f4h1 {
+            font-size: 7rem; } }
+    .pressWrapper .headerContent .headerRightpress {
+      padding: 1rem 0;
+      align-self: flex-start;
+      position: relative;
+      left: -7rem;
+      top: 1rem; }
+      @media screen and (max-width: 430px) {
+        .pressWrapper .headerContent .headerRightpress {
+          top: 0;
+          left: -8.5rem; } }
+      .pressWrapper .headerContent .headerRightpress .f4expand {
+        font-size: 5rem;
+        -webkit-text-stroke: 1.2px #ed2759;
+        -webkit-text-fill-color: transparent; }
+        @media screen and (max-width: 430px) {
+          .pressWrapper .headerContent .headerRightpress .f4expand {
+            font-size: 2rem;
+            -webkit-text-stroke: 0.8px #ed2759; } }
+      .pressWrapper .headerContent .headerRightpress p {
+        font-size: 1.6rem;
+        color: #ed2759; }
+        @media screen and (max-width: 430px) {
+          .pressWrapper .headerContent .headerRightpress p {
+            font-size: 1rem; } }
   .pressWrapper .f4bg {
-    background: url("../images/f4b.gif") no-repeat right center;
-    background-size: cover;
+    background: #e0cdc5 url("../images/f4b.gif") no-repeat right center/cover;
     position: relative;
     top: -0.55rem; }
+    @media screen and (max-width: 430px) {
+      .pressWrapper .f4bg {
+        background-position: -200px top; } }
   .pressWrapper .F4speakers {
     height: 140%;
     padding: 5rem 2rem 2rem 2rem;
     margin: 0 2rem 2rem 2rem; }
+    @media screen and (max-width: 430px) {
+      .pressWrapper .F4speakers {
+        padding: 5rem 1rem 2rem 1rem;
+        margin: 0; } }
   .pressWrapper h4 {
     font-size: 7rem;
     font-weight: 600;
     color: #ffefd7;
     margin-left: 2rem;
     letter-spacing: 3px;
-    -webkit-text-stroke: 3px #ffefd7;
+    -webkit-text-stroke: 2px #ed2759;
     -webkit-text-fill-color: transparent;
     width: 100%; }
+    @media screen and (max-width: 430px) {
+      .pressWrapper h4 {
+        font-size: 4rem;
+        -webkit-text-stroke: 2px #ffefd7;
+        -webkit-text-fill-color: #ffefd7;
+        mix-blend-mode: normal; } }
+    .pressWrapper h4 span {
+      -webkit-text-fill-color: #ed2759;
+      mix-blend-mode: hard-light; }
+      @media screen and (max-width: 430px) {
+        .pressWrapper h4 span {
+          -webkit-text-fill-color: #ffefd7;
+          mix-blend-mode: normal; } }
   .pressWrapper .speakerposters {
     margin-top: 2rem;
     display: flex;
@@ -41,6 +104,9 @@
       margin: 2rem; }
       .pressWrapper .speakerposters .poster img {
         height: 500px; }
+        @media screen and (max-width: 430px) {
+          .pressWrapper .speakerposters .poster img {
+            height: 320px; } }
       .pressWrapper .speakerposters .poster .tuned {
         height: 500px;
         padding: 4rem; }
@@ -50,10 +116,18 @@
           position: relative;
           top: 12%;
           color: #ffefd7; }
+          @media screen and (max-width: 430px) {
+            .pressWrapper .speakerposters .poster .tuned h2 {
+              top: 8%; } }
   .pressWrapper .otherNews {
-    padding: 1rem 5rem 6rem 5rem;
+    padding: 3rem 5rem 6rem 5rem;
+    margin-top: -2rem;
     position: relative;
     z-index: 1; }
+    @media screen and (max-width: 430px) {
+      .pressWrapper .otherNews {
+        padding: 2rem;
+        margin-top: 1.5rem; } }
     .pressWrapper .otherNews .latest {
       position: relative; }
       .pressWrapper .otherNews .latest h4 {
@@ -64,6 +138,14 @@
         -webkit-text-stroke: 3px #ffefd7;
         -webkit-text-fill-color: transparent;
         z-index: 8; }
+        @media screen and (max-width: 430px) {
+          .pressWrapper .otherNews .latest h4 {
+            font-size: 4rem;
+            -webkit-text-stroke: 2px #ffefd7;
+            -webkit-text-fill-color: #ffefd7;
+            top: -1.1rem;
+            left: -0.8rem;
+            z-index: 2; } }
       .pressWrapper .otherNews .latest .overlayh4 {
         -webkit-text-stroke: none;
         -webkit-text-fill-color: #ffefd7;
@@ -73,14 +155,24 @@
         margin-top: -12.5rem;
         opacity: 0.7;
         z-index: 2; }
+        @media screen and (max-width: 430px) {
+          .pressWrapper .otherNews .latest .overlayh4 {
+            display: none; } }
     .pressWrapper .otherNews .cardDeck {
       margin-top: -3.8rem;
       position: relative;
       z-index: 6; }
+      @media screen and (max-width: 430px) {
+        .pressWrapper .otherNews .cardDeck {
+          margin-top: 1.5rem;
+          z-index: 1; } }
     .pressWrapper .otherNews .card {
       background-color: #fff7e8;
       border: none;
       height: 760px; }
+      @media screen and (max-width: 430px) {
+        .pressWrapper .otherNews .card {
+          margin-bottom: 3.5rem; } }
       .pressWrapper .otherNews .card img {
         height: 410px;
         filter: brightness(85%); }

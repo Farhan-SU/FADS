@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router} from "react-router-dom";
+import history from './history';
 import 'normalize.css';
 import './index.scss';
 import App from './App';
@@ -13,10 +14,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
+
 ReactDOM.render(
   <React.StrictMode>
   <ApolloProvider client={client}>
-  <Router>
+  <Router history={history}>
     <App/>  
   </Router>
   </ApolloProvider>

@@ -5,9 +5,6 @@ import '../../assets/styles/gallery.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../SEO';
-
-
-/**Images*/
 import AlineLeft from '../../assets/images/aline/nojacket.png';
 import AlineRight from '../../assets/images/aline/jacket.png';
 import JerkLeft from "../../assets/images/jerk/solei.png";
@@ -213,7 +210,7 @@ const Editorial = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
               <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
-          </div>
+        </div>
         </Col>
         <Col md={4} className="right">
           <img src={VintageRight} alt="jerkphotos" ref={addToRefsright} className="exception-img2"/>

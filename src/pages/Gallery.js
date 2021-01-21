@@ -1,7 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/gallery.scss';
-import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
+import { NavLink, Switch, useLocation, useRouteMatch} from 'react-router-dom';
 import SEO from '../components/SEO';
 
 
@@ -22,20 +22,19 @@ export default function Gallery () {
     }}>
   <>
       <Row className="wrapper">
-        <Col md={6} className='editorial'>
-        <Link to="./gallery/editorial">
+        <Col xs={12} md={6} className='editorial'>
+        <NavLink exact to="/gallery/editorial">
           <div className="linkbox">
           <h1>EDITORIAL</h1>
           </div>
-        </Link>
+        </NavLink>
         </Col>
-      
-        <Col md={6} className="shows">
-        <Link to="./gallery/shows">
+        <Col xs={12} md={6} className="shows">
+        <NavLink exact to="/gallery/shows">
         <div className="linkbox">
           <h1>SHOWS</h1>
         </div>
-        </Link>
+        </NavLink>
         </Col>
     </Row>   
   </>

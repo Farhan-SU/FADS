@@ -1,12 +1,9 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
+import React, {Suspense, lazy} from 'react';
 import {Switch, Route, useLocation, withRouter} from "react-router-dom";
-import Footer from './components/Footer';
-import FooterSM from './components/FooterSM';
 import Layout from './components/Layout';
-import Splash from './components/Splash';
 import LoadingScreen from './components/LoadingScreen';
-import './assets/styles/layout.scss';
 import './App.scss';
+import './assets/styles/layout.scss';
 
 const aboutus = lazy(() => import('./pages/aboutus'));
 const homepg = lazy(() => import('./pages/homepg'));
@@ -41,9 +38,6 @@ function App () {
         <Layout>
         <Route {...rest} component={component} />
         </Layout>
-        <footer>
-        <FooterSM/>
-        </footer>
       </>
     );
   };
@@ -65,7 +59,7 @@ function App () {
                     <RouteWithLayout exact path="/" component={homepg}/>
                     <RouteWithLayout exact path="/gallery" component={gallery} />  
                     <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
-                    <RouteWithLayout path="/gallery/editorials/aline" component={aline}/>
+                    <RouteWithLayout exact path="/gallery/editorials/aline" component={aline}/>
                     <RouteWithLayout exact path="/gallery/editorials/jerk-fads" component={jerkFads}/>
                     <RouteWithLayout exact path="/gallery/editorials/winter" component={winter}/>
                     <RouteWithLayout exact path="/gallery/editorials/work-wear-vintage" component={workWear}/>
@@ -79,8 +73,8 @@ function App () {
                     <RouteWithLayout exact path="/agency/graphicDesigners" component={graphicD}/>
                     <RouteWithLayout exact path="/agency/makeupArtists" component={makeupArtists}/>
                     <RouteWithLayout path="/agency/bio/:slug" component={bio}/>
-                    <RouteWithLayout path="/aboutus" component={aboutus} />
-                    <RouteWithLayout path="/press" component={press} />
+                    <RouteWithLayout exact path="/aboutus" component={aboutus} />
+                    <RouteWithLayout exact path="/press" component={press} />
                   </Switch>
                 </Suspense>
             </div>

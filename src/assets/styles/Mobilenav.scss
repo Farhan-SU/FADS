@@ -1,13 +1,15 @@
 .mobilenavWrapper{
     position: fixed;
     transform: translateX(0);
-    z-index: 150;
+    padding-top: 1rem;
+    margin-top: -0.5rem;
+    z-index: 20;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: start;
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     overflow: hidden;
     
@@ -23,9 +25,15 @@
   .nav {
     width: 100%;
     position: fixed;
+    margin-top: -0.3rem;
+    padding-top: 1rem;
     z-index: 100;
+    visibility: hidden;
     background-color: #917d9b;
-    backdrop-filter: blur(20px);
+    will-change: transform;
+    .showmenu & {
+        visibility: visible;
+    }
   }
   
   .nav-content {
@@ -33,7 +41,7 @@
     height: 100vh;
     overflow: hidden;
     color:#fff4e4;
-    backdrop-filter: blur(10);
+    opacity: 0.8;
 
     .nav-inner {
         margin: 5rem 1rem 1rem 0.5rem;
@@ -53,7 +61,7 @@
         }
     }
     .nav-info{
-        margin: 4rem auto;
+        margin: 2rem auto;
     }
     .nav-info-item {
         color:#d2c5eb;
@@ -65,10 +73,13 @@
         }
     }
     .smNavsocial{
-        margin: 0 auto auto 2.6rem;
-        width: 65%;
+        margin: 3rem auto auto 2.6rem;
+        width: 75%;
         .smSocial{
             margin-right: 3rem;
+            img{
+               height: 30px;
+            }
         }
     }
   } 
@@ -86,10 +97,11 @@
             margin-bottom: 5px;
             width: 30px;
             height: 3px;
-            background: rgb(47, 23, 114);
+            background: rgb(129, 110, 151);
             border-radius: 2px;
             transform-origin: left center;
             transition: all 0.4s ease-in-out;
+            filter: contrast(150%) brightness(1.4);
 
             &:first-of-type {
                 .open & {

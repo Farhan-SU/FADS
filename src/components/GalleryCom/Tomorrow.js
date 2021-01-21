@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import { NavLink, withRouter} from 'react-router-dom';
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
@@ -172,15 +172,15 @@ function Tomorrow () {
         </section>
         <div className="endsec">
             <div className="secContent">
-            <h1>Tomorrow Land</h1>   
-            <div className="showNxt" style={{marginLeft: '8rem'}}>
-            <Link className="link" to="/gallery/shows/tomorrow-land.js" onClick>
+            <h1>Back to Gallery</h1>   
+            <div className="showNxt">
+            <NavLink className="link" exact to="/gallery">
             <span className="link__arrow">
                 <span></span>
                 <span></span>
             </span>
             <span className="link__line"></span>
-            </Link>
+            </NavLink>
             </div>
             </div>
         </div>

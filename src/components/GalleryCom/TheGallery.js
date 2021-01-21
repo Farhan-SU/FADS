@@ -214,9 +214,9 @@ function TheGallery () {
         </section>
         <div className="endsec">
             <div className="secContent">
-            <h1>Tomorrow Land</h1>   
+            <h1>Night Circus</h1>   
             <div className="showNxt">
-            <Link className="link" to="/gallery/shows/tomorrow-land">
+            <Link className="link" to="/gallery/shows/circus" style={{marginLeft: '-4rem'}}>
             <span className="link__arrow">
                 <span></span>
                 <span></span>

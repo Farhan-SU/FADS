@@ -5,9 +5,7 @@ const shows = () => {
 
   return (
     <>
-    <div style={{height: '100%'}}>
       <Shows/>
-    </div>
     </>
   );
 };

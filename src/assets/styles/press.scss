@@ -1,30 +1,100 @@
 @import 'colors';
+@import 'breakpoints'; 
 
-.pressPage{
-    height: 100%;
-    background-color: #e0cdc5;
-}
 .pressWrapper{
     background-color: #e0cdc5;
     height: 100%;
-    padding-top: 5rem;
-
+    border: 1px solid rgba(253, 253, 253, 0);
+ 
+    
     .pressHeader{
-        height: 1000px;
-        background: url('../images/pressHeader.svg') no-repeat center top;
-        background-size: cover;
+        padding: 6rem;
+        margin-top: 4rem;
+
+        @include media ("screen", "<=phone") {
+            padding: 3rem;
+            margin-top: 6rem;
+        }
+
+        .introH1{
+            font-size: 3rem;
+            color: $heading;
+
+            @include media ("screen", "<=phone") {
+            font-size: 1.8rem;
+            }
+        }  
+    }
+    .headerContent{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        .headerLeftpress{
+            align-self: flex-start;
+            .f4h1{
+                font-size: 14rem;
+                transform: rotate(-90deg);
+                color: $f4color;
+                position: relative;
+                left: -5rem;
+
+                @include media ("screen", "<=phone") {
+                font-size: 7rem;
+                }
+            }
+        }
+        .headerRightpress{
+            padding: 1rem 0;
+            align-self: flex-start;
+            position: relative;
+            left: -7rem;
+            top: 1rem;
+
+            @include media ("screen", "<=phone") {
+                top: 0;
+                left: -8.5rem;
+            }
+     
+            .f4expand{
+                font-size: 5rem;
+                -webkit-text-stroke: 1.2px $f4color;
+                -webkit-text-fill-color: transparent; 
+
+                @include media ("screen", "<=phone") {
+                    font-size: 2rem;
+                    -webkit-text-stroke: 0.8px $f4color;
+                    }
+            }
+            p{
+                font-size: 1.6rem;
+                color: $f4color;
+
+                @include media ("screen", "<=phone") {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
     .f4bg{
-        background: url('../images/f4b.gif') no-repeat right center;
-        background-size: cover;
+        background: #e0cdc5 url('../images/f4b.gif') no-repeat right center/ cover;
         position: relative;
-        top: -0.55rem;
+        top: -0.55rem; 
+
+        @include media ("screen", "<=phone") {
+           background-position: -200px top;
+        }
     }
 
     .F4speakers{
        height: 140%;
        padding: 5rem 2rem 2rem 2rem; 
        margin: 0 2rem 2rem 2rem;
+
+       @include media ("screen", "<=phone") {
+        padding: 5rem 1rem 2rem 1rem; 
+        margin: 0;
+        }
     }
     
 
@@ -34,9 +104,25 @@
         color: $heading;
         margin-left: 2rem;
         letter-spacing: 3px;
-        -webkit-text-stroke: 3px $heading;
+        -webkit-text-stroke: 2px $f4color;
         -webkit-text-fill-color: transparent; 
         width: 100%;
+
+        @include media ("screen", "<=phone") {
+            font-size: 4rem;
+            -webkit-text-stroke: 2px $heading;
+            -webkit-text-fill-color: $heading;
+            mix-blend-mode: normal;  
+        }
+        span{
+            -webkit-text-fill-color: $f4color;
+            mix-blend-mode: hard-light;
+
+            @include media ("screen", "<=phone") {
+                -webkit-text-fill-color: $heading;
+                mix-blend-mode: normal;  
+            }
+        }
     }
 
     .speakerposters{
@@ -46,6 +132,7 @@
         align-items: center;
         align-content: space-around;
         flex-wrap: wrap;
+      
 
         .poster{
             display: flex;
@@ -53,6 +140,9 @@
             margin: 2rem;
             img{
                 height: 500px;
+                @include media ("screen", "<=phone") {
+                  height: 320px; 
+                }
             }
             .tuned{
                 height: 500px;
@@ -64,14 +154,25 @@
                 position: relative;
                 top: 12%;
                 color: $heading;
+
+                @include media ("screen", "<=phone") {
+                    top: 8%;
+                  }
                 }
             }
         }
     }
     .otherNews{
-        padding: 1rem 5rem 6rem 5rem;
+        padding: 3rem 5rem 6rem 5rem;
+        margin-top: -2rem;
         position: relative;
         z-index: 1;
+     
+
+        @include media ("screen", "<=phone") {
+            padding: 2rem;
+            margin-top: 1.5rem;
+          }
 
         .latest{
             position: relative;
@@ -83,6 +184,15 @@
                 -webkit-text-stroke: 3px $heading;
                 -webkit-text-fill-color: transparent; 
                 z-index: 8;
+
+                @include media ("screen", "<=phone") {
+                    font-size: 4rem;
+                    -webkit-text-stroke: 2px $heading;
+                    -webkit-text-fill-color: $heading; 
+                    top: -1.1rem;
+                    left: -0.8rem;
+                    z-index: 2;
+                  }
             }
             .overlayh4{
                 -webkit-text-stroke: none;
@@ -93,17 +203,30 @@
                 margin-top: -12.5rem;
                 opacity: 0.7;
                 z-index: 2;
+
+                @include media ("screen", "<=phone") {
+                    display: none;
+                  }
             }
         }
         .cardDeck{
             margin-top: -3.8rem;
             position: relative;
             z-index: 6;
+
+            @include media ("screen", "<=phone") {
+                margin-top: 1.5rem;
+                z-index: 1;
+              }
         }
         .card{
            background-color: rgb(255, 247, 232);
            border: none;
            height: 760px;
+
+           @include media ("screen", "<=phone") {
+            margin-bottom: 3.5rem;
+          }
 
            img{
                height: 410px;

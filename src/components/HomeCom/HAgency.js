@@ -1,66 +1,69 @@
-import React, {useRef,useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger} from 'gsap/ScrollTrigger';
 import '../../assets/styles/pages.scss';
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.core.globals('ScrollTrigger', ScrollTrigger);
+
+if (typeof window !== `undefined`) {
+  gsap.registerPlugin(ScrollTrigger)
+  gsap.core.globals('ScrollTrigger', ScrollTrigger)
+}; 
 
 export default function HAgency()  {  
+   
+  useEffect(() =>{
+    let tl = gsap.timeline();
+      tl.to('.marquee', {
+        duration: 16,
+        ease: "none",
+        x: "-=4855",
+        modifiers: {
+          x: gsap.utils.unitize(x => parseFloat(x) % 4855)
+        },
+        repeat: -1,
+        yoyo: true
+      });
+      }, []);
 
-    const tl = useRef();
-    const agency = useRef(null);
-    const agencyhead = useRef(null);
-    const agencytxt = useRef(null);
-
-    useEffect(() =>{
-      tl.current = gsap.timeline({
-        scrollTrigger: {
-          id: "agency",
-          trigger: agency.current,
-          scrub: true,
-          start: "top top",
-          end: '+=970',
-          pin: agencyhead.current,
-          pinReparent: true,
-          pinSpacing: false,
-          toggleActions: "play none none reverse"
-        }
-      })
-      .from(agency.current, {duration: 0.5})
-      .from(agencytxt.current, {duration: 1.5, autoAlpha: 0, ease: 'sine.in'});
-
-      return () => {
-        if (ScrollTrigger.getById('agency')) {
-          ScrollTrigger.getById('agency').kill();
-        }tl.current.kill();
-      };    
-    }, []);
-      
+ 
     return (
       <>
-        <div  ref={agency} className="layerseven" id="agency">
-            <div className="agencylist">
-                <h3>Our team</h3>
-                <ul>
-                <li >MODELS</li>
-                <li>Fashion Designers</li>
-                <li>Graphic Designers</li>
-                <li>Videographers</li>
-                <li>Photographers</li>
-                <li>Makeup Artist</li>
-                <li>Stylist</li>
-                <li>Communication</li>
-                </ul>  
+        <div className="layerseven" id="agency">
+          <div className="agencyHead">
+            <h2>Have a project?</h2>
+            <h5>We have some of the most talented individuals that can help you bring you ideas to life. Meet our team of:</h5>
+          </div>
+
+          <div className='marqueewrapper' >
+            <div className="marquee">
+            <div className="mtext"><h2>Fashion Designers/</h2></div>
+            <div className="mtext"><h2>Graphic Designers/</h2></div>
+            <div className="mtext"><h2>Web Designer/</h2></div>
+            <div className="mtext"><h2>Videographers/</h2></div>
             </div>
-            <div className="agencytxt">
-                <h2 ref={agencyhead}>We Collaborate Fearlessly</h2>
-                <Link to="/Agency">
-                <p ref={agencytxt}><em>How can we help you?</em></p>
-                </Link>
+          </div>
+          <div className='marqueewrapper'>
+            <div className="marquee"> 
+            <div className="mtext"><h2>Photographers/</h2></div>
+            <div className="mtext"><h2>Models/</h2></div>
+            <div className="mtext"><h2>Set Design/</h2></div>
+            <div className="mtext"><h2>Makeup Artist/</h2></div>
+            <div className="mtext"><h2>Stylist/</h2></div>
+            <div className="mtext"><h2>Communication/</h2></div>
+            </div>
+          </div>
+          
+            <div className="agencyLink">
+              <Link to="/agency">
+                <div className="linkbtn">
+                  <div className="circlelink"/>
+                  <p className="linktext">How can we help you? &#10230;</p>
+                </div>
+              </Link>
             </div>
         </div>
+
       </>
     );
 };

@@ -3,7 +3,7 @@ a.navlinks {
 
 .wrapabtjoin {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden; }
   .wrapabtjoin p {
     color: #ffefd7;
@@ -11,6 +11,10 @@ a.navlinks {
     font-weight: 500;
     white-space: normal;
     line-height: 2.7rem; }
+    @media screen and (max-width: 430px) {
+      .wrapabtjoin p {
+        font-size: 1.4rem;
+        line-height: 2rem; } }
   .wrapabtjoin h4 {
     font-size: 10rem;
     font-weight: 900;
@@ -19,11 +23,19 @@ a.navlinks {
     overflow: hidden;
     width: fit-content; }
   .wrapabtjoin .firstsec {
-    background: url("../images/aboutus/part1.png") no-repeat top center;
-    background-size: cover;
+    background: url("../images/aboutus/part1.png") no-repeat top center/cover;
     height: 1820px;
     padding: 0 4.5rem;
-    margin-top: -10rem; }
+    margin-top: -10rem;
+    border: 1px solid green; }
+    @media screen and (max-width: 430px) {
+      .wrapabtjoin .firstsec {
+        background: none;
+        /*background: rgba(39, 37, 37, 0.647) url('../images/part1mobile.png') no-repeat top center/ cover;
+            background-blend-mode: multiply;
+            margin-top: -1.4rem;
+            padding: 365rem 0 0 0;
+            height: 100%;*/ } }
     .wrapabtjoin .firstsec h1 {
       position: relative;
       top: 11%;
@@ -32,19 +44,34 @@ a.navlinks {
       color: #a284c9;
       width: 80%;
       mix-blend-mode: hard-light; }
+      @media screen and (max-width: 430px) {
+        .wrapabtjoin .firstsec h1 {
+          font-size: 5rem;
+          left: 1.8rem;
+          top: -15rem; } }
     .wrapabtjoin .firstsec .topright {
       padding: 0.75rem;
       position: relative;
       width: 39%;
       float: right;
       height: 100%; }
+      @media screen and (max-width: 430px) {
+        .wrapabtjoin .firstsec .topright {
+          width: 70%;
+          top: -14rem;
+          right: 1rem;
+          padding: 1rem; } }
       .wrapabtjoin .firstsec .topright p {
         text-align: right; }
   .wrapabtjoin .secondsec {
-    background: url("../images/aboutus/part2.png") no-repeat top center;
-    background-size: cover;
+    background: url("../images/aboutus/part2.png") no-repeat top center/cover;
     height: 1805px;
     padding: 2rem 4.5rem; }
+    @media screen and (max-width: 430px) {
+      .wrapabtjoin .secondsec {
+        background: none;
+        height: 100%;
+        padding: 1rem; } }
     .wrapabtjoin .secondsec .bottomleft {
       padding: 0.5rem 1rem;
       position: relative;
@@ -52,6 +79,10 @@ a.navlinks {
       width: 41%;
       overflow: hidden;
       height: 50%; }
+      @media screen and (max-width: 430px) {
+        .wrapabtjoin .secondsec .bottomleft {
+          width: 85%;
+          top: -9rem; } }
     .wrapabtjoin .secondsec .joinHeader {
       position: relative;
       top: 11%;
@@ -72,6 +103,11 @@ a.navlinks {
     padding: 1rem 4.5rem;
     position: relative;
     top: -0.24rem; }
+    @media screen and (max-width: 430px) {
+      .wrapabtjoin .thirdsec {
+        background: none;
+        height: 100%;
+        padding: 1rem; } }
     .wrapabtjoin .thirdsec .joinusText {
       margin-top: 1rem;
       position: relative;
@@ -101,6 +137,11 @@ a.navlinks {
     padding: 1rem 4.5rem;
     position: relative;
     top: -0.55rem; }
+    @media screen and (max-width: 430px) {
+      .wrapabtjoin .fourthsec {
+        background: none;
+        height: 100%;
+        padding: 1rem; } }
     .wrapabtjoin .fourthsec .designers {
       margin-bottom: 2rem;
       overflow: hidden; }

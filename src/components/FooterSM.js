@@ -2,10 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/layout.scss';
-import {ReactComponent as Facebook} from '../assets/images/facebook.svg';
-import {ReactComponent as Twitter} from '../assets/images/twitter.svg';
-import {ReactComponent as IG} from '../assets/images/instagram.svg';
-import {ReactComponent as Linkedin} from '../assets/images/linkedin.svg';
+import Facebook from '../assets/images/facebook.png';
+import instagram from '../assets/images/instagram.png';
+import LinkedIn from '../assets/images/linkedin.png';
 
 
 const FooterSM = () => {             
@@ -20,9 +19,21 @@ const FooterSM = () => {
                 <span><i>Syracuse, NY</i></span>
             </div>
             <Row className="media">
-            <a className='social-sm except' href="https://www.facebook.com/syracusefads" target="_blank" rel="noopener noreferrer" ><Facebook/></a>
-            <a className='social-sm' href="https://www.instagram.com/fashiondesignsociety/" target="_blank" rel="noopener noreferrer" ><IG/></a>
-            <a className='social-sm' href="https://www.linkedin.com/company/fashion-and-design-society/" target="_blank" rel="noopener noreferrer" ><Linkedin/></a>
+            <Col xs={4} className="linkbox">
+                <a className='social-sm except' href="https://www.facebook.com/syracusefads" target="_blank" rel="noopener noreferrer" >
+                <img src={Facebook} alt="facebook icon"/>
+                </a>
+            </Col>
+            <Col xs={4} className="linkbox">
+                <a className='social-sm' href="https://www.instagram.com/fashiondesignsociety/" target="_blank" rel="noopener noreferrer" >
+                <img src={instagram} alt="Instagram Icon"/>
+                </a>
+            </Col>
+            <Col xs={4} className="linkbox">
+                <a className='social-sm' href="https://www.linkedin.com/company/fashion-and-design-society/" target="_blank" rel="noopener noreferrer" >
+                <img src={LinkedIn} alt="LinkedIn Icon"/>
+                </a>
+            </Col>
             </Row>
             </Col>
             <Col md={6} className='second-sm'>

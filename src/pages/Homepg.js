@@ -7,7 +7,10 @@ import HGallery from '../components/HomeCom/HGallery';
 import HAboutus from '../components/HomeCom/HAboutus';
 import HAgency from '../components/HomeCom/HAgency';
 import HJoinus from '../components/HomeCom/HJoinus';
+import HSocial from '../components/HomeCom/HSocial';
 import Button from '../components/Button';
+
+
 
 
 export default function Homepg ()  {  
@@ -33,10 +36,11 @@ export default function Homepg ()  {
         </Row>
     </div>
     <HFadsBio/>
-    <HGallery/>
+   <HGallery/>
     <HAboutus/>
     <HAgency/>
     <HJoinus/>
+    <HSocial/>
     </div>
     </>  
     </SEO>

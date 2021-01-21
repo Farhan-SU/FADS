@@ -1,9 +1,9 @@
 @import 'colors';
+@import 'breakpoints'; 
 
 .nav {
   a.navlinks {
     color: #3c4652;
-
     &:hover{
       color: rgb(107, 27, 172);
       text-decoration: underline;
@@ -64,6 +64,7 @@ overflow-x: hidden;
   .spacer {
     height: 110vh;
     width: 100vw;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -84,7 +85,7 @@ overflow-x: hidden;
     }
   }  
   .circusSpacer{
-    background: #acacac7a url('../images/circusShowBg.gif') no-repeat center center/ cover;
+    background: #acacac7a url('../images/circusShowBg.gif') no-repeat center center/ 1500px;
     background-blend-mode: darken;
   }
   .gallerySpacer{
@@ -115,8 +116,8 @@ overflow-x: hidden;
     }
     .showNxt{
       position: relative;
-      top: 12rem;
-      left: -8rem;
+      top: 9rem;
+      left: -9rem;
     }
   }
 }

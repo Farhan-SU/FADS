@@ -156,26 +156,26 @@
 .bioBttn{
   margin: 2rem 0 0 0.5rem;
 
-  p{
+  .linktext{
     font-size: 1.2rem;
     font-weight: 500;
     color: $bluegray;
     transition: color 300ms ease-in-out;
 
     &:hover{
-      color: rgb(160, 35, 19);
+      color: rgb(174, 40, 207);
     }
   }
 
   .arrow {
-    height: 20px;
+    height: 22px;
     left: 21.5%;
     position: absolute;
     width: 20px;
     
     &-top,
     &-bottom {
-      background-color: rgb(95, 65, 121);
+      background-color: rgb(125, 86, 160);
       height: 2px;
       position: absolute;
       top: 70%;
