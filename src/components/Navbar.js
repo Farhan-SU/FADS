@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {NavLink, Link, withRouter, useHistory} from "react-router-dom";
+import {NavLink, Link, withRouter, useHistory, useLocation} from "react-router-dom";
 import {Row, Col} from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav';
 import '../assets/styles/layout.scss';
@@ -10,8 +10,8 @@ import navLogoWeb from '../assets/images/navLogo.webp';
 
 
 function Navbar() {
-  const history = useHistory();
 
+  const history = useHistory();
   function goHome() {
   history.push("/");
   }

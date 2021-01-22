@@ -98,8 +98,7 @@ export default function HAboutus()  {
             <h3 ref={abtextref}>Meet the diverse group of career minded 
             individuals at Syracuse University who share 
             a passion for creativity, design, and fashion.</h3>
-          </div>
-          <div className="abtLink">
+            <div className="abtLink">
             <Link to="/aboutus">
                 <div className="linkbtn">
                 <div className="circlelink"/>
@@ -107,6 +106,7 @@ export default function HAboutus()  {
                 </div>
             </Link>
             </div>
+          </div>
         </div>
       </>
     );

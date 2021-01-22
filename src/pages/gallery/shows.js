@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import Shows from '../../components/GalleryCom/Shows';
+import WrapShows from "../../components/GalleryCom/WrapShows";
 
 const shows = () => {
 
   return (
     <>
-      <Shows/>
+      <WrapShows/>
     </>
   );
 };

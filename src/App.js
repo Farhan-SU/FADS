@@ -49,32 +49,33 @@ function App () {
     return () => clearTimeout(timer);  
   },[]);*/
   
-  const location = useLocation();
+  let location = useLocation();
 
         return (
           <>
             <div className="routes">
             <Suspense fallback={<LoadingScreen/>}>
                   <Switch location={location}>
-                    <RouteWithLayout exact path="/" component={homepg}/>
-                    <RouteWithLayout exact path="/gallery" component={gallery} />  
-                    <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
                     <RouteWithLayout exact path="/gallery/editorials/aline" component={aline}/>
                     <RouteWithLayout exact path="/gallery/editorials/jerk-fads" component={jerkFads}/>
                     <RouteWithLayout exact path="/gallery/editorials/winter" component={winter}/>
                     <RouteWithLayout exact path="/gallery/editorials/work-wear-vintage" component={workWear}/>
-                    <RouteWithLayout exact path="/gallery/shows" component={shows}/>
                     <RouteWithLayout exact path="/gallery/shows/circus" component={circus}/>
                     <RouteWithLayout exact path="/gallery/shows/thegallery" component={thegallery}/>
                     <RouteWithLayout exact path="/gallery/shows/tomorrow-land" component={tomorrow}/>
-                    <RouteWithLayout exact path="/agency" component={agency} />
+                    <RouteWithLayout exact path="/gallery" component={gallery} />  
+                    <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
+                    <RouteWithLayout exact path="/gallery/shows" component={shows}/>
+                    <RouteWithLayout path="/agency/bio/:slug" component={bio}/>
                     <RouteWithLayout exact path="/agency/eboard" component={eboard}/>
                     <RouteWithLayout exact path="/agency/fashionDesigners" component={fashionD}/>
                     <RouteWithLayout exact path="/agency/graphicDesigners" component={graphicD}/>
                     <RouteWithLayout exact path="/agency/makeupArtists" component={makeupArtists}/>
-                    <RouteWithLayout path="/agency/bio/:slug" component={bio}/>
+                    <RouteWithLayout exact path="/agency" component={agency} />
                     <RouteWithLayout exact path="/aboutus" component={aboutus} />
                     <RouteWithLayout exact path="/press" component={press} />
+                    <RouteWithLayout exact path="/" component={homepg}/>
+                    <RouteWithLayout exact path="*" component={homepg}/>
                   </Switch>
                 </Suspense>
             </div>

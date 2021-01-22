@@ -9,10 +9,7 @@
   transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
   -webkit-transition: transform 500ms ease-in-out;
-  -moz-transition: transform 500ms ease-in-out;
-  border: 1px solid red;
-  position: relative;
-  z-index: 5; }
+  -moz-transition: transform 500ms ease-in-out; }
 
 @media screen and (max-width: 430px) {
   .linkbtn {
@@ -353,6 +350,7 @@
   border-radius: 3px; }
 
 .aboutuswrapper {
+  overflow: hidden;
   width: 100vw;
   height: 170vh;
   padding-bottom: 2rem;
@@ -364,23 +362,6 @@
   .aboutuswrapper {
     height: 100%;
     padding-bottom: 1rem; } }
-
-.aboutuswrapper .abtLink {
-  position: relative;
-  top: -7rem;
-  left: 6rem; }
-
-@media screen and (max-width: 430px) {
-  .aboutuswrapper .abtLink {
-    top: 1.5em;
-    left: 1em; } }
-
-.aboutuswrapper .abtLink .linkbtn {
-  color: #f1d7a6; }
-
-@media screen and (max-width: 430px) {
-  .aboutuswrapper .abtLink .linkbtn {
-    font-size: 1rem; } }
 
 .ab-text {
   position: relative;
@@ -426,6 +407,24 @@
     width: 82%;
     line-height: 1.4rem;
     letter-spacing: -0.3px; } }
+
+.ab-text .abtLink {
+  position: relative;
+  width: 50%;
+  top: 7rem;
+  left: 6rem; }
+
+@media screen and (max-width: 430px) {
+  .ab-text .abtLink {
+    top: 1.5em;
+    left: 1em; } }
+
+.ab-text .abtLink .linkbtn {
+  color: #f1d7a6; }
+
+@media screen and (max-width: 430px) {
+  .ab-text .abtLink .linkbtn {
+    font-size: 1rem; } }
 
 .ab-img-con {
   width: 100%;

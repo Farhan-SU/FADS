@@ -151,10 +151,10 @@ const Shows = () => {
         <Col md={4} className="description">
         <Row className="header">
           <Link to="/gallery/shows/thegallery"  onClick={() => history.push("/gallery/shows/thegallery")}>
-          <Col noGutter={true} xs={12}>
+          <Col noGutter={true} md={4}>
           <h3>Spring 2020</h3>
           </Col>
-          <Col xs={12}>
+          <Col md={4}>
           <h1>The Gallery</h1>
           </Col>
           </Link>
@@ -177,10 +177,10 @@ const Shows = () => {
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
         <Link exact to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
-          <Col noGutter={true} xs={12}>
+          <Col noGutter={true} md={4}>
           <h3>Spring 2019</h3>
           </Col>
-          <Col xs={12}>
+          <Col md={4}>
           <h1>Night Circus</h1>
           </Col>
           </Link>
@@ -203,10 +203,10 @@ const Shows = () => {
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
         <Link exact to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
-          <Col noGutter={true} xs={12}>
+          <Col noGutter={true} md={4}>
            <h3>Spring 2018</h3>
           </Col>
-          <Col noGutter={true} xs={12} style={{marginLeft:'1rem'}}>
+          <Col noGutter={true} md={4} style={{marginLeft:'1rem'}}>
           <h1>Tomorrow<br/>Land</h1>
           </Col>
         </Link>

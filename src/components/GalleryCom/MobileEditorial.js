@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import {Row, Col} from 'react-bootstrap';
-import { Link, withRouter, useHistory} from 'react-router-dom';
+import { NavLink, Link, withRouter, useHistory} from 'react-router-dom';
 import ImgWebp from '../ImgWebp';
 import '../../assets/styles/gallery.scss';
 import SEO from '../SEO';
@@ -203,11 +203,11 @@ const MobileEditorial = () => {
         </div>
       </section>
         <Row className="navEdShow">
-         <Link to="/gallery/shows">
+         <NavLink to="/gallery/shows">
             <Col className="nvLinkbox">
             <h5>FADS Fashion Shows &#62;</h5>
             </Col>
-        </Link>
+        </NavLink>
         </Row>
       </div>
       </>

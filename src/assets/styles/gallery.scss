@@ -229,6 +229,7 @@
     color: $darkpurple;
     position: relative;
     top: -1rem;
+
     h1{
       font-size: 3.5rem;
     }
@@ -241,7 +242,20 @@
 
   .editorialSection{
     @extend %centeralignMobile;
-    height: 100%;
+    overflow: hidden;
+  }
+  .imgContainer{
+    position: relative;
+    z-index: 1;
+    img{
+      height: 480px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .showSection{
+    @extend %centeralignMobile;
+    overflow: hidden;
   }
   .imgContainer{
     position: relative;
@@ -308,7 +322,7 @@
     justify-content: flex-end;
     align-content: flex-end;
     align-items: center;
-    padding: 3rem 0;
+    padding: 1rem 0;
 
     .nvLinkbox{
       padding: 3rem;
@@ -317,6 +331,9 @@
       h5{
         font-size: 1rem;
         color: $muave;
+        border-top: 1px solid rgba(184, 102, 184, 0.5);
+        border-bottom: 1px solid rgba(184, 102, 184, 0.5);
+        padding: 0.6rem 0;
       }  
   }
 

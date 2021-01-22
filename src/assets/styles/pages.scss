@@ -10,9 +10,6 @@
   transition: transform 500ms ease-in-out;
   -webkit-transition: transform 500ms ease-in-out;
   -moz-transition: transform 500ms ease-in-out;
-  border: 1px solid red;
-  position: relative;
-  z-index: 5;
 
   @include media ("screen", "<=phone") {
     width: 300px;
@@ -324,7 +321,7 @@
 }
 
 .aboutuswrapper{
-
+  overflow: hidden;
   width: 100vw;
    height: 170vh;
    padding-bottom: 2rem;
@@ -336,22 +333,7 @@
     height: 100%;
     padding-bottom: 1rem;
   }
-  .abtLink{
-    position: relative;
-    top: -7rem;
-    left: 6rem;
 
-    @include media ("screen", "<=phone") {
-      top: 1.5em;
-      left: 1em;
-    }
-    .linkbtn{
-      color: #f1d7a6;
-      @include media ("screen", "<=phone") {
-        font-size: 1rem;
-      }
-    }
-  }
   }
   .ab-text{
     position: relative;
@@ -397,6 +379,23 @@
         width: 82%;
         line-height: 1.4rem; 
         letter-spacing: -0.3px;
+      }
+    }
+    .abtLink{
+      position: relative;
+      width: 50%;
+      top: 7rem;
+      left: 6rem;
+  
+      @include media ("screen", "<=phone") {
+        top: 1.5em;
+        left: 1em;
+      }
+      .linkbtn{
+        color: #f1d7a6;
+        @include media ("screen", "<=phone") {
+          font-size: 1rem;
+        }
       }
     }
   }
