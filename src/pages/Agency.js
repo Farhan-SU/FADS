@@ -7,7 +7,10 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO';
    
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== `undefined`) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.core.globals("ScrollTrigger", ScrollTrigger);
+};
 
 function Agency() {
 
@@ -20,7 +23,6 @@ function Agency() {
   useEffect(() => {
     gsap.set(agencyReveal.current.children, { y: 150 });
     sl.current = ScrollTrigger.batch(agencyReveal.current.children, {
-      scrub: true,
       onEnter: batch =>
         gsap.to(batch, {
           id: "agencyref",
@@ -28,20 +30,21 @@ function Agency() {
           y: 0,
           stagger: { each: 0.20},
           overwrite: true,
-          ease: 'sine.in',
-          markers: {startColor: "green", endColor: "red", fontSize: "12px"}
+          ease: 'sine.in'
         }),
       onLeave: batch => gsap.set(batch, { duration: 1, opacity: 0, y: -150, overwrite: true, ease: 'sine.in' }),
       onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, y: 0, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
-      onLeaveBack: batch =>  gsap.set(batch, { duration: 1, opacity: 0.5, y: 150, overwrite: true, ease: 'sine.in', delay: 1 })
+      onLeaveBack: batch =>  gsap.set(batch, { duration: 1, opacity: 0.9, y: 150, overwrite: true, ease: 'sine.in', delay: 0.4 })
     } 
     );
   }, []);
 
+  useEffect(() => {
     if (ScrollTrigger.getById('agencyref')) {
       ScrollTrigger.getById('agencyref').kill();
       sl.current.kill();
-    }
+    };
+  }, []);
 
   return (
     <>
@@ -54,7 +57,7 @@ function Agency() {
     <div className="agency-home">
       <div className="intro-a">
         <div className="experts">
-        <h1 contentEditable="false" role='textbox' aria-multiline='true'>Our Expertise</h1>
+        <h1>Our Expertise</h1>
         <Reveal><h3>We are more than just, we are also a fashion and digital creative agency. 
           We have some of the most talented individuals on our team. From designers, 
           photographers, models, to set designers, makeup artists, and more. Meet the members of each of our team and get to 
@@ -62,33 +65,33 @@ function Agency() {
         </div>
       </div>
       <Row className='agency'ref={agencyReveal}> 
-        <Col md={3}className="box">
-          <Link to="./agency/eboard"><h3>E-Board</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="./agency/models"><h3>Models</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="./agency/fashionDesigners"><h3>Fashion Designers</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="./agency/graphicDesigners"><h3>Graphic Designers</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="./agency/videoPhoto"><h3>Videographers & Photographers</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="./agency/makeupArtists"><h3>Makeup Artists</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="/Aboutus"><h3>Stylists</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="/Aboutus"><h3>Communication</h3></Link>
-        </Col>
-        <Col md={3}className="box">
-          <Link to="/Aboutus"><h3>Set Design</h3></Link>
-        </Col>
+      <Link to="./agency/eboard"><Col className="box">
+         <h3>E-Board</h3>
+        </Col></Link>
+        <Link to="./agency/models"><Col className="box">
+          <h3>Models</h3>
+        </Col></Link>
+        <Link to="./agency/fashionDesigners"><Col  className="box">
+         <h3 className="bigTxt">Fashion Designers</h3>
+        </Col></Link>
+        <Link to="./agency/graphicDesigners"><Col className="box">
+         <h3 className="bigTxt">Graphic Designers</h3>
+        </Col></Link>
+        <Link to="./agency/videoPhoto"><Col className="box">
+          <h3 className="bigTxt">Videographers & Photographers</h3>
+        </Col></Link>
+        <Link to="./agency/makeupArtists"><Col className="box">
+         <h3 className="bigTxt">Makeup Artists</h3>
+        </Col></Link>
+        <Link to="/Aboutus"><Col className="box">
+          <h3>Stylists</h3>
+        </Col></Link>
+        <Link to="/Aboutus"><Col className="box">
+          <h3>Communication</h3>
+        </Col></Link>
+        <Link to="/Aboutus"><Col className="box">
+          <h3>Set Design</h3>
+        </Col></Link>
         </Row>
     </div>
     </SEO>

@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import { NavLink, withRouter} from 'react-router-dom';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
@@ -94,7 +94,7 @@ function Tomorrow () {
         <div className="yearlyShows">
          <div className="spacer">
              <div className="tomorrowSpacer">
-            <h1 contentEditable="false" role='textbox' aria-multiline='false' style={{position: 'relative', top: '-2.5rem'}}>
+            <h1 className="tmmrwh1">
                 Tomorrow Land <br/> <span>Fall 2018</span>
             </h1>
             </div>

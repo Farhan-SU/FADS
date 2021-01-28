@@ -1,7 +1,7 @@
 import React, {useRef,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../../assets/styles/pages.scss';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Galimg1 from '../../assets/images/workwear/fuzzyhat.png';
 import Galimg2 from '../../assets/images/homegal.png';

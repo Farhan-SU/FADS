@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
@@ -51,7 +51,6 @@ function JerkEd () {
                 if (ScrollTrigger.getById('containerWork')) {
                 ScrollTrigger.getById('containerWork').kill();
                 }
-                gshowtl.current.kill();
             };
     },[]);
 
@@ -76,7 +75,7 @@ function JerkEd () {
           return () => {
             if (ScrollTrigger.getById('panelsWork')) {
             ScrollTrigger.getById('panelsWork').kill();
-            } gshowtl.current.kill();
+            }
         };
     }, []);
 
@@ -86,30 +85,6 @@ function JerkEd () {
         };
     };
 
-
-    const arrow = useRef();
-    const nextArrow = useRef();
-
-    useEffect(() =>{
-        gshowtl.current = gsap.timeline({
-          scrollTrigger: {
-            id: "arrow",
-            trigger: arrow.current,
-            start: "top 20%",
-            end: "+=200px",
-            scrub: true,
-            toggleActions: "play none none pause",
-          }
-        })
-        .from(nextArrow.current, {duration: 1, autoAlpha: 0, ease: 'sine.in'});
-  
-        return () => {
-          if (ScrollTrigger.getById('arrow')) {
-            ScrollTrigger.getById('arrow').kill();
-          } gshowtl.current.kill();
-        };    
-      }, []);
-  
 
     return (
         <>
@@ -121,8 +96,7 @@ function JerkEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 contentEditable role='textbox' aria-multiline='false'>September<br/>2019</h1>
-            <h3></h3>
+            <h1 className="wwSep">September<br/>2019</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
@@ -219,7 +193,7 @@ function JerkEd () {
                 </div>
             </div>
         </section>
-        <div className="endsec" ref={arrow}>
+        <div className="endsec">
         <div className="imgNext">
             <div className="worksec">
             <WebpG
@@ -230,7 +204,7 @@ function JerkEd () {
                 />
             </div>
         </div>
-            <div className="Endnext" ref={nextArrow}>
+            <div className="Endnext">
             <Link className="link" to="/gallery/editorials/winter">
             <span className="link__arrow">
                 <span></span>

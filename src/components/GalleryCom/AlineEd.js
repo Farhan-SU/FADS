@@ -1,12 +1,13 @@
 import React, {useRef, useEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
 import alineEnd from '../../assets/images/alineEnd.png';
 import alineEndWeb from '../../assets/images/alineEnd.webp';
 import SEO from '../SEO';
+import { Col, Row } from 'react-bootstrap';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -86,30 +87,6 @@ function AlineEd () {
     };
 
 
-    const arrow = useRef();
-    const nextArrow = useRef();
-
-    useEffect(() =>{
-        gshowtl.current = gsap.timeline({
-          scrollTrigger: {
-            id: "arrow",
-            trigger: arrow.current,
-            start: "top 20%",
-            end: "+=200px",
-            scrub: true,
-            toggleActions: "play none none pause",
-          }
-        })
-        .from(nextArrow.current, {duration: 1, opacity: 0, ease: 'sine.in'});
-  
-        return () => {
-          if (ScrollTrigger.getById('arrow')) {
-            ScrollTrigger.getById('arrow').kill();
-          }
-        };    
-      }, []);
-  
-
     return (
         <>
         <SEO  
@@ -120,7 +97,7 @@ function AlineEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 contentEditable role='textbox' aria-multiline='false'>MAY <br/>2019</h1>
+            <h1>MAY <br/>2019</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
@@ -182,16 +159,16 @@ function AlineEd () {
                 </div>
             </div>
         </section>
-        <div className="endsec" ref={arrow}>
-        <div className="imgNext">
+        <Row className="endsec">
+        <Col xs={12} lg={12} className="imgNext">
             <WebpG
                 src={alineEndWeb}
                 fallback={alineEnd}
                 alt="navigation button to aline end"
                 style={{width: '75%'}}
                 />
-        </div>
-            <div className="Endnext" ref={nextArrow}>
+        </Col>
+            <Col xs={12} lg={12} className="Endnext">
             <Link className="link" to="/gallery/editorials/jerk-fads">
             <span className="link__arrow">
                 <span></span>
@@ -199,8 +176,8 @@ function AlineEd () {
             </span>
             <span className="link__line"></span>
             </Link>
-            </div>
-        </div>
+            </Col>
+        </Row>
     </div>
     </SEO>
     </>

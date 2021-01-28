@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import {NavLink, withRouter, useHistory} from "react-router-dom";
 import '../assets/styles/Mobilenav.scss';
 import navLogo from '../assets/images/navLogo.gif';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Facebook from '../assets/images/facebook.png';
 import instagram from '../assets/images/instagram.png';
@@ -16,15 +16,16 @@ if (typeof window !== `undefined`) {
 function MobileNav() {
   
   const history = useHistory();
-  function goHome() {
-  history.push("/");
-  }
+  
+    function goHome() {
+    history.push("/");
+    }
 
   const smNavTl = useRef(null);
   const nav = useRef(null);
   const navContent = useRef(null);
   const [menuOpen, setmenuOpen] = useState(false);
-  const [showmenu, sethidemenu] = useState(false);
+  const showmenu = false;
 
   const homeSm = useRef(null);
   const gallerySm = useRef(null);
@@ -37,11 +38,11 @@ function MobileNav() {
   useEffect(() => {
     smNavTl.current = gsap.timeline({paused: true,  defaults: { duration: 1, ease: "sine.inOut" }})
     .fromTo(nav.current, {autoAlpha: 0}, {autoAlpha: 1})
-    .fromTo(navContent.current, {opacity: 0, y: 200}, {opacity: 1, y: 0, display: 'grid'})
+    .fromTo(navContent.current, {autoAlpha: 0, y: 200}, {autoAlpha: 1, y: 0, display: 'grid'})
     .fromTo([homeSm.current, gallerySm.current, aboutSm.current, agencySm.current, pressSm.current],
-      {opacity: 0, y: 40}, {opacity: 1, y: 0, stagger: {each: .3}}, "-=1")
-    .fromTo(info.current, {duration: 1, opacity: 0, y: 60}, {opacity: 1, y: 0}, "-=0.9")
-    .fromTo(socialSm.current, {duration: 0.5, opacity: 0, y: 80}, {duration: 0.5, opacity: 1, y: 0}, "-=0.7")
+      {autoAlpha: 0, y: 40}, {autoAlpha: 1, y: 0, stagger: {each: .5}}, "-=1")
+    .fromTo(info.current, {duration: 1, autoAlpha: 0, y: 60}, {autoAlpha: 1, y: 0}, "-=0.9")
+    .fromTo(socialSm.current, {duration: 0.5, autoAlpha: 0, y: 80}, {duration: 0.5, autoAlpha: 1, y: 0}, "-=0.7")
     .reverse();
   }, []);
 
@@ -53,9 +54,7 @@ function MobileNav() {
   function toggleNav() {
     setmenuOpen(!menuOpen);
   }
-  function openMenu() {
-    sethidemenu(!showmenu);
-  }
+  
 
   const openClass = menuOpen ? 'open' : "";
   const showClass = showmenu ? 'showmenu' : "";

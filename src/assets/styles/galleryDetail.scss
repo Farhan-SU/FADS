@@ -11,6 +11,98 @@
   }
 }
 
+.section{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.portfolio {
+  width:100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #1F242D;
+  overflow: hidden;
+
+  h2{
+    position: absolute;
+    text-transform: uppercase;
+    top: 13%;
+    font-size: 27rem;
+    letter-spacing: -1.5rem;
+    -webkit-text-stroke: 2px $graypurple;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    opacity: 0.3;
+    text-align: center;
+
+    @include media ("screen", "<=phone") {
+      font-size: 10rem;
+      top: 25%;
+      left: -3rem;
+    }
+  }
+  .wwv{
+    @include media ("screen", "<=phone") {
+      font-size: 10rem;
+      top: 5%;
+    }
+  }
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.panel {
+  height: 100%;
+  display: flex;
+  flex: 0 0 60%;
+  padding: 0.5rem;
+  margin-left: 2rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+
+  @include media ("screen", "<=phone") {
+    flex: 0 0 88%;
+  }
+
+  &:nth-of-type(even){
+   position: relative;
+   z-index: -1;
+  }
+}
+#landscape{
+  flex: 0 0 80%;
+
+  @include media ("screen", "<=phone") {
+    flex: 0 0 180%;
+   }
+}
+.panel_item {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.panel_img{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 .galleryShows{
 position: relative;
 overflow-x: hidden;
@@ -18,12 +110,18 @@ overflow-x: hidden;
   .spacer {
     height: 110vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     align-content: center;
-    padding: 15rem 3rem 4rem 3rem;
+    padding: 2rem 3rem 4rem 3rem;
     background: #acacac7a url('../images/floating.gif') no-repeat center center/ cover;
     background-blend-mode: darken;
+
+    @include media ("screen", "<=phone") {
+      padding: 5rem;
+      height: 100vh;
+      text-align: center;
+    }
 
     h1 {
       font-size: 7rem;
@@ -31,28 +129,65 @@ overflow-x: hidden;
       letter-spacing: 0.5rem;
       mix-blend-mode: exclusion;
       color: $heading;
+      text-align: center;
+
+      @include media ("screen", "<=phone") {
+        font-size: 6rem;
+      }
+    }
+
+    .wwSep, .winterDec{
+      @include media ("screen", "<=phone") {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+      }
     }
   }   
   .endsec {
     height: 110vh;
     background-color: rgba(164, 157, 177, 0.712);
-    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    @include media ("screen", "<=phone") {
+      height: 100%;
+      padding: 3rem 1rem;
+    }
     .imgNext{
       position: relative;
       left: 12%;
-      top: 10%;
+      top: 8%;
+      @include media ("screen", "<=phone") {
+        top: 10%;
+       }
+    
 
       .winterEndsec{
-        margin-left: 7rem;
+        margin-left: 7rem;  
+        @include media ("screen", "<=phone") {
+          width: 110%;
+          margin-left: 0;
+          margin-bottom: 0;
+         }     
+      }
+      .winterEndarrow{
+        margin-top: 5rem;
+        @include media ("screen", "<=phone") {
+          margin-top: 1rem;
+         }  
       }
       .worksec{
        width: 100%;
        margin-left: 14rem;
        margin-bottom: 3rem;
+
+       @include media ("screen", "<=phone") {
+        width: 130%;
+        margin-left: 1.8rem;
+        margin-bottom: 0;
+       }
       }
-    }
-    .winterEndarrow{
-      margin-top: 5rem;
     }
   } 
 }
@@ -61,6 +196,7 @@ overflow-x: hidden;
 .yearlyShows{
   position: relative;
   overflow-x: hidden;
+
   .spacer {
     height: 110vh;
     width: 100vw;
@@ -68,6 +204,13 @@ overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
+
+    @include media ("screen", "<=phone") {
+      height: 100vh;
+      text-align: center;
+    }
+
     h1{
       padding: 15rem 3rem 4rem 3rem;
       font-size: 7rem;
@@ -77,19 +220,34 @@ overflow-x: hidden;
       text-transform: uppercase;
       text-align: center;
       color: $heading;
+
+      @include media ("screen", "<=phone") {
+        padding: 8rem 2rem 4rem 2rem;
+        font-size: 4rem;
+      }
     }
     span{
       font-family: 'Montserrat', sans-serif;
       font-size: 5rem;
       font-weight: 600;
+
+      @include media ("screen", "<=phone") {
+        font-size: 2.5rem;
+      }
     }
-  }  
+    .tmmrwShowh1{
+      @include media ("screen", "<=phone") {
+        font-size: 4rem;
+      }
+    }
+  } 
+
   .circusSpacer{
     background: #acacac7a url('../images/circusShowBg.gif') no-repeat center center/ 1500px;
     background-blend-mode: darken;
   }
   .gallerySpacer{
-    background: #fcfcfcce url('../images/thegalleryBg1.gif') repeat top center/ contain;
+    background: #b9b2b2ce url('../images/thegalleryBg1.gif') repeat top center/ contain;
     background-blend-mode: darken;
     width: 100vw;
   }
@@ -102,9 +260,16 @@ overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     overflow: hidden;
     background: #9786a3 url('../images/prevshow.svg') no-repeat center center/ cover;
     background-blend-mode: color-burn;
+
+      @include media ("screen", "<=phone") {
+        height: 100%;
+        padding: 1rem;
+      }
+
   } 
   .secContent{
     h1{
@@ -113,11 +278,21 @@ overflow-x: hidden;
       mix-blend-mode: normal;
       color: $lightergraypurple;
       text-align: center;
+
+      @include media ("screen", "<=phone") {
+        font-size: 8vw;
+        margin-bottom: 0.5rem;
+      }
     }
     .showNxt{
       position: relative;
       top: 9rem;
       left: -9rem;
+
+      @include media ("screen", "<=phone") {
+        top: -0.2rem;
+        left: -4rem;
+      }
     }
   }
 }
@@ -135,9 +310,13 @@ overflow-x: hidden;
     position: relative;
     top: -12rem;
     left: 13.5%;
+      
+      @include media ("screen", "<=phone") {
+       top: -1rem;
+        left: -55.5%;
+        padding: 3rem;
+      }
    
-   
-  
     &__arrow {
       display: inline-flex;
   
@@ -168,6 +347,9 @@ overflow-x: hidden;
           width: 0;
           height: 3px;
           background: #eb0037;
+          @include media ("screen", "<=phone") {
+            display: none;
+           }
         }
       }
     }
@@ -181,6 +363,10 @@ overflow-x: hidden;
       background: #6e4eaa;
       overflow: hidden;
       z-index: 1;
+
+      @include media ("screen", "<=phone") {
+        width: 90px;
+       }
   
       &:after {
         content: '';
@@ -189,7 +375,11 @@ overflow-x: hidden;
         left: 80px;
         width: 80px;
         height: 3px;
-        background: #eb0037;
+        background: $f4color;
+
+        @include media ("screen", "<=phone") {
+          display: none;
+         }
       }
     }
     &:hover {
@@ -197,6 +387,9 @@ overflow-x: hidden;
         &__line {
           &:after {
             animation: animation-line 1.2s forwards;
+            @include media ("screen", "<=phone") {
+              animation: none;
+             }
           }
         }
   
@@ -205,6 +398,10 @@ overflow-x: hidden;
             &:after {
               animation: animation-arrow 1.2s forwards;
               animation-delay: 1s;
+
+              @include media ("screen", "<=phone") {
+                animation: none;
+               }
             }
           }
         }
@@ -232,75 +429,3 @@ overflow-x: hidden;
     }
   }
 
-.section{
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.portfolio {
-  width:100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background-color: #1F242D;
-  overflow: hidden;
-
-  h2{
-    position: absolute;
-    text-transform: uppercase;
-    font-stretch: ultra-condensed;
-    top: 13%;
-    font-size: 27rem;
-    letter-spacing: -2rem;
-    -webkit-text-stroke: 3px $graypurple;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    opacity: 0.3;
-    text-align: center;
-  }
-}
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.panel {
-  height: 100%;
-  display: flex;
-  flex: 0 0 60%;
-  padding: 0.5rem;
-  margin-left: 2rem;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  background-color: transparent;
-  overflow: hidden;
-
-  &:nth-of-type(even){
-   position: relative;
-   z-index: -1;
-  }
-}
-#landscape{
-  flex: 0 0 80%;
-}
-.panel_item {
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.panel_img{
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  object-fit: contain;
-}

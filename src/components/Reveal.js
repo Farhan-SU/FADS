@@ -3,7 +3,10 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../assets/styles/pages.scss';
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== `undefined`) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.core.globals("ScrollTrigger", ScrollTrigger);
+};
 
 const Reveal = ({ children, className }) => {
             
@@ -14,14 +17,13 @@ const Reveal = ({ children, className }) => {
       id: "reveal",
       scrollTrigger: revealRef.current,
       y: 150,
-      scrub: true,
+      scrub: 0.01,
       autoAlpha: 1, 
       ease: "expo", 
       duration: 1.25,
       stagger: { each: 0.30},
       start: "5% center"
   });
-
   return () => {
     if (ScrollTrigger.getById('reveal')) {
       ScrollTrigger.getById('reveal').kill();

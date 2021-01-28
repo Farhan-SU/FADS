@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
@@ -93,9 +93,7 @@ function Circus () {
         <div className="yearlyShows">
          <div className="spacer">
              <div className="circusSpacer">
-            <h1 contentEditable="false" role='textbox' aria-multiline='false'>
-                Night Circus <br/> <span>Spring 2019</span>
-            </h1>
+            <h1>Night Circus <br/> <span>Spring 2019</span></h1>
             </div>
          </div>
         <section className="section">

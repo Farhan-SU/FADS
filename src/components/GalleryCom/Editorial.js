@@ -42,6 +42,11 @@ const Editorial = () => {
         onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
         onLeaveBack: batch =>  gsap.set(batch, { duration: 1,  autoAlpha: 0.1, overwrite: true, ease: 'sine.in'}) 
       });
+      return () => {
+        if (ScrollTrigger.getById('boxs')) {
+        ScrollTrigger.getById('boxs').kill();
+        };
+    };
     }, []);
 
     const images = useRef();
@@ -50,6 +55,7 @@ const Editorial = () => {
     useEffect(() => {
       edtl.current = images.current.forEach((el) => {
         gsap.fromTo(el, {
+          duration: 1.3, 
           opacity: 0,
           y: 300,
         }, {
@@ -60,8 +66,8 @@ const Editorial = () => {
           scrollTrigger: {
             id: 'edit-left',
             trigger: el,
-            start: 'top top+=500',
-            toggleActions: 'play none none reverse'
+            start: 'top top+=550',
+            toggleActions: 'play none none none'
           }
         });
       });
@@ -90,7 +96,7 @@ const Editorial = () => {
             id: 'edit-right',
             trigger: al,
             start: 'top top+=100',
-            toggleActions: 'play none none reverse'
+            toggleActions: 'play none none none'
           }
         });
       });

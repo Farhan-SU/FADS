@@ -1,8 +1,10 @@
 @import 'colors';
+@import 'breakpoints'; 
 
 .error-bio{
   height: 100vh;
   background-color: $bluegray;
+
    h1{
      font-size: 4rem;
      color: $heading;
@@ -29,20 +31,32 @@
             letter-spacing: 0.3rem;
             margin-bottom: 1rem;
             color: $bluegray;
+
+            @include media ("screen", "<=phone") {
+                font-size: 4rem;
+                margin-top: -1rem;
+            }
         }
         h4{
             font-size: 2rem;
             margin-bottom: 1rem;
             font-weight: 500;
-            color: $bluegray;
+            color: darken($bluegray, $amount: 10);
+
+            @include media ("screen", "<=phone") {
+              font-size: 1.5rem;
+              padding: 0 3rem;
+          }
         }
         .bannerBio{
             margin: 3rem 0;
             width: 100vw;
 
+            @include media ("screen", "<=phone") {
+              display: none;
+            }
             .banner-img{
               width: 100vw;
-         
             }
         }
 
@@ -51,15 +65,26 @@
 .actualbio{
   height: 100%;
   width: 100%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: center;
-    overflow: scroll;
-    margin-bottom: 3rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  overflow: scroll;
+  margin-bottom: 3rem;
+
+    @include media ("screen", "<=phone") {
+      margin-bottom: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
 
     .bioPic{
       padding: 0;
+      @include media ("screen", "<=phone") {
+        width: 100vw;
+      }
         img{
+            object-fit: cover;
             width: 100%;
             height: 100%;
       
@@ -71,9 +96,14 @@
       margin-left: 2rem;
       margin-top: 1rem;
       padding: 2rem;
+ 
         .desBio{
           min-height: 100%;
           margin-top: 2.5rem;
+
+          @include media ("screen", "<=phone") {
+            margin-top: 1rem;
+          }
             p{
                 font-size: 1.5rem;
                 line-height: 2.4rem;
@@ -82,7 +112,20 @@
                 white-space: normal;
                 word-break: break-word;
                 overflow-wrap: break-word;
+
+                @include media ("screen", "<=phone") {
+                  font-size: 1rem;
+                  line-height: 1.8rem;
+                }
             }
+        }
+        .social{
+          width: 32px;
+          height: 32px;
+        }
+        .fb{
+          width: 25px;
+          height: 29px;
         }
         a{
           display: flex;
@@ -108,11 +151,19 @@
   padding: 1rem 4rem;
   margin-top: 5rem;
 
+  @include media ("screen", "<=phone") {
+    padding: 1rem 2rem;
+  }
+
   h2{
     font-size: 2.8vw;
     color: #58446e;
     opacity: 0.9;
     text-transform: uppercase;
+
+    @include media ("screen", "<=phone") {
+      font-size: 6.8vw;
+    }
   }
 }
 
@@ -150,54 +201,72 @@
       left: 1%;
       display: flex;
       margin-left: 1.8rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        z-index: 1;
+      }
     }
 }
 
 .bioBttn{
   margin: 2rem 0 0 0.5rem;
 
-  .linktext{
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: $bluegray;
-    transition: color 300ms ease-in-out;
-
+  .biolinkbtn{
+    position: relative;
+    z-index: 50;
+    width: 400px;
+    height: 70px;
+    padding: 0 0.5rem;
+    transition: transform 500ms ease-in-out;
+    -webkit-transition: transform 500ms ease-in-out;
+    -moz-transition: transform 500ms ease-in-out;
+  
+    @include media ("screen", "<=phone") {
+      position: relative;
+      z-index: 100;
+      width: 300px;
+      height: 70px;
+    }
+  
     &:hover{
-      color: rgb(174, 40, 207);
+      transform: translate3d(6px, 0, 0);
+      -webkit-transform: translate3d(6px, 0, 0);
+      -moz-transform: translate3d(6px, 0, 0);
     }
-  }
-
-  .arrow {
-    height: 22px;
-    left: 21.5%;
-    position: absolute;
-    width: 20px;
-    
-    &-top,
-    &-bottom {
-      background-color: rgb(125, 86, 160);
-      height: 2px;
+    .biocirclelink{
+      background-color: #3d115ef3;
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
       position: absolute;
-      top: 70%;
-      width: 60%;
-    }
-    
-    &-top {
-      transform: rotate(45deg);
-      transform-origin: bottom right;
-      &:after {
-        left: 100%;
-        right: 0;
+      z-index: 50;
+  
+      @include media ("screen", "<=phone") {
+        height: 60px;
+        width: 60px;
       }
     }
-    
-    &-bottom {
-      transform: rotate(-45deg);
-      transform-origin: top right;
-      
-      &:after {
-        left: 0;
-        right: 100%;
+    .biolinktext{
+      z-index: 50;
+      position: absolute;
+      width: 400px;
+      top: 1.1rem;
+      left: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: $muave;
+  
+      @include media ("screen", "<=phone") {
+        width: 250px;
+        top: 1.1em;
+        left: 0.5em;
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 100;
       }
     }
   }

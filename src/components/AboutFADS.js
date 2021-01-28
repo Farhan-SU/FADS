@@ -1,15 +1,13 @@
-import React, {useRef, useEffect } from 'react';
+import React from 'react';
 import '../assets/styles/aboutus.scss'
 import SEO from './SEO';
 import Reveal from './Reveal';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-;
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutTest () {
-
 
     return (
         <>
@@ -21,7 +19,7 @@ export default function AboutTest () {
         }}>
         <div className="wrapabtjoin">
             <div className="firstsec">
-                <h1 contentEditable="false" role='textbox' aria-multiline='false'>Our Story</h1>
+                <h1>Our Story</h1>
                     <Reveal className="topright">   
                         <p>
                         The Fashion and Design Society is a diverse group of career minded individuals at
@@ -48,7 +46,7 @@ export default function AboutTest () {
                     </p>
                 </Reveal>
                 <div className="joinHeader">
-                    <h1 contentEditable="false" role='textbox' aria-multiline='false'>Join Us</h1>
+                    <h1>Join Us</h1>
                 </div>
             </div>
             <div className="thirdsec">

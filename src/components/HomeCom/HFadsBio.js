@@ -1,5 +1,5 @@
 import React, {useRef,useEffect, useState} from 'react';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import fadsAbout from '../../assets/images/joinUsHpg.mp4';
 import '../../assets/styles/pages.scss';

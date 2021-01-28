@@ -1,7 +1,7 @@
 import React, {useRef,useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import '../../assets/styles/pages.scss';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {Row, Col} from 'react-bootstrap';
 import joinFadsvid from '../../assets/images/fadsfam.mp4';

@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
@@ -49,7 +49,7 @@ function JerkEd () {
             return () => {
                 if (ScrollTrigger.getById('containerJerk')) {
                 ScrollTrigger.getById('containerJerk').kill();
-                }  gshowtl.current.kill();
+                };
             };
     },[]);
 
@@ -74,7 +74,7 @@ function JerkEd () {
           return () => {
             if (ScrollTrigger.getById('panelsJerk')) {
             ScrollTrigger.getById('panelsJerk').kill();
-            } gshowtl.current.kill();
+            };
         };
     }, []);
 
@@ -84,30 +84,6 @@ function JerkEd () {
         };
     };
 
-
-    const arrow = useRef();
-    const nextArrow = useRef();
-
-    useEffect(() =>{
-        gshowtl.current = gsap.timeline({
-          scrollTrigger: {
-            id: "arrow",
-            trigger: arrow.current,
-            start: "top 20%",
-            end: "+=200px",
-            scrub: true,
-            toggleActions: "play none none pause",
-          }
-        })
-        .from(nextArrow.current, {duration: 1, opacity: 0, ease: 'sine.in'});
-  
-        return () => {
-          if (ScrollTrigger.getById('arrow')) {
-            ScrollTrigger.getById('arrow').kill();
-          } gshowtl.current.kill();
-        };    
-      }, []);
-  
 
     return (
         <>
@@ -119,12 +95,11 @@ function JerkEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 contentEditable="false" role='textbox' aria-multiline='false'>April <br/>2019</h1>
-            <h3></h3>
+            <h1>April <br/>2019</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
-             <h2 ref={parallaxRef}>JERK X FADS</h2>
+             <h2 ref={parallaxRef}>JERK</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
@@ -254,7 +229,7 @@ function JerkEd () {
                 </div>
             </div>
         </section>
-        <div className="endsec" ref={arrow}>
+        <div className="endsec">
         <div className="imgNext">
             <WebpG
                 src={jerkEndWeb}
@@ -263,7 +238,7 @@ function JerkEd () {
                 style={{width: '75%'}}
                 />
         </div>
-            <div className="Endnext" ref={nextArrow}>
+            <div className="Endnext">
             <Link className="link" to="/gallery/editorials/work-wear-vintage">
             <span className="link__arrow">
                 <span></span>

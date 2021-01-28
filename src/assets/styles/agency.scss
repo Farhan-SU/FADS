@@ -1,13 +1,17 @@
 @import 'colors'; 
+@import 'breakpoints'; 
 
 .agency-home{
-    background: url('../images/agencyBgT2.gif') no-repeat 60px;
-    background-color: #e2e2e2;
-    background-size: cover;
+    background:  #e2e2e2 url('../images/agencyBgT2.gif') no-repeat 60px/ cover;
     height: 100%;
     width: 100vw;
     overflow: hidden;
     padding-bottom: 5rem;
+
+    @include media ("screen", "<=phone") {
+        background-position: bottom center;
+        background-size: 300%;
+    }
 }
 
 .intro-a{
@@ -15,6 +19,13 @@
     color: $text;
     margin-top: 6rem;
     margin-bottom: 3rem;
+    
+    @include media ("screen", "<=phone") {
+        width: 100vw;
+        height: 100%;
+        margin-top: 8.5rem;
+        margin-bottom: 3rem;
+    }
 
    .experts{
     position: relative;
@@ -22,41 +33,83 @@
     left: 6rem;
     word-break: break-word;
     width: 90%;
+
+    @include media ("screen", "<=phone") {
+        width: 100vw;
+        top: 2rem;
+        left: 0.2rem;
+        padding-left: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
     h1{
         font-size: 8rem;
-        padding-right: 3rem ;
+        padding-right: 3rem;
         text-transform: uppercase;
         letter-spacing: 15px;
         line-height: 8rem;
         mix-blend-mode: hard-light;
+
+        @include media ("screen", "<=phone") {
+            font-size: 10.8vw;
+            letter-spacing: 2px;
+            line-height: 3rem;
+        }
     }
     h3{
       width: 54%;
       margin-top: 2rem;
       line-height: 2.3rem;
       font-size: 1.5rem;
+      @include media ("screen", "<=phone") {
+        width: 90vw;
+        padding-right: 2rem;
+        font-size: 1rem;
+    }
     }
    }
 }
 .agency{
     height: 100%;
     position: relative;
-    top: -2rem;
+    top: -1rem;
     width: 99vw;
     padding: auto 2rem;
+    margin-bottom: 2rem;
     justify-content: center;
     align-items: center;
     align-content: space-around;
+    overflow: hidden;
+
+    @include media ("screen", "<=phone") {
+     width: 100vw;
+     padding: auto 1rem;
+     margin-left: 0.2rem;
+     margin-top: 6rem;
+    }
 
     .box{
-        height: 200px;
-        width: 150px;
+        height: 210px;
+        width: 320px;
         margin: 2rem 2.3rem;
         text-align: center;
         background-color: $darkpurple;
         border-radius: 5px;
         align-self: center;
 
+        @include media ("screen", "<=phone") {
+            margin: 1rem 2.3rem 2rem 2.3rem;
+            height: 200px;
+            width: 320px;
+            padding: 0 1rem;
+            background-color: #61526dda;
+        }
+        a{  
+            @include media ("screen", "<=phone") {
+                position: relative;
+                z-index: 300
+            } 
+        }
         &:hover{
             background-color: $muave;
             transition: all 500ms ease-in-out;
@@ -69,6 +122,13 @@
             font-weight: 400;
             position: relative;
             top: 5rem;
+            @include media ("screen", "<=phone") {
+                
+            }
+        }
+        .bigTxt{
+            position: relative;
+            top: 3.5rem; 
         }
     }
    

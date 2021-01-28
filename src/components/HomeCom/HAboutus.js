@@ -1,7 +1,7 @@
 import React, {useRef,useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import '../../assets/styles/pages.scss'
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import fadsAbout from '../../assets/images/joinUsHpg.mp4';
 ;
@@ -65,7 +65,7 @@ export default function HAboutus()  {
               }
             })
             smtl.fromTo(overlayref.current, {duration: 2, y: 0, autoAlpha: 1, backgroundColor: "#AC9FB2"}, 
-            {duration: 2, x: -1700, autoAlpha: 1, ease: 'sine.in'})
+            {duration: 2, x: -700, autoAlpha: 1, ease: 'sine.in'})
             smtl.add("reveal", "+=1")
             smtl.from(imgabout.current, {duration: 2, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"}, 'reveal')
           };

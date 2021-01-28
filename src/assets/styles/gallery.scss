@@ -9,6 +9,7 @@
   align-items: center;
   align-content: center;
 }
+
 %circle {
   height: 500px;
   background: url('../images/gallery-circle.svg') no-repeat center center;
@@ -33,10 +34,9 @@
     height: 100%;
     width: 105vw;
   }
-
-
   .linkbox{
     position: relative;
+    z-index: 200;
     top: 19rem;
     text-align: center;
     display: flex;
@@ -47,7 +47,6 @@
     @include media ("screen", "<=phone") {
       top: 1em;
       left: 0.2em;
-  
     }
 
     h1{
@@ -111,7 +110,7 @@
   }
 
   img{
-    width: 74%;
+    width: 76%;
     position: relative;
     left: 3.7rem;
     border-radius: 5px;
@@ -125,18 +124,21 @@
     top: 7rem;
   }
   .description{
-    height: 500px;
-    background: url('../images/gallery-circle.svg') no-repeat center center;
-    background-size: 90%;
+    height: 499px;
+    width: 100%;
+    background: url('../images/gallery-circle.svg') no-repeat center center/ 90%;
     margin-top: 1rem;
-    align-self: center;
-
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  
     h1{
       color: $text;
       font-size: 3.3rem;
       letter-spacing: 0.2rem;
-      text-align: center;
-      margin-top: 0.5rem;
       width: 100%;
       mix-blend-mode: darken;
 
@@ -146,10 +148,13 @@
           -webkit-text-fill-color: transparent; 
         }
       }
+
     h3{
       font-weight: 400;
       font-size: 1.7rem;
-      margin-top: 1rem;
+    }
+    .tmrLg{
+      left: 0.8rem;
     }
     .svg-line{
       position: absolute;
@@ -162,43 +167,28 @@
       align-items: center;
       align-content: center;
       position: relative;
-      top: 35%;
-      left: 14%;
-      text-align: center;
-      border-radius: 30%;
-      width: 80%;
+      top: 5%;
+      border-radius: 50%;
+      height: 380px;
+      width: 370px;
+      overflow: hidden;
     }
   }
   
-  .aline, .jerk,.winter, .thegallery, .circus{
+  .aline, .jerk, .winter, .thegallery, .circus, .vintage{
     @extend %gallerycontent;
   }
-  .vintage{
-    @extend %gallerycontent;
-
-      .vintage-header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        position: relative;
-        top: 21%;
-        left: 13%;
-        text-align: center;
-        border-radius: 30%;
-        width: 80%;
-        
+    .vintage-header{
         h1{
           flex-wrap: wrap;
           font-size: 3.1rem;
         }
       }
-      .exception-img2{
+    .exception-img2{
         position: relative;
         top: 10rem;
         width: 80%;
       }
-    }
   .land{
     @extend %gallerycontent;
         h1{
@@ -272,13 +262,13 @@
     width: 215px;
     border-radius: 50%;
     position: absolute;
-    z-index: 2;
+    z-index: 200;
     background-color: #FFD6BE;
     mix-blend-mode: exclusion;
   } 
   .title{
     position: absolute;
-    z-index: 3;
+    z-index: 200;
     border: 2.5px solid $graypurple;
     border-radius: 50%;
     height: 200px;
@@ -289,8 +279,9 @@
   .titleHeader{
     @extend %centeralignMobile;
     height: 100%;
-    position: relative;
     text-align: center;
+    position: relative;
+    z-index: 200;
     h1, h3{
       color: $heading;
       mix-blend-mode: normal;

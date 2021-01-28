@@ -1,7 +1,7 @@
 import React, {useRef,useEffect} from 'react';
 import '../../assets/styles/pages.scss';
 import {Link} from 'react-router-dom';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Galimg1 from '../../assets/images/workwear/fuzzyhat.png';
 import Galimg2 from '../../assets/images/homegal.png';
@@ -16,8 +16,6 @@ if (typeof window !== `undefined`) {
 export default function GalleryMobile ()  {  
 
   const smtl = useRef();
-  const image1SM = useRef();
-  const image2SM = useRef();
   const containerRefSM = useRef();
   const galleryRef1SM = useRef();
   const galleryRef2SM = useRef();
@@ -65,7 +63,7 @@ export default function GalleryMobile ()  {
        </Row>
 
         <div className="galLink">
-          <Link to="/gallery">
+          <Link exact to="/gallery">
               <div className="linkbtn">
                 <div className="circlelink"/>
                   <p className="linktext">View our gallery &#10230;</p>

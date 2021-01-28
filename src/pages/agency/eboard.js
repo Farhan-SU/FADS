@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState} from 'react';
 import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
-import {Row, Col} from 'react-bootstrap';
 import '../../assets/styles/pgagency.scss';
 import SEO from '../../components/SEO';
 import { gql } from 'apollo-boost';
@@ -51,6 +50,9 @@ export default function Eboard() {
     )
   }
   if (data) {
+    /*const name = data.members.filter((memberName) => data.members === memberName);
+    console.log(name);*/
+
       return (
         <SEO
         pageMeta={{
@@ -65,9 +67,7 @@ export default function Eboard() {
             <div key={member.id} className="member-intro">
               <Link to={`/agency/bio/${member.slug}`}>
                {/*image goes below this comment*/}
-               <div className="wrapBlur">
                <img src={member.agencyImg.url} alt={member.memberName} className="memImg"/>
-               </div>
               <h2>{member.memberName}</h2>
               <h4><em>{member.memberPosition}</em></h4>
               </Link>

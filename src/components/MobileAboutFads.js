@@ -1,6 +1,9 @@
 import React from 'react';
 import '../assets/styles/aboutus.scss'
 import SEO from './SEO';
+import ImgWebp from './ImgWebp';
+import AboutPgSm from '../assets/images/aboutusPgmobile.png';
+import AboutPgSmW from '../assets/images/aboutusPgmobile.webp';
 
 export default function AboutTest () {
 
@@ -13,34 +16,33 @@ export default function AboutTest () {
         description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major."
         }}>
         <div className="wrapabtjoinSM">
-            <div className="firstsecSM">
-                <h1 contentEditable="false" role='textbox' aria-multiline='false'>Our Story</h1>
-                    <div className="toprightSM">   
-                        <p>
-                        The Fashion and Design Society is a diverse group of career minded individuals at
-                        Syracuse University who share a passion for creativity, design, and fashion
-                        FADS is an open environment for the discussion of new ideas that brings important 
-                        concerns of the global fashion industry to the forefront at Syracuse University.
-                        </p>
-                    </div>
+            <div className="headersecSM">
+                <h1>Our Story</h1>
             </div>
-                <div className="bottomleftSM">
-                    <p>
-                    FADS is an open environment for the discussion of
-                    new ideas that brings important concerns of the
-                    global fashion industry and the changing social
-                    climate to the forefront of dialogue at SU.
-                    </p>
-                    <p>
-                    We give our committed members an opportunity
-                    to gain real-time experience in fields that are
-                    potential career avenues for them in their future.
-                    FADS has general member meetings, model training, and fashion design meetings 
-                    each week to collaborate with on our work for our shows, photo shoots, and events.
-                    </p>
-                </div>
+            
+             <div className="toprightSM">   
+                <p>
+                The Fashion and Design Society is a diverse group of career minded individuals at
+                Syracuse University who share a passion for creativity, design, and fashion
+                FADS is an open environment for the discussion of new ideas that brings important 
+                concerns of the global fashion industry to the forefront at Syracuse University.
+                </p>
+                <p>
+                FADS is an open environment for the discussion of
+                new ideas that brings important concerns of the
+                global fashion industry and the changing social
+                climate to the forefront of dialogue at SU.
+                </p>
+                <p>
+                We give our committed members an opportunity
+                to gain real-time experience in fields that are
+                potential career avenues for them in their future.
+                FADS has general member meetings, model training, and fashion design meetings 
+                each week to collaborate with on our work for our shows, photo shoots, and events.
+                </p>
+            </div>
                 <div className="joinHeaderSM">
-                    <h1 contentEditable="false" role='textbox' aria-multiline='false'>Join Us</h1>
+                    <h1>Join Us</h1>
                 </div>
                 <div className="joinusTextSM">
                 <p>At FADS, you will have the opportunity to work with our team  
@@ -49,6 +51,7 @@ export default function AboutTest () {
                         improve on your skills alongside the FADS family.  
                         Explore the positions we offer below.</p>
                 </div>
+                <div className="roletextSM">
                 <div className="exmemberSM">
                 <h4>EXECUTIVE BOARD MEMBERS</h4>
                 <p>Shape the organization by contributing your unique 
@@ -73,8 +76,14 @@ export default function AboutTest () {
                     <h4>Committee Members</h4>
                     <p>Learn about and apply the aspect of fashion they are interested into the organization and production of a fashion show.</p>
                 </div>
+            </div>
             <div className="bgMobile">
-
+                <ImgWebp
+                    src={AboutPgSmW}
+                    fallback={AboutPgSm}
+                    alt="About Us collage"  
+                    className="aboutSMimg"               
+                />
             </div>
         </div>
         </SEO>

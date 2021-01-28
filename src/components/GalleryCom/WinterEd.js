@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
-import gsap from "gsap";
+import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
@@ -51,7 +51,6 @@ function WinterEd () {
                 if (ScrollTrigger.getById('containerWinter')) {
                 ScrollTrigger.getById('containerWinter').kill();
                 }
-                gshowtl.current.kill();
             };
     },[]);
 
@@ -77,7 +76,6 @@ function WinterEd () {
             if (ScrollTrigger.getById('panels')) {
             ScrollTrigger.getById('panels').kill();
             }
-            gshowtl.current.kill();
         };
     }, []);
 
@@ -86,32 +84,6 @@ function WinterEd () {
             panelRef.current.push(el);
         };
     };
-
-
-    const arrow = useRef();
-    const nextArrow = useRef();
-
-    useEffect(() =>{
-        gshowtl.current = gsap.timeline({
-          scrollTrigger: {
-            id: "arrow",
-            trigger: arrow.current,
-            start: "top 20%",
-            end: "+=150px",
-            scrub: true,
-            toggleActions: "play none none pause",
-          }
-        })
-        .from(nextArrow.current, {duration: 1, autoAlpha: 0, ease: 'sine.in'});
-  
-        return () => {
-          if (ScrollTrigger.getById('arrow')) {
-            ScrollTrigger.getById('arrow').kill();
-          }
-          gshowtl.current.kill();
-        };    
-      }, []);
-  
 
     return (
         <>
@@ -123,8 +95,7 @@ function WinterEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 contentEditable role='textbox' aria-multiline='false'>December<br/>2018</h1>
-            <h3></h3>
+            <h1 className="winterDec">December<br/>2018</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
@@ -182,7 +153,7 @@ function WinterEd () {
                 </div>
             </div>
         </section>
-        <div className="endsec" ref={arrow}>
+        <div className="endsec">
         <div className="imgNext">
             <div className="winterEndsec">
             <WebpG
@@ -193,7 +164,7 @@ function WinterEd () {
                 />
         </div>
         </div>
-            <div className="Endnext" ref={nextArrow}>
+            <div className="Endnext">
             <div className="winterEndarrow">
             <Link className="link" to="/gallery/editorial">
             <span className="link__arrow">
