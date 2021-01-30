@@ -133,7 +133,6 @@
         align-content: space-around;
         flex-wrap: wrap;
       
-
         .poster{
             display: flex;
             flex-direction: column;
@@ -181,7 +180,7 @@
                 width: 100%;
                 position: relative;
                 top: 1.1rem;
-                -webkit-text-stroke: 3px $heading;
+                -webkit-text-stroke: 2px $heading;
                 -webkit-text-fill-color: transparent; 
                 z-index: 8;
 
@@ -209,6 +208,10 @@
                   }
             }
         }
+        .cardLink{
+            position: relative;
+            z-index: 200;
+        }
         .cardDeck{
             margin-top: -3.8rem;
             position: relative;
@@ -216,7 +219,7 @@
 
             @include media ("screen", "<=phone") {
                 margin-top: 1.5rem;
-                z-index: 1;
+                z-index: 7;
               }
         }
         .card{

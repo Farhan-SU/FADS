@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import {Row, Col} from 'react-bootstrap';
-import { Link, withRouter, useHistory} from 'react-router-dom';
+import { Link, withRouter} from 'react-router-dom';
 import '../../assets/styles/gallery.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

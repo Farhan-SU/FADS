@@ -18,7 +18,6 @@ function WinterEd () {
    
     const gshowtl = useRef();
     const portfolioRef = useRef();
-    const parallaxRef = useRef();
     const panelRef = useRef();
     panelRef.current = [];
 
@@ -56,19 +55,12 @@ function WinterEd () {
 
     useEffect(() => {
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.fromTo(el, {
-              autoAlpha: 0,
-              scale: 0.7
-            }, {
-              duration: 1,
-              autoAlpha: 1,
-              scale: 1,
-              ease: "circ.out",
-              scrollTrigger: {
-                id: 'panels',
-                trigger: portfolioRef.current,
-                trigger: el
-              }
+            gsap.from(el, {
+                delay: 0.5,
+                duration: 1,
+                autoAlpha: 0,
+                ease: "circ.Inout",
+                scale: 0.5,
             });
           });
 
@@ -99,7 +91,7 @@ function WinterEd () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
-             <h2 ref={parallaxRef}>Winter</h2>
+             <h2>Winter</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG

@@ -103,7 +103,7 @@ export default function Bio(props) {
             <>
                 <Row className="actualbio" noGutters={true}>
                     <Col md={6} className="bioPic">
-                        <img src={member.agencyImg.url}/>
+                        <img src={member.agencyImg.url} alt={"picture of" + member.memberName}/>
                     </Col>
                     <Col md={5} className="biocontent">
                         <div className="desBio">

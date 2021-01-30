@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import {Row, Col} from 'react-bootstrap';
-import { NavLink, Link, withRouter, useHistory} from 'react-router-dom';
+import { NavLink, Link, withRouter} from 'react-router-dom';
 import ImgWebp from '../ImgWebp';
 import '../../assets/styles/gallery.scss';
 import SEO from '../SEO';

@@ -1,11 +1,8 @@
 import React from "react";
 import '../assets/styles/press.scss';
-import { Col, Row, CardDeck, Card } from "react-bootstrap";
-/*import '../assets/styles/press.scss';*/
 import SEO from '../components/SEO';
 import F4Speakers from '../components/F4speakers';
 import NewsDeck from '../components/NewsCard';
-import LoadingScreen from '../components/LoadingScreen';
 
 
   function press() {

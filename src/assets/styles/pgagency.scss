@@ -21,61 +21,43 @@
   }
  
 .eboardwrapper{
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
     height: 100%;
-    margin: 9rem auto 5rem auto;
-
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+    background: $graypurple url('../images/eboardbgl.svg') no-repeat right center/ cover;
+    background-blend-mode: multiply;
+ 
     @include media ("screen", "<=phone") {
-        margin: 8rem auto;
+        background: $graypurple url('../images/eboardbgsm1.svg') no-repeat left center/ cover;
     }
-  
+    a{
+        position: relative;
+        z-index: 30;
+    }
     h1{
         font-size: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
         align-content: center;
-        -webkit-text-stroke: 2px $darkpurple;
-        -webkit-text-fill-color: transparent;
+        color: $text;
+        mix-blend-mode: difference;
 
         @include media ("screen", "<=phone") {
             font-size: 4.2rem;
-            -webkit-text-stroke: 1.3px $darkpurple;
+    
         }
     }
-    h1 span span{
-        opacity: 0;
-        animation: move-text 0.75s forwards;
-    }
-
-@keyframes move-text {
-    0% {
-      bottom: -0.2em;
-      opacity: 1;
-    }
-    
-    50% {
-      bottom: 0.2em;
-    }
-  
-    100% {
-      bottom: 0;
-      opacity: 1;
-    }
-  }
-  
-  
-  @media screen and (max-width: 500px) {
-    body {
-      transform: scale(0.75);
-    }
-  }
 
     .members{
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-content: center;
-        margin: 2rem 2rem 0 2rem;
+        margin: -3rem 2rem 0 2rem;
         text-align: center;
         flex-wrap: wrap;
 
@@ -92,7 +74,6 @@
         .member-intro{
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
             width: 33%;
             height: 600px;
             padding: 1.2rem;
@@ -102,8 +83,11 @@
             @include media ("screen", "<=phone") {
                 width: 100%;
                 transition: none;
+                margin: 2rem 0 1rem 0;
+                /*background: $graypurple url('../images/eboardbgsm.svg') no-repeat right center/ cover;
+                background-blend-mode: multiply;*/
             }
-            
+
             img{
                 height: 420px;
                 border-radius: 5px;
@@ -111,18 +95,9 @@
                 max-height: 80%;
             }
         }
-   
         h2{
             letter-spacing: 0.2rem;
-            color: $bluegray;
-            @include media ("screen", "<=phone") {
-               transform: rotate(-90deg);
-               position: relative;
-               left: -10rem;
-               top: -13rem;
-
-            }
-           
+            color: $heading;        
         }
         h4{
             line-height: 2.3rem;

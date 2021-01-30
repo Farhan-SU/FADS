@@ -15,7 +15,6 @@ function TheGallery () {
  
     const fashiontl = useRef();
     const portfolioSRef = useRef();
-    const parallaxRef = useRef();
     const panelSRef = useRef();
     panelSRef.current = [];
 
@@ -53,27 +52,14 @@ function TheGallery () {
 
     useEffect(() => {
         fashiontl.current = panelSRef.current.forEach((el, index) => {
-            gsap.fromTo(el, {
-              autoAlpha: 0,
-              scale: 0.7
-            }, {
-              duration: 1,
-              autoAlpha: 1,
-              scale: 1,
-              ease: "circ.out",
-              scrollTrigger: {
-                id: 'panelsJerk',
-                trigger: portfolioSRef.current,
-                trigger: el
-              }
+            gsap.from(el, {
+                delay: 0.5,
+                duration: 1,
+                autoAlpha: 0,
+                ease: "circ.out",
+                scale: 0.5,
             });
           });
-
-          return () => {
-            if (ScrollTrigger.getById('panelsJerk')) {
-            ScrollTrigger.getById('panelsJerk').kill();
-            };
-        };
     }, []);
 
     const addPanels = el => {
@@ -98,7 +84,7 @@ function TheGallery () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioSRef}>
-             <h2 ref={parallaxRef}>Gallery</h2>
+             <h2>Gallery</h2>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG

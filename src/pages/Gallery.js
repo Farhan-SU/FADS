@@ -1,12 +1,10 @@
-import React, {lazy, Suspense} from 'react';
+import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/gallery.scss';
-import { NavLink, Switch, useLocation, useRouteMatch} from 'react-router-dom';
+import { NavLink, useRouteMatch} from 'react-router-dom';
 import SEO from '../components/SEO';
 
 
-const editorial = lazy(() => import('./gallery/editorial'));
-const shows = lazy(() => import('./gallery/shows'));
  
 export default function Gallery () {
   let { path, url } = useRouteMatch();

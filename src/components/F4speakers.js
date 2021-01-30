@@ -16,27 +16,27 @@ const F4speakers = () => {
         <h4><span>Latest</span> Speakers</h4>
         <Row className="speakerposters">
           <Col md className="poster">
-           <a href="https://www.instagram.com/syracusefads/">
+           <a href="https://www.instagram.com/fashiondesignsociety/">
              <img src={diane} alt="Diane Mills F4 Poster that links to the Interviews"/>
            </a>
           </Col>
           <Col md className="poster">
-          <a href="https://www.instagram.com/tv/CDzHrwig4Zd/?utm_source=ig_web_copy_link" target="_blank">
+          <a href="https://www.instagram.com/tv/CDzHrwig4Zd/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer">
              <img src={ashley} alt="Ashley De Rosa F4 Poster that links to the Interviews"/>
            </a>
           </Col>
           <Col md className="poster">
-          <a href="https://www.instagram.com/tv/CDZDLzsARpv/?utm_source=ig_web_copy_link" target="_blank">
+          <a href="https://www.instagram.com/tv/CDZDLzsARpv/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer">
              <img src={shantanu} alt="Shantanu and Nikhil F4 Poster that links to the Interviews"/>
            </a>
           </Col>
           <Col md className="poster">
-          <a href="https://www.instagram.com/tv/CDH0tg-jjAy/?utm_source=ig_web_copy_link" target="_blank">
+          <a href="https://www.instagram.com/tv/CDH0tg-jjAy/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer">
              <img src={erin} alt="Erin Reimel F4 Poster that links to the Interviews"/>
            </a>
           </Col>
           <Col md className="poster">
-          <a href="https://www.instagram.com/tv/CC4UDF_MBfS/?utm_source=ig_web_copy_link" target="_blank">
+          <a href="https://www.instagram.com/tv/CC4UDF_MBfS/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer">
              <img src={salehe} alt="Salehe Bembury F4 Poster that links to the Interviews"/>
            </a>
           </Col>

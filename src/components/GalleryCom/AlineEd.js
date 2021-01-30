@@ -18,7 +18,6 @@ function AlineEd () {
 
     const gshowtl = useRef();
     const portfolioRef = useRef();
-    const parallaxRef = useRef();
     const panelRef = useRef();
     panelRef.current = [];
 
@@ -41,7 +40,6 @@ function AlineEd () {
                     end: () => xendvalue
                 }
             })
-            .to(parallaxRef.current, {x: 100, duration: 0.5, opacity: 0.8, ease: 'sine.in'})
             .to(panelRef.current, {x : () => panelend}, 0);
 
         } else {
@@ -57,27 +55,14 @@ function AlineEd () {
 
     useEffect(() => {
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.fromTo(el, {
-              autoAlpha: 0,
-              scale: 0.7
-            }, {
+            gsap.from(el, {
+              delay: 0.5,
               duration: 1,
-              autoAlpha: 1,
-              scale: 1,
-              ease: "circ.out",
-              scrollTrigger: {
-                id: 'panels',
-                trigger: portfolioRef.current,
-                trigger: el
-              }
+              autoAlpha: 0,
+              ease: "circ.Inout",
+              scale: 0.5,
             });
           });
-
-          return () => {
-            if (ScrollTrigger.getById('panels')) {
-            ScrollTrigger.getById('panels').kill();
-            };
-        };
     }, []);
 
     const addPanels = el => {
@@ -101,7 +86,7 @@ function AlineEd () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
-             <h2 ref={parallaxRef}>Aline</h2>
+             <h2>Aline</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG

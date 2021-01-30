@@ -4,7 +4,6 @@ import {withRouter} from "react-router-dom";
 import '../assets/styles/layout.scss';
 import MobileNav from './MobileNav';
 import FooterSM from './FooterSM';
-import TopPage from './ScrollToTop';
 import { useMediaQuery } from 'react-responsive';
 
 function Layout(props) {

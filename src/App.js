@@ -1,5 +1,5 @@
 import React, {Suspense, lazy} from 'react';
-import {Switch, Route, useLocation, withRouter} from "react-router-dom";
+import {Switch, Route, useLocation} from "react-router-dom";
 import Layout from './components/Layout';
 import LoadingScreen from './components/LoadingScreen';
 import './App.scss';
@@ -24,9 +24,9 @@ const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
 const agency = lazy(() => import('./pages/agency'));
 const press = lazy(() => import('./pages/press'));
 const eboard = lazy(() => import('./pages/agency/eboard'));
-const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
+/*const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
 const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
-const makeupArtists = lazy(() => import('./pages/agency/makeupArtists'));
+const makeupArtists = lazy(() => import('./pages/agency/makeupArtists'));*/
 const bio = lazy(() => import('./pages/agency/bio'));
 
 
@@ -68,9 +68,9 @@ function App () {
                     <RouteWithLayout exact path="/gallery/shows" component={shows}/>
                     <RouteWithLayout path="/agency/bio/:slug" component={bio}/>
                     <RouteWithLayout exact path="/agency/eboard" component={eboard}/>
-                    <RouteWithLayout exact path="/agency/fashionDesigners" component={fashionD}/>
-                    <RouteWithLayout exact path="/agency/graphicDesigners" component={graphicD}/>
-                    <RouteWithLayout exact path="/agency/makeupArtists" component={makeupArtists}/>
+                    <RouteWithLayout exact path="/agency/fashionDesigners" component={eboard}/>
+                    <RouteWithLayout exact path="/agency/graphicDesigners" component={eboard}/>
+                    <RouteWithLayout exact path="/agency/makeupArtists" component={eboard}/>
                     <RouteWithLayout exact path="/agency" component={agency} />
                     <RouteWithLayout exact path="/aboutus" component={aboutus} />
                     <RouteWithLayout exact path="/press" component={press} />

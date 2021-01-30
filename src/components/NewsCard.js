@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, CardDeck, Card} from "react-bootstrap";
+import {CardDeck, Card} from "react-bootstrap";
 import SEO from './SEO';
 import '../assets/styles/press.scss';
 import TheGallery from '../assets/images/gallerypos.webp';
@@ -36,9 +36,9 @@ const NewsCard = () => {
              </small>
             </Card.Text>
             </Card.Body>
-            <a href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank">
+            <a href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
-            <Card.Link href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank">
+            <Card.Link className="cardLink" href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on The NewsHouse &#10230;</b></small>
             </Card.Link>
             </Card.Footer>
@@ -56,9 +56,9 @@ const NewsCard = () => {
             <small className="text-muted">August 2020 - Jade Chung</small>
             </Card.Text>
             </Card.Body>
-            <a href="http://dailyorange.com/2020/08/su-fashion-design-society-hosts-zoom-series/" target="_blank">
+            <a href="http://dailyorange.com/2020/08/su-fashion-design-society-hosts-zoom-series/" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
-            <Card.Link href="http://dailyorange.com/2020/08/su-fashion-design-society-hosts-zoom-series/" target="_blank">
+            <Card.Link href="http://dailyorange.com/2020/08/su-fashion-design-society-hosts-zoom-series/" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on The Daily Orange &#10230;</b></small></Card.Link>
             </Card.Footer>
             </a>
@@ -76,9 +76,9 @@ const NewsCard = () => {
             </small>
             </Card.Text>
             </Card.Body>
-            <a href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank">
+            <a href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
-            <Card.Link href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank">
+            <Card.Link href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on The Daily Orange &#10230;</b></small>
             </Card.Link>
             </Card.Footer>
@@ -103,9 +103,9 @@ const NewsCard = () => {
              </small>
             </Card.Text>
             </Card.Body>
-            <a href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/12/9/syracuse-fads-presents-the-gallery-fashion-show" target="_blank">
+            <a href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/12/9/syracuse-fads-presents-the-gallery-fashion-show" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
-            <Card.Link href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/12/9/syracuse-fads-presents-the-gallery-fashion-show" target="_blank">
+            <Card.Link href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/12/9/syracuse-fads-presents-the-gallery-fashion-show" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on Jerk Magazine &#10230;</b></small>
             </Card.Link>
             </Card.Footer>
@@ -124,9 +124,9 @@ const NewsCard = () => {
                 </small>
             </Card.Text>
             </Card.Body>
-            <a href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/10/15/a-glimpse-into-syracuse-snarl " target="_blank">
+            <a href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/10/15/a-glimpse-into-syracuse-snarl " target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
-            <Card.Link href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/10/15/a-glimpse-into-syracuse-snarl" target="_blank">
+            <Card.Link href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/10/15/a-glimpse-into-syracuse-snarl" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on The Daily Orange &#10230;</b></small>
             </Card.Link>
             </Card.Footer>
@@ -145,9 +145,9 @@ const NewsCard = () => {
             </small>
             </Card.Text>
             </Card.Body>
-            <a href="https://www.syracuse.com/su-news/2018/03/fashion_of_tomorrow_hits_the_runway_at_su_photos.html" target="_blank">
+            <a href="https://www.syracuse.com/su-news/2018/03/fashion_of_tomorrow_hits_the_runway_at_su_photos.html" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
-            <Card.Link href="https://www.syracuse.com/su-news/2018/03/fashion_of_tomorrow_hits_the_runway_at_su_photos.html" target="_blank">
+            <Card.Link href="https://www.syracuse.com/su-news/2018/03/fashion_of_tomorrow_hits_the_runway_at_su_photos.html" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on Syracuse.com &#10230;</b></small>
             </Card.Link>
             </Card.Footer>

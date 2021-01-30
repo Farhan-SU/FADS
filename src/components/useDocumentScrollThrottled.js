@@ -12,7 +12,6 @@ function useDocumentScrollThrottled(callback) {
       previousScrollTop = previousPosition;
       return currentScrollTop;
     });
-
     callback({ previousScrollTop, currentScrollTop });
   }
 

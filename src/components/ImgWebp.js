@@ -13,7 +13,7 @@ const ImgWepb = ({
     return (
       <picture>
         <source srcSet={src} type={type} />
-        <img src={fallback} {...delegated} className={className}/>
+        <img src={fallback} {...delegated} className={className} alt=""/>
       </picture>
     );
   };

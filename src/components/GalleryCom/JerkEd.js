@@ -17,7 +17,6 @@ function JerkEd () {
     
     const gshowtl = useRef();
     const portfolioRef = useRef();
-    const parallaxRef = useRef();
     const panelRef = useRef();
     panelRef.current = [];
 
@@ -55,27 +54,14 @@ function JerkEd () {
 
     useEffect(() => {
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.fromTo(el, {
-              autoAlpha: 0,
-              scale: 0.7
-            }, {
+            gsap.from(el, {
+              delay: 0.5,
               duration: 1,
-              autoAlpha: 1,
-              scale: 1,
-              ease: "circ.out",
-              scrollTrigger: {
-                id: 'panelsJerk',
-                trigger: portfolioRef.current,
-                trigger: el
-              }
+              autoAlpha: 0,
+              ease: "circ.Inout",
+              scale: 0.5,
             });
           });
-
-          return () => {
-            if (ScrollTrigger.getById('panelsJerk')) {
-            ScrollTrigger.getById('panelsJerk').kill();
-            };
-        };
     }, []);
 
     const addPanels = el => {
@@ -99,7 +85,7 @@ function JerkEd () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
-             <h2 ref={parallaxRef}>JERK</h2>
+             <h2>JERK</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG

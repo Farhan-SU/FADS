@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {NavLink, Link, withRouter, useHistory, useLocation} from "react-router-dom";
+import {NavLink, Link, withRouter, useHistory} from "react-router-dom";
 import {Row, Col} from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav';
 import '../assets/styles/layout.scss';
@@ -42,7 +42,7 @@ function Navbar() {
       <Row className='navwrapper'>
         <div className={`header ${shadowStyle} ${hiddenStyle}`}>
           <Link to="/" exact onClick={goHome}>
-            <Col md={true} md={5} className="logoCol">
+            <Col md={5} className="logoCol">
               <ImgWepb
                 src={navLogoWeb}
                 fallback={navLogo}
@@ -51,7 +51,7 @@ function Navbar() {
               />
             </Col>
           </Link>
-          <Col md={true} md={5} className="linkList">
+          <Col md={5} className="linkList">
           <Nav className='nav'>
             <Nav.Item>
                  <NavLink to="/gallery" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>Gallery</NavLink>

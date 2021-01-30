@@ -1,8 +1,7 @@
 import React, {useRef,useEffect, useState} from 'react';
+import '../../assets/styles/pages.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import fadsAbout from '../../assets/images/joinUsHpg.mp4';
-import '../../assets/styles/pages.scss';
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -12,7 +11,6 @@ export default function HFadsBio ()  {
   
   const [killTl, setkillTl] = useState(false);
   const tl = useRef();
-  const smtl = useRef();
   const fadsbio = useRef(null);
   const biotxt = useRef(null);
 

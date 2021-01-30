@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState} from 'react';
-import { Link, Switch, useLocation, useRouteMatch} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Link} from 'react-router-dom';
 import '../../assets/styles/pgagency.scss';
 import SEO from '../../components/SEO';
 import { gql } from 'apollo-boost';
@@ -9,8 +9,6 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const endpoint = 'https://api-us-east-1.graphcms.com/v2/ckf8z1uao08mm01wghz4k17at/master?query=query%7B%0A%20%20members%7B%0A%20%20%20%20id%0A%20%20%20%20memberName%0A%20%20%20%20memberPosition%0A%20%20%20%09agencyImg%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0A';
 
 const MEMBERS = gql`
 query{
@@ -50,6 +48,7 @@ export default function Eboard() {
     )
   }
   if (data) {
+
     /*const name = data.members.filter((memberName) => data.members === memberName);
     console.log(name);*/
 
@@ -65,9 +64,9 @@ export default function Eboard() {
         <div className="members">
           {data.members.map(member => (
             <div key={member.id} className="member-intro">
-              <Link to={`/agency/bio/${member.slug}`}>
                {/*image goes below this comment*/}
                <img src={member.agencyImg.url} alt={member.memberName} className="memImg"/>
+               <Link to={`/agency/bio/${member.slug}`} className="memberDes">
               <h2>{member.memberName}</h2>
               <h4><em>{member.memberPosition}</em></h4>
               </Link>

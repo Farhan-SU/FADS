@@ -88,7 +88,7 @@ export default function HAboutus()  {
         <div className="aboutuswrapper" id="about-ref" ref={AboutRef}>
           <div  className="ab-img-con">
               <video className='videoTag' preloaded="true" controls autoPlay loop muted playsInline className='aboutpic'>
-                  <source src={fadsAbout} type='video/mp4' className='aboutpic'/>
+                  <source src={fadsAbout} type='video/mp4'/>
                   Sorry! Your browser does not support this video file.
               </video>
               <div ref={overlayref} className='overlay'/>

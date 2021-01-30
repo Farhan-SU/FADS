@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/layout.scss';
 import Facebook from '../assets/images/facebook.png';
@@ -39,7 +38,7 @@ const FooterSM = () => {
             <Col md={6} className='second-sm'>
             <div className="contact">
                 <h3>INQUIRIES at</h3>
-                <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank">syracusefads@gmail.com</a>
+                <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank" rel="noopener noreferrer" >syracusefads@gmail.com</a>
             </div>
             </Col>
         </Row>

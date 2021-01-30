@@ -65,7 +65,6 @@ const Shows = () => {
           y: 0,
           ease: "circ.out",
           scrollTrigger: {
-            trigger: ".sleft",
             trigger: el,
             start: 'top top+=500',
             toggleActions: 'play none none reverse'
@@ -94,7 +93,6 @@ const Shows = () => {
           y: 0,
           ease: "circ.out",
           scrollTrigger: {
-            trigger: ".sright",
             trigger: al,
             start: 'top top+=100',
             toggleActions: 'play none none reverse'
@@ -121,7 +119,6 @@ const Shows = () => {
           autoAlpha: 1,
           ease: 'none',
           scrollTrigger: {
-            trigger: ".description",
             trigger: text,
             start: 'top top+=600',
             toggleActions: 'play none none reverse'
@@ -200,7 +197,7 @@ const Shows = () => {
 
       <Row as='section' className="land">
         <Col md={4}className="sleft">
-          <img ref={sImgLeft} src={TlandLeft} alt="jerkphotos" ref={addSImgRefs} className="img1"/>
+          <img src={TlandLeft} alt="jerkphotos" ref={addSImgRefs} className="img1"/>
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">

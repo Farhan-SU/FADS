@@ -23,6 +23,7 @@ function MobileNav() {
 
   const smNavTl = useRef(null);
   const nav = useRef(null);
+  const navwrap = useRef(null);
   const navContent = useRef(null);
   const [menuOpen, setmenuOpen] = useState(false);
   const showmenu = false;
@@ -35,9 +36,15 @@ function MobileNav() {
   const info = useRef(null);
   const socialSm = useRef(null);
 
+  const intialheightNav = window.innerHeight/6.5;
+  const openheightNav = window.innerHeight;
+
+
   useEffect(() => {
+    gsap.set(navwrap.current, {height: intialheightNav});
     smNavTl.current = gsap.timeline({paused: true,  defaults: { duration: 1, ease: "sine.inOut" }})
-    .fromTo(nav.current, {autoAlpha: 0}, {autoAlpha: 1})
+    .fromTo(navwrap.current, {height: intialheightNav}, {height: openheightNav})
+    .fromTo(nav.current, {autoAlpha: 0}, {autoAlpha: 1}, '-=0.8')
     .fromTo(navContent.current, {autoAlpha: 0, y: 200}, {autoAlpha: 1, y: 0, display: 'grid'})
     .fromTo([homeSm.current, gallerySm.current, aboutSm.current, agencySm.current, pressSm.current],
       {autoAlpha: 0, y: 40}, {autoAlpha: 1, y: 0, stagger: {each: .5}}, "-=1")
@@ -61,7 +68,7 @@ function MobileNav() {
   
   return (
     <>
-    <div className="mobilenavWrapper">
+    <div className="mobilenavWrapper" ref={navwrap}>
       <div className="smLogo"> 
       <NavLink to="/" exact>
         <img src={navLogo} alt="fads logo"/> 
@@ -88,7 +95,7 @@ function MobileNav() {
               <li className="nav-info-item"><em>Syracuse, NY</em></li> 
               <li className="nav-info-item">Collaboration or Inquires:</li> 
               <li className="nav-info-item">
-              <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank">syracusefads@gmail.com</a></li>  
+              <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank" rel="noopener noreferrer">syracusefads@gmail.com</a></li>  
             </ul>
             <div className="smNavsocial" ref={socialSm}>
               <a className='smSocial' href="https://www.facebook.com/syracusefads" target="_blank" rel="noopener noreferrer" >
