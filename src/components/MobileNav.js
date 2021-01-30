@@ -36,7 +36,7 @@ function MobileNav() {
   const info = useRef(null);
   const socialSm = useRef(null);
 
-  const intialheightNav = window.innerHeight/6.5;
+  const intialheightNav = window.innerHeight/6;
   const openheightNav = window.innerHeight;
 
 
