@@ -4,11 +4,14 @@ import Layout from './components/Layout';
 import LoadingScreen from './components/LoadingScreen';
 import './App.scss';
 import './assets/styles/layout.scss';
+import AnimatedCursor from "react-animated-cursor";
+import { useMediaQuery } from 'react-responsive';
 
 const aboutus = lazy(() => import('./pages/aboutus'));
 const homepg = lazy(() => import('./pages/homepg'));
 
 /*Gallery Routes*/
+/*Editorial*/
 const gallery = lazy(() => import('./pages/gallery'));
 const editorial = lazy(() => import('./pages/gallery/editorial'));
 const shows = lazy(() => import('./pages/gallery/shows'));
@@ -16,9 +19,15 @@ const aline = lazy(() => import('./pages/gallery/editorials/aline'));
 const jerkFads = lazy(() => import('./pages/gallery/editorials/jerk-fads'));
 const winter = lazy(() => import('./pages/gallery/editorials/winter'));
 const workWear = lazy(() => import('./pages/gallery/editorials/work-wear-vintage'));
+const galleryShoots = lazy(() => import('./pages/gallery/editorials/galleryShoots'));
+const halloween = lazy(() => import('./pages/gallery/editorials/halloween'));
+const makeupJ = lazy(() => import('./pages/gallery/editorials/makeupJ'));
+/*Shows*/
 const circus = lazy(() => import('./pages/gallery/shows/circus'));
 const thegallery = lazy(() => import('./pages/gallery/shows/thegallery'));
 const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
+
+
 
 /*Agency Routes*/
 const agency = lazy(() => import('./pages/agency'));
@@ -42,6 +51,11 @@ function App () {
     );
   };
 
+  const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 992 })
+    return isDesktop ? children : null
+  }
+
   /*const [TimePassed, setTimePassed] = useState(true);
 
   useEffect(() => {
@@ -53,6 +67,14 @@ function App () {
 
         return (
           <>
+          <Desktop><AnimatedCursor
+            innerSize={10}
+            outerSize={14}
+            color='191, 112, 244'
+            outerAlpha={0.2}
+            innerScale={0.5}
+            outerScale={4}/></Desktop>
+  
             <div className="routes">
             <Suspense fallback={<LoadingScreen/>}>
                   <Switch location={location}>
@@ -60,6 +82,9 @@ function App () {
                     <RouteWithLayout exact path="/gallery/editorials/jerk-fads" component={jerkFads}/>
                     <RouteWithLayout exact path="/gallery/editorials/winter" component={winter}/>
                     <RouteWithLayout exact path="/gallery/editorials/work-wear-vintage" component={workWear}/>
+                    <RouteWithLayout exact path="/gallery/editorials/galleryShoots" component={galleryShoots}/>
+                    <RouteWithLayout exact path="/gallery/editorials/halloween" component={halloween}/>
+                    <RouteWithLayout exact path="/gallery/editorials/makeupJ" component={makeupJ}/>
                     <RouteWithLayout exact path="/gallery/shows/circus" component={circus}/>
                     <RouteWithLayout exact path="/gallery/shows/thegallery" component={thegallery}/>
                     <RouteWithLayout exact path="/gallery/shows/tomorrow-land" component={tomorrow}/>
@@ -79,6 +104,7 @@ function App () {
                   </Switch>
                 </Suspense>
             </div>
+
         </>
         );
  

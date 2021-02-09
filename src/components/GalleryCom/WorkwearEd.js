@@ -4,9 +4,10 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
-import workEnd from '../../assets/images/workEnd.png';
-import workEndWeb from '../../assets/images/workEnd.webp';
+import EndEsec from '../../assets/images/endE.png';
+import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
+import { Col, Row } from 'react-bootstrap';
 
 
 if (typeof window !== `undefined`) {
@@ -82,7 +83,7 @@ function JerkEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 className="wwSep">September<br/>2019</h1>
+            <h1 className="longTxtEd">September<br/>2019</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
@@ -180,16 +181,18 @@ function JerkEd () {
             </div>
         </section>
         <div className="endsec">
-        <div className="imgNext">
-            <div className="worksec">
-            <WebpG
-                src={workEndWeb}
-                fallback={workEnd}
-                alt="FADS Logo"
-                style={{width: '48%'}}
+        <Row className="imgNext">
+            <Col lg={12} className="endSec1">
+                <h1 className="winterh1">Winter</h1>
+            </Col>
+             <Col lg={12} className="endseccontent">
+                <WebpG
+                    src={EndEsecW}
+                    fallback={EndEsec}
+                    alt="FADS Logo"
                 />
-            </div>
-        </div>
+            </Col>
+        </Row>
             <div className="Endnext">
             <Link className="link" to="/gallery/editorials/winter">
             <span className="link__arrow">

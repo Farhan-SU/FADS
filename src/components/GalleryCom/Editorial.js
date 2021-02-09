@@ -5,14 +5,38 @@ import '../../assets/styles/gallery.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../SEO';
+import ImgWebp from '../ImgWebp';
+
+/**Images*/
 import AlineLeft from '../../assets/images/aline/nojacket.png';
 import AlineRight from '../../assets/images/aline/jacket.png';
-import JerkLeft from "../../assets/images/jerk/solei.png";
-import JerkRight from "../../assets/images/jerk/jerkfads.png";
+import AlineLeftW from '../../assets/images/aline/nojacket.webp';
+import AlineRightW from '../../assets/images/aline/jacket.webp';
+import JerkRight from "../../assets/images/jerk/solei.png";
+import JerkLeft from "../../assets/images/jerk/jerkfads.png";
+import JerkRightW from "../../assets/images/jerk/solei.webp";
+import JerkLeftW from "../../assets/images/jerk/jerkfads.webp";
 import VintageLeft from '../../assets/images/workwear/fuzzyhat.png';
 import VintageRight from '../../assets/images/workwear/suit.png';
-import WinterLeft from "../../assets/images/winter/sky.png";
-import WinterRight from "../../assets/images/winter/curve.png";
+import VintageLeftW from '../../assets/images/workwear/fuzzyhat.webp';
+import VintageRightW from '../../assets/images/workwear/suit.webp';
+import WinterRight from "../../assets/images/winter/sky.png";
+import WinterLeft from "../../assets/images/winter/curve.png";
+import WinterRightW from "../../assets/images/winter/sky.webp";
+import WinterLeftW from "../../assets/images/winter/curve.webp";
+import gallerySRight from "../../assets/images/galleryShoots/galleryShootA4.png";
+import gallerySRightW from "../../assets/images/galleryShoots/galleryShootA4.webp";
+import gallerySLeft from "../../assets/images/galleryShoots/galleryShootA.png";
+import gallerySLeftW from "../../assets/images/galleryShoots/galleryShootA.webp";
+import makeupRight from "../../assets/images/makeup/makeupJerk6.png";
+import makeupRightW from "../../assets/images/makeup/makeupJerk6.webp";
+import makeupLeft from "../../assets/images/makeup/makeupJerk2.png";
+import makeupLeftW from "../../assets/images/makeup/makeupJerk2.webp";
+import SweetLeft from '../../assets/images/sweetEscape/aanya3.png';
+import SweetLeftW from '../../assets/images/sweetEscape/aanya3.webp';
+import SweetRight from '../../assets/images/sweetEscape/aspen1.png';
+import SweetRightW from '../../assets/images/sweetEscape/aspen1.png';
+
 
 
 if (typeof window !== `undefined`) {
@@ -26,7 +50,6 @@ const Editorial = () => {
     const line = useRef();
 
     useEffect(() => {
-      gsap.to(line.current.children, { autoAlpha: 1, duration: 2, ease: 'sine.in' });
       edtl.current = ScrollTrigger.batch(line.current.children, {
         scrub: true,
         onEnter: batch =>
@@ -57,17 +80,16 @@ const Editorial = () => {
         gsap.fromTo(el, {
           duration: 1.3, 
           opacity: 0,
-          y: 300,
-        }, {
+          y: 300}, {
           duration: 1.3, 
           opacity: 1,
           y: 0,
-          ease: "circ.out",
+          ease: "circ.Inout",
           scrollTrigger: {
             id: 'edit-left',
             trigger: el,
-            start: 'top top+=550',
-            toggleActions: 'play none none none'
+            start: '10% top+=600',
+            toggleActions: 'play none none none',
           }
         });
       });
@@ -91,12 +113,12 @@ const Editorial = () => {
           duration: 1,
           opacity: 1, 
           y: 0,
-          ease: "circ.out",
+          ease: "circ.Inout",
           scrollTrigger: {
             id: 'edit-right',
             trigger: al,
-            start: 'top top+=100',
-            toggleActions: 'play none none none'
+            start: 'top top+=200',
+            toggleActions: 'play none none none',
           }
         });
       });
@@ -145,18 +167,23 @@ const Editorial = () => {
         }}>
       <>
       <div ref={line} className="editorialwrapper">
-      <Row as="section" className="aline">
-        <Col md={4}className="left">
-          <img src={AlineLeft} alt="jerkphotos" className="img1"/>
+
+      <Row as="section" className="sweet">
+        <Col md={4} className="left">
+         <picture className="img1">
+          <source srcset={SweetLeftW} alt="Sweet Escape shoots" type="image/webp"/>
+          <source srcset={SweetLeft} alt="Sweet Escape  shoots"  type="image/png"/>
+          <img src={SweetLeft} alt="Sweet Escape  shoots"/>
+        </picture>
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-        <Link to="/gallery/editorials/aline">
+        <Link to="/gallery/editorials/halloween">
           <Col xs={12}>
-          <h3>May 2019</h3>
+          <h3>October 2020</h3>
           </Col>
           <Col xs={12}>
-          <h1>Aline</h1>
+          <h1>Sweet Escape</h1>
           </Col>
           </Link>
         </Row>
@@ -167,45 +194,95 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <img src={AlineRight} alt="jerkphotos" className="img2"/>
+        <picture className="img2">
+          <source srcset={SweetRightW} alt="Sweet Escape shoots" type="image/webp"/>
+          <source srcset={SweetRight} alt="Sweet Escape  shoots"  type="image/png"/>
+          <img src={SweetRight} alt="Sweet Escape  shoots"/>
+        </picture>
         </Col>
       </Row>
 
-      <Row as="section" className="jerk">
-        <Col md={4}className="left">
-          <img src={JerkLeft} ref={addToRefs} alt="jerkphotos" className="img1"/>
+      <Row as="section" className="shootGallery">
+        <Col md={4} className="left">
+        <picture className="img1">
+          <source srcset={gallerySLeftW} alt="gallery shoots" type="image/webp"/>
+          <source srcset={gallerySLeft} alt="gallery shoots"  type="image/png"/>
+          <img src={gallerySLeft} alt="gallery shoots" ref={addToRefs}/>
+        </picture>
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
-        <Link to="/gallery/editorials/jerk-fads">
+        <Link to="/gallery/editorials/galleryShoots">
           <Col xs={12}>
-          <h3>April 2019</h3>
+          <h3>12/2019</h3>
           </Col>
           <Col xs={12}>
-          <h1>JERK X FADS</h1>
+          <h1>The Gallery</h1>
           </Col>
           </Link>
         </Row>
-        <div className="svg-line">
+          <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
               <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
-          <img src={JerkRight}  ref={addToRefsright} alt="jerkphotos" className="img2"/>
+          <picture className="img2">
+          <source srcset={gallerySRightW} alt="gallery shoots" type="image/webp"/>
+          <source srcset={gallerySRight} alt="gallery shoots" type="image/png"/>
+          <img src={gallerySRight} ref={addToRefsright} alt="gallery shoots"/>
+        </picture>
+        </Col>
+      </Row>
+
+      <Row as="section" className="makeupJerk">
+        <Col md={4} className="left">
+          <picture className="img1">
+          <source srcset={makeupLeftW} alt="makeup shoots" type="image/webp"/>
+          <source srcset={makeupLeft} alt="makeup shoots" type="image/png"/>
+          <img src={makeupLeft} alt="makeup shoots" ref={addToRefs}/>
+        </picture>
+        </Col>
+        <Col md={4} className="description">
+        <Row ref={addToRefstext} className="header">
+        <Link to="/gallery/editorials/makeupJ">
+          <Col xs={12}>
+          <h3>03/2020</h3>
+          </Col>
+          <Col xs={12}>
+          <h1>Not A Dream</h1>
+          </Col>
+          </Link>
+        </Row>
+          <div className="svg-line">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
+              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </Col>
+        <Col md={4} className="right">
+          <picture className="img2">
+          <source srcset={makeupRightW} alt="makeup shoots" type="image/webp"/>
+          <source srcset={makeupRight} alt="makeup shoots" type="image/png"/>
+          <img src={makeupRight} alt="makeup shoots" ref={addToRefsright}/>
+        </picture>
         </Col>
       </Row>
 
       <Row as='section' className="vintage">
         <Col md={4}className="left">
-          <img src={VintageLeft} alt="jerkphotos" ref={addToRefs} className="img1"/>
+          <picture className="img1">
+          <source srcset={VintageLeftW} alt="work wear vintage shoots" type="image/webp"/>
+          <source srcset={VintageLeft} alt="work wear vintage shoots" type="image/png"/>
+          <img src={VintageLeft} alt="makeup shoots" ref={addToRefs}/>
+        </picture>
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="vintage-header">
         <Link to="/gallery/editorials/work-wear-vintage">
           <Col xs={12}>
-           <h3>Sept 2019</h3>
+           <h3>10/2019</h3>
           </Col>
           <Col xs={12}>
           <h1>Work<br/>wear Vintage</h1>
@@ -219,20 +296,96 @@ const Editorial = () => {
         </div>
         </Col>
         <Col md={4} className="right">
-          <img src={VintageRight} alt="jerkphotos" ref={addToRefsright} className="exception-img2"/>
+          <picture className="exception-img2">
+          <source srcset={VintageRightW} alt="work wear vintage shoots" type="image/webp"/>
+          <source srcset={VintageRight} alt="work wear vintage shoots" type="image/png"/>
+          <img src={VintageRight} alt="makeup shoots" ref={addToRefsright} className="biggerImg2"/>
+        </picture>
         </Col>
       </Row>
 
-      <Row className="winter">
+      <Row as="section" className="aline">
         <Col md={4}className="left">
-          <img src={WinterLeft} alt="jerkphotos" ref={addToRefs}className="img1"/>
+          <picture className="img1">
+          <source srcset={AlineLeftW} alt="Aline shoots" type="image/webp"/>
+          <source srcset={AlineLeft} alt="Aline shoots" type="image/png"/>
+          <img src={AlineLeft} alt="Aline shoots" ref={addToRefs}/>
+        </picture>
+        </Col>
+        <Col md={4} className="description">
+        <Row ref={addToRefstext} className="header">
+        <Link to="/gallery/editorials/aline">
+          <Col xs={12}>
+          <h3>05/2019</h3>
+          </Col>
+          <Col xs={12}>
+          <h1>Aline</h1>
+          </Col>
+          </Link>
+        </Row>
+          <div className="svg-line">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
+              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </Col>
+        <Col md={4} className="right">
+          <picture className="img2">
+          <source srcset={AlineRightW} alt="Aline shoots" type="image/webp"/>
+          <source srcset={AlineRight} alt="Aline shoots" type="image/png"/>
+          <img src={AlineRight} alt="Aline shoots" ref={addToRefsright}/>
+        </picture>
+        </Col>
+      </Row>
+
+      <Row as="section" className="jerk">
+        <Col md={4}className="left">
+          <picture className="img1">
+          <source srcset={JerkLeftW} alt="Jerk shoots" type="image/webp"/>
+          <source srcset={JerkLeft} alt="Jerk shoots" type="image/png"/>
+          <img src={JerkLeft} alt="Jerk shoots" ref={addToRefs}/>
+        </picture>
+        </Col>
+        <Col md={4} className="description">
+        <Row ref={addToRefstext} className="header">
+        <Link to="/gallery/editorials/jerk-fads">
+          <Col xs={12}>
+          <h3>05/2019</h3>
+          </Col>
+          <Col xs={12}>
+          <h1>JERK X FADS</h1>
+          </Col>
+          </Link>
+        </Row>
+        <div className="svg-line">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
+              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </Col>
+        <Col md={4} className="right">
+          <picture className="img2">
+          <source srcset={JerkRightW} alt="Jerk shoots" type="image/webp"/>
+          <source srcset={JerkRight} alt="Jerk shoots" type="image/png"/>
+          <img src={JerkRight} alt="Jerk shoots" ref={addToRefsright}/>
+        </picture>
+        </Col>
+      </Row>
+
+      <Row as='section' className="winter">
+        <Col md={4}className="left">
+          <picture className="img1">
+          <source srcset={WinterLeftW} alt="Jerk shoots" type="image/webp"/>
+          <source srcset={WinterLeft} alt="Jerk shoots" type="image/png"/>
+          <img src={WinterLeft} alt="Jerk shoots" ref={addToRefs}/>
+        </picture>
         </Col>
         <Col md={4}>
         <Row className="description">
         <Row ref={addToRefstext} className="header">
           <Link to="/gallery/editorials/winter">
             <Col xs={12}>
-              <h3>December 2018</h3>
+              <h3>12/2018</h3>
             </Col>
             <Col xs={12}>
               <h1>Winter</h1>
@@ -242,7 +395,11 @@ const Editorial = () => {
         </Row>
         </Col>
         <Col md={4} className="right">
-          <img src={WinterRight} alt="jerkphotos" ref={addToRefsright} className="img2"/>
+          <picture className="img2">
+          <source srcset={WinterRightW} alt="Jerk shoots" type="image/webp"/>
+          <source srcset={WinterRight} alt="Jerk shoots" type="image/png"/>
+          <img src={WinterRight} alt="Jerk shoots"ref={addToRefsright}/>
+        </picture>
         </Col>
       </Row>
       </div>

@@ -4,9 +4,10 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
-import jerkEnd from '../../assets/images/jerkEnd.png';
-import jerkEndWeb from '../../assets/images/jerkEnd.webp';
+import EndEsec from '../../assets/images/endE.png';
+import EndEsecW from '../../assets/images/endE.webp';
 import SEO from "../SEO";
+import { Col, Row } from 'react-bootstrap';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -216,14 +217,19 @@ function JerkEd () {
             </div>
         </section>
         <div className="endsec">
-        <div className="imgNext">
-            <WebpG
-                src={jerkEndWeb}
-                fallback={jerkEnd}
-                alt="FADS Logo"
-                style={{width: '75%'}}
+        <Row className="imgNext">
+            <Col lg={12} className="endSec1">
+                <h1>Work Wear</h1><h2 className="ontop">Vintage</h2>
+            </Col>
+            <Col lg={12} className="endseccontent">
+                <WebpG
+                    src={EndEsecW}
+                    fallback={EndEsec}
+                    alt="FADS Logo"
                 />
-        </div>
+            </Col>
+        </Row>
+        
             <div className="Endnext">
             <Link className="link" to="/gallery/editorials/work-wear-vintage">
             <span className="link__arrow">

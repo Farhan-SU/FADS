@@ -5,6 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
 import SEO from '../SEO';
+import {Row, Col} from 'react-bootstrap';
+import Prev from '../../assets/images/prev.png';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -154,9 +156,16 @@ function Circus () {
             </div>
         </section>
         <div className="endsec">
-            <div className="secContent">
-            <h1>Tomorrow Land</h1>   
-            <div className="showNxt">
+        <Row className="imgNext">
+            <Col lg={12} className="endSec1">
+                <h1>Tomorr</h1><h2 className="ontopGshoots">ow</h2>
+            </Col>
+            <Col lg={12} className="endseccontent">
+              <img src={Prev} alt="relive it again design"/>
+            </Col>
+        </Row>
+            <div className="Endnext">
+            <div className="winterEndarrow">
             <Link className="link" to="/gallery/shows/tomorrow-land">
             <span className="link__arrow">
                 <span></span>

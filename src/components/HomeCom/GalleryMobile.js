@@ -63,7 +63,7 @@ export default function GalleryMobile ()  {
        </Row>
 
         <div className="galLink">
-          <Link exact to="/gallery">
+          <Link to="/gallery">
               <div className="linkbtn">
                 <div className="circlelink"/>
                   <p className="linktext">View our gallery &#10230;</p>

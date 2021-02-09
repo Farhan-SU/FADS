@@ -17,45 +17,60 @@
   overflow-x: hidden;
   margin-top: 8rem; }
   .biowrapper .bio-header {
-    margin-top: 4rem;
-    text-align: center; }
+    margin: -2.3rem 4.3rem 2.3rem 4.3rem;
+    height: 80vh; }
+    @media screen and (max-width: 430px) {
+      .biowrapper .bio-header {
+        height: 100%;
+        margin: 1rem 0 0 0;
+        padding: 2rem 0.5rem;
+        text-align: center; } }
     .biowrapper .bio-header h1 {
-      font-size: 5rem;
+      font-size: 11.5vw;
       letter-spacing: 0.3rem;
       margin-bottom: 1rem;
-      color: #6b728d; }
+      color: #54475e;
+      line-height: 12rem;
+      letter-spacing: 2px;
+      -webkit-text-stroke: 2px #54475e;
+      -webkit-text-fill-color: transparent; }
       @media screen and (max-width: 430px) {
         .biowrapper .bio-header h1 {
           font-size: 4rem;
+          line-height: normal;
+          color: #54475e;
+          -webkit-text-stroke: 0.1px transparent;
+          -webkit-text-fill-color: #54475e;
+          font-size: 2.5rem;
           margin-top: -1rem; } }
     .biowrapper .bio-header h4 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 500;
-      color: #555b70; }
+      font-size: 2.5rem;
+      margin-left: 0.7rem;
+      font-weight: 600;
+      color: #3c343d;
+      letter-spacing: 4px; }
       @media screen and (max-width: 430px) {
         .biowrapper .bio-header h4 {
-          font-size: 1.5rem;
-          padding: 0 3rem; } }
-    .biowrapper .bio-header .bannerBio {
-      margin: 3rem 0;
-      width: 100vw; }
-      @media screen and (max-width: 430px) {
-        .biowrapper .bio-header .bannerBio {
-          display: none; } }
-      .biowrapper .bio-header .bannerBio .banner-img {
-        width: 100vw; }
+          margin-left: 0;
+          font-size: 1.2rem;
+          letter-spacing: normal;
+          padding: 0 3rem;
+          color: #625164;
+          font-weight: 500; } }
 
 .actualbio {
+  margin-left: 2rem;
   height: 100%;
   width: 100%;
+  flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: flex-start;
-  align-content: center;
+  align-content: flex-start;
   overflow: scroll;
-  margin-bottom: 3rem; }
+  margin-bottom: 4rem; }
   @media screen and (max-width: 430px) {
     .actualbio {
+      margin-left: 0;
       margin-bottom: 1.5rem;
       justify-content: center;
       align-items: center;
@@ -66,24 +81,31 @@
       .actualbio .bioPic {
         width: 100vw; } }
     .actualbio .bioPic img {
+      border-radius: 20px;
       object-fit: cover;
       width: 100%;
       height: 100%; }
+      @media screen and (max-width: 430px) {
+        .actualbio .bioPic img {
+          border-radius: 1px; } }
   .actualbio .biocontent {
     min-height: 100%;
     height: 100%;
-    margin-left: 2rem;
+    margin-right: 6rem;
     margin-top: 1rem;
     padding: 2rem; }
+    @media screen and (max-width: 430px) {
+      .actualbio .biocontent {
+        margin-right: 0;
+        padding: 2.3rem; } }
     .actualbio .biocontent .desBio {
-      min-height: 100%;
-      margin-top: 2.5rem; }
+      margin-top: -2.5rem; }
       @media screen and (max-width: 430px) {
         .actualbio .biocontent .desBio {
           margin-top: 1rem; } }
       .actualbio .biocontent .desBio p {
-        font-size: 1.5rem;
-        line-height: 2.4rem;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
         color: #1d1d3a;
         font-weight: 400;
         white-space: normal;
@@ -127,40 +149,29 @@
       .portfolioTxt h2 {
         font-size: 6.8vw; } }
 
-.slide {
-  width: 100%; }
-  .slide:not(:first-child) {
-    margin-left: 6vw; }
-  .slide .preview {
-    height: 100%;
-    flex-basis: 100%;
-    width: 400px;
-    background: transparent;
-    overflow: hidden; }
-    .slide .preview img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
-      z-index: 1; }
-
 .showcase {
-  width: 100%;
-  margin: 2rem 1rem 6rem 1rem;
-  overflow: hidden; }
-  .showcase .slider {
+  width: 100vw;
+  height: 100%;
+  margin: 3rem 0 6rem 0;
+  overflow: hidden;
+  cursor: move; }
+
+.sliderBio {
+  outline: none; }
+  .sliderBio .slick-dots {
     width: 100%;
-    position: relative;
-    top: 50%;
-    left: 1%;
-    display: flex;
-    margin-left: 1.8rem; }
-    .showcase .slider img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
-      z-index: 1; }
+    height: 100px;
+    position: relative; }
+  .sliderBio img {
+    width: 100%;
+    border-radius: 20px; }
+
+.slick-slide {
+  padding: none;
+  margin: 0.5rem; }
+
+.slick-slide, .slick-slide * {
+  outline: none; }
 
 .bioBttn {
   margin: 2rem 0 0 0.5rem; }
@@ -202,7 +213,7 @@
       left: 1.2rem;
       font-size: 1.3rem;
       font-weight: 700;
-      color: #a57daf; }
+      color: #a67db0; }
       @media screen and (max-width: 430px) {
         .bioBttn .biolinkbtn .biolinktext {
           width: 250px;

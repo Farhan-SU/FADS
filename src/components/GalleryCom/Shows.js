@@ -63,10 +63,10 @@ const Shows = () => {
           duration: 1.3, 
           opacity: 1,
           y: 0,
-          ease: "circ.out",
+          ease: "circ.Inout",
           scrollTrigger: {
             trigger: el,
-            start: 'top top+=500',
+            start: 'top top+=600',
             toggleActions: 'play none none reverse'
           }
         });
@@ -91,10 +91,10 @@ const Shows = () => {
           duration: 1,
           opacity: 1, 
           y: 0,
-          ease: "circ.out",
+          ease: "circ.Inout",
           scrollTrigger: {
             trigger: al,
-            start: 'top top+=100',
+            start: 'top top+=200',
             toggleActions: 'play none none reverse'
           }
         });

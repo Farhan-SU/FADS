@@ -1,4 +1,5 @@
 import React, { useRef, useEffect} from 'react';
+import {withRouter} from 'react-router-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../../assets/styles/bio.scss';
 import SEO from "../../components/SEO";
@@ -10,8 +11,9 @@ import LoadingScreen from '../../components/LoadingScreen';
 import Facebook from '../../assets/images/facebook.png';
 import instagram from '../../assets/images/instagram.png';
 import LinkedIn from '../../assets/images/linkedin.png';
+import Slider from "react-slick";
 
-gsap.registerPlugin(Draggable);
+
 
 const MEMBER = gql`
 query Member($slug: String) {
@@ -45,7 +47,40 @@ query Member($slug: String) {
 }
 `;
 
-export default function Bio(props) {
+function Bio(props) {
+
+  let settings = {
+    dots: true,
+    lazyLoad: true,
+    infinite: true,
+    autoplay: true,
+    focusOnSelect: false,
+    autoplaySpeed: 1500,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    centerMode: false,
+    swipeToSlide: true,
+    className: "sliderBio",
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
  
   const showcase = useRef();
    const sliderRef = useRef();
@@ -64,9 +99,9 @@ export default function Bio(props) {
   
   const Slide = ({ imageSource }) => {
     return (
-      <div className="slide">
-        <div className="preview">
-          <img src={imageSource} alt="Some work done by this person" draggable={true} />
+      <div>
+        <div>
+          <img src={imageSource} alt="Some work done by this person"/>
         </div>
       </div>
     );
@@ -96,9 +131,6 @@ export default function Bio(props) {
             <div className="bio-header">
                 <h1>{member.memberName}</h1>
                 <h4>{member.memberPosition}</h4>
-                <div className="bannerBio">
-                    <img src={bio.bannerimg.url} className="banner-img" alt={"Cropped picture only showing the eyes of" + member.memberName}/>
-                </div>
             </div>
             <>
                 <Row className="actualbio" noGutters={true}>
@@ -133,14 +165,16 @@ export default function Bio(props) {
                     </div>
                     </a>
                 </div>
-                <div className="showcase" ref={showcase}>
-                  <div className="slider" ref={sliderRef}>
-                    {bio.showcase.map((item, index) => {
+                <div className="showcase">
+                  <Slider {...settings}>
+                    {bio.showcase.map((item) => {
                         return (
-                        <Slide key={index} imageSource={item.url} draggable={true} />
+                        <ul>
+                        <img src={item.url} key={item.id} alt={"Portfolio work by" + member.memberName}/>
+                        </ul>
                         );
                     })}
-                  </div>
+                  </Slider>
                 </div>
                 
             </>
@@ -148,3 +182,5 @@ export default function Bio(props) {
         </SEO>
       );
 };
+
+export default withRouter(Bio);

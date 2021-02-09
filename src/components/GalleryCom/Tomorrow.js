@@ -1,10 +1,12 @@
 import React, {useRef, useEffect} from 'react';
-import { NavLink, withRouter} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
+import Reliveit from '../../assets/images/reliveit.png';
 import SEO from '../SEO';
+import {Row, Col} from 'react-bootstrap';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -80,8 +82,7 @@ function Tomorrow () {
         <div className="yearlyShows">
          <div className="spacer">
              <div className="tomorrowSpacer">
-            <h1 className="tmmrwh1">
-                Tomorrow Land <br/> <span>Fall 2018</span>
+            <h1 className="tmmrwsh1">Tomorrow Land <br/> <span>Fall 2018</span>
             </h1>
             </div>
          </div>
@@ -157,17 +158,22 @@ function Tomorrow () {
             </div>
         </section>
         <div className="endsec">
-            <div className="secContent">
-            <h1>Back to Gallery</h1>   
-            <div className="showNxt">
-            <NavLink className="link" exact to="/gallery">
+        <Row className="imgNext">
+            <Col lg={12} className="endSec1">
+                <h1>Back to</h1><h2 className="ontop">Gallery</h2>
+            </Col>
+            <Col lg={12} className="endseccontent">
+              <img src={Reliveit} alt="relive it again design"/>
+            </Col>
+        </Row>
+            <div className="Endnext">
+            <Link className="link" to="/gallery">
             <span className="link__arrow">
                 <span></span>
                 <span></span>
             </span>
             <span className="link__line"></span>
-            </NavLink>
-            </div>
+            </Link>
             </div>
         </div>
     </div>

@@ -107,13 +107,13 @@
         a{  
             @include media ("screen", "<=phone") {
                 position: relative;
-                z-index: 300
+                z-index: 300;
+    
             } 
         }
         &:hover{
-            background-color: $muave;
+            background-color: saturate($darkpurple, $amount: 12%);
             transition: all 500ms ease-in-out;
-            cursor: pointer;
         }
        
         h3{

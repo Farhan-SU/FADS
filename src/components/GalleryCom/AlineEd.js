@@ -4,9 +4,9 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
-import alineEnd from '../../assets/images/alineEnd.png';
-import alineEndWeb from '../../assets/images/alineEnd.webp';
 import SEO from '../SEO';
+import EndEsec from '../../assets/images/endE.png';
+import EndEsecW from '../../assets/images/endE.webp';
 import { Col, Row } from 'react-bootstrap';
 
 if (typeof window !== `undefined`) {
@@ -82,7 +82,7 @@ function AlineEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1>MAY <br/>2019</h1>
+            <h1>Aline<br/>8/2019</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
@@ -145,14 +145,18 @@ function AlineEd () {
             </div>
         </section>
         <Row className="endsec">
-        <Col xs={12} lg={12} className="imgNext">
-            <WebpG
-                src={alineEndWeb}
-                fallback={alineEnd}
-                alt="navigation button to aline end"
-                style={{width: '75%'}}
-                />
-        </Col>
+            <Row className="imgNext">
+                <Col lg={12} className="endSec1">
+                    <h1>Jerk X</h1><h2 className="ontop">FADS</h2>
+                </Col>
+                <Col lg={12} className="endseccontent">
+                    <WebpG
+                        src={EndEsecW}
+                        fallback={EndEsec}
+                        alt="FADS Logo"
+                    />
+                </Col>
+            </Row>
             <Col xs={12} lg={12} className="Endnext">
             <Link className="link" to="/gallery/editorials/jerk-fads">
             <span className="link__arrow">

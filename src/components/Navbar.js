@@ -51,22 +51,22 @@ function Navbar() {
               />
             </Col>
           </Link>
-          <Col md={5} className="linkList">
+          <Col md={6} className="linkList">
           <Nav className='nav'>
             <Nav.Item>
-                 <NavLink to="/gallery" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>Gallery</NavLink>
+                 <NavLink to="/gallery" exact className="navlinks" activeStyle={{color: "#d65273"}}>Gallery</NavLink>
             </Nav.Item>
 
             <Nav.Item>
-                  <NavLink to="/aboutus" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>About Us</NavLink>
+                  <NavLink to="/aboutus" exact className="navlinks" activeStyle={{color: "#d65273"}}>About Us</NavLink>
             </Nav.Item>
             
             <Nav.Item>
-                  <NavLink to="/agency" className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>Agency</NavLink>
+                  <NavLink to="/agency" className="navlinks" activeStyle={{color: "#d65273"}}>Agency</NavLink>
             </Nav.Item>
             
             <Nav.Item>
-                  <NavLink to="/press" exact className="navlinks" activeStyle={{fontWeight: "bold",color: "#61526d"}}>Press</NavLink>
+                  <NavLink to="/press" exact className="navlinks" activeStyle={{color: "#d65273"}}>Press</NavLink>
             </Nav.Item>
           </Nav>
           </Col>

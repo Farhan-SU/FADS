@@ -1,16 +1,6 @@
 @import 'colors';
 @import 'breakpoints'; 
 
-.nav {
-  a.navlinks {
-    color: #3c4652;
-    &:hover{
-      color: rgb(107, 27, 172);
-      text-decoration: underline;
-    }
-  }
-}
-
 .section{
   height: 100%;
   width: 100%;
@@ -24,16 +14,17 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: #1F242D;
+  background-color: #ece6ee;
   overflow: hidden;
+  
 
   h2{
     position: absolute;
     text-transform: uppercase;
-    top: 13%;
-    font-size: 27rem;
+    top: 30%;
+    font-size: 14rem;
     letter-spacing: -1.5rem;
-    -webkit-text-stroke: 1px $graypurple;
+    -webkit-text-stroke: 1px $lightergraypurple;
     -webkit-text-fill-color: transparent;
     display: inline-block;
     opacity: 0.4;
@@ -53,6 +44,9 @@
     }
   }
 }
+a{
+  cursor: none;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +61,7 @@
   display: flex;
   flex: 0 0 60%;
   padding: 0.5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
@@ -109,88 +103,133 @@ position: relative;
 overflow-x: hidden;
 
   .spacer {
-    height: 110vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
     padding: 2rem 3rem 4rem 3rem;
-    background: #acacac7a url('../images/floating.gif') no-repeat center center/ cover;
-    background-blend-mode: darken;
+    /*background: #acacac7a url('../images/floating.gif') no-repeat center center/ cover;
+    background-blend-mode: darken;*/
+    background: linear-gradient(180deg,#7e7491e1, #ece6ee), url('../images/floating.gif') no-repeat center 63% /cover;
+    background-blend-mode: lighten;
 
     @include media ("screen", "<=phone") {
       padding: 5rem;
       height: 100vh;
       text-align: center;
+      background-position: center 55%;
     }
 
     h1 {
       font-size: 7rem;
       opacity: 0.9;
       letter-spacing: 0.5rem;
-      mix-blend-mode: exclusion;
-      color: $heading;
+      mix-blend-mode: difference;
+      color: rgb(231, 188, 236);
       text-align: center;
 
       @include media ("screen", "<=phone") {
-        font-size: 6rem;
+        font-size: 14vw;
       }
     }
 
-    .wwSep, .winterDec{
+    .longTxtEd{
       @include media ("screen", "<=phone") {
-        font-size: 3rem;
+        font-size: 3.1rem;
         letter-spacing: 0.2rem;
       }
     }
-  }   
-  .endsec {
-    height: 110vh;
-    background-color: rgba(164, 157, 177, 0.712);
+  }    
+}
+.endsec {
+  height: 115vh;
+  padding: 4rem 0 0 0;
+  background:linear-gradient(#ece6ee 20%, #dfd7ec);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+
+  @include media ("screen", "<=phone") {
+    height: 100%;
+    padding: 3rem 1rem;
+  }
+
+  .imgNext{
+    display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    
+    position: relative;
+    width: 100vw;
+    z-index: 10;
+    margin-top: -2rem;
+
     @include media ("screen", "<=phone") {
-      height: 100%;
-      padding: 3rem 1rem;
-    }
-    .imgNext{
-      position: relative;
-      left: 12%;
-      top: 8%;
-      @include media ("screen", "<=phone") {
-        top: 10%;
-       }
-    
-
-      .winterEndsec{
-        margin-left: 7rem;  
-        @include media ("screen", "<=phone") {
-          width: 110%;
-          margin-left: 0;
-          margin-bottom: 0;
-         }     
-      }
-      .winterEndarrow{
-        margin-top: 5rem;
-        @include media ("screen", "<=phone") {
-          margin-top: 1rem;
-         }  
-      }
-      .worksec{
-       width: 100%;
-       margin-left: 14rem;
-       margin-bottom: 3rem;
-
+      margin-top: 2rem;
+      top: 10%;
+     }
+     .endseccontent{
+       position: relative;
+       left: 28%;
+       margin-top: -4.8rem;
        @include media ("screen", "<=phone") {
-        width: 130%;
-        margin-left: 1.8rem;
-        margin-bottom: 0;
+        left: 6%;
+        margin-top: -4.8rem;
        }
+       img{
+        width: 45%;
+        opacity: 0.6;
+        mix-blend-mode: exclusion;
+        @include media ("screen", "<=phone") {
+          width: 90%;
+         }
       }
-    }
-  } 
+     }
+
+     .endSec1{
+      text-align: center;
+      position: relative;
+      margin-top: -4rem;
+      top: 21rem;
+      left: 3%;
+      @include media ("screen", "<=phone") {
+        top: 9rem;
+        left: 0;
+   
+       }
+       h1, h2{
+        font-size: 6rem;
+        display: inline-flex;
+        color: lighten($darkpurple, $amount: 2%);
+        @include media ("screen", "<=phone") {
+          font-size: 2.5rem;
+         }
+       }
+       .ontop{
+        position: relative;
+        z-index: 20;
+        margin-left: 0.5rem;
+      }
+      .ontopD{
+        position: relative;
+        z-index: 20;
+        margin-left: 2rem;
+      }
+      .ontopGshoots{
+        position: relative;
+        z-index: 20;
+        margin-left: 0;
+      }
+      .winterh1{
+        @include media ("screen", "<=phone") {
+          font-size: 3.5rem;
+         }
+      }
+
+     }
+  }
 }
 
 
@@ -199,103 +238,57 @@ overflow-x: hidden;
   overflow-x: hidden;
 
   .spacer {
-    height: 110vh;
+    height: 100vh;
     width: 100vw;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
+    background: linear-gradient(#685a72, #ece6ee), url('../images/fadsShowW.gif') no-repeat center -11px /contain;
+    background-blend-mode: multiply;
 
     @include media ("screen", "<=phone") {
       height: 100vh;
       text-align: center;
+      background-position: top center;
     }
 
     h1{
-      padding: 15rem 3rem 4rem 3rem;
+      padding: 7rem 3rem 4rem 3rem;
       font-size: 7rem;
-      opacity: 0.9;
       letter-spacing: 0.5rem;
       mix-blend-mode: hard-light;
       text-transform: uppercase;
       text-align: center;
-      color: $heading;
+      color: $lightergraypurple;
+
 
       @include media ("screen", "<=phone") {
-        padding: 8rem 2rem 4rem 2rem;
-        font-size: 4rem;
+        width: 100vw;
+        padding: 5rem 0 4rem 0.3rem;
+        font-size: 3.7rem;
+        color: $lightergraypurple;
+
       }
     }
     span{
       font-family: 'Montserrat', sans-serif;
       font-size: 5rem;
-      font-weight: 600;
-
-      @include media ("screen", "<=phone") {
-        font-size: 2.5rem;
-      }
-    }
-    .tmmrwShowh1{
-      @include media ("screen", "<=phone") {
-        font-size: 4rem;
-      }
-    }
-  } 
-
-  .circusSpacer{
-    background: #acacac7a url('../images/circusShowBg.gif') no-repeat center center/ 1500px;
-    background-blend-mode: darken;
-  }
-  .gallerySpacer{
-    background: #b9b2b2ce url('../images/thegalleryBg1.gif') repeat top center/ contain;
-    background-blend-mode: darken;
-    width: 100vw;
-  }
-  .tomorrowSpacer{
-    background: #4b4146bb url('../images/tomorrowBg.gif') no-repeat center center/ cover;
-    background-blend-mode: soft-light;
-  }
-    .endsec {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    overflow: hidden;
-    background: #9786a3 url('../images/prevshow.svg') no-repeat center center/ cover;
-    background-blend-mode: color-burn;
-
-      @include media ("screen", "<=phone") {
-        height: 100%;
-        padding: 1rem;
-      }
-
-  } 
-  .secContent{
-    h1{
-      font-size: 7vw;
-      top: 30%;
-      mix-blend-mode: normal;
+      font-weight: 500;
       color: $lightergraypurple;
-      text-align: center;
 
       @include media ("screen", "<=phone") {
-        font-size: 8vw;
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
       }
     }
-    .showNxt{
-      position: relative;
-      top: 9rem;
-      left: -9rem;
-
+    .tmmrwsh1{
       @include media ("screen", "<=phone") {
-        top: -0.2rem;
-        left: -4rem;
+        font-size: 2.7rem;
+        position: relative;
+        top: -1.5rem;
       }
     }
-  }
+  } 
 }
 
 /***Credits to https://codepen.io/sego/pen/bQZKwP for button effect**/
@@ -309,11 +302,12 @@ overflow-x: hidden;
     transform: rotate(180deg) translate3d(-300px, 0, 0);
     height: 10%;
     position: relative;
-    top: -12rem;
+    top: -16rem;
     left: 13.5%;
+    z-index: 100;
       
       @include media ("screen", "<=phone") {
-       top: -1rem;
+       top: -5rem;
         left: -55.5%;
         padding: 3rem;
       }
@@ -327,7 +321,7 @@ overflow-x: hidden;
         height: 3px;
         border-radius: 2px;
         overflow: hidden;
-        background: #6e4eaa;
+        background: #a77afa;
         z-index: 2;
   
         &:nth-child(1) {
@@ -347,7 +341,7 @@ overflow-x: hidden;
           left: 0;
           width: 0;
           height: 3px;
-          background: #eb0037;
+          background: #ff003c;
           @include media ("screen", "<=phone") {
             display: none;
            }
@@ -361,7 +355,7 @@ overflow-x: hidden;
       margin-right: 30px;
       width: 150px;
       height: 3px;
-      background: #6e4eaa;
+      background: #a77afa;
       overflow: hidden;
       z-index: 1;
 
@@ -376,7 +370,7 @@ overflow-x: hidden;
         left: 80px;
         width: 80px;
         height: 3px;
-        background: $f4color;
+        background: #ff003c;
 
         @include media ("screen", "<=phone") {
           display: none;

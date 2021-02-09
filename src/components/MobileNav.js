@@ -8,7 +8,6 @@ import Facebook from '../assets/images/facebook.png';
 import instagram from '../assets/images/instagram.png';
 import LinkedIn from '../assets/images/linkedin.png';
 
-
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
 }; 

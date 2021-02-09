@@ -5,6 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
 import SEO from '../SEO';
+import {Row, Col} from 'react-bootstrap';
+import Prev from '../../assets/images/prev.png';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -197,10 +199,17 @@ function TheGallery () {
             </div>
         </section>
         <div className="endsec">
-            <div className="secContent">
-            <h1>Night Circus</h1>   
-            <div className="showNxt">
-            <Link className="link" to="/gallery/shows/circus" style={{marginLeft: '-4rem'}}>
+        <Row className="imgNext">
+            <Col lg={12} className="endSec1">
+                <h1>The</h1><h2 className="ontop">Circus</h2>
+            </Col>
+            <Col lg={12} className="endseccontent">
+              <img src={Prev} alt="relive it again design"/>
+            </Col>
+        </Row>
+            <div className="Endnext">
+            <div className="winterEndarrow">
+            <Link className="link" to="/gallery/shows/circus">
             <span className="link__arrow">
                 <span></span>
                 <span></span>

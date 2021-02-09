@@ -12,10 +12,10 @@ import AlineLeft from '../../assets/images/aline/nojacket.png';
 import AlineRight from '../../assets/images/aline/jacket.png';
 import AlineLeftW from '../../assets/images/aline/nojacket.webp';
 import AlineRightW from '../../assets/images/aline/jacket.webp';
-import JerkLeft from "../../assets/images/jerk/solei.png";
-import JerkRight from "../../assets/images/jerk/jerkfads.png";
-import JerkLeftW from "../../assets/images/jerk/solei.webp";
-import JerkRightW from "../../assets/images/jerk/jerkfads.webp";
+import JerkRight from "../../assets/images/jerk/solei.png";
+import JerkLeft from "../../assets/images/jerk/jerkfads.png";
+import JerkRightW from "../../assets/images/jerk/solei.webp";
+import JerkLeftW from "../../assets/images/jerk/jerkfads.webp";
 import VintageLeft from '../../assets/images/workwear/fuzzyhat.png';
 import VintageRight from '../../assets/images/workwear/suit.png';
 import VintageLeftW from '../../assets/images/workwear/fuzzyhat.webp';
@@ -24,6 +24,20 @@ import WinterRight from "../../assets/images/winter/sky.png";
 import WinterLeft from "../../assets/images/winter/curve.png";
 import WinterRightW from "../../assets/images/winter/sky.webp";
 import WinterLeftW from "../../assets/images/winter/curve.webp";
+import gallerySRight from "../../assets/images/galleryShoots/galleryShootA4.png";
+import gallerySRightW from "../../assets/images/galleryShoots/galleryShootA4.webp";
+import gallerySLeft from "../../assets/images/galleryShoots/galleryShootA.png";
+import gallerySLeftW from "../../assets/images/galleryShoots/galleryShootA.webp";
+import makeupRight from "../../assets/images/makeup/makeupJerk6.png";
+import makeupRightW from "../../assets/images/makeup/makeupJerk6.webp";
+import makeupLeft from "../../assets/images/makeup/makeupJerk2.png";
+import makeupLeftW from "../../assets/images/makeup/makeupJerk2.webp";
+import SweetLeft from '../../assets/images/sweetEscape/aanya3.png';
+import SweetLeftW from '../../assets/images/sweetEscape/aanya3.webp';
+import SweetRight from '../../assets/images/sweetEscape/aspen1.png';
+import SweetRightW from '../../assets/images/sweetEscape/aspen1.png';
+
+
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger)
@@ -44,7 +58,7 @@ const MobileEditorial = () => {
           scrollTrigger: {
             id: 'mobileEdit',
             trigger: circle,
-            start: '-90% 10%',
+            start: '-97% 15%',
             once: true,
             toggleActions: 'play none none none',
          
@@ -77,6 +91,138 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="imgContainer">
        <Col>
             <ImgWebp
+                src={SweetLeftW}
+                fallback={SweetLeft}
+                alt="picture from Sweet Escape shoots"
+            />
+       </Col>
+       <Col>
+       <ImgWebp
+              src={SweetRightW}
+              fallback={SweetRight}
+              alt="picture from Sweet Escape shoots"
+            />
+       </Col>
+      </Row>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+        <Link to="/gallery/editorials/halloween">
+          <Col>
+          <h3>10/2020</h3>
+          </Col>
+          <Col>
+          <h1>Sweet Escape</h1>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
+      </section>
+
+      <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
+                src={makeupLeftW}
+                fallback={makeupLeft}
+                alt="picture from Night Circus shoots"
+            />
+       </Col>
+       <Col>
+        <ImgWebp
+            src={makeupRightW}
+            fallback={makeupRight}
+            alt="picture from Night Circus shoots"
+        />
+       </Col>
+      </Row>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+        <Link to="/gallery/editorials/makeupJ">
+          <Col>
+          <h3>03/2020</h3>
+          </Col>
+          <Col>
+          <h1>Not A Dream</h1>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
+
+      </section>
+      <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
+                src={gallerySLeftW}
+                fallback={gallerySLeft}
+                alt="picture from The Gallery shoots"
+            />
+       </Col>
+       <Col>
+        <ImgWebp
+            src={gallerySRightW}
+            fallback={gallerySRight}
+            alt="picture from the Gallery shoots"
+        />
+       </Col>
+      </Row>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+        <Link to="/gallery/editorials/galleryShoots">
+          <Col>
+          <h3>12/2019</h3>
+          </Col>
+          <Col>
+          <h1>The Gallery</h1>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
+      </section>
+
+      <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
+                src={VintageLeftW}
+                fallback={VintageLeft}
+                alt="picture from Night Circus shoots"
+            />
+       </Col>
+       <Col>
+        <ImgWebp
+            src={VintageRightW}
+            fallback={VintageRight}
+            alt="picture from Night Circus shoots"
+        />
+       </Col>
+      </Row>
+        <div className="circleGallery" ref={showCircle}/>
+        <div className="title">
+        <Row noGutters={true} className="titleHeader">
+            <Link to="/gallery/editorials/work-wear-vintage">
+            <Col>
+            <h3>10/2019</h3>
+            </Col>
+            <Col>
+            <h1>Work<br/>wear Vintage</h1>
+            </Col>
+            </Link>
+            </Row>
+        </div>
+        <div className="tlLine"/>
+      </section>
+
+      <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
                 src={AlineLeftW}
                 fallback={AlineLeft}
                 alt="picture from Night Circus shoots"
@@ -95,7 +241,7 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/editorials/aline">
           <Col>
-          <h3>May 2019</h3>
+          <h3>05/2019</h3>
           </Col>
           <Col>
           <h1>Aline</h1>
@@ -128,7 +274,7 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/editorials/jerk-fads">
           <Col>
-          <h3>April 2019</h3>
+          <h3>05/2019</h3>
           </Col>
           <Col>
           <h1>Jerk <br/>X FADS</h1>
@@ -137,39 +283,6 @@ const MobileEditorial = () => {
         </Row>
       </div>
       <div className="tlLine"/>
-      </section>
-
-      <section className="editorialSection">
-      <Row noGutters={true} className="imgContainer">
-       <Col>
-            <ImgWebp
-                src={VintageLeftW}
-                fallback={VintageLeft}
-                alt="picture from Night Circus shoots"
-            />
-       </Col>
-       <Col>
-        <ImgWebp
-            src={VintageRightW}
-            fallback={VintageRight}
-            alt="picture from Night Circus shoots"
-        />
-       </Col>
-      </Row>
-        <div className="circleGallery" ref={showCircle}/>
-        <div className="title">
-        <Row noGutters={true} className="titleHeader">
-            <Link to="/gallery/editorials/work-wear-vintage">
-            <Col>
-            <h3>April 2019</h3>
-            </Col>
-            <Col>
-            <h1>Work<br/>wear Vintage</h1>
-            </Col>
-            </Link>
-            </Row>
-        </div>
-        <div className="tlLine"/>
       </section>
       <section className="editorialSection">
       <Row noGutters={true} className="imgContainer">
@@ -193,7 +306,7 @@ const MobileEditorial = () => {
         <Row noGutters={true} className="titleHeader">
             <Link to="/gallery/editorials/winter">
             <Col>
-            <h3>December 2018</h3>
+            <h3>12/2018</h3>
             </Col>
             <Col>
             <h1>Winter</h1>

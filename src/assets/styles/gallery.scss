@@ -101,15 +101,16 @@
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
-  margin-bottom: 2rem;
-  margin-top: 8rem;
+  padding-bottom: 4rem;
+  padding-top: 10rem;
+  background: lighten($lightergraypurple, 8%);
 
   .left, .right, .sleft, .sright{
     height: 90%;
     overflow: hidden;
   }
 
-  img{
+ img{
     width: 76%;
     position: relative;
     left: 3.7rem;
@@ -172,33 +173,32 @@
       height: 380px;
       width: 370px;
       overflow: hidden;
+
+      .bigTxtEd{
+        font-size: 2.7rem;
+      }
     }
   }
   
-  .aline, .jerk, .winter, .thegallery, .circus, .vintage{
+  section {
     @extend %gallerycontent;
+
+    .biggerImg2{
+      width: 82%;
+    }
   }
-    .vintage-header{
-        h1{
-          flex-wrap: wrap;
-          font-size: 3.1rem;
-        }
-      }
-    .exception-img2{
-        position: relative;
-        top: 10rem;
-        width: 80%;
-      }
-  .land{
-    @extend %gallerycontent;
-        h1{
-          flex-wrap: wrap;
-          position: relative;
-          font-size: 2.7rem;
-          left: -4%;
-        }
-      }
+  .exception-img2{
+      position: relative;
+      top: 10rem;
+  }
+  .makeupJerk, .sweet{
+    img{
+      width: 85%;
+      margin-left: -6px;
+    }
+  }
 }
+
 
 /*******Mobile Editorial/Shows**********/
 /*******Mobile Editorial/Shows**********/
@@ -223,6 +223,7 @@
     h1{
       font-size: 3.5rem;
     }
+
     p{
       font-size: 1.3rem;
       position: relative;
@@ -254,6 +255,7 @@
       height: 480px;
       width: 100%;
       object-fit: cover;
+
     }
   }
 
@@ -263,8 +265,9 @@
     border-radius: 50%;
     position: absolute;
     z-index: 200;
-    background-color: #FFD6BE;
-    mix-blend-mode: exclusion;
+    /*background-color: #7a4c7ae8;*/
+    background-color: #7a4c65b2;
+    mix-blend-mode: difference;
   } 
   .title{
     position: absolute;
@@ -296,8 +299,10 @@
       font-size: 2rem;
       position: relative;
       top: -0.5rem;
-
     }
+    .longTxtEd{
+      font-size: 1.6rem;
+  }
   }
   .tlLine{
     border: 1px solid $graypurple;

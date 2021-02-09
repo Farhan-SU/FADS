@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://allfont.net/allfont.css?fonts=vipnagorgialla");
+@import-normalize;
 *,
 *::after,
 *::before {
@@ -12,18 +13,23 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scrollbar-width: none; }
+  scrollbar-width: none;
+  cursor: none; }
+  @media only screen and (max-width: 992px) {
+    html,
+    body {
+      cursor: default; } }
 
 body {
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
   background-color: #F9F6FD;
-  color: #1A2632;
-  cursor: default; }
+  color: #1A2632; }
 
 .active {
-  color: #301930; }
+  color: #4e4cbb;
+  mix-blend-mode: difference; }
 
 p, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
@@ -40,11 +46,16 @@ a {
   font-weight: 500;
   font-size: 1.1rem;
   position: relative;
-  z-index: 200; }
+  z-index: 400; }
 
 a:hover {
+  color: #4e4cbb;
   text-decoration: none; }
 
 .splashpg {
   background-color: #161515;
   height: 100vh; }
+
+@media only screen and (max-width: 470px) {
+  body {
+    cursor: default; } }

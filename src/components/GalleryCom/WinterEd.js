@@ -4,9 +4,9 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import WebpG from '../ImgWebp';
-import winterEndWeb from '../../assets/images/winterEnd.webp';
-import winterEnd from '../../assets/images/winterEnd.png';
+import Reliveit from '../../assets/images/reliveit.png';
 import SEO from '../SEO';
+import {Row, Col} from 'react-bootstrap';
 
 
 if (typeof window !== `undefined`) {
@@ -87,7 +87,7 @@ function WinterEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 className="winterDec">December<br/>2018</h1>
+            <h1 className="longTxtEd">December<br/>2018</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
@@ -146,19 +146,17 @@ function WinterEd () {
             </div>
         </section>
         <div className="endsec">
-        <div className="imgNext">
-            <div className="winterEndsec">
-            <WebpG
-                src={winterEndWeb}
-                fallback={winterEnd}
-                alt="FADS Logo"
-                style={{width: '70%'}}
-                />
-        </div>
-        </div>
+        <Row className="imgNext">
+            <Col lg={12} className="endSec1">
+                <h1>Back to</h1><h2 className="ontop">Gallery</h2>
+            </Col>
+            <Col lg={12} className="endseccontent">
+              <img src={Reliveit} alt="relive it again design"/>
+            </Col>
+        </Row>
             <div className="Endnext">
             <div className="winterEndarrow">
-            <Link className="link" to="/gallery/editorial">
+            <Link className="link" to="/gallery">
             <span className="link__arrow">
                 <span></span>
                 <span></span>
