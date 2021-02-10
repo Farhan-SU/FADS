@@ -25,9 +25,6 @@ query Member($slug: String) {
     bio {
       ... on Bio {
         description
-        bannerimg {
-          url
-        }
         position
         facebook
         linkedIn
@@ -81,32 +78,7 @@ function Bio(props) {
       }
     ]
   };
- 
-  const showcase = useRef();
-   const sliderRef = useRef();
-
-   useEffect(() => {
-    showcase.current = Draggable.create(sliderRef.current, {
-      trigger: showcase.current,
-      type: "x",
-      dragClickables:true
-      /*bounds: {
-        minX: -sliderRef.current.clientWidth + window.innerWidth * 1.1,
-        maxX: 0
-      }*/
-    });
-  }, []);
   
-  const Slide = ({ imageSource }) => {
-    return (
-      <div>
-        <div>
-          <img src={imageSource} alt="Some work done by this person"/>
-        </div>
-      </div>
-    );
-  };
-
     const { loading, error, data } = useQuery(MEMBER, {
             variables: { slug: props.match.params.slug},
           });
@@ -170,7 +142,7 @@ function Bio(props) {
                     {bio.showcase.map((item) => {
                         return (
                         <ul>
-                        <img src={item.url} key={item.id} alt={"Portfolio work by" + member.memberName}/>
+                        <img src={item.url} key={bio.id} alt={"Portfolio work by" + member.memberName}/>
                         </ul>
                         );
                     })}

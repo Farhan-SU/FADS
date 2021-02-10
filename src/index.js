@@ -6,7 +6,8 @@ import ScrollToTop from './components/ScrollToTop';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';import 'normalize.css';
+import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';
+import 'normalize.css';
 import './index.scss';
 
 const client = new ApolloClient({
