@@ -7,6 +7,26 @@ import WebpG from '../ImgWebp';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
 import Prev from '../../assets/images/prev.png';
+import Gallery1w from '../../assets/images/the_gallery/arch.webp';
+import Gallery1 from '../../assets/images/the_gallery/arch.png';
+import Gallery2w from '../../assets/images/the_gallery/teal.webp';
+import Gallery2 from '../../assets/images/the_gallery/teal.png';
+import Gallery3w from '../../assets/images/the_gallery/jeans.webp';
+import Gallery3 from '../../assets/images/the_gallery/jeans.png';
+import Gallery4w from '../../assets/images/the_gallery/blackdress.webp';
+import Gallery4 from '../../assets/images/the_gallery/blackdress.png';
+import Gallery5w from '../../assets/images/the_gallery/denim.webp';
+import Gallery5 from '../../assets/images/the_gallery/denim.png';
+import Gallery6w from '../../assets/images/the_gallery/glitter.webp';
+import Gallery6 from '../../assets/images/the_gallery/glitter.png';
+import Gallery7w from '../../assets/images/the_gallery/design.webp';
+import Gallery7 from '../../assets/images/the_gallery/design.png';
+import Gallery8w from '../../assets/images/the_gallery/contjacket.webp';
+import Gallery8 from '../../assets/images/the_gallery/contjacket.png';
+import Gallery9w from '../../assets/images/the_gallery/whitedress.webp';
+import Gallery9 from '../../assets/images/the_gallery/whitedress.png';
+import Gallery10w from '../../assets/images/the_gallery/closeup.webp';
+import Gallery10 from '../../assets/images/the_gallery/closeup.png';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -55,20 +75,19 @@ function TheGallery () {
     useEffect(() => {
         fashiontl.current = panelSRef.current.forEach((el, index) => {
             gsap.from(el, {
-                delay: 0.5,
                 duration: 1,
-                autoAlpha: 0,
-                ease: "circ.out",
-                scale: 0.5,
+                autoAlpha: 0.8,
+                ease: "circ.Inout",
+                scale: 0.5
             });
           });
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelSRef.current.includes(el)) {
             panelSRef.current.push(el);
         };
-    };
+    }
 
     return (
         <>
@@ -90,9 +109,9 @@ function TheGallery () {
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/the_gallery/arch.webp')}
-                            fallback={require('../../assets/images/the_gallery/arch.png')}
-                            alt="FADS Logo"
+                            src={Gallery1w}
+                            fallback={Gallery1}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
                         />
                     </div>
@@ -100,99 +119,90 @@ function TheGallery () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/the_gallery/teal.webp')}
-                            fallback={require('../../assets/images/the_gallery/teal.png')}
-                            alt="FADS Logo"
+                            src={Gallery2w}
+                            fallback={Gallery2}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/the_gallery/jeans.webp')}
-                            fallback={require('../../assets/images/the_gallery/jeans.png')}
-                            alt="FADS Logo"
+                            src={Gallery3w}
+                            fallback={Gallery3}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../../assets/images/the_gallery/blackdress.webp')}
-                           fallback={require('../../assets/images/the_gallery/blackdress.png')}
-                            alt="FADS Logo"
+                            src={Gallery4w}
+                            fallback={Gallery4}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/the_gallery/denim.webp')}
-                            fallback={require('../../assets/images/the_gallery/denim.png')}
-                            alt="FADS Logo"
+                            src={Gallery5w}
+                            fallback={Gallery5}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../../assets/images/the_gallery/glitter.webp')}
-                           fallback={require('../../assets/images/the_gallery/glitter.png')}
-                            alt="FADS Logo"
+                            src={Gallery6w}
+                            fallback={Gallery6}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
-                            src={require('../../assets/images/the_gallery/design.webp')}
-                            fallback={require('../../assets/images/the_gallery/design.png')}
-                            alt="FADS Logo"
+                            src={Gallery7w}
+                            fallback={Gallery7}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                         </div>
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../../assets/images/the_gallery/contjacket.webp')}
-                           fallback={require('../../assets/images/the_gallery/contjacket.png')}
-                            alt="FADS Logo"
+                            src={Gallery8w}
+                            fallback={Gallery8}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
-                            src={require('../../assets/images/the_gallery/whitedress.webp')}
-                            fallback={require('../../assets/images/the_gallery/whitedress.png')}
-                            alt="FADS Logo"
+                            src={Gallery9w}
+                            fallback={Gallery9}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                         </div>
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../../assets/images/the_gallery/closeup.webp')}
-                           fallback={require('../../assets/images/the_gallery/closeup.png')}
-                            alt="FADS Logo"
+                            src={Gallery10w}
+                            fallback={Gallery10}
+                            alt="Gallery editorial shoots"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>

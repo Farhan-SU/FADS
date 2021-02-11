@@ -51,19 +51,17 @@ const Editorial = () => {
 
     useEffect(() => {
       edtl.current = ScrollTrigger.batch(line.current.children, {
-        scrub: true,
         onEnter: batch =>
           gsap.to(batch, {
             id: "boxs",
             autoAlpha: 1, 
             duration: 1,
             stagger: { each: 0.20},
-            overwrite: true,
-            ease: 'sine.in'
+            overwrite: "auto",
           }),
-        onLeave: batch => gsap.set(batch, { duration: 1, autoAlpha: 0.1, overwrite: true, ease: 'sine.in' }, '-=1.5'),
-        onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
-        onLeaveBack: batch =>  gsap.set(batch, { duration: 1,  autoAlpha: 0.1, overwrite: true, ease: 'sine.in'}) 
+        onLeave: batch => gsap.set(batch, { duration: 1, autoAlpha: 0.1, overwrite: "auto",  ease: 'sine.inOut'}, '-=1.5'),
+        onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, stagger: 0.15, overwrite: "auto",  ease: 'sine.inOut'}),
+        onLeaveBack: batch =>  gsap.set(batch, { duration: 1,  autoAlpha: 0.1, overwrite: "auto",  ease: 'sine.inOut'}) 
       });
       return () => {
         if (ScrollTrigger.getById('boxs')) {
@@ -178,7 +176,7 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-        <Link to="/gallery/editorials/halloween">
+        <Link to="/gallery/editorials/sweet">
           <Col xs={12}>
           <h3>October 2020</h3>
           </Col>
@@ -246,7 +244,7 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
-        <Link to="/gallery/editorials/makeupJ">
+        <Link to="/gallery/editorials/notadream">
           <Col xs={12}>
           <h3>03/2020</h3>
           </Col>

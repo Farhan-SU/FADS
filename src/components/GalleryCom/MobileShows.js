@@ -50,11 +50,11 @@ const MobileShow = () => {
       });
     }, []);
 
-    const showCircle = circle => {
-      if (circle && !circleRef.current.includes(circle)) {
-          circleRef.current.push(circle);
-      }
-    };
+    function showCircle(circle) {
+    if (circle && !circleRef.current.includes(circle)) {
+      circleRef.current.push(circle);
+    }
+  }
 
     return(
       <>
@@ -123,7 +123,7 @@ const MobileShow = () => {
         <div className="circleGallery" ref={showCircle}/>
         <div className="title">
         <Row noGutters={true} className="titleHeader">
-        <Link exact to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
+        <Link to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
             <Col>
             <h3>Spring 2019</h3>
             </Col>
@@ -156,7 +156,7 @@ const MobileShow = () => {
       <div className="circleGallery" ref={showCircle}/>
       <div className="title">
       <Row noGutters={true} className="titleHeader">
-      <Link exact to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
+      <Link to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
           <Col>
           <h3>Spring 2018</h3>
           </Col>

@@ -7,6 +7,18 @@ import WebpG from '../ImgWebp';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
 import Prev from '../../assets/images/prev.png';
+import Cir1w from '../../assets/images/circus/bw.webp';
+import Cir1 from '../../assets/images/circus/bw.png';
+import Cir2w from '../../assets/images/circus/redboots.webp';
+import Cir2 from '../../assets/images/circus/redboots.png';
+import Cir3w from '../../assets/images/circus/gold.webp';
+import Cir3 from '../../assets/images/circus/gold.png';
+import Cir4w from '../../assets/images/circus/reddress.webp';
+import Cir4 from '../../assets/images/circus/reddress.webp';
+import Cir5w from '../../assets/images/circus/pins.webp';
+import Cir5 from '../../assets/images/circus/pins.png';
+import Cir6w from '../../assets/images/circus/magic.webp';
+import Cir6 from '../../assets/images/circus/magic.png';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -55,11 +67,9 @@ function Circus () {
     useEffect(() => {
         fashiontl.current = panelSRef.current.forEach((el, index) => {
             gsap.from(el, {
-                delay: 0.5,
                 duration: 1,
-                autoAlpha: 0,
-                ease: "circ.Inout",
-                scale: 0.5,
+                autoAlpha: 0.8,
+                ease: "circ.Inout"
             });
           });
 
@@ -70,11 +80,11 @@ function Circus () {
         };
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelSRef.current.includes(el)) {
             panelSRef.current.push(el);
         };
-    };
+    }
 
     return (
         <>
@@ -92,12 +102,12 @@ function Circus () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioSRef}>
-             <h2>CIRCUS</h2>
+             <h2 className="biggerport">CIRCUS</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
-                            src={require('../../assets/images/circus/bw.webp')}
-                            fallback={require('../../assets/images/circus/bw.png')}
+                            src={Cir1w}
+                            fallback={Cir1}
                             alt="picture from Night Circus shoots"
                             className="panel_img"
                         />
@@ -106,50 +116,50 @@ function Circus () {
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/circus/redboots.webp')}
-                            fallback={require('../../assets/images/circus/redboots.png')}
-                            alt="picture from Night Circus shoots"
-                            className="panel_img"
+                        src={Cir2w}
+                        fallback={Cir2}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/circus/gold.webp')}
-                            fallback={require('../../assets/images/circus/gold.png')}
-                            alt="picture from Night Circus shoots"
-                            className="panel_img" 
+                        src={Cir3w}
+                        fallback={Cir3}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/circus/reddress.webp')}
-                            fallback={require('../../assets/images/circus/reddress.png')}
-                            alt="picture from Night Circus shoots"
-                            className="panel_img"
+                        src={Cir4w}
+                        fallback={Cir4}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/circus/pins.webp')}
-                            fallback={require('../../assets/images/circus/pins.png')}
-                            alt="picture from Night Circus shoots"
-                            className="panel_img"
+                        src={Cir5w}
+                        fallback={Cir5}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/circus/magic.webp')}
-                            fallback={require('../../assets/images/circus/magic.png')}
-                            alt="picture from Night Circus shoots"
-                            className="panel_img"
+                        src={Cir6w}
+                        fallback={Cir6}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
                         />
                     </div>
                 </div>

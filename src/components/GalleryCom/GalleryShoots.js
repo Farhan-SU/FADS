@@ -8,6 +8,16 @@ import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
+import Gals1w from '../../assets/images/galleryShoots/galleryShootA.webp';
+import Gals1 from '../../assets/images/galleryShoots/galleryShootA.png';
+import Gals2w from '../../assets/images/galleryShoots/galleryShootA2.webp';
+import Gals2 from '../../assets/images/galleryShoots/galleryShootA2.png';
+import Gals3w from '../../assets/images/galleryShoots/galleryShootA3.webp';
+import Gals3 from '../../assets/images/galleryShoots/galleryShootA3.png';
+import Gals4w from '../../assets/images/galleryShoots/galleryShootA5.webp';
+import Gals4 from '../../assets/images/galleryShoots/galleryShootA5.png';
+import Gals5w from '../../assets/images/galleryShoots/galleryShootA4.webp';
+import Gals5 from '../../assets/images/galleryShoots/galleryShootA4.png';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -56,29 +66,27 @@ function GalleryShoots () {
     useEffect(() => {
         gshowtl.current = panelRef.current.forEach((el, index) => {
             gsap.from(el, {
-              delay: 0.5,
-              duration: 1,
-              autoAlpha: 0,
-              ease: "circ.Inout",
-              scale: 0.5,
+                duration: 1,
+                autoAlpha: 0.8,
+                ease: "circ.Inout",
             });
           });
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
-    };
+    }
 
 
     return (
         <>
         <SEO  
           pageMeta={{
-          title: "Aline | Editorial",
+          title: "The Gallery | Editorial",
           keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
-          description: "Our Sepetember 2020 editorial photoshoot"
+          description: "Sepetember 2020 editorial photoshoot for The Gallery Fashion Show"
         }}>
         <div className="galleryShows">
          <div className="spacer">
@@ -90,55 +98,50 @@ function GalleryShoots () {
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
-                            src={require('../../assets/images/galleryShoots/galleryShootA.webp')}
-                            fallback={require('../../assets/images/galleryShoots/galleryShootA.png')}
+                            src={Gals1w}
+                            fallback={Gals1}
                             alt="The Gallery editorial shoots"
                             className="panel_img"
-                            style={{width: '100%'}}
                         />
                         </div>
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                       src={require('../../assets/images/galleryShoots/galleryShootA2.webp')}
-                       fallback={require('../../assets/images/galleryShoots/galleryShootA2.png')}
-                       alt="The Gallery editorial shoots"
-                       className="panel_img"
-                       style={{width: '100%'}}
+                            src={Gals2w}
+                            fallback={Gals2}
+                            alt="The Gallery editorial shoots"
+                            className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                       src={require('../../assets/images/galleryShoots/galleryShootA3.webp')}
-                       fallback={require('../../assets/images/galleryShoots/galleryShootA3.png')}
-                       alt="The Gallery editorial shoots"
-                       className="panel_img"
-                       style={{width: '100%'}}
+                            src={Gals3w}
+                            fallback={Gals3}
+                            alt="The Gallery editorial shoots"
+                            className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                         src={require('../../assets/images/galleryShoots/galleryShootA5.webp')}
-                         fallback={require('../../assets/images/galleryShoots/galleryShootA5.png')}
-                         alt="The Gallery editorial shoots"
-                         className="panel_img"
-                         style={{width: '100%'}}
+                            src={Gals4w}
+                            fallback={Gals4}
+                            alt="The Gallery editorial shoots"
+                            className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                         src={require('../../assets/images/galleryShoots/galleryShootA4.webp')}
-                         fallback={require('../../assets/images/galleryShoots/galleryShootA4.png')}
-                         alt="The Gallery editorial shoots"
-                         className="panel_img"
-                         style={{width: '100%'}}
+                            src={Gals5w}
+                            fallback={Gals5}
+                            alt="The Gallery editorial shoots"
+                            className="panel_img"
                         />
                     </div>
                 </div>
@@ -147,7 +150,7 @@ function GalleryShoots () {
         <Row className="endsec">
         <Row className="imgNext">
             <Col lg={12} className="endSec1">
-                <h1 className="gshootsh1">Hallow</h1><h2 className="ontopGshoots">een</h2>
+                <h1>Not A</h1><h2 className="ontopGshoots">Dream</h2>
             </Col>
             <Col lg={12} className="endseccontent">
                 <WebpG

@@ -20,8 +20,8 @@ const jerkFads = lazy(() => import('./pages/gallery/editorials/jerk-fads'));
 const winter = lazy(() => import('./pages/gallery/editorials/winter'));
 const workWear = lazy(() => import('./pages/gallery/editorials/work-wear-vintage'));
 const galleryShoots = lazy(() => import('./pages/gallery/editorials/galleryShoots'));
-const halloween = lazy(() => import('./pages/gallery/editorials/halloween'));
-const makeupJ = lazy(() => import('./pages/gallery/editorials/makeupJ'));
+const sweet = lazy(() => import('./pages/gallery/editorials/sweet'));
+const notadream = lazy(() => import('./pages/gallery/editorials/notadream'));
 /*Shows*/
 const circus = lazy(() => import('./pages/gallery/shows/circus'));
 const thegallery = lazy(() => import('./pages/gallery/shows/thegallery'));
@@ -83,8 +83,8 @@ function App () {
                     <RouteWithLayout exact path="/gallery/editorials/winter" component={winter}/>
                     <RouteWithLayout exact path="/gallery/editorials/work-wear-vintage" component={workWear}/>
                     <RouteWithLayout exact path="/gallery/editorials/galleryShoots" component={galleryShoots}/>
-                    <RouteWithLayout exact path="/gallery/editorials/halloween" component={halloween}/>
-                    <RouteWithLayout exact path="/gallery/editorials/makeupJ" component={makeupJ}/>
+                    <RouteWithLayout exact path="/gallery/editorials/sweet" component={sweet}/>
+                    <RouteWithLayout exact path="/gallery/editorials/notadream" component={notadream}/>
                     <RouteWithLayout exact path="/gallery/shows/circus" component={circus}/>
                     <RouteWithLayout exact path="/gallery/shows/thegallery" component={thegallery}/>
                     <RouteWithLayout exact path="/gallery/shows/tomorrow-land" component={tomorrow}/>

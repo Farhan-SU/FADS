@@ -73,11 +73,11 @@ const Shows = () => {
       });
     }, []);
 
-    const addSImgRefs = el => {
-      if (el && !sImgLeft.current.includes(el)) {
-          sImgLeft.current.push(el);
-      }
-    };
+    function addSImgRefs(el) {
+    if (el && !sImgLeft.current.includes(el)) {
+      sImgLeft.current.push(el);
+    }
+  }
 
     const sImgRight = useRef();
     sImgRight.current = [];
@@ -101,11 +101,11 @@ const Shows = () => {
       });
     }, []);
 
-    const addSImgRefsRight = al => {
-      if (al && !sImgRight.current.includes(al)) {
-          sImgRight.current.push(al);
-      }
-    };
+    function addSImgRefsRight(al) {
+    if (al && !sImgRight.current.includes(al)) {
+      sImgRight.current.push(al);
+    }
+  }
 
     const textRef = useRef();
     textRef.current = [];
@@ -127,11 +127,11 @@ const Shows = () => {
       });
     }, []);
 
-    const addToRefstext = text => {
-      if (text && !textRef.current.includes(text)) {
-          textRef.current.push(text);
-      }
-    };
+    function addToRefstext(text) {
+    if (text && !textRef.current.includes(text)) {
+      textRef.current.push(text);
+    }
+  }
 
     return(
       <>
@@ -175,7 +175,7 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
-        <Link exact to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
+        <Link  to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
           <Col  md={12}>
           <h3>Spring 2019</h3>
           </Col>
@@ -201,7 +201,7 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row ref={addToRefstext} className="header">
-        <Link exact to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
+        <Link  to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
           <Col  md={12}>
            <h3>Spring 2018</h3>
           </Col>

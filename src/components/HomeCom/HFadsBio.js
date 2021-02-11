@@ -2,6 +2,7 @@ import React, {useRef,useEffect, useState} from 'react';
 import '../../assets/styles/pages.scss';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import BioTriangle from '../../assets/images/biotriangle.png';
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -11,8 +12,8 @@ export default function HFadsBio ()  {
   
   const [killTl, setkillTl] = useState(false);
   const tl = useRef();
-  const fadsbio = useRef(null);
-  const biotxt = useRef(null);
+  const fadsbio = useRef();
+  const biotxt = useRef();
 
   useEffect(() => {
     let elementsToSave = [];
@@ -27,16 +28,15 @@ export default function HFadsBio ()  {
             scrollTrigger: {
               trigger: fadsbio.current,
               id: "hometl",
-              start: "top top",
-              end: '+=1000px',
+              start: "-10% top",
+              end: '+=1300px',
               anticipatePin: 2,
               pin: biotxt.current,
-              pinReparent: true,
               pinSpacing: false,
-              toggleActions: "play none play reverse"
+              toggleActions: "play none play reverse",
             }
           })
-          .fromTo(biotxt.current, { autoAlpha: 0, duration: 1, y: 50, ease: 'back.inOut(1.4)'}, { autoAlpha: 1, y: 0, duration: 1});
+          .from(biotxt.current, {opacity: 0, duration: 1, y: 80, ease: 'back.inOut(1.4)'});
         }
       },
       "(max-width: 430px)": () => {
@@ -51,7 +51,7 @@ export default function HFadsBio ()  {
               pin: false,
             }
           })
-          .fromTo(biotxt.current, {autoAlpha: 0, duration: 0.5, y: 90, ease: 'back.inOut(1.4)'}, {autoAlpha: 1, y: 40, duration: 0.5});
+          .fromTo(biotxt.current, {duration: 1, y: 90, ease: 'back.inOut(1.4)'}, {autoAlpha: 1, y: 40, duration: 0.5});
         }
       }
     });
@@ -69,8 +69,8 @@ export default function HFadsBio ()  {
       <>
       <div ref={fadsbio} id="hometl" className="layertwo">
         <div> 
-        <div className="text">
-          <h3 ref={biotxt} as="img">
+        <div ref={biotxt} className="text">
+          <h3>
             <em>FADS offers students a space to pursue fashion
                 related interests outside of their major, with
                 the opportunities and professional environment

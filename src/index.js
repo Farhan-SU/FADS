@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router} from "react-router-dom";
-import history from './history';
 import ScrollToTop from './components/ScrollToTop';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -15,11 +14,10 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-
 ReactDOM.render(
   <React.StrictMode>
   <ApolloProvider client={client}>
-  <Router history={history}>
+  <Router>
   <ScrollToTop/>
     <App/>  
   </Router>

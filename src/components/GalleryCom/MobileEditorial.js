@@ -67,11 +67,11 @@ const MobileEditorial = () => {
       });
     }, []);
 
-    const showCircle = circle => {
-      if (circle && !circleRef.current.includes(circle)) {
-          circleRef.current.push(circle);
-      }
-    };
+    function showCircle(circle) {
+    if (circle && !circleRef.current.includes(circle)) {
+      circleRef.current.push(circle);
+    }
+  }
 
     return(
       <>
@@ -107,7 +107,7 @@ const MobileEditorial = () => {
       <div className="circleGallery" ref={showCircle}/>
       <div className="title">
       <Row noGutters={true} className="titleHeader">
-        <Link to="/gallery/editorials/halloween">
+        <Link to="/gallery/editorials/sweet">
           <Col>
           <h3>10/2020</h3>
           </Col>
@@ -140,7 +140,7 @@ const MobileEditorial = () => {
       <div className="circleGallery" ref={showCircle}/>
       <div className="title">
       <Row noGutters={true} className="titleHeader">
-        <Link to="/gallery/editorials/makeupJ">
+        <Link to="/gallery/editorials/notadream">
           <Col>
           <h3>03/2020</h3>
           </Col>

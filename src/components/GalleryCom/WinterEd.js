@@ -7,6 +7,16 @@ import WebpG from '../ImgWebp';
 import Reliveit from '../../assets/images/reliveit.png';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
+import Winter1w from '../../assets/images/winter/curve.webp';
+import Winter1 from '../../assets/images/winter/curve.png';
+import Winter2w from '../../assets/images/winter/trees.webp';
+import Winter2 from '../../assets/images/winter/trees.png';
+import Winter3w from '../../assets/images/winter/sky.webp';
+import Winter3 from '../../assets/images/winter/sky.png';
+import Winter4w from '../../assets/images/winter/cone.webp';
+import Winter4 from '../../assets/images/winter/cone.png';
+import Winter5w from '../../assets/images/winter/snow.webp';
+import Winter5 from '../../assets/images/winter/snow.png';
 
 
 if (typeof window !== `undefined`) {
@@ -56,11 +66,9 @@ function WinterEd () {
     useEffect(() => {
         gshowtl.current = panelRef.current.forEach((el, index) => {
             gsap.from(el, {
-                delay: 0.5,
                 duration: 1,
-                autoAlpha: 0,
+                autoAlpha: 0.8,
                 ease: "circ.Inout",
-                scale: 0.5,
             });
           });
 
@@ -71,11 +79,11 @@ function WinterEd () {
         };
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
-    };
+    }
 
     return (
         <>
@@ -95,9 +103,9 @@ function WinterEd () {
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
-                            src={require('../../assets/images/winter/curve.webp')}
-                            fallback={require('../../assets/images/winter/curve.png')}
-                            alt="FADS Logo"
+                            src={Winter1w}
+                            fallback={Winter1}
+                            alt="Winter editorial shoot"
                             className="panel_img"
                         />
                         </div>
@@ -105,20 +113,9 @@ function WinterEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/winter/trees.webp')}
-                            fallback={require('../../assets/images/winter/trees.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                           
-                        />
-                    </div>
-                </div>
-                <div className="panel" ref={addPanels}>
-                    <div className="panel_item">
-                    <WebpG
-                            src={require('../../assets/images/winter/sky.webp')}
-                            fallback={require('../../assets/images/winter/sky.png')}
-                            alt="FADS Logo"
+                            src={Winter2w}
+                            fallback={Winter2}
+                            alt="Winter editorial shoot"
                             className="panel_img"
                         />
                     </div>
@@ -126,9 +123,19 @@ function WinterEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/winter/cone.webp')}
-                            fallback={require('../../assets/images/winter/cone.png')}
-                            alt="FADS Logo"
+                            src={Winter3w}
+                            fallback={Winter3}
+                            alt="Winter editorial shoot"
+                            className="panel_img"
+                        />
+                    </div>
+                </div>
+                <div className="panel" ref={addPanels}>
+                    <div className="panel_item">
+                    <WebpG
+                            src={Winter4w}
+                            fallback={Winter4}
+                            alt="Winter editorial shoot"
                             className="panel_img"
                         />
                     </div>
@@ -136,8 +143,8 @@ function WinterEd () {
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/winter/snow.webp')}
-                            fallback={require('../../assets/images/winter/snow.png')}
+                            src={Winter5w}
+                            fallback={Winter5}
                             alt="FADS Logo"
                             className="panel_img"
                         />

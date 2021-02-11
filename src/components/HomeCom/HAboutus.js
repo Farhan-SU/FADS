@@ -1,7 +1,7 @@
 import React, {useRef,useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import '../../assets/styles/pages.scss'
-import {gsap} from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import fadsAbout from '../../assets/images/joinUsHpg.mp4';
 ;
@@ -13,13 +13,12 @@ if (typeof window !== `undefined`) {
 }; 
 
 export default function HAboutus()  {  
-    
-    const [killTl, setkillTl] = useState(false);
-    const abRef = useRef(null);
-    const abtextref = useRef(null);
-    const AboutRef = useRef(null); 
-    const overlayref = useRef(null)
-    const imgabout = useRef(null);
+
+    const abRef = useRef();
+    const abtextref = useRef();
+    const AboutRef = useRef(); 
+    const overlayref = useRef()
+    const imgabout = useRef();
 
     useEffect(() => {
       const elementsToSave = [];
@@ -33,27 +32,21 @@ export default function HAboutus()  {
   
       ScrollTrigger.matchMedia({
         "(min-width: 800px)": () => {
-          if (!killTl) {
             let tl = gsap.timeline({
               scrollTrigger: {
                 id: 'about-ref',
                 trigger: AboutRef.current,
-                scrub: true,
-                start: "top 30%" ,
+                scrub: 0.1,
+                start: "-10% 30%" ,
                 end: "bottom bottom",
+                once: true,
                 toggleActions: "play none play none"
               }
             })
-            tl.fromTo(overlayref.current, {duration: 2, y: 0, autoAlpha: 1, backgroundColor: "#AC9FB2"}, 
-            {duration: 2, x: -1700, autoAlpha: 1, ease: 'sine.in',backgroundColor: "#AC9FB2"})
-            tl.add("reveal", "+=1")
-            tl.from(abRef.current, {duration: 1, autoAlpha: 0, y: 18, ease: 'sine.in'})
-            tl.from(imgabout.current, {duration: 1, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"}, 'reveal')
-            tl.from(abtextref.current, {duration: 0.7, autoAlpha: 0, y: 10, transformOrigin:"0% 100%", ease: 'power1.inOut'});
-          };
+            tl.to(overlayref.current, {duration: 2, x: -1700, autoAlpha: 1, ease: 'sine.in',backgroundColor: "#AC9FB2"})
+            tl.from(imgabout.current, {duration: 1, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"})
         },
         "(max-width: 430px)": () => {
-          if (!killTl) {
             let smtl = gsap.timeline({
               scrollTrigger: {
                 id: 'about-ref',
@@ -64,23 +57,18 @@ export default function HAboutus()  {
                 once: true
               }
             })
-            smtl.fromTo(overlayref.current, {duration: 2, y: 0, autoAlpha: 1, backgroundColor: "#AC9FB2"}, 
-            {duration: 2, x: -700, autoAlpha: 1, ease: 'sine.in'})
-            smtl.add("reveal", "+=1")
-            smtl.from(imgabout.current, {duration: 2, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"}, 'reveal')
-          };
+            smtl.to(overlayref.current, {duration: 2, x: -700, autoAlpha: 1, ease: 'sine.in'})
+            smtl.add("reveal", "+=0.5")
+            smtl.from(imgabout.current, {duration: 2, autoAlpha: 0, scale: 0.9, ease: "back.inOut(1.4)"}, 'reveal');
         }
       });
    }, []);
 
    useEffect(() => {
     return () => {
-        if (killTl) {
           ScrollTrigger.getAll().forEach(tl => tl.kill());
           ScrollTrigger.getAll().forEach(smtl => smtl.kill());
-          setkillTl(killTl);
         };
-      };
     }, []);
                     
     return (
@@ -94,8 +82,8 @@ export default function HAboutus()  {
               <div ref={overlayref} className='overlay'/>
           </div>
           <div className="ab-text">
-            <h2 ref={abRef}>ABOUT US</h2>
-            <h3 ref={abtextref}>Meet the diverse group of career minded 
+            <h2>ABOUT US</h2>
+            <h3>Meet the diverse group of career minded 
             individuals at Syracuse University who share 
             a passion for creativity, design, and fashion.</h3>
             <div className="abtLink">

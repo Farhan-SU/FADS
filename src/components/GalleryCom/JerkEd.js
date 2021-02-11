@@ -8,6 +8,27 @@ import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
 import SEO from "../SEO";
 import { Col, Row } from 'react-bootstrap';
+import Jerk1w from '../../assets/images/jerk/solei.webp';
+import Jerk1 from '../../assets/images/jerk/solei.png';
+import Jerk2w from '../../assets/images/jerk/flowers.webp';
+import Jerk2 from '../../assets/images/jerk/flowers.png';
+import Jerk3w from '../../assets/images/jerk/flower2.webp';
+import Jerk3 from '../../assets/images/jerk/flower2.png';
+import Jerk4w from '../../assets/images/jerk/skull.webp';
+import Jerk4 from '../../assets/images/jerk/skull.png';
+import Jerk5w from '../../assets/images/jerk/jerkfads.webp';
+import Jerk5 from '../../assets/images/jerk/jerkfads.png';
+import Jerk6w from '../../assets/images/jerk/threeppl.webp';
+import Jerk6 from '../../assets/images/jerk/threeppl.png';
+import Jerk7w from '../../assets/images/jerk/jerkshirtless.webp';
+import Jerk7 from '../../assets/images/jerk/jerkshirtless.png';
+import Jerk8w from '../../assets/images/jerk/tree3.webp';
+import Jerk8 from '../../assets/images/jerk/tree3.png';
+import Jerk9w from '../../assets/images/jerk/jolly.webp';
+import Jerk9 from '../../assets/images/jerk/jolly.png';
+import Jerk10w from '../../assets/images/jerk/pinkpants.webp';
+import Jerk10 from '../../assets/images/jerk/pinkpants.png';
+
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -56,20 +77,18 @@ function JerkEd () {
     useEffect(() => {
         gshowtl.current = panelRef.current.forEach((el, index) => {
             gsap.from(el, {
-              delay: 0.5,
               duration: 1,
-              autoAlpha: 0,
+              autoAlpha: 0.8,
               ease: "circ.Inout",
-              scale: 0.5,
             });
           });
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
-    };
+    }
 
 
     return (
@@ -86,13 +105,13 @@ function JerkEd () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
-             <h2>JERK</h2>
+             <h2 className="biggerport">JERK</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
-                            src={require('../../assets/images/jerk/solei.webp')}
-                            fallback={require('../../assets/images/jerk/solei.webp')}
-                            alt="FADS Logo"
+                            src={Jerk1w}
+                            fallback={Jerk1}
+                            alt="Jerk Photoshoot"
                             className="panel_img"
                         />
                         </div>
@@ -101,10 +120,10 @@ function JerkEd () {
                     <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/flowers.webp')}
-                            fallback={require('../../assets/images/jerk/flowers.png')}
-                            alt="FADS Logo"
-                            className="panel_img"  
+                            src={Jerk2w}
+                            fallback={Jerk2}
+                            alt="Jerk Photoshoot"
+                            className="panel_img"
                         />
                     </div>
                     </div>
@@ -112,11 +131,10 @@ function JerkEd () {
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/flower2.webp')}
-                            fallback={require('../../assets/images/jerk/flower2.png')}
-                            alt="FADS Logo"
+                            src={Jerk3w}
+                            fallback={Jerk3}
+                            alt="Jerk Photoshoot"
                             className="panel_img"
-                            
                         />
                     </div>
                     </div>
@@ -124,11 +142,10 @@ function JerkEd () {
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/skull.webp')}
-                            fallback={require('../../assets/images/jerk/skull.png')}
-                            alt="FADS Logo"
+                            src={Jerk4w}
+                            fallback={Jerk4}
+                            alt="Jerk Photoshoot"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
@@ -136,11 +153,10 @@ function JerkEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/jerkfads.webp')}
-                            fallback={require('../../assets/images/jerk/jerkfads.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            
+                        src={Jerk5w}
+                        fallback={Jerk5}
+                        alt="Jerk Photoshoot"
+                        className="panel_img"
                         />
                     </div>
                 </div>
@@ -148,11 +164,10 @@ function JerkEd () {
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/threeppl.webp')}
-                            fallback={require('../../assets/images/jerk/threeppl.png')}
-                            alt="FADS Logo"
+                            src={Jerk6w}
+                            fallback={Jerk6}
+                            alt="Jerk Photoshoot"
                             className="panel_img"
-                            
                         />
                     </div>
                 </div>
@@ -160,11 +175,10 @@ function JerkEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/jerkshirtless.webp')}
-                            fallback={require('../../assets/images/jerk/jerkshirtless.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            
+                        src={Jerk7w}
+                        fallback={Jerk7}
+                        alt="Jerk Photoshoot"
+                        className="panel_img"
                         />
                     </div>
                 </div>
@@ -172,11 +186,10 @@ function JerkEd () {
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/tree3.webp')}
-                            fallback={require('../../assets/images/jerk/tree3.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            
+                        src={Jerk8w}
+                        fallback={Jerk8}
+                        alt="Jerk Photoshoot"
+                        className="panel_img"
                         />
                     </div>
                 </div>
@@ -184,33 +197,20 @@ function JerkEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/jolly.webp')}
-                            fallback={require('../../assets/images/jerk/jolly.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            
+                        src={Jerk9w}
+                        fallback={Jerk9}
+                        alt="Jerk Photoshoot"
+                        className="panel_img"
                         />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/jerk/pinkpants.webp')}
-                            fallback={require('../../assets/images/jerk/pinkpants.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            
-                        />
-                    </div>
-                </div>
-                <div className="panel" ref={addPanels}>
-                    <div className="panel_item">
-                    <WebpG
-                            src={require('../../assets/images/jerk/twopants.webp')}
-                            fallback={require('../../assets/images/jerk/twopants.png')}
-                            alt="FADS Logo"
-                            className="panel_img"
-                            
+                        src={Jerk10w}
+                        fallback={Jerk10}
+                        alt="Jerk Photoshoot"
+                        className="panel_img"
                         />
                     </div>
                 </div>
@@ -219,7 +219,7 @@ function JerkEd () {
         <div className="endsec">
         <Row className="imgNext">
             <Col lg={12} className="endSec1">
-                <h1>Work Wear</h1><h2 className="ontop">Vintage</h2>
+                <h1>Wint</h1><h2 className="ontop">er</h2>
             </Col>
             <Col lg={12} className="endseccontent">
                 <WebpG
@@ -231,7 +231,7 @@ function JerkEd () {
         </Row>
         
             <div className="Endnext">
-            <Link className="link" to="/gallery/editorials/work-wear-vintage">
+            <Link className="link" to="/gallery/editorials/winter">
             <span className="link__arrow">
                 <span></span>
                 <span></span>

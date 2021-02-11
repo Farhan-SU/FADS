@@ -7,6 +7,18 @@ import WebpG from '../ImgWebp';
 import Reliveit from '../../assets/images/reliveit.png';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
+import Tmmrw1w from '../../assets/images/tomorrowland/fashionline.webp';
+import Tmmrw1 from '../../assets/images/tomorrowland/fashionline.png';
+import Tmmrw2w from '../../assets/images/tomorrowland/space.webp';
+import Tmmrw2 from '../../assets/images/tomorrowland/space.png';
+import Tmmrw3w from '../../assets/images/tomorrowland/people.webp';
+import Tmmrw3 from '../../assets/images/tomorrowland/people.png';
+import Tmmrw4w from '../../assets/images/tomorrowland/netmask.webp';
+import Tmmrw4 from '../../assets/images/tomorrowland/netmask.png';
+import Tmmrw5w from '../../assets/images/tomorrowland/walk.webp';
+import Tmmrw5 from '../../assets/images/tomorrowland/walk.png';
+import Tmmrw6w from '../../assets/images/tomorrowland/mask.webp';
+import Tmmrw6 from '../../assets/images/tomorrowland/mask.png';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -56,20 +68,18 @@ function Tomorrow () {
     useEffect(() => {
         fashiontl.current = panelSRef.current.forEach((el, index) => {
             gsap.from(el, {
-                delay: 0.5,
                 duration: 1,
-                autoAlpha: 0,
+                autoAlpha: 0.8,
                 ease: "circ.Inout",
-                scale: 0.5,
             });
           });
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelSRef.current.includes(el)) {
             panelSRef.current.push(el);
         };
-    };
+    }
 
     return (
         <>
@@ -92,9 +102,9 @@ function Tomorrow () {
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/tomorrowland/fashionline.webp')}
-                            fallback={require('../../assets/images/tomorrowland/fashionline.png')}
-                            alt="FADS Logo"
+                            src={Tmmrw1w}
+                            fallback={Tmmrw1}
+                            alt="Tommorrow Land Show"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -103,9 +113,9 @@ function Tomorrow () {
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                             src={require('../../assets/images/tomorrowland/space.webp')}
-                             fallback={require('../../assets/images/tomorrowland/space.png')}
-                            alt="FADS Logo"
+                            src={Tmmrw2w}
+                            fallback={Tmmrw2}
+                            alt="Tommorrow Land Show"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -114,9 +124,9 @@ function Tomorrow () {
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                             src={require('../../assets/images/tomorrowland/people.webp')}
-                             fallback={require('../../assets/images/tomorrowland/people.png')}
-                            alt="FADS Logo"
+                            src={Tmmrw3w}
+                            fallback={Tmmrw3}
+                            alt="Tommorrow Land Show"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -125,9 +135,9 @@ function Tomorrow () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../../assets/images/tomorrowland/netmask.webp')}
-                           fallback={require('../../assets/images/tomorrowland/mask.png')}
-                            alt="FADS Logo"
+                            src={Tmmrw4w}
+                            fallback={Tmmrw4}
+                            alt="Tommorrow Land Show"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -136,9 +146,9 @@ function Tomorrow () {
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../../assets/images/tomorrowland/walk.webp')}
-                           fallback={require('../../assets/images/tomorrowland/walk.png')}
-                            alt="FADS Logo"
+                            src={Tmmrw5w}
+                            fallback={Tmmrw5}
+                            alt="Tommorrow Land Show"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -147,9 +157,9 @@ function Tomorrow () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                           src={require('../../assets/images/tomorrowland/mask.webp')}
-                           fallback={require('../../assets/images/tomorrowland/mask.png')}
-                            alt="FADS Logo"
+                            src={Tmmrw6w}
+                            fallback={Tmmrw6}
+                            alt="Tommorrow Land Show"
                             className="panel_img"
                             style={{width: '100%'}}
                         />
@@ -160,7 +170,7 @@ function Tomorrow () {
         <div className="endsec">
         <Row className="imgNext">
             <Col lg={12} className="endSec1">
-                <h1>Back to</h1><h2 className="ontop">Gallery</h2>
+                <h1>Back to</h1><h2 style={{marginLeft: '1rem'}}> Gallery</h2>
             </Col>
             <Col lg={12} className="endseccontent">
               <img src={Reliveit} alt="relive it again design"/>

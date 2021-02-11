@@ -8,6 +8,16 @@ import SEO from '../SEO';
 import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
 import { Col, Row } from 'react-bootstrap';
+import Aline1w from '../../assets/images/aline/nojacket.webp';
+import Aline1 from '../../assets/images/aline/nojacket.png';
+import Aline2w from '../../assets/images/aline/fulljacket.webp';
+import Aline2 from '../../assets/images/aline/fulljacket.png';
+import Aline3w from '../../assets/images/aline/red.webp';
+import Aline3 from '../../assets/images/aline/red.png';
+import Aline4w from '../../assets/images/aline/jacket.webp';
+import Aline4 from '../../assets/images/aline/jacket.png';
+import Aline5w from '../../assets/images/aline/standred.webp';
+import Aline5 from '../../assets/images/aline/standred.webp';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -56,20 +66,18 @@ function AlineEd () {
     useEffect(() => {
         gshowtl.current = panelRef.current.forEach((el, index) => {
             gsap.from(el, {
-              delay: 0.5,
-              duration: 1,
-              autoAlpha: 0,
-              ease: "circ.Inout",
-              scale: 0.5,
+                duration: 1,
+                autoAlpha: 0.8,
+                ease: "circ.Inout"
             });
           });
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
-    };
+    }
 
 
     return (
@@ -90,8 +98,8 @@ function AlineEd () {
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <WebpG
-                            src={require('../../assets/images/aline/nojacket.webp')}
-                            fallback={require('../../assets/images/aline/nojacket.png')}
+                            src={Aline1w}
+                            fallback={Aline1}
                             alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
@@ -101,8 +109,8 @@ function AlineEd () {
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/aline/fulljacket.webp')}
-                            fallback={require('../../assets/images/aline/fulljacket.png')}
+                            src={Aline2w}
+                            fallback={Aline2}
                             alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
@@ -112,8 +120,8 @@ function AlineEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/aline/red.webp')}
-                            fallback={require('../../assets/images/aline/red.png')}
+                            src={Aline3w}
+                            fallback={Aline3}
                             alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
@@ -123,8 +131,8 @@ function AlineEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/aline/jacket.webp')}
-                            fallback={require('../../assets/images/aline/jacket.png')}
+                            src={Aline4w}
+                            fallback={Aline4}
                             alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}
@@ -134,8 +142,8 @@ function AlineEd () {
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <WebpG
-                            src={require('../../assets/images/aline/standred.webp')}
-                            fallback={require('../../assets/images/aline/standred.png')}
+                            src={Aline5w}
+                            fallback={Aline5}
                             alt="Aline editorial shoots"
                             className="panel_img"
                             style={{width: '100%'}}

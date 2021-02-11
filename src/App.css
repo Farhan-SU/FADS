@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap");
 @import url("https://allfont.net/allfont.css?fonts=vipnagorgialla");
 @import-normalize;
 *,
 *::after,
 *::before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -15,10 +16,11 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: none;
   cursor: none; }
-  @media only screen and (max-width: 992px) {
-    html,
-    body {
-      cursor: default; } }
+
+@media only screen and (max-width: 992px) {
+  html,
+  body {
+    cursor: default; } }
 
 body {
   width: 100vw;
@@ -59,3 +61,5 @@ a:hover {
 @media only screen and (max-width: 470px) {
   body {
     cursor: default; } }
+
+/*# sourceMappingURL=App.css.map */
