@@ -33,13 +33,14 @@
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.2em; }
-  @media screen and (max-width: 430px) {
-    #scroll-title {
-      font-size: 6px;
-      position: relative;
-      left: 0.8rem;
-      top: -5.1rem;
-      transform: rotate(90deg); } }
+
+@media screen and (max-width: 430px) {
+  #scroll-title {
+    font-size: 6px;
+    position: relative;
+    left: 0.8rem;
+    top: -5.1rem;
+    transform: rotate(90deg); } }
 
 #scroll-down::before {
   -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;

@@ -3,8 +3,7 @@ import {Link} from 'react-router-dom';
 import '../../assets/styles/pages.scss'
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import fadsAbout from '../../assets/images/joinUsHpg.mp4';
-;
+import joinFadsvid from '../../assets/images/fadsfam.mp4';
 
 
 if (typeof window !== `undefined`) {
@@ -14,52 +13,46 @@ if (typeof window !== `undefined`) {
 
 export default function HAboutus()  {  
 
-    const abRef = useRef();
-    const abtextref = useRef();
-    const AboutRef = useRef(); 
+    const aboutRef = useRef(); 
     const overlayref = useRef()
-    const imgabout = useRef();
 
     useEffect(() => {
       const elementsToSave = [];
-      abRef.current && elementsToSave.push(abRef.current);
-      abtextref.current && elementsToSave.push(abtextref.current);
-      AboutRef.current && elementsToSave.push(AboutRef.current);
+      aboutRef.current && elementsToSave.push(aboutRef.current);
       overlayref.current && elementsToSave.push(overlayref.current);
-      imgabout.current && elementsToSave.push(imgabout.current);
 
       ScrollTrigger.saveStyles(elementsToSave);
   
       ScrollTrigger.matchMedia({
         "(min-width: 800px)": () => {
-            let tl = gsap.timeline({
+          gsap.set(overlayref.current, {width: 0});
+            const tl = gsap.timeline({
               scrollTrigger: {
                 id: 'about-ref',
-                trigger: AboutRef.current,
-                scrub: 0.1,
-                start: "-10% 30%" ,
+                trigger: aboutRef.current,
+                scrub: 0.01,
+                start: "top-=10% 90%" ,
                 end: "bottom bottom",
                 once: true,
-                toggleActions: "play none play none"
+                toggleActions: "play none play none",
+                markers: true
               }
             })
-            tl.to(overlayref.current, {duration: 2, x: -1700, autoAlpha: 1, ease: 'sine.in',backgroundColor: "#AC9FB2"})
-            tl.from(imgabout.current, {duration: 1, autoAlpha: 0, scale: 1.3, ease: "back.inOut(1.4)"})
+            .to(overlayref.current, {duration: 1, width:'100%', ease: 'sine.in'}, "-=2");
         },
         "(max-width: 430px)": () => {
-            let smtl = gsap.timeline({
+          gsap.set(overlayref.current, {width: 0});
+            const smtl = gsap.timeline({
               scrollTrigger: {
                 id: 'about-ref',
-                trigger: AboutRef.current,
+                trigger: aboutRef.current,
                 scrub: 0.2,
                 start: "-30% 40%" ,
                 end: "100%",
                 once: true
               }
             })
-            smtl.to(overlayref.current, {duration: 2, x: -700, autoAlpha: 1, ease: 'sine.in'})
-            smtl.add("reveal", "+=0.5")
-            smtl.from(imgabout.current, {duration: 2, autoAlpha: 0, scale: 0.9, ease: "back.inOut(1.4)"}, 'reveal');
+            .to(overlayref.current, {duration: 0.5, width:'100%', ease: 'sine.in'});
         }
       });
    }, []);
@@ -73,13 +66,12 @@ export default function HAboutus()  {
                     
     return (
       <>
-        <div className="aboutuswrapper" id="about-ref" ref={AboutRef}>
-          <div  className="ab-img-con">
-              <video className='videoTag' preloaded="true" controls autoPlay loop muted playsInline className='aboutpic'>
-                  <source src={fadsAbout} type='video/mp4'/>
+        <div className="aboutuswrapper" id="about-ref" ref={aboutRef}>
+          <div  className="ab-img-con" ref={overlayref}>
+              <video className='videoTag' preloaded="true" controls autoPlay loop muted playsInline>
+                  <source src={joinFadsvid} type='video/mp4'/>
                   Sorry! Your browser does not support this video file.
               </video>
-              <div ref={overlayref} className='overlay'/>
           </div>
           <div className="ab-text">
             <h2>ABOUT US</h2>

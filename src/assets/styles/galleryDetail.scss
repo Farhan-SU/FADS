@@ -70,7 +70,6 @@ a{
   justify-content: center;
   background-color: transparent;
   overflow: hidden;
-  border: 1px solid red;
 
   @include media ("screen", "<=phone") {
     flex: 0 0 95%;
@@ -115,7 +114,7 @@ overflow-x: hidden;
     padding: 2rem 3rem 4rem 3rem;
     /*background: #acacac7a url('../images/floating.gif') no-repeat center center/ cover;
     background-blend-mode: darken;*/
-    background: linear-gradient(180deg,#7e7491e1, #ece6ee), url('../images/floating.gif') no-repeat center 63% /cover;
+    background: linear-gradient(180deg, #7e7491 0%, #ece6ee 100%), url('../images/floating.gif') no-repeat center 63% /cover;
     background-blend-mode: lighten;
 
     @include media ("screen", "<=phone") {
@@ -345,7 +344,7 @@ overflow-x: hidden;
           left: 0;
           width: 0;
           height: 3px;
-          background: #ff003c;
+          background: $darkpurple;
           @include media ("screen", "<=phone") {
             display: none;
            }
@@ -374,7 +373,7 @@ overflow-x: hidden;
         left: 80px;
         width: 80px;
         height: 3px;
-        background: #ff003c;
+        background: $darkpurple;
 
         @include media ("screen", "<=phone") {
           display: none;

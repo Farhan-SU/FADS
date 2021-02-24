@@ -7,12 +7,15 @@ import './assets/styles/layout.scss';
 import AnimatedCursor from "react-animated-cursor";
 import { useMediaQuery } from 'react-responsive';
 
+
+const homepg = lazy(() => import("./pages/homepg"));
 const aboutus = lazy(() => import('./pages/aboutus'));
-const homepg = lazy(() => import('./pages/homepg'));
+const press = lazy(() => import('./pages/press'));
+const f4 = lazy(() => import('./pages/f4'));
 
 /*Gallery Routes*/
 /*Editorial*/
-const gallery = lazy(() => import('./pages/gallery'));
+const gallery = lazy(() => import(/* webpackPrefetch: true */ './pages/gallery'));
 const editorial = lazy(() => import('./pages/gallery/editorial'));
 const shows = lazy(() => import('./pages/gallery/shows'));
 const aline = lazy(() => import('./pages/gallery/editorials/aline'));
@@ -30,9 +33,17 @@ const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
 
 
 /*Agency Routes*/
-const agency = lazy(() => import('./pages/agency'));
-const press = lazy(() => import('./pages/press'));
-const eboard = lazy(() => import('./pages/agency/eboard'));
+const agency = lazy(() => import(/* webpackPrefetch: true */ './pages/agency'));
+
+const eboard = lazy(() => {
+  return Promise.all([
+    import("./pages/agency/eboard"),
+    new Promise(resolve => setTimeout(resolve, 600))
+  ])
+  .then(([moduleExports]) => moduleExports);
+});
+
+
 /*const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
 const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
 const makeupArtists = lazy(() => import('./pages/agency/makeupArtists'));*/
@@ -55,24 +66,17 @@ function App () {
     const isDesktop = useMediaQuery({ minWidth: 992 })
     return isDesktop ? children : null
   }
-
-  /*const [TimePassed, setTimePassed] = useState(true);
-
-  useEffect(() => {
-    let timer = setTimeout(() => setTimePassed(false), 4000)
-    return () => clearTimeout(timer);  
-  },[]);*/
-  
+ 
   let location = useLocation();
 
         return (
           <>
           <Desktop><AnimatedCursor
             innerSize={10}
-            outerSize={14}
-            color='191, 112, 244'
+            outerSize={15}
+            color='47, 14, 71'
             outerAlpha={0.2}
-            innerScale={0.5}
+            innerScale={0.4}
             outerScale={4}/></Desktop>
   
             <div className="routes">
@@ -99,6 +103,7 @@ function App () {
                     <RouteWithLayout exact path="/agency" component={agency} />
                     <RouteWithLayout exact path="/aboutus" component={aboutus} />
                     <RouteWithLayout exact path="/press" component={press} />
+                    <RouteWithLayout exact path="/f4" component={f4} />
                     <RouteWithLayout exact path="/" component={homepg}/>
                     <RouteWithLayout exact path="*" component={homepg}/>
                   </Switch>

@@ -1,6 +1,7 @@
 {
-    "name": "FADS",
+    "name": "Fashion and Design Society",
     "short_name": "FADS",
+    "description" : "Digital Agency",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +14,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#b200ff",
-    "background_color": "#b200ff",
+    "theme_color": "#2f0e47",
+    "background_color": "#d9cedf",
     "display": "standalone"
 }

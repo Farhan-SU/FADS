@@ -13,7 +13,7 @@ const F4speakers = () => {
     <>
       <div className="f4bg">
       <div className="F4speakers">
-        <h4><span>Latest</span> Speakers</h4>
+        <h4><span>Selected</span> Speakers</h4>
         <Row className="speakerposters">
           <Col md className="poster">
            <a href="https://www.instagram.com/fashiondesignsociety/">

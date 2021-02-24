@@ -1,38 +1,67 @@
 import React, { useRef, useEffect} from 'react';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../assets/styles/pages.scss';
+import PropTypes from 'prop-types';
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger);
   gsap.core.globals("ScrollTrigger", ScrollTrigger);
 };
 
-const Reveal = ({ children, className }) => {
-            
-  const revealRef = useRef(null);
+const Reveal = ({
+  children,
+  wrapperElement = "div",
+  direction = null,
+  delay = 0,
+  ...props
+}) => {
+  const Component = wrapperElement;
+  let compRef = useRef(null);
+  const distance = 100;
 
+  let fadeDirection;
+  switch (direction) {
+    case "left":
+      fadeDirection = { x: -distance };
+      break;
+    case "right":
+      fadeDirection = { x: distance };
+      break;
+    case "up":
+      fadeDirection = { y: distance };
+      break;
+    case "down":
+      fadeDirection = { y: -distance };
+      break;
+    default:
+      fadeDirection = { x: 0 };
+  }
   useEffect(() => {
-  gsap.from(revealRef.current, {
-      id: "reveal",
-      scrollTrigger: revealRef.current,
-      y: 150,
-      scrub: 0.01,
-      autoAlpha: 1, 
-      ease: "expo", 
-      duration: 1.25,
-      stagger: { each: 0.30},
-      start: "5% center"
-  });
-  return () => {
-    if (ScrollTrigger.getById('reveal')) {
-      ScrollTrigger.getById('reveal').kill();
-    }
-  };
+    gsap.from(compRef.current, {
+      ease: 'sine.InOut',
+      duration: 1.2,
+      opacity: 0,
+      delay,
+      ...fadeDirection,
+    });
   }, []);
-
-  return <div className={className} ref={revealRef}>{children}</div>;
+  return (
+    <Component ref={compRef} {...props}>
+      {children}
+    </Component>
+  );
 };
 
 export default Reveal;
 
+Reveal.propTypes = {
+  children: PropTypes.node.isRequired,
+  direction: PropTypes.string,
+  duration: PropTypes.number,
+  distance: PropTypes.number,
+};
+Reveal.defaultProps = {
+  direction : null,
+  duration : 1,
+  distance : 100,
+};

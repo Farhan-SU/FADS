@@ -1,252 +1,231 @@
 .wrapabtjoin {
   height: 100%;
   width: 100vw;
-  overflow-x: hidden; }
-  .wrapabtjoin p {
-    color: #ffefd7;
-    font-size: 1.9rem;
-    font-weight: 500;
-    white-space: normal;
-    line-height: 2.7rem; }
-  .wrapabtjoin h4 {
-    font-size: 10rem;
-    font-weight: 900;
-    text-transform: uppercase; }
-  .wrapabtjoin .revealBox {
-    overflow: hidden;
-    width: fit-content; }
-  .wrapabtjoin .firstsec {
-    background: url("../images/aboutus/part1.png") no-repeat top center/cover;
-    height: 1820px;
-    padding: 0 4.5rem;
-    margin-top: -10rem; }
-    .wrapabtjoin .firstsec h1 {
-      position: relative;
-      top: 11%;
-      font-size: 12rem;
-      text-transform: uppercase;
-      color: #e2daec;
-      width: 80%;
-      mix-blend-mode: hard-light; }
-      @media screen and (max-width: 430px) {
-        .wrapabtjoin .firstsec h1 {
-          font-size: 5rem;
-          left: 1.8rem;
-          top: -15rem; } }
-    .wrapabtjoin .firstsec .topright {
-      padding: 0.75rem;
-      position: relative;
-      width: 39%;
-      float: right;
-      height: 100%; }
-      @media screen and (max-width: 430px) {
-        .wrapabtjoin .firstsec .topright {
-          width: 70%;
-          top: -14rem;
-          right: 1rem;
-          padding: 1rem; } }
-      .wrapabtjoin .firstsec .topright p {
-        text-align: right; }
-  .wrapabtjoin .secondsec {
-    background: url("../images/aboutus/part2.png") no-repeat top center/cover;
-    height: 1805px;
-    padding: 2rem 4.5rem; }
-    @media screen and (max-width: 430px) {
-      .wrapabtjoin .secondsec {
-        background: none;
-        height: 100%;
-        padding: 1rem; } }
-    .wrapabtjoin .secondsec .bottomleft {
-      padding: 0.5rem 1rem;
-      position: relative;
-      margin-top: 1rem;
-      width: 41%;
-      overflow: hidden;
-      height: 50%; }
-      @media screen and (max-width: 430px) {
-        .wrapabtjoin .secondsec .bottomleft {
-          width: 85%;
-          top: -9rem; } }
-    .wrapabtjoin .secondsec .joinHeader {
-      position: relative;
-      top: 11%;
-      left: -3rem;
-      overflow: hidden; }
-      .wrapabtjoin .secondsec .joinHeader h1 {
-        font-size: 14rem;
-        text-transform: uppercase;
-        color: #6b728d;
-        padding: 2rem 1rem;
-        position: relative;
-        top: 1rem;
-        mix-blend-mode: screen; }
-  .wrapabtjoin .thirdsec {
-    background: url("../images/aboutus/part3.png") no-repeat top center;
-    height: 1800px;
-    background-size: cover;
-    padding: 1rem 4.5rem;
-    position: relative;
-    top: -0.24rem; }
-    @media screen and (max-width: 430px) {
-      .wrapabtjoin .thirdsec {
-        background: none;
-        height: 100%;
-        padding: 1rem; } }
-    .wrapabtjoin .thirdsec .joinusText {
-      margin-top: 1rem;
-      position: relative;
-      top: -14rem; }
-      .wrapabtjoin .thirdsec .joinusText p {
-        position: relative;
-        width: 35%;
-        line-height: 3rem; }
-    .wrapabtjoin .thirdsec .revealBox1 {
-      position: relative;
-      top: 15%;
-      padding-bottom: 4rem;
-      height: 100%; }
-      .wrapabtjoin .thirdsec .revealBox1 .exmember {
-        text-align: right; }
-        .wrapabtjoin .thirdsec .revealBox1 .exmember h4 {
-          color: #231242;
-          margin-bottom: 0.5rem;
-          opacity: 0.9; }
-        .wrapabtjoin .thirdsec .revealBox1 .exmember p {
-          width: 57%;
-          float: right;
-          letter-spacing: 3px; }
-  .wrapabtjoin .fourthsec {
-    background: url("../images/aboutus/part4.png") no-repeat top center;
-    height: 1790px;
-    padding: 1rem 4.5rem;
-    position: relative;
-    top: -0.55rem; }
-    @media screen and (max-width: 430px) {
-      .wrapabtjoin .fourthsec {
-        background: none;
-        height: 100%;
-        padding: 1rem; } }
-    .wrapabtjoin .fourthsec .designers {
-      margin-bottom: 2rem;
-      overflow: hidden; }
-      .wrapabtjoin .fourthsec .designers h4 {
-        color: #f5915e;
-        position: relative;
-        left: 0.5rem;
-        mix-blend-mode: screen;
-        opacity: 0.7; }
-      .wrapabtjoin .fourthsec .designers p {
-        width: 75%;
-        position: relative;
-        left: 1rem; }
-    .wrapabtjoin .fourthsec .models {
-      float: right;
-      text-align: right;
-      margin: 2rem 0; }
-      .wrapabtjoin .fourthsec .models h4 {
-        color: #5A95B4; }
-      .wrapabtjoin .fourthsec .models p {
-        float: right;
-        width: 58%;
-        position: relative; }
-    .wrapabtjoin .fourthsec .committee {
-      margin-top: 3rem; }
-      .wrapabtjoin .fourthsec .committee h4 {
-        color: #DEB69F; }
-      .wrapabtjoin .fourthsec .committee p {
-        width: 68%;
-        position: relative;
-        left: 1rem; }
+  overflow-x: hidden;
+  padding: 0 5rem; }
+
+.wrapabtjoin p {
+  color: #1a2632;
+  font-size: 1.9rem;
+  font-weight: 500;
+  white-space: normal;
+  line-height: 2.7rem; }
+
+.wrapabtjoin h4 {
+  font-size: 10rem;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+.wrapabtjoin h1 {
+  font-size: 12rem;
+  text-transform: uppercase;
+  color: #61526d; }
+
+.wrapabtjoin .firstsec {
+  height: 100%; }
+
+.wrapabtjoin .firstsec h1 {
+  position: relative;
+  font-size: 12rem;
+  text-transform: uppercase;
+  color: #61526d;
+  width: 80%;
+  padding-top: 4rem; }
+
+@media screen and (max-width: 430px) {
+  .wrapabtjoin .firstsec h1 {
+    font-size: 5rem;
+    left: 1.8rem; } }
+
+.wrapabtjoin .firstsec .topright {
+  position: relative;
+  height: 100%; }
+
+@media screen and (max-width: 430px) {
+  .wrapabtjoin .firstsec .topright {
+    width: 70%;
+    padding: 1rem; } }
+
+.wrapabtjoin .joinHeader {
+  position: relative; }
+
+.wrapabtjoin .joinHeader h1 {
+  position: relative; }
+
+.wrapabtjoin .joinusText {
+  margin-top: 1rem;
+  position: relative; }
+
+.wrapabtjoin .joinusText p {
+  position: relative;
+  line-height: 3rem; }
+
+.wrapabtjoin .exmember {
+  text-align: right;
+  height: 100%; }
+
+.wrapabtjoin .exmember h4 {
+  color: #231242;
+  margin-bottom: 0.5rem;
+  opacity: 0.9; }
+
+.wrapabtjoin .exmember p {
+  float: right;
+  letter-spacing: 3px; }
+
+.wrapabtjoin .designers {
+  margin-bottom: 2rem; }
+
+.wrapabtjoin .designers h4 {
+  color: #f5915e;
+  position: relative;
+  left: 0.5rem;
+  opacity: 0.7; }
+
+.wrapabtjoin .designers p {
+  width: 75%;
+  position: relative;
+  left: 1rem; }
+
+.wrapabtjoin .models {
+  float: right;
+  text-align: right;
+  margin: 2rem 0; }
+
+.wrapabtjoin .models h4 {
+  color: #5A95B4; }
+
+.wrapabtjoin .models p {
+  float: right;
+  width: 58%;
+  position: relative; }
+
+.wrapabtjoin .committee {
+  margin-top: 3rem; }
+
+.wrapabtjoin .committee h4 {
+  color: #DEB69F; }
+
+.wrapabtjoin .committee p {
+  width: 68%;
+  position: relative;
+  left: 1rem; }
 
 .wrapabtjoinSM {
   width: 100vw;
   height: 100%;
   overflow: hidden; }
-  .wrapabtjoinSM .bgMobile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; }
-    .wrapabtjoinSM .bgMobile .aboutSMimg {
-      width: 100vw;
-      object-fit: contain; }
-  .wrapabtjoinSM h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    color: #a284c9;
-    mix-blend-mode: exclusion; }
-  .wrapabtjoinSM p {
-    color: #ffefd7;
-    font-size: 0.9rem;
-    font-weight: 500;
-    white-space: normal;
-    line-height: 1.4rem;
-    mix-blend-mode: difference; }
-  .wrapabtjoinSM .headersecSM {
-    position: relative;
-    top: 11%;
-    padding: 5rem 2rem 0.4rem 2rem; }
-  .wrapabtjoinSM .toprightSM {
-    padding: 0 2rem;
-    position: relative;
-    top: -0.5rem; }
-  .wrapabtjoinSM .joinHeaderSM {
-    padding: 0 2rem;
-    position: relative;
-    top: -1.3rem; }
-    .wrapabtjoinSM .joinHeaderSM h1 {
-      font-size: 7rem;
-      line-height: 7rem; }
-  .wrapabtjoinSM .joinusTextSM {
-    padding: 0 3rem;
-    position: relative;
-    top: -5.3rem; }
-    .wrapabtjoinSM .joinusTextSM p {
-      color: #ffefd7;
-      mix-blend-mode: normal; }
-  .wrapabtjoinSM h4 {
-    font-size: 4rem;
-    font-weight: 900;
-    text-transform: uppercase; }
-  .wrapabtjoinSM .roletextSM {
-    padding-bottom: 3rem;
-    position: relative;
-    top: -0.5rem; }
-    .wrapabtjoinSM .roletextSM p {
-      font-size: 1rem;
-      color: #ffefd7;
-      mix-blend-mode: normal; }
-    .wrapabtjoinSM .roletextSM h4 {
-      font-size: 3.7rem; }
-  .wrapabtjoinSM .exmemberSM {
-    text-align: right;
-    padding: 0 1rem;
-    position: relative;
-    top: -2.3rem; }
-    .wrapabtjoinSM .exmemberSM h4 {
-      color: #2c1061; }
-    .wrapabtjoinSM .exmemberSM p {
-      padding: 0 0 0 4rem; }
-  .wrapabtjoinSM .designersSM {
-    text-align: left;
-    padding: 0 0.8rem 2.5rem 0.8rem; }
-    .wrapabtjoinSM .designersSM h4 {
-      color: #f5915e; }
-    .wrapabtjoinSM .designersSM p {
-      padding: 0 4.5rem 0 0.5rem; }
-  .wrapabtjoinSM .modelsSM {
-    text-align: right;
-    padding: 0 1rem;
-    margin-bottom: 2.7rem; }
-    .wrapabtjoinSM .modelsSM h4 {
-      color: #5A95B4; }
-    .wrapabtjoinSM .modelsSM p {
-      padding: 0 0 0 3.5rem; }
-  .wrapabtjoinSM .committeeSM {
-    text-align: left;
-    padding: 0 0.8rem 3rem 0.8rem; }
-    .wrapabtjoinSM .committeeSM h4 {
-      color: #f5915e;
-      font-size: 3.7rem; }
-    .wrapabtjoinSM .committeeSM p {
-      padding: 0 4.5rem 0 0.5rem; }
+
+.wrapabtjoinSM .bgMobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.wrapabtjoinSM .bgMobile .aboutSMimg {
+  width: 100vw;
+  object-fit: contain; }
+
+.wrapabtjoinSM h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #a284c9;
+  mix-blend-mode: exclusion; }
+
+.wrapabtjoinSM p {
+  color: #fdf3e4;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: normal;
+  line-height: 1.4rem;
+  mix-blend-mode: difference; }
+
+.wrapabtjoinSM .headersecSM {
+  position: relative;
+  top: 11%;
+  padding: 5rem 2rem 0.4rem 2rem; }
+
+.wrapabtjoinSM .toprightSM {
+  padding: 0 2rem;
+  position: relative;
+  top: -0.5rem; }
+
+.wrapabtjoinSM .joinHeaderSM {
+  padding: 0 2rem;
+  position: relative;
+  top: -1.3rem; }
+
+.wrapabtjoinSM .joinHeaderSM h1 {
+  font-size: 7rem;
+  line-height: 7rem; }
+
+.wrapabtjoinSM .joinusTextSM {
+  padding: 0 3rem;
+  position: relative;
+  top: -5.3rem; }
+
+.wrapabtjoinSM .joinusTextSM p {
+  color: #fdf3e4;
+  mix-blend-mode: normal; }
+
+.wrapabtjoinSM h4 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+.wrapabtjoinSM .roletextSM {
+  padding-bottom: 3rem;
+  position: relative;
+  top: -0.5rem; }
+
+.wrapabtjoinSM .roletextSM p {
+  font-size: 1rem;
+  color: #fdf3e4;
+  mix-blend-mode: normal; }
+
+.wrapabtjoinSM .roletextSM h4 {
+  font-size: 3.7rem; }
+
+.wrapabtjoinSM .exmemberSM {
+  text-align: right;
+  padding: 0 1rem;
+  position: relative;
+  top: -2.3rem; }
+
+.wrapabtjoinSM .exmemberSM h4 {
+  color: #2c1061; }
+
+.wrapabtjoinSM .exmemberSM p {
+  padding: 0 0 0 4rem; }
+
+.wrapabtjoinSM .designersSM {
+  text-align: left;
+  padding: 0 0.8rem 2.5rem 0.8rem; }
+
+.wrapabtjoinSM .designersSM h4 {
+  color: #f5915e; }
+
+.wrapabtjoinSM .designersSM p {
+  padding: 0 4.5rem 0 0.5rem; }
+
+.wrapabtjoinSM .modelsSM {
+  text-align: right;
+  padding: 0 1rem;
+  margin-bottom: 2.7rem; }
+
+.wrapabtjoinSM .modelsSM h4 {
+  color: #5A95B4; }
+
+.wrapabtjoinSM .modelsSM p {
+  padding: 0 0 0 3.5rem; }
+
+.wrapabtjoinSM .committeeSM {
+  text-align: left;
+  padding: 0 0.8rem 3rem 0.8rem; }
+
+.wrapabtjoinSM .committeeSM h4 {
+  color: #f5915e;
+  font-size: 3.7rem; }
+
+.wrapabtjoinSM .committeeSM p {
+  padding: 0 4.5rem 0 0.5rem; }

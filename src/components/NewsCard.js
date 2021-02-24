@@ -5,6 +5,7 @@ import '../assets/styles/press.scss';
 import TheGallery from '../assets/images/gallerypos.webp';
 import TheGalleryBackup from '../assets/images/gallerypos.png';
 import galleryBTS from '../assets/images/galleryBTS.jpg'; 
+import Reveal from '../components/Reveal';
 
 
 const NewsCard = () => {
@@ -22,10 +23,33 @@ const NewsCard = () => {
             <h4>Latest Article</h4>
             <h4 className="overlayh4">Latest Article</h4>
         </div>
-        <div className="cardDeck">
+        <Reveal className="cardDeck" wrapperElement="div" direction="up">
         <CardDeck>
         <Card bsPrefix="card">
+            <div className="imgWrapNews">
+            <Card.Img variant="top" src="http://s3.amazonaws.com/dailyorange/wp-content/uploads/2020/11/13235643/Image-from-iOS-5-copy.jpg" alt=""/>
+            </div>
+            <Card.Body>
+            <Card.Title>Virtual fashion show looks at intersection of body, clothing and space</Card.Title>
+            <Card.Text>
+            "This digital showcase, which features over 30 pieces by student designers, challenges the viewer to consider how garment changes meaning in 
+            different spaces"
+            <br/>
+            <small className="text-muted">November 2020 - Gavi Azoff</small>
+            </Card.Text>
+            </Card.Body>
+            <a href="http://dailyorange.com/2020/11/virtual-fashion-show-looks-intersection-body-clothing-space/" target="_blank" rel="noopener noreferrer" >
+            <Card.Footer>
+            <Card.Link href="http://dailyorange.com/2020/11/virtual-fashion-show-looks-intersection-body-clothing-space/" target="_blank" rel="noopener noreferrer" >
+                <small className="text-muted"><b>Read the full story on The Daily Orange &#10230;</b></small></Card.Link>
+            </Card.Footer>
+            </a>
+        </Card>
+
+        <Card bsPrefix="card">
+            <div className="imgWrapNews">
             <Card.Img as="img" variant="top" src="https://www.thenewshouse.com/wp-content/uploads/IMG_5149.JPG.jpeg" />
+            </div>
             <Card.Body>
             <Card.Title>Syracuse FADS project shows the power of virtual fashion</Card.Title>
             <Card.Text>
@@ -44,8 +68,11 @@ const NewsCard = () => {
             </Card.Footer>
             </a>
         </Card>
+
         <Card bsPrefix="card">
+            <div className="imgWrapNews">
             <Card.Img variant="top" src="http://dailyorange.com/resize/800/wp-content/uploads/2020/08/17152455/FADS-dom.jpg" />
+            </div>
             <Card.Body>
             <Card.Title>SU Fashion and Design Society hosts F*4 Zoom Series</Card.Title>
             <Card.Text>
@@ -63,34 +90,15 @@ const NewsCard = () => {
             </Card.Footer>
             </a>
         </Card>
-        <Card bsPrefix="card">
-            <Card.Img variant="top" srcset={TheGallery} src={TheGalleryBackup} alt="SU Student in a dress designed by a student for FADS"/>
-            <Card.Body>
-            <Card.Title>Fashion and Design Society show presents students’ looks</Card.Title>
-            <Card.Text>
-            The Fashion and Design Society’s student-run fashion show was held at Skybarn at 8 p.m. on Dec. 6. 
-            Entitled “The Gallery,” the show aimed to portray that fashion and art are interchangeable.
-            <br/>
-            <small className="text-muted">
-            December 2019 - Mandy Kraynak
-            </small>
-            </Card.Text>
-            </Card.Body>
-            <a href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank" rel="noopener noreferrer" >
-            <Card.Footer>
-            <Card.Link href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank" rel="noopener noreferrer" >
-                <small className="text-muted"><b>Read the full story on The Daily Orange &#10230;</b></small>
-            </Card.Link>
-            </Card.Footer>
-            </a>
-        </Card>
         </CardDeck>
-        </div>
+        </Reveal>
 
         <div className="cardDeck2">
         <CardDeck>
         <Card bsPrefix="card">
+            <div className="imgWrapNews">
             <Card.Img as="img" variant="top" src={galleryBTS} />
+            </div>
             <Card.Body>
             <Card.Title>Syracuse FADS presents The Gallery Fashion Show</Card.Title>
             <Card.Text>
@@ -112,28 +120,32 @@ const NewsCard = () => {
             </a>
         </Card>
         <Card bsPrefix="card">
-            <Card.Img variant="top" src="https://images.squarespace-cdn.com/content/v1/5c72d811d74562103adbe24c/1571166329008-03U0MS6M5YBQ7JW1N1WW/ke17ZwdGBToddI8pDm48kKRsCX04qDCWWl3r93LgscdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxbInGZT80E1K7QPTqDXy9Q6xHqwqal--hK76JOwYagVPp47QcSE9hmoWBv-cYTHVI/DO1140296.JPG?format=2500w" />
+            <div className="imgWrapNews">
+            <Card.Img variant="top" srcset={TheGallery} src={TheGalleryBackup} alt="SU Student in a dress designed by a student for FADS"/>
+            </div>
             <Card.Body>
-            <Card.Title>A Glimpse into Syracuse Snarl</Card.Title>
+            <Card.Title>Fashion and Design Society show presents students’ looks</Card.Title>
             <Card.Text>
-            Syracuse Fashion Week presents the annual Syracuse Snarl! This year, the show’s theme was “Living Dolls”. Syracuse Area designers 
-            participated  in creating daring designs based on their own interpretations of what living dolls meant to them. 
+            The Fashion and Design Society’s student-run fashion show was held at Skybarn at 8 p.m. on Dec. 6. 
+            Entitled “The Gallery,” the show aimed to portray that fashion and art are interchangeable.
             <br/>
-                <small className="text-muted">
-                    October 2019 - Taylor Knight
-                </small>
+            <small className="text-muted">
+            December 2019 - Mandy Kraynak
+            </small>
             </Card.Text>
             </Card.Body>
-            <a href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/10/15/a-glimpse-into-syracuse-snarl " target="_blank" rel="noopener noreferrer" >
+            <a href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
-            <Card.Link href="https://jerkmagazine.net/9mfehhs6kt2vag7aqn19w0hd2b5dka/2019/10/15/a-glimpse-into-syracuse-snarl" target="_blank" rel="noopener noreferrer" >
+            <Card.Link href="http://dailyorange.com/2019/12/fashion-design-society-show-presents-students-looks/" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on The Daily Orange &#10230;</b></small>
             </Card.Link>
             </Card.Footer>
             </a>
         </Card>
         <Card bsPrefix="card">
+            <div className="imgWrapNews">
             <Card.Img variant="top" src="https://expo.advance.net/img/66b185f74b/width960/976_20180330mjgfashion2.jpeg" />
+            </div>
             <Card.Body>
             <Card.Title>Fashion of tomorrow hits the runway at SU</Card.Title>
             <Card.Text>

@@ -26,46 +26,45 @@ export default function GalleryDesktop ()  {
         scrollTrigger: {
           id: 'container-ref',
           trigger: containerRef.current,
-          scrub: 0.1,
-          start: "top 50%",
-          end: "=+400"
+          scrub: 0.01,
+          start: "top 60%",
+          end: "=+500px",
+          once: true
         }
       })
-      .from(galleryRef1.current, {duration: 1.5, autoAlpha: 0, y: 40,ease: 'back.inOut(1.4)'})
-      .from(image1.current, {duration: 1.9, autoAlpha: 0 , x: -350, ease: "circ.out",})
-      .from(galleryRef2.current, {duration: 1.6, autoAlpha: 0, y: 40,  ease: 'back.inOut(1.4)'}, '-=0.8')
-      .from(image2.current, {duration: 1.3, autoAlpha: 0 , x: 350, ease: "circ.out"}, '-=0.7');
-
+      .from(galleryRef1.current, {duration: 1.4, autoAlpha: 0, y: 40,ease: 'sine.out'})
+      .from(image1.current, {duration: 4, opacity: 0, y: -200, ease: "circ.out",})
+      .from(image2.current, {duration: 4, opacity: 0, y: 200, ease: "circ.out"}, "-=2");
+    
       return () => {
         if (ScrollTrigger.getById('container-ref')) {
           ScrollTrigger.getById('container-ref').kill();
         } tl.current.kill();
       };
-      
-    }, []);
-                     
+    }, []);          
     return (
       <>
-     <div className="layerfour" id="container-ref" ref={containerRef}>
-          <div ref={image1} className='gallery-images'>
-              <img src={Galimg1} alt="gallery images" className="img1"/>
-          </div>
-
+     <div className="layerfour" ref={containerRef}>
+        <div ref={image1} className='gallery-images'>
+            <img src={Galimg1} alt="gallery images" className="img1"/>
+        </div>
         <div className="gallery">
-          <h2 ref={galleryRef1}>Check Out</h2>
-          <h2  ref={galleryRef2}>Our work</h2>
+          <div className="galhptxt" ref={galleryRef1}>
+            <h2>Check Out</h2>
+            <h2>Our work</h2>
+          </div>
           <div className="galLink">
             <Link to="/gallery">
-                <div className="linkbtn">
-                  <div className="circlelink"/>
-                  <p className="linktext">View our gallery &#10230;</p>
-                </div>
+              <div className="linkbtn">
+                <div className="circlelink"/>
+                <p className="linktext">View our gallery &#10230;</p>
+              </div>
             </Link>
           </div>
         </div>
-          <div  ref={image2}className='gallery-images'>
-            <img src={Galimg2} alt="gallery images" className="img2"/>
-          </div>
+        <div  ref={image2}className='gallery-images'>
+          <img src={Galimg2} alt="gallery images" className="img2"/>
+        </div>
       </div>
       </>
     );

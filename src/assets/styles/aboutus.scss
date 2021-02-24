@@ -5,9 +5,10 @@
     height: 100%;
     width: 100vw;
     overflow-x: hidden;
+    padding: 0 5rem;
 
     p{
-        color: $heading;
+        color: $text;
         font-size: 1.9rem;
         font-weight: 500;
         white-space: normal;
@@ -19,194 +20,102 @@
         font-weight: 900;
         text-transform: uppercase;
     }
-    .revealBox{
-        overflow: hidden;
-        width: fit-content;
+    h1{
+        font-size: 12rem;
+        text-transform: uppercase;
+        color: $darkpurple; 
     }
-
     .firstsec{
-        background: url('../images/aboutus/part1.png') no-repeat top center/ cover;
-        height: 1820px;
-        padding: 0 4.5rem;
-        margin-top: -10rem;
-    
+        height: 100%;
         h1{
             position: relative;
-            top: 11%;
             font-size: 12rem;
             text-transform: uppercase;
-            color: #e2daec;
+            color: $darkpurple;
             width: 80%;
-            mix-blend-mode: hard-light;
+            padding-top: 4rem;
 
             @include media ("screen", "<=phone") {
                 font-size: 5rem;
                 left: 1.8rem;
-                top: -15rem;
             }
         }
 
         .topright{
-            padding: 0.75rem;
             position: relative;
-            width: 39%;
-            float: right;
             height: 100%;
 
             @include media ("screen", "<=phone") {
                 width: 70%;
-                top: -14rem;
-                right: 1rem;
                 padding: 1rem;
             }
-
-          p{
-            text-align: right;
-            
-           }
         }
     }
-    .secondsec{
-        background: url('../images/aboutus/part2.png') no-repeat top center/ cover;
-        height: 1805px;
-        padding: 2rem 4.5rem;
 
-        @include media ("screen", "<=phone") {
-            background: none;
-            height: 100%;
-            padding: 1rem;
-        }
-
-        .bottomleft{
-            padding: 0.5rem 1rem;
-            position: relative;
-            margin-top: 1rem;
-            width: 41%;
-            overflow: hidden;
-            height: 50%;
-
-            @include media ("screen", "<=phone") {
-                width: 85%;
-                top: -9rem;
-                
-            }
-        }
-        .joinHeader{
-            position: relative;
-            top: 11%;
-            left: -3rem;
-            overflow: hidden;
+    .joinHeader{
+        position: relative;
             h1{
-                font-size: 14rem;
-                text-transform: uppercase;
-                color: $bluegray;
-                padding: 2rem 1rem;
-                position: relative;
-                top: 1rem;
-                mix-blend-mode: screen;
+            position: relative;
             }
+        }
+    .joinusText{
+        margin-top: 1rem;
+        position: relative;
+        p{
+            position: relative;
+            line-height: 3rem;
         }
     }
-    .thirdsec{
-        background: url('../images/aboutus/part3.png') no-repeat top center;
-        height: 1800px;
-        background-size: cover;
-        padding: 1rem 4.5rem;
-        position: relative;
-        top: -0.24rem;
-
-        @include media ("screen", "<=phone") {
-            background: none;
-            height: 100%;
-            padding: 1rem;
+    .exmember{
+        text-align: right;
+        height: 100%;
+        h4{
+            color: #231242;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
         }
-
-        .joinusText{
-            margin-top: 1rem;
-            position: relative;
-            top: -14rem;
-            p{
-                position: relative;
-                width: 35%;
-                line-height: 3rem;
-            }
-        }
-
-        .revealBox1{
-            position: relative;
-            top: 15%;
-            padding-bottom: 4rem;
-            height: 100%;
-    
-            .exmember{
-                text-align: right;
-                h4{
-                    color: #231242;
-                    margin-bottom: 0.5rem;
-                    opacity: 0.9;
-                }
-                p{
-                    width: 57%;
-                    float: right;
-                    letter-spacing: 3px;
-                }
-               
-            }
-        }
-    }
-    .fourthsec{
-        background: url('../images/aboutus/part4.png') no-repeat top center;
-        height: 1790px;
-        padding: 1rem 4.5rem;
-        position: relative;
-        top: -0.55rem;
-
-        @include media ("screen", "<=phone") {
-            background: none;
-            height: 100%;
-            padding: 1rem;
-        }
-
-        .designers{
-            margin-bottom: 2rem;
-            overflow: hidden;
-            h4{
-                color: #f5915e;
-                position: relative;
-                left: 0.5rem;
-                mix-blend-mode: screen;
-                opacity: 0.7;
-            }
-            p{
-                width: 75%;
-                position: relative;
-                left: 1rem;
-            }
-        }
-        .models{
+        p{
             float: right;
-            text-align: right;
-            margin: 2rem 0;
-            h4{
-                color:#5A95B4;
-            }
-            p{
-                float: right;
-                width: 58%;
-                position: relative;
-
-            }
+            letter-spacing: 3px;
         }
-        .committee{
-            margin-top: 3rem;
-            h4{
-                color: #DEB69F;
-            }
-            p{
-                width: 68%;
-                position: relative;
-                left: 1rem;
-            }
+    }
+    .designers{
+        margin-bottom: 2rem;
+        h4{
+            color: #f5915e;
+            position: relative;
+            left: 0.5rem;
+            opacity: 0.7;
+        }
+        p{
+            width: 75%;
+            position: relative;
+            left: 1rem;
+        }
+    }
+    .models{
+        float: right;
+        text-align: right;
+        margin: 2rem 0;
+        h4{
+            color:#5A95B4;
+        }
+        p{
+            float: right;
+            width: 58%;
+            position: relative;
+    
+        }
+    }
+    .committee{
+        margin-top: 3rem;
+        h4{
+            color: #DEB69F;
+        }
+        p{
+            width: 68%;
+            position: relative;
+            left: 1rem;
         }
     }
 }

@@ -4,7 +4,6 @@
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -22,6 +21,15 @@ body {
   body {
     cursor: default; } }
 
+html::-webkit-scrollbar {
+  display: none; }
+
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background: transparent; }
+
 body {
   width: 100vw;
   height: 100%;
@@ -30,8 +38,8 @@ body {
   color: #1A2632; }
 
 .active {
-  color: #4e4cbb;
-  mix-blend-mode: difference; }
+  color: #a67db0;
+  mix-blend-mode: multiply; }
 
 p, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
@@ -43,7 +51,7 @@ h1, h2 {
   mix-blend-mode: normal; }
 
 a {
-  color: black;
+  color: #0e1f33;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
@@ -51,15 +59,9 @@ a {
   z-index: 400; }
 
 a:hover {
-  color: #4e4cbb;
+  color: #a67db0;
   text-decoration: none; }
-
-.splashpg {
-  background-color: #161515;
-  height: 100vh; }
 
 @media only screen and (max-width: 470px) {
   body {
     cursor: default; } }
-
-/*# sourceMappingURL=App.css.map */

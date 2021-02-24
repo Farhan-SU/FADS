@@ -7,6 +7,7 @@ import { useQuery } from '@apollo/react-hooks';
 import LoadingScreen from '../../components/LoadingScreen';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Reveal from '../../components/Reveal';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,7 +61,7 @@ export default function Eboard() {
         description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
       }}>
       <div className="eboardwrapper">
-      <h1>E-Board</h1>
+      <Reveal wrapperElement="h1" direction="up">E-Board</Reveal>
         <div className="members">
           {data.members.map(member => (
             <div key={member.id} className="member-intro">

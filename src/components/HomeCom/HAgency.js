@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger} from 'gsap/ScrollTrigger';
 import '../../assets/styles/pages.scss';
-
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -11,10 +10,11 @@ if (typeof window !== `undefined`) {
 }; 
 
 export default function HAgency()  {  
+
+  const marqueeRef = useRef();
    
   useEffect(() =>{
-    let tl = gsap.timeline();
-      tl.to('.marquee', {
+      gsap.to('.marquee', {
         duration: 16,
         ease: "none",
         x: "-=4855",
@@ -22,7 +22,7 @@ export default function HAgency()  {
           x: gsap.utils.unitize(x => parseFloat(x) % 4855)
         },
         repeat: -1,
-        yoyo: true
+        yoyo: true,
       });
       }, []);
 
@@ -36,21 +36,21 @@ export default function HAgency()  {
           </div>
 
           <div className='marqueewrapper' >
-            <div className="marquee">
+            <div className="marquee" ref={marqueeRef}>
             <div className="mtext"><h2>Fashion Designers/</h2></div>
             <div className="mtext"><h2>Graphic Designers/</h2></div>
-            <div className="mtext"><h2>Web Designer/</h2></div>
+            <div className="mtext"><h2>Web Designers/</h2></div>
             <div className="mtext"><h2>Videographers/</h2></div>
             </div>
           </div>
           <div className='marqueewrapper'>
-            <div className="marquee"> 
+            <div className="marquee" ref={marqueeRef}> 
             <div className="mtext"><h2>Photographers/</h2></div>
             <div className="mtext"><h2>Models/</h2></div>
-            <div className="mtext"><h2>Set Design/</h2></div>
-            <div className="mtext"><h2>Makeup Artist/</h2></div>
-            <div className="mtext"><h2>Stylist/</h2></div>
-            <div className="mtext"><h2>Communication/</h2></div>
+            <div className="mtext"><h2>Set Designers/</h2></div>
+            <div className="mtext"><h2>Makeup Artists/</h2></div>
+            <div className="mtext"><h2>Stylists/</h2></div>
+            <div className="mtext"><h2>Communications/</h2></div>
             </div>
           </div>
           

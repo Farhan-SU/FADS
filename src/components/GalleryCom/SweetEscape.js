@@ -95,7 +95,7 @@ function SweetEscape () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1 className="longTxtEd">October <br/>2020</h1>
+            <h1 className="longTxtEd">10/2020</h1>
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
