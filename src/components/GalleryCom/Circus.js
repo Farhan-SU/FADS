@@ -3,7 +3,7 @@ import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
 import Prev from '../../assets/images/prev.png';
@@ -102,10 +102,9 @@ function Circus () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioSRef}>
-             <h2 className="biggerport">CIRCUS</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Cir1w}
                             fallback={Cir1}
                             alt="picture from Night Circus shoots"
@@ -115,7 +114,7 @@ function Circus () {
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Cir2w}
                         fallback={Cir2}
                         alt="picture from Night Circus shoots"
@@ -125,7 +124,7 @@ function Circus () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Cir3w}
                         fallback={Cir3}
                         alt="picture from Night Circus shoots"
@@ -135,7 +134,7 @@ function Circus () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Cir4w}
                         fallback={Cir4}
                         alt="picture from Night Circus shoots"
@@ -145,7 +144,7 @@ function Circus () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Cir5w}
                         fallback={Cir5}
                         alt="picture from Night Circus shoots"
@@ -155,7 +154,7 @@ function Circus () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Cir6w}
                         fallback={Cir6}
                         alt="picture from Night Circus shoots"

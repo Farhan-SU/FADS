@@ -3,7 +3,7 @@ import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
@@ -100,7 +100,7 @@ function NotaDream () {
              <h2>Not a Dream</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Dream1w}
                             fallback={Dream1}
                             alt="Makeup x Jerk editorial shoots"
@@ -110,7 +110,7 @@ function NotaDream () {
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Dream2w}
                             fallback={Dream2}
                             alt="Makeup x Jerk editorial shoots"
@@ -120,7 +120,7 @@ function NotaDream () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Dream3w}
                             fallback={Dream3}
                             alt="Makeup x Jerk editorial shoots"
@@ -130,7 +130,7 @@ function NotaDream () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Dream4w}
                             fallback={Dream4}
                             alt="Makeup x Jerk editorial shoots"
@@ -140,7 +140,7 @@ function NotaDream () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Dream5w}
                             fallback={Dream5}
                             alt="Makeup x Jerk editorial shoots"
@@ -150,7 +150,7 @@ function NotaDream () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Dream6w}
                             fallback={Dream6}
                             alt="Makeup x Jerk editorial shoots"
@@ -166,7 +166,7 @@ function NotaDream () {
                 <h1>Work Wear</h1><h2 className="ontop">Vintage</h2>
             </Col>
             <Col lg={12} className="endseccontent">
-                <WebpG
+                <ImgWebp
                     src={EndEsecW}
                     fallback={EndEsec}
                     alt="FADS Logo"

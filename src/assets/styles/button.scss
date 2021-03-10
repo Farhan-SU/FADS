@@ -1,4 +1,4 @@
-@import 'colors', 'breakpoints'; ; 
+@import 'breakpoints'; 
 /*Button animation inspired by Paul @ https://codepen.io/bypavel/pen/jAXpgq*/
 
   #scroll-down {
@@ -20,8 +20,8 @@
       padding: 0;
       width: 10px;
       height: 10px;
-      border-top: 2px solid #fd9824;
-      border-right: 2px solid #fd9824;
+      border-top: 2px solid #d65273;
+      border-right: 2px solid #d65273;
       -moz-transform: rotate(135deg);
       -webkit-transform: rotate(135deg);
       -o-transform: rotate(135deg);
@@ -31,7 +31,7 @@
   #scroll-title {
     display: block;
     text-transform: uppercase;
-    color: #f1a853;
+    color: #d65273;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.2em;
@@ -59,7 +59,7 @@
       left: 49.3%;
       width: 2px;
       height: 80px;
-      background: #fd9824;
+      background: #d65273;
       content: ' ';
   }
   @-webkit-keyframes elasticus {

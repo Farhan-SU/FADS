@@ -1,5 +1,5 @@
 .agency-home {
-  background: #e2e2e2 url("../images/agencyBgT2.gif") no-repeat 60px/cover;
+  background: #ece7ef url("../images/agencyBgT2.gif") no-repeat 60px/cover;
   height: 100%;
   width: 100vw;
   overflow: hidden;
@@ -13,7 +13,7 @@
   height: 100vh;
   color: #1a2632;
   margin-top: 6rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 4rem; }
   @media screen and (max-width: 430px) {
     .intro-a {
       width: 100vw;
@@ -38,7 +38,7 @@
       padding-right: 3.3rem;
       text-transform: uppercase;
       letter-spacing: 15px;
-      line-height: 8rem;
+      line-height: 7rem;
       mix-blend-mode: hard-light; }
       @media screen and (max-width: 430px) {
         .intro-a .experts h1 {
@@ -47,7 +47,7 @@
           line-height: 3rem; } }
     .intro-a .experts h3 {
       width: 54%;
-      margin-top: 2rem;
+      margin-top: 0.5rem;
       line-height: 2.3rem;
       font-size: 1.5rem; }
       @media screen and (max-width: 430px) {
@@ -66,7 +66,8 @@
   justify-content: center;
   align-items: center;
   align-content: space-around;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: none; }
   @media screen and (max-width: 430px) {
     .agency {
       width: 100vw;

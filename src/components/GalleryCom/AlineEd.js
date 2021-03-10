@@ -3,7 +3,7 @@ import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
@@ -94,10 +94,9 @@ function AlineEd () {
          </div>
         <section className="section">
         <div className="portfolio" ref={portfolioRef}>
-             <h2>Aline</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Aline1w}
                             fallback={Aline1}
                             alt="Aline editorial shoots"
@@ -108,7 +107,7 @@ function AlineEd () {
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Aline2w}
                             fallback={Aline2}
                             alt="Aline editorial shoots"
@@ -119,7 +118,7 @@ function AlineEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Aline3w}
                             fallback={Aline3}
                             alt="Aline editorial shoots"
@@ -130,7 +129,7 @@ function AlineEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Aline4w}
                             fallback={Aline4}
                             alt="Aline editorial shoots"
@@ -141,7 +140,7 @@ function AlineEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Aline5w}
                             fallback={Aline5}
                             alt="Aline editorial shoots"
@@ -158,7 +157,7 @@ function AlineEd () {
                     <h1>Jerk X</h1><h2 className="ontop">FADS</h2>
                 </Col>
                 <Col lg={12} className="endseccontent">
-                    <WebpG
+                    <ImgWebp
                         src={EndEsecW}
                         fallback={EndEsec}
                         alt="FADS Logo"

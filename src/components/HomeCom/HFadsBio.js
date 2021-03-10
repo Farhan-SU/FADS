@@ -29,12 +29,11 @@ export default function HFadsBio ()  {
               id: "hometl",
               start: "-10% 15%",
               end: 'bottom bottom-=70px',
-              anticipatePin: 2,
               pin: biotxt.current,
               toggleActions: "play complete reverse reset",
             }
           })
-          .from(biotxt.current, {opacity: 0, duration: 0.7, ease: 'sine.in'}, "-=1.5")
+          .from(biotxt.current, {opacity: 0, duration: 0.7, ease: 'sine.in'}, "-=2")
           /*.to(fadsbio.current, {duration: 2, backgroundColor: '#757c97', ease: "linear"});*/
         }
       },
@@ -50,7 +49,7 @@ export default function HFadsBio ()  {
               pin: false,
             }
           })
-          .from(biotxt.current, {autoAlpha: 1, duration: 1, ease: 'back.inOut(1.4)'});
+          .to(biotxt.current, {autoAlpha: 1, duration: 1, ease: 'back.inOut(1.4)'});
         }
       }
     });

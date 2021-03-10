@@ -23,36 +23,12 @@ if (typeof window !== `undefined`) {
 const Shows = () => {
 
     const history = useHistory();
- 
     const showtl = useRef();
     const line = useRef();
-
-    useEffect(() => {
-      gsap.to(line.current.children, { autoAlpha: 1, duration: 1, ease: 'sine.in' });
-      showtl.current = ScrollTrigger.batch(line.current.children, {
-        scrub: true,
-        onEnter: batch =>
-          gsap.to(batch, {
-            id: 'boxShow',
-            opacity:1,
-            duration: 1,
-            stagger: { each: 0.20},
-            overwrite: true,
-            ease: 'sine.in'
-          }),
-        onLeave: batch => gsap.set(batch, { duration: 0.5, opacity: 0.3, overwrite: true, ease: 'sine.in' }, '-=1.5'),
-        onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, stagger: 0.15, overwrite: true, ease: 'sine.in'}),
-        onLeaveBack: batch =>  gsap.set(batch, { duration: 1, opacity: 0.5, overwrite: true, ease: 'sine.in'})  
-      });
-      return () => {
-        if (ScrollTrigger.getById('boxShow')) {
-        ScrollTrigger.getById('boxShow').kill();
-        };
-    };
-    }, []);
-
     const sImgLeft = useRef();
     sImgLeft.current = [];
+    const sImgRight = useRef();
+    sImgRight.current = [];
 
     useEffect(() => {
       showtl.current = sImgLeft.current.forEach((el, index) => {
@@ -66,8 +42,8 @@ const Shows = () => {
           ease: "circ.Inout",
           scrollTrigger: {
             trigger: el,
-            start: 'top top+=600',
-            toggleActions: 'play none none reverse'
+            start: 'top top+=700',
+            toggleActions: 'play none none none'
           }
         });
       });
@@ -78,9 +54,6 @@ const Shows = () => {
       sImgLeft.current.push(el);
     }
   }
-
-    const sImgRight = useRef();
-    sImgRight.current = [];
 
     useEffect(() => {
       showtl.current = sImgRight.current.forEach((al, index) => {
@@ -95,7 +68,7 @@ const Shows = () => {
           scrollTrigger: {
             trigger: al,
             start: 'top top+=200',
-            toggleActions: 'play none none reverse'
+            toggleActions: 'play none none none'
           }
         });
       });
@@ -104,32 +77,6 @@ const Shows = () => {
     function addSImgRefsRight(al) {
     if (al && !sImgRight.current.includes(al)) {
       sImgRight.current.push(al);
-    }
-  }
-
-    const textRef = useRef();
-    textRef.current = [];
-
-    useEffect(() => {
-      showtl.current = textRef.current.forEach((text, index) => {
-        gsap.fromTo(text, {
-          autoAlpha: 0,
-        }, {
-          duration: 0.5, 
-          autoAlpha: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: text,
-            start: 'top top+=600',
-            toggleActions: 'play none none reverse'
-          }
-        });
-      });
-    }, []);
-
-    function addToRefstext(text) {
-    if (text && !textRef.current.includes(text)) {
-      textRef.current.push(text);
     }
   }
 
@@ -142,19 +89,19 @@ const Shows = () => {
           description: "Our bi-annual fashion shows. All the pieces are made from scratch by our fashion and design students"
         }}>
       <>
-      <div ref={line} className="show-wrapper">
-      <Row as="section" className="thegallery">
+      <div className="show-wrapper">
+      <Row as="section" className="sectionBox">
         <Col md={4}className="sleft">
           <img src={TheGalLeft} alt="jerkphotos" className="img1"/>
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-          <Link to="/gallery/shows/thegallery"  onClick={() => history.push("/gallery/shows/thegallery")}>
-          <Col md={12}>
-          <h3>Spring 2020</h3>
-          </Col>
+          <Link to="/gallery/shows/thegallery" onClick={() => history.push("/gallery/shows/thegallery")}>
           <Col md={12}>
           <h1>The Gallery</h1>
+          </Col>
+          <Col md={12}>
+          <h3>Spring 2020</h3>
           </Col>
           </Link>
         </Row>
@@ -169,18 +116,18 @@ const Shows = () => {
         </Col>
       </Row>
 
-      <Row as="section" className="circus">
+      <Row as="section" className="sectionBox">
         <Col md={4}className="sleft">
           <img src={CircusLeft} ref={addSImgRefs} alt="jerkphotos" className="img1"/>
         </Col>
         <Col md={4} className="description">
-        <Row ref={addToRefstext} className="header">
+        <Row className="header">
         <Link  to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
-          <Col  md={12}>
-          <h3>Spring 2019</h3>
-          </Col>
           <Col md={12}>
           <h1>Night Circus</h1>
+          </Col>
+          <Col  md={12}>
+          <h3>Spring 2019</h3>
           </Col>
           </Link>
         </Row>
@@ -195,18 +142,18 @@ const Shows = () => {
         </Col>
       </Row>
 
-      <Row as='section' className="land">
+      <Row as='section' className="sectionBox">
         <Col md={4}className="sleft">
           <img src={TlandLeft} alt="jerkphotos" ref={addSImgRefs} className="img1"/>
         </Col>
         <Col md={4} className="description">
-        <Row ref={addToRefstext} className="header">
+        <Row className="header">
         <Link  to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
-          <Col  md={12}>
-           <h3>Spring 2018</h3>
-          </Col>
           <Col md={12} className="tmrLg">
           <h1>Tomorrow<br/>Land</h1>
+          </Col>
+          <Col  md={12}>
+           <h3>Spring 2018</h3>
           </Col>
         </Link>
         </Row>

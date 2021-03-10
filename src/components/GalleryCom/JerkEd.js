@@ -3,7 +3,7 @@ import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
 import SEO from "../SEO";
@@ -108,7 +108,7 @@ function JerkEd () {
              <h2 className="biggerport">JERK</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Jerk1w}
                             fallback={Jerk1}
                             alt="Jerk Photoshoot"
@@ -119,7 +119,7 @@ function JerkEd () {
 
                     <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Jerk2w}
                             fallback={Jerk2}
                             alt="Jerk Photoshoot"
@@ -130,7 +130,7 @@ function JerkEd () {
 
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Jerk3w}
                             fallback={Jerk3}
                             alt="Jerk Photoshoot"
@@ -141,7 +141,7 @@ function JerkEd () {
 
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Jerk4w}
                             fallback={Jerk4}
                             alt="Jerk Photoshoot"
@@ -152,7 +152,7 @@ function JerkEd () {
 
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Jerk5w}
                         fallback={Jerk5}
                         alt="Jerk Photoshoot"
@@ -163,7 +163,7 @@ function JerkEd () {
 
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Jerk6w}
                             fallback={Jerk6}
                             alt="Jerk Photoshoot"
@@ -174,7 +174,7 @@ function JerkEd () {
 
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Jerk7w}
                         fallback={Jerk7}
                         alt="Jerk Photoshoot"
@@ -185,7 +185,7 @@ function JerkEd () {
                 
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Jerk8w}
                         fallback={Jerk8}
                         alt="Jerk Photoshoot"
@@ -196,7 +196,7 @@ function JerkEd () {
 
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Jerk9w}
                         fallback={Jerk9}
                         alt="Jerk Photoshoot"
@@ -206,7 +206,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                         src={Jerk10w}
                         fallback={Jerk10}
                         alt="Jerk Photoshoot"
@@ -222,7 +222,7 @@ function JerkEd () {
                 <h1>Wint</h1><h2 className="ontop">er</h2>
             </Col>
             <Col lg={12} className="endseccontent">
-                <WebpG
+                <ImgWebp
                     src={EndEsecW}
                     fallback={EndEsec}
                     alt="FADS Logo"

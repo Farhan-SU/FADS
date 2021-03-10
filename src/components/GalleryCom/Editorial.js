@@ -47,46 +47,24 @@ if (typeof window !== `undefined`) {
 const Editorial = () => {
  
     const edtl = useRef();
-    const line = useRef();
-
-    useEffect(() => {
-      edtl.current = ScrollTrigger.batch(line.current.children, {
-        onEnter: batch =>
-          gsap.to(batch, {
-            id: "boxs",
-            autoAlpha: 1, 
-            duration: 1,
-            stagger: { each: 0.20},
-            overwrite: "auto",
-          }),
-        onLeave: batch => gsap.set(batch, { duration: 1, autoAlpha: 0.1, overwrite: "auto",  ease: 'sine.inOut'}, '-=1.5'),
-        onEnterBack: batch => gsap.to(batch, { duration: 1, opacity: 1, stagger: 0.15, overwrite: "auto",  ease: 'sine.inOut'}),
-        onLeaveBack: batch =>  gsap.set(batch, { duration: 1,  autoAlpha: 0.1, overwrite: "auto",  ease: 'sine.inOut'}) 
-      });
-      return () => {
-        if (ScrollTrigger.getById('boxs')) {
-        ScrollTrigger.getById('boxs').kill();
-        };
-    };
-    }, []);
-
     const images = useRef();
     images.current = [];
+    const imagesright = useRef();
+    imagesright.current = [];
 
     useEffect(() => {
       edtl.current = images.current.forEach((el) => {
         gsap.fromTo(el, {
-          duration: 1.3, 
           opacity: 0,
           y: 300}, {
-          duration: 1.3, 
+          duration: 1, 
           opacity: 1,
           y: 0,
           ease: "circ.Inout",
           scrollTrigger: {
             id: 'edit-left',
             trigger: el,
-            start: '10% top+=600',
+            start: '10% top+=700',
             toggleActions: 'play none none none',
           }
         });
@@ -98,9 +76,6 @@ const Editorial = () => {
           images.current.push(el);
       }
     };
-
-    const imagesright = useRef();
-    imagesright.current = [];
 
     useEffect(() => {
       edtl.current = imagesright.current.forEach((al) => {
@@ -128,33 +103,6 @@ const Editorial = () => {
       }
     };
 
-    const textRef = useRef();
-    textRef.current = [];
-
-    useEffect(() => {
-      edtl.current = textRef.current.forEach((text) => {
-        gsap.fromTo(text, {
-          autoAlpha: 0,
-        }, {
-          duration: 0.5, 
-          autoAlpha: 1,
-          ease: 'none',
-          scrollTrigger: {
-            id: 'edit-txt',
-            trigger: text,
-            start: 'top top+=600',
-            toggleActions: 'play none none reverse',
-          }
-        });
-      });
-    }, []);
-
-    const addToRefstext = text => {
-      if (text && !textRef.current.includes(text)) {
-          textRef.current.push(text);
-      }
-    };
-
     return(
       <>
         <SEO
@@ -164,9 +112,8 @@ const Editorial = () => {
           description: "Here at FADS, we have montly photoshoots with our Models and crew"
         }}>
       <>
-      <div ref={line} className="editorialwrapper">
-
-      <Row as="section" className="sweet">
+      <div className="editorialwrapper">
+      <Row as="section" className="sectionBox">
         <Col md={4} className="left">
          <picture className="img1">
           <source srcset={SweetLeftW} alt="Sweet Escape shoots" type="image/webp"/>
@@ -178,10 +125,10 @@ const Editorial = () => {
         <Row className="header">
         <Link to="/gallery/editorials/sweet">
           <Col xs={12}>
-          <h3>October 2020</h3>
+          <h1>Sweet Escape</h1>
           </Col>
           <Col xs={12}>
-          <h1>Sweet Escape</h1>
+          <h3>10/2020</h3>
           </Col>
           </Link>
         </Row>
@@ -195,12 +142,12 @@ const Editorial = () => {
         <picture className="img2">
           <source srcset={SweetRightW} alt="Sweet Escape shoots" type="image/webp"/>
           <source srcset={SweetRight} alt="Sweet Escape  shoots"  type="image/png"/>
-          <img src={SweetRight} alt="Sweet Escape  shoots"/>
+          <img src={SweetRight} alt="Sweet Escape shoots"/>
         </picture>
         </Col>
       </Row>
 
-      <Row as="section" className="shootGallery">
+      <Row as="section" className="sectionBox">
         <Col md={4} className="left">
         <picture className="img1">
           <source srcset={gallerySLeftW} alt="gallery shoots" type="image/webp"/>
@@ -209,13 +156,13 @@ const Editorial = () => {
         </picture>
         </Col>
         <Col md={4} className="description">
-        <Row ref={addToRefstext} className="header">
+        <Row  className="header">
         <Link to="/gallery/editorials/galleryShoots">
           <Col xs={12}>
-          <h3>12/2019</h3>
+          <h1>The Gallery</h1>
           </Col>
           <Col xs={12}>
-          <h1>The Gallery</h1>
+          <h3>12/2019</h3>
           </Col>
           </Link>
         </Row>
@@ -234,7 +181,7 @@ const Editorial = () => {
         </Col>
       </Row>
 
-      <Row as="section" className="makeupJerk">
+      <Row as="section" className="sectionBox">
         <Col md={4} className="left">
           <picture className="img1">
           <source srcset={makeupLeftW} alt="makeup shoots" type="image/webp"/>
@@ -243,13 +190,13 @@ const Editorial = () => {
         </picture>
         </Col>
         <Col md={4} className="description">
-        <Row ref={addToRefstext} className="header">
+        <Row  className="header">
         <Link to="/gallery/editorials/notadream">
           <Col xs={12}>
-          <h3>03/2020</h3>
+          <h1>Not A Dream</h1>
           </Col>
           <Col xs={12}>
-          <h1>Not A Dream</h1>
+          <h3>03/2020</h3>
           </Col>
           </Link>
         </Row>
@@ -268,7 +215,7 @@ const Editorial = () => {
         </Col>
       </Row>
 
-      <Row as='section' className="vintage">
+      <Row as='section' className="sectionBox">
         <Col md={4}className="left">
           <picture className="img1">
           <source srcset={VintageLeftW} alt="work wear vintage shoots" type="image/webp"/>
@@ -277,13 +224,13 @@ const Editorial = () => {
         </picture>
         </Col>
         <Col md={4} className="description">
-        <Row ref={addToRefstext} className="vintage-header">
+        <Row  className="vintage-header">
         <Link to="/gallery/editorials/work-wear-vintage">
           <Col xs={12}>
-           <h3>10/2019</h3>
+          <h1>Work<br/>wear Vintage</h1>
           </Col>
           <Col xs={12}>
-          <h1>Work<br/>wear Vintage</h1>
+           <h3>10/2019</h3>
           </Col>
         </Link>
         </Row>
@@ -302,7 +249,7 @@ const Editorial = () => {
         </Col>
       </Row>
 
-      <Row as="section" className="aline">
+      <Row as="section" className="sectionBox">
         <Col md={4}className="left">
           <picture className="img1">
           <source srcset={AlineLeftW} alt="Aline shoots" type="image/webp"/>
@@ -311,13 +258,13 @@ const Editorial = () => {
         </picture>
         </Col>
         <Col md={4} className="description">
-        <Row ref={addToRefstext} className="header">
+        <Row  className="header">
         <Link to="/gallery/editorials/aline">
           <Col xs={12}>
-          <h3>05/2019</h3>
+            <h1>Aline</h1>
           </Col>
           <Col xs={12}>
-          <h1>Aline</h1>
+            <h3>05/2019</h3>
           </Col>
           </Link>
         </Row>
@@ -336,7 +283,7 @@ const Editorial = () => {
         </Col>
       </Row>
 
-      <Row as="section" className="jerk">
+      <Row as="section" className="sectionBox">
         <Col md={4}className="left">
           <picture className="img1">
           <source srcset={JerkLeftW} alt="Jerk shoots" type="image/webp"/>
@@ -345,13 +292,13 @@ const Editorial = () => {
         </picture>
         </Col>
         <Col md={4} className="description">
-        <Row ref={addToRefstext} className="header">
+        <Row  className="header">
         <Link to="/gallery/editorials/jerk-fads">
           <Col xs={12}>
-          <h3>05/2019</h3>
+          <h1>JERK X FADS</h1>
           </Col>
           <Col xs={12}>
-          <h1>JERK X FADS</h1>
+          <h3>05/2019</h3>
           </Col>
           </Link>
         </Row>
@@ -370,7 +317,7 @@ const Editorial = () => {
         </Col>
       </Row>
 
-      <Row as='section' className="winter">
+      <Row as='section' className="sectionBox">
         <Col md={4}className="left">
           <picture className="img1">
           <source srcset={WinterLeftW} alt="Jerk shoots" type="image/webp"/>
@@ -380,13 +327,13 @@ const Editorial = () => {
         </Col>
         <Col md={4}>
         <Row className="description">
-        <Row ref={addToRefstext} className="header">
+        <Row  className="header">
           <Link to="/gallery/editorials/winter">
             <Col xs={12}>
-              <h3>12/2018</h3>
+              <h1>Winter</h1>
             </Col>
             <Col xs={12}>
-              <h1>Winter</h1>
+              <h3>12/2018</h3>
             </Col>
           </Link>
         </Row>

@@ -34,11 +34,10 @@ export default function HAboutus()  {
                 start: "top-=10% 90%" ,
                 end: "bottom bottom",
                 once: true,
-                toggleActions: "play none play none",
-                markers: true
+                toggleActions: "play none play none"
               }
             })
-            .to(overlayref.current, {duration: 1, width:'100%', ease: 'sine.in'}, "-=2");
+            .to(overlayref.current, {duration: 1, width:'100%', ease: 'sine.in'});
         },
         "(max-width: 430px)": () => {
           gsap.set(overlayref.current, {width: 0});

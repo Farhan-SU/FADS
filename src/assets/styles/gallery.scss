@@ -26,7 +26,6 @@
 /*****Gallery home****/
 
 .wrapper {
-  background-color: black;
   height: 110vh;
   width: 101.2vw;
 
@@ -72,9 +71,8 @@
 }
 
 .editorial{
-  background: url('../images/surya.webp') no-repeat 70% 40%;
+  background: url('../images/surya.webp') no-repeat 70% 40%/cover;
   height: 110vh;
-  background-size: cover;
 
   @include media ("screen", "<=phone") {
     height: 100%;
@@ -83,9 +81,8 @@
 }
 
 .shows {
-  background: linear-gradient( rgba(31, 31, 31, 0.3), rgba(0, 0, 0, 0.5) ), url('../images/fadsshow.webp') no-repeat 50% 38%;
+  background: url('../images/fadsshow.webp') no-repeat 50% 38%/ 200%;
   height: 110vh;
-  background-size: 200%;
 
    @include media ("screen", "<=phone") {
     height: 100%;
@@ -102,7 +99,7 @@
   width: 100vw;
   overflow-x: hidden;
   padding-bottom: 4rem;
-  padding-top: 10rem;
+  padding-top: 8rem;
   background: lighten($lightergraypurple, 8%);
 
   .left, .right, .sleft, .sright{
@@ -128,20 +125,34 @@
     height: 499px;
     width: 100%;
     background: url('../images/gallery-circle.svg') no-repeat center center/ 90%;
-    margin-top: 1rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     text-align: center;
+
+    .header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      position: relative;
+      border-radius: 50%;
+      height: 380px;
+      width: 370px;
+      overflow: hidden;
+
+      .bigTxtEd{
+        font-size: 2.7rem;
+      }
+    }
   
     h1{
-      color: $text;
+      color: $purple;
       font-size: 3.3rem;
       letter-spacing: 0.2rem;
       width: 100%;
-      mix-blend-mode: darken;
 
       &:hover{
           transition: all 400ms ease-in-out;
@@ -152,51 +163,34 @@
 
     h3{
       font-weight: 400;
-      font-size: 1.7rem;
+      font-size: 2rem;
+      position: relative;
+      top: -0.8rem;
     }
     .tmrLg{
-      left: 0.8rem;
+      h1{
+        font-size: 2.7rem;
+      }
     }
     .svg-line{
       position: absolute;
       left: 50%;
-      top: 93%
+      top: 94%
     }
-    .header{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      position: relative;
-      top: 5%;
-      border-radius: 50%;
-      height: 380px;
-      width: 370px;
-      overflow: hidden;
-
-      .bigTxtEd{
-        font-size: 2.7rem;
+  }
+    .sectionBox {
+      @extend %gallerycontent;
+      .exception-img2{
+        position: relative;
+        top: 9rem;
+      }
+      .notdream,.sweet{
+        img{
+          width: 85%;
+          margin-left: -6px;
+        }
       }
     }
-  }
-  
-  section {
-    @extend %gallerycontent;
-
-    .biggerImg2{
-      width: 82%;
-    }
-  }
-  .exception-img2{
-      position: relative;
-      top: 10rem;
-  }
-  .makeupJerk, .sweet{
-    img{
-      width: 85%;
-      margin-left: -6px;
-    }
-  }
 }
 
 

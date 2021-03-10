@@ -1,15 +1,7 @@
 .wrapabtjoin {
   height: 100%;
   width: 100vw;
-  overflow-x: hidden;
-  padding: 0 5rem; }
-
-.wrapabtjoin p {
-  color: #1a2632;
-  font-size: 1.9rem;
-  font-weight: 500;
-  white-space: normal;
-  line-height: 2.7rem; }
+  overflow-x: hidden; }
 
 .wrapabtjoin h4 {
   font-size: 10rem;
@@ -19,97 +11,122 @@
 .wrapabtjoin h1 {
   font-size: 12rem;
   text-transform: uppercase;
-  color: #61526d; }
+  color: #d9cedf;
+  margin: 0 auto; }
 
-.wrapabtjoin .firstsec {
-  height: 100%; }
+.wrapabtjoin .abtheader {
+  padding: 0 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: url("../images/bGourstor.png") no-repeat top center/cover; }
 
-.wrapabtjoin .firstsec h1 {
+.wrapabtjoin .abtheader h1 {
   position: relative;
-  font-size: 12rem;
-  text-transform: uppercase;
-  color: #61526d;
-  width: 80%;
-  padding-top: 4rem; }
+  top: 2.5rem; }
 
 @media screen and (max-width: 430px) {
-  .wrapabtjoin .firstsec h1 {
+  .wrapabtjoin .abtheader h1 {
     font-size: 5rem;
     left: 1.8rem; } }
 
-.wrapabtjoin .firstsec .topright {
+.wrapabtjoin .abtdes {
+  overflow: hidden;
+  height: 100%;
   position: relative;
-  height: 100%; }
+  padding: 18.5rem  3rem;
+  background: #d9cedf url("../images/abtdesimg.png") no-repeat left center/cover;
+  background-blend-mode: luminosity; }
 
-@media screen and (max-width: 430px) {
-  .wrapabtjoin .firstsec .topright {
-    width: 70%;
-    padding: 1rem; } }
+.wrapabtjoin .abtdes .destext {
+  width: 32vw;
+  position: relative;
+  left: 10%; }
+
+.wrapabtjoin .abtdes .destext p {
+  color: #f9f5ff;
+  font-size: 1.25rem; }
 
 .wrapabtjoin .joinHeader {
-  position: relative; }
+  padding: 8rem 5rem;
+  height: 100vh;
+  background: url("../images/bGourstor.png") no-repeat top center/cover; }
 
-.wrapabtjoin .joinHeader h1 {
-  position: relative; }
+.wrapabtjoin .joinHeader p {
+  width: 90%;
+  font-size: 1.7rem;
+  color: #d9cedf; }
 
-.wrapabtjoin .joinusText {
-  margin-top: 1rem;
-  position: relative; }
+.wrapabtjoin .comitWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start; }
 
-.wrapabtjoin .joinusText p {
-  position: relative;
-  line-height: 3rem; }
-
-.wrapabtjoin .exmember {
-  text-align: right;
-  height: 100%; }
-
-.wrapabtjoin .exmember h4 {
-  color: #231242;
+.wrapabtjoin .comitWrap h2 {
+  font-size: 4.3rem;
   margin-bottom: 0.5rem;
-  opacity: 0.9; }
+  color: #f9dcb0;
+  mix-blend-mode: luminosity; }
 
-.wrapabtjoin .exmember p {
-  float: right;
-  letter-spacing: 3px; }
-
-.wrapabtjoin .designers {
-  margin-bottom: 2rem; }
-
-.wrapabtjoin .designers h4 {
-  color: #f5915e;
+.wrapabtjoin .comitWrap p {
   position: relative;
-  left: 0.5rem;
-  opacity: 0.7; }
+  z-index: 2;
+  font-size: 1.5rem;
+  color: #f9f5ff;
+  mix-blend-mode: hard-light; }
 
-.wrapabtjoin .designers p {
-  width: 75%;
+.wrapabtjoin .comitWrap .comitBox {
   position: relative;
-  left: 1rem; }
+  height: 750px;
+  padding: 2rem;
+  overflow: hidden; }
 
-.wrapabtjoin .models {
-  float: right;
-  text-align: right;
-  margin: 2rem 0; }
+.wrapabtjoin .comitWrap .comitBox .figurecom {
+  position: absolute;
+  margin-top: 5rem;
+  bottom: 0;
+  right: 4rem;
+  z-index: 1;
+  height: 70%;
+  mix-blend-mode: luminosity; }
 
-.wrapabtjoin .models h4 {
-  color: #5A95B4; }
+.wrapabtjoin .comitWrap .comitBox .figurecom img {
+  height: 100%;
+  object-fit: scale-down; }
 
-.wrapabtjoin .models p {
-  float: right;
-  width: 58%;
-  position: relative; }
+.wrapabtjoin .comitWrap .comitBox:nth-of-type(1) {
+  /*background-color: rgb(71, 55, 73);*/
+  background-color: #2E2031; }
 
-.wrapabtjoin .committee {
-  margin-top: 3rem; }
+.wrapabtjoin .comitWrap .comitBox:nth-of-type(2) {
+  /*background-color: #7e6771;*/
+  background-color: #7a636d; }
 
-.wrapabtjoin .committee h4 {
-  color: #DEB69F; }
+.wrapabtjoin .comitWrap .comitBox:nth-of-type(3) {
+  background-color: #5d4e69;
+  /*background-color: saturate($darkpurple, 1%);*/ }
 
-.wrapabtjoin .committee p {
-  width: 68%;
-  position: relative;
-  left: 1rem; }
+.wrapabtjoin .comitWrap .comitBox:nth-of-type(4) {
+  background-color: #343042;
+  /*background-color: #656580;*/ }
+
+.wrapabtjoin .comitWrap .exec, .wrapabtjoin .comitWrap .models {
+  padding: 2.5rem; }
+
+.wrapabtjoin .comitWrap .exec p, .wrapabtjoin .comitWrap .models p {
+  padding-right: 4.8rem; }
+
+.wrapabtjoin .comitWrap .design, .wrapabtjoin .comitWrap .members {
+  padding: 2.5rem;
+  text-align: right; }
+
+.wrapabtjoin .comitWrap .design p, .wrapabtjoin .comitWrap .members p {
+  padding-left: 4rem; }
 
 .wrapabtjoinSM {
   width: 100vw;
@@ -118,8 +135,7 @@
 
 .wrapabtjoinSM .bgMobile {
   position: absolute;
-  top: 0;
-  left: 0;
+  transform: translate(0, 0);
   z-index: -1; }
 
 .wrapabtjoinSM .bgMobile .aboutSMimg {

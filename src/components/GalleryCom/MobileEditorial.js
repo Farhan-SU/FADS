@@ -109,10 +109,10 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/editorials/sweet">
           <Col>
-          <h3>10/2020</h3>
+          <h1>Sweet Escape</h1>
           </Col>
           <Col>
-          <h1>Sweet Escape</h1>
+          <h3>10/2020</h3>
           </Col>
           </Link>
         </Row>
@@ -142,10 +142,10 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/editorials/notadream">
           <Col>
-          <h3>03/2020</h3>
+          <h1>Not A Dream</h1>
           </Col>
           <Col>
-          <h1>Not A Dream</h1>
+          <h3>03/2020</h3>
           </Col>
           </Link>
         </Row>
@@ -175,10 +175,10 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/editorials/galleryShoots">
           <Col>
-          <h3>12/2019</h3>
+          <h1>The Gallery</h1>
           </Col>
           <Col>
-          <h1>The Gallery</h1>
+          <h3>12/2019</h3>
           </Col>
           </Link>
         </Row>
@@ -208,10 +208,10 @@ const MobileEditorial = () => {
         <Row noGutters={true} className="titleHeader">
             <Link to="/gallery/editorials/work-wear-vintage">
             <Col>
-            <h3>10/2019</h3>
+            <h1>Work<br/>wear Vintage</h1>
             </Col>
             <Col>
-            <h1>Work<br/>wear Vintage</h1>
+            <h3>10/2019</h3>
             </Col>
             </Link>
             </Row>
@@ -241,10 +241,10 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/editorials/aline">
           <Col>
-          <h3>05/2019</h3>
+          <h1>Aline</h1>
           </Col>
           <Col>
-          <h1>Aline</h1>
+          <h3>05/2019</h3>
           </Col>
           </Link>
         </Row>
@@ -274,10 +274,10 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/editorials/jerk-fads">
           <Col>
-          <h3>05/2019</h3>
+          <h1>Jerk <br/>X FADS</h1>
           </Col>
           <Col>
-          <h1>Jerk <br/>X FADS</h1>
+          <h3>05/2019</h3>
           </Col>
           </Link>
         </Row>
@@ -306,10 +306,10 @@ const MobileEditorial = () => {
         <Row noGutters={true} className="titleHeader">
             <Link to="/gallery/editorials/winter">
             <Col>
-            <h3>12/2018</h3>
+            <h1>Winter</h1>
             </Col>
             <Col>
-            <h1>Winter</h1>
+            <h3>12/2018</h3>
             </Col>
             </Link>
             </Row>

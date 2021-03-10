@@ -3,7 +3,7 @@ import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
 import Prev from '../../assets/images/prev.png';
@@ -108,7 +108,7 @@ function TheGallery () {
              <h2>Gallery</h2>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery1w}
                             fallback={Gallery1}
                             alt="Gallery editorial shoots"
@@ -118,7 +118,7 @@ function TheGallery () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery2w}
                             fallback={Gallery2}
                             alt="Gallery editorial shoots"
@@ -128,7 +128,7 @@ function TheGallery () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery3w}
                             fallback={Gallery3}
                             alt="Gallery editorial shoots"
@@ -138,7 +138,7 @@ function TheGallery () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery4w}
                             fallback={Gallery4}
                             alt="Gallery editorial shoots"
@@ -148,7 +148,7 @@ function TheGallery () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery5w}
                             fallback={Gallery5}
                             alt="Gallery editorial shoots"
@@ -158,7 +158,7 @@ function TheGallery () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery6w}
                             fallback={Gallery6}
                             alt="Gallery editorial shoots"
@@ -168,7 +168,7 @@ function TheGallery () {
                 </div>
                 <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Gallery7w}
                             fallback={Gallery7}
                             alt="Gallery editorial shoots"
@@ -178,7 +178,7 @@ function TheGallery () {
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery8w}
                             fallback={Gallery8}
                             alt="Gallery editorial shoots"
@@ -188,7 +188,7 @@ function TheGallery () {
                 </div>
                 <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Gallery9w}
                             fallback={Gallery9}
                             alt="Gallery editorial shoots"
@@ -198,7 +198,7 @@ function TheGallery () {
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Gallery10w}
                             fallback={Gallery10}
                             alt="Gallery editorial shoots"

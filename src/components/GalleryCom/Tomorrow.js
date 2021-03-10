@@ -3,7 +3,7 @@ import {Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import Reliveit from '../../assets/images/reliveit.png';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
@@ -101,7 +101,7 @@ function Tomorrow () {
              <h2>Tomorrow</h2>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Tmmrw1w}
                             fallback={Tmmrw1}
                             alt="Tommorrow Land Show"
@@ -112,7 +112,7 @@ function Tomorrow () {
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Tmmrw2w}
                             fallback={Tmmrw2}
                             alt="Tommorrow Land Show"
@@ -123,7 +123,7 @@ function Tomorrow () {
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Tmmrw3w}
                             fallback={Tmmrw3}
                             alt="Tommorrow Land Show"
@@ -134,7 +134,7 @@ function Tomorrow () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Tmmrw4w}
                             fallback={Tmmrw4}
                             alt="Tommorrow Land Show"
@@ -145,7 +145,7 @@ function Tomorrow () {
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Tmmrw5w}
                             fallback={Tmmrw5}
                             alt="Tommorrow Land Show"
@@ -156,7 +156,7 @@ function Tomorrow () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Tmmrw6w}
                             fallback={Tmmrw6}
                             alt="Tommorrow Land Show"

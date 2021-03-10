@@ -5,8 +5,6 @@ import '../assets/styles/layout.scss';
 import MobileNav from './MobileNav';
 import FooterSM from './FooterSM';
 import { useMediaQuery } from 'react-responsive';
-import PropTypes from 'prop-types';
-import Reveal from './Reveal';
 
 function Layout(props) {
    const isMobile = useMediaQuery({ maxWidth: 495});
@@ -26,7 +24,7 @@ function Layout(props) {
    <>
       <footer>
         <FooterSM/>
-        </footer></>
+      </footer></>
       </>
    );
  };

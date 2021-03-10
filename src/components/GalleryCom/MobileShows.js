@@ -28,7 +28,6 @@ if (typeof window !== `undefined`) {
 
 const MobileShow = () => {
     const history = useHistory();
-
     const showtl = useRef();
     const circleRef = useRef();
     circleRef.current = [];
@@ -92,10 +91,10 @@ const MobileShow = () => {
       <Row noGutters={true} className="titleHeader">
          <Link to="/gallery/shows/thegallery"  onClick={() => history.push("/gallery/shows/thegallery")}>  
           <Col>
-          <h3>Spring 2019</h3>
+          <h1>The Gallery</h1>
           </Col>
           <Col>
-          <h1>The Gallery</h1>
+          <h3>Spring 2019</h3>
           </Col>
           </Link>
         </Row>
@@ -125,10 +124,10 @@ const MobileShow = () => {
         <Row noGutters={true} className="titleHeader">
         <Link to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
             <Col>
-            <h3>Spring 2019</h3>
+            <h1>Night Circus</h1>
             </Col>
             <Col>
-            <h1>Night Circus</h1>
+            <h3>Spring 2019</h3>
             </Col>
             </Link>
             </Row>
@@ -158,10 +157,10 @@ const MobileShow = () => {
       <Row noGutters={true} className="titleHeader">
       <Link to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
           <Col>
-          <h3>Spring 2018</h3>
+          <h1>Tomorrow <br/> Land</h1>
           </Col>
           <Col>
-          <h1>Tomorrow <br/> Land</h1>
+          <h3>Spring 2018</h3>
           </Col>
           </Link>
         </Row>

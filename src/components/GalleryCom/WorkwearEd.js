@@ -3,7 +3,7 @@ import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
@@ -106,7 +106,7 @@ function JerkEd () {
              <h2 className="wwv">WORK WEAR VINTAGE</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Vintage1w}
                             fallback={Vintage1}
                             alt="Work Wear Vintage Shoot"
@@ -116,7 +116,7 @@ function JerkEd () {
                     </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage2w}
                             fallback={Vintage2}
                             alt="Work Wear Vintage Shoot"
@@ -126,7 +126,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage3w}
                             fallback={Vintage3}
                             alt="Work Wear Vintage Shoot"
@@ -136,7 +136,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage4w}
                             fallback={Vintage4}
                             alt="Work Wear Vintage Shoot"
@@ -146,7 +146,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage5w}
                             fallback={Vintage5}
                             alt="Work Wear Vintage Shoot"
@@ -156,7 +156,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage6w}
                             fallback={Vintage6}
                             alt="Work Wear Vintage Shoot"
@@ -166,7 +166,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage7w}
                             fallback={Vintage7}
                             alt="Work Wear Vintage Shoot"
@@ -176,7 +176,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage8w}
                             fallback={Vintage8}
                             alt="Work Wear Vintage Shoot"
@@ -186,7 +186,7 @@ function JerkEd () {
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Vintage9w}
                             fallback={Vintage9}
                             alt="Work Wear Vintage Shoot"
@@ -202,7 +202,7 @@ function JerkEd () {
                 <h1 className="winterh1">Winter</h1>
             </Col>
              <Col lg={12} className="endseccontent">
-                <WebpG
+                <ImgWebp
                     src={EndEsecW}
                     fallback={EndEsec}
                     alt="FADS Logo"

@@ -27,8 +27,9 @@
     height: 100%;
     padding-top: 6rem;
     padding-bottom: 8rem;
-    background: $graypurple url('../images/eboardbgl.svg') no-repeat right center/ cover;
+    background: $graypurple;
     background-blend-mode: multiply;
+    /*background: $graypurple url('../images/eboardbgl.svg') no-repeat right center/ cover;*/
  
     @include media ("screen", "<=phone") {
         background: $graypurple url('../images/eboardbgsm1.svg') no-repeat left center/ cover;
@@ -60,17 +61,15 @@
         margin: -3rem 2rem 0 2rem;
         text-align: center;
         flex-wrap: wrap;
+        
+        a{
+            cursor: none;
+        }
 
         @include media ("screen", "<=phone") {
             margin: 2rem 0;
         }
        
-        &:hover > .member-intro {
-            filter: grayscale(80%);
-          }
-        &:hover > .member-intro:hover {
-            filter: none;
-          }
         .member-intro{
             display: flex;
             flex-direction: column;
@@ -78,23 +77,24 @@
             height: 600px;
             padding: 1.2rem;
             margin: 2rem 0;
-            transition: filter 300ms ease-in-out;
 
             @include media ("screen", "<=phone") {
                 width: 100%;
                 transition: none;
                 margin: 2rem 0 1rem 0;
-                /*background: $graypurple url('../images/eboardbgsm.svg') no-repeat right center/ cover;
-                background-blend-mode: multiply;*/
             }
-
             img{
                 height: 420px;
                 border-radius: 5px;
                 max-width: 80%;
                 max-height: 80%;
+                opacity: 0.8;
+                margin: 0 auto 2rem auto;
+                transition: all 400ms ease-in-out;
+  
             }
         }
+        
         h2{
             letter-spacing: 0.2rem;
             color: $heading;        
@@ -103,9 +103,6 @@
             line-height: 2.3rem;
             margin-top: 0.5rem;
             color: $darkpurple;
-        }
-        img{
-         margin: 0 auto 2rem auto;
         }
     }
 }

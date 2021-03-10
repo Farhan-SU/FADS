@@ -7,9 +7,9 @@ import { useQuery } from '@apollo/react-hooks';
 import LoadingScreen from '../../components/LoadingScreen';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Reveal from '../../components/Reveal';
 
-gsap.registerPlugin(ScrollTrigger);
+
+
 
 const MEMBERS = gql`
 query{
@@ -37,22 +37,9 @@ export default function Eboard() {
     }
 }, [loading, data])
 
-
-  if (error) {
-    return <><div className="error-bio"><h1>{error.message}</h1></div></>;
-  }
-  if (loading) {
-    return (
-      <div className="loading">
-        <LoadingScreen/>
-      </div>
-    )
-  }
+if (loading) return <LoadingScreen/>;
+if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
   if (data) {
-
-    /*const name = data.members.filter((memberName) => data.members === memberName);
-    console.log(name);*/
-
       return (
         <SEO
         pageMeta={{
@@ -61,7 +48,7 @@ export default function Eboard() {
         description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
       }}>
       <div className="eboardwrapper">
-      <Reveal wrapperElement="h1" direction="up">E-Board</Reveal>
+      <h1>E-Board</h1>
         <div className="members">
           {data.members.map(member => (
             <div key={member.id} className="member-intro">

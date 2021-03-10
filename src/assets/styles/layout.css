@@ -36,9 +36,9 @@ html, body {
 
 #f4nav {
   position: relative;
-  left: -1.5rem; }
+  left: -1.2rem; }
 
-/****/
+/**Loading Com**/
 .bgLoading {
   background: #dfdcee url("../images/loading1.gif") no-repeat center center/contain;
   background-blend-mode: multiply;
@@ -55,25 +55,6 @@ html, body {
     color: #666e9c;
     margin-top: 4rem;
     mix-blend-mode: multiply; }
-
-/***Spinner***/
-.svgLoader {
-  animation: spin 0.5s linear infinite;
-  margin: auto; }
-
-.divLoader {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999; }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
 
 /*************FOOTER**********************/
 /*************FOOTER**********************/
@@ -183,9 +164,3 @@ html, body {
         .second-sm .contact a {
           font-size: 1rem;
           letter-spacing: 0.1rem; } }
-
-.spinner {
-  height: 400%;
-  position: relative;
-  top: 40%;
-  left: 40%; }

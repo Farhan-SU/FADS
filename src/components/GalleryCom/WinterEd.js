@@ -3,7 +3,7 @@ import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import Reliveit from '../../assets/images/reliveit.png';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
@@ -102,7 +102,7 @@ function WinterEd () {
              <h2>Winter</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Winter1w}
                             fallback={Winter1}
                             alt="Winter editorial shoot"
@@ -112,7 +112,7 @@ function WinterEd () {
                     </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Winter2w}
                             fallback={Winter2}
                             alt="Winter editorial shoot"
@@ -122,7 +122,7 @@ function WinterEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Winter3w}
                             fallback={Winter3}
                             alt="Winter editorial shoot"
@@ -132,7 +132,7 @@ function WinterEd () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Winter4w}
                             fallback={Winter4}
                             alt="Winter editorial shoot"
@@ -142,7 +142,7 @@ function WinterEd () {
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Winter5w}
                             fallback={Winter5}
                             alt="FADS Logo"

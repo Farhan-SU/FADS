@@ -5,7 +5,7 @@ import { Col, Row } from 'react-bootstrap';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
-import WebpG from '../ImgWebp';
+import ImgWebp from '../ImgWebp';
 import EndEsec from '../../assets/images/endE.png';
 import EndEsecW from '../../assets/images/endE.webp';
 import Sweet1w from '../../assets/images/sweetEscape/aanya2.webp';
@@ -102,7 +102,7 @@ function SweetEscape () {
              <h2 className="biggerport">ESCAPE</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <WebpG
+                        <ImgWebp
                             src={Sweet1w}
                             fallback={Sweet1}
                             alt="The Sweet Escape editorial shoots"
@@ -112,7 +112,7 @@ function SweetEscape () {
                     </div>
                     <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Sweet2w}
                             fallback={Sweet2}
                             alt="The Sweet Escape editorial shoots"
@@ -122,7 +122,7 @@ function SweetEscape () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Sweet3w}
                             fallback={Sweet3}
                             alt="The Sweet Escape editorial shoots"
@@ -132,7 +132,7 @@ function SweetEscape () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Sweet4w}
                             fallback={Sweet4}
                             alt="The Sweet Escape editorial shoots"
@@ -142,7 +142,7 @@ function SweetEscape () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Sweet5w}
                             fallback={Sweet5}
                             alt="The Sweet Escape editorial shoots"
@@ -152,7 +152,7 @@ function SweetEscape () {
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <WebpG
+                    <ImgWebp
                             src={Sweet6w}
                             fallback={Sweet6}
                             alt="The Sweet Escape editorial shoots"
@@ -168,7 +168,7 @@ function SweetEscape () {
                 <h1>Not a</h1><h2 className="ontopD"> Dream</h2>
             </Col>
             <Col lg={12} className="endseccontent">
-                <WebpG
+                <ImgWebp
                     src={EndEsecW}
                     fallback={EndEsec}
                     alt="FADS Logo"
@@ -176,7 +176,7 @@ function SweetEscape () {
             </Col>
         </Row>
             <Col xs={12} lg={12} className="Endnext">
-            <Link className="link" to="/gallery/editorials/makeupJ">
+            <Link className="link" to="/gallery/editorials/galleryShoots">
             <span className="link__arrow">
                 <span></span>
                 <span></span>

@@ -6,6 +6,7 @@ import './App.scss';
 import './assets/styles/layout.scss';
 import AnimatedCursor from "react-animated-cursor";
 import { useMediaQuery } from 'react-responsive';
+import eboard from './pages/agency/eboard';
 
 
 const homepg = lazy(() => import("./pages/homepg"));
@@ -35,14 +36,13 @@ const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
 /*Agency Routes*/
 const agency = lazy(() => import(/* webpackPrefetch: true */ './pages/agency'));
 
-const eboard = lazy(() => {
+/*const eboard = lazy(() => {
   return Promise.all([
     import("./pages/agency/eboard"),
     new Promise(resolve => setTimeout(resolve, 600))
   ])
   .then(([moduleExports]) => moduleExports);
-});
-
+});*/
 
 /*const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
 const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
