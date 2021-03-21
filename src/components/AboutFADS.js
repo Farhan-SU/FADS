@@ -24,9 +24,14 @@ export default function AboutTest () {
         description: "We are Fashion and Design Society. We are also a Fashion Agency offering students a space to pursue fashion related interests outside of their major."
         }}>
         <div className="wrapabtjoin">
-            <div className="abtheader">
-                <Reveal wrapperElement="h1" direction="up">Our Story</Reveal>
-            </div>
+            <Row className="abtheader">
+                <Col lg={12}>
+                <Reveal wrapperElement="h2" direction="up">A fashion collective</Reveal>
+                </Col>
+                <Col lg={12}>
+                <Reveal wrapperElement="h2" direction="up" delay={0.8}>and creative network agency</Reveal>
+                </Col>
+            </Row>
             <div className="abtdes">
                 <div className="destext">
                  <p>

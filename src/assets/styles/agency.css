@@ -1,107 +1,106 @@
 .agency-home {
-  background: #ece7ef url("../images/agencyBgT2.gif") no-repeat 60px/cover;
+  background: #ece7ef url("../images/agencyBgT2.gif") no-repeat left -570px/160%;
   height: 100%;
   width: 100vw;
   overflow: hidden;
   padding-bottom: 5rem; }
-  @media screen and (max-width: 430px) {
-    .agency-home {
-      background-position: bottom center;
-      background-size: 300%; } }
+
+@media screen and (max-width: 430px) {
+  .agency-home {
+    background-position: bottom center;
+    background-size: 300%; } }
 
 .intro-a {
-  height: 100vh;
-  color: #1a2632;
-  margin-top: 6rem;
-  margin-bottom: 4rem; }
-  @media screen and (max-width: 430px) {
-    .intro-a {
-      width: 100vw;
-      height: 100%;
-      margin-top: 8.5rem;
-      margin-bottom: 3rem; } }
+  height: 100%;
+  padding-top: 12.4rem;
+  padding-bottom: 6rem; }
+
+@media screen and (max-width: 430px) {
+  .intro-a {
+    width: 100vw;
+    height: 100%;
+    margin-top: 8.5rem;
+    margin-bottom: 3rem; } }
+
+.intro-a .experts {
+  padding-left: 5rem;
+  position: relative;
+  word-break: break-word;
+  width: 100%; }
+
+@media screen and (max-width: 430px) {
   .intro-a .experts {
-    position: relative;
-    top: 8rem;
-    left: 6rem;
-    word-break: break-word;
-    width: 90%; }
-    @media screen and (max-width: 430px) {
-      .intro-a .experts {
-        width: 100vw;
-        top: 2rem;
-        left: 0.2rem;
-        padding-left: 1.7rem;
-        margin-bottom: 2rem; } }
-    .intro-a .experts h1 {
-      font-size: 8rem;
-      padding-right: 3.3rem;
-      text-transform: uppercase;
-      letter-spacing: 15px;
-      line-height: 7rem;
-      mix-blend-mode: hard-light; }
-      @media screen and (max-width: 430px) {
-        .intro-a .experts h1 {
-          font-size: 10.8vw;
-          letter-spacing: 2px;
-          line-height: 3rem; } }
-    .intro-a .experts h3 {
-      width: 54%;
-      margin-top: 0.5rem;
-      line-height: 2.3rem;
-      font-size: 1.5rem; }
-      @media screen and (max-width: 430px) {
-        .intro-a .experts h3 {
-          width: 90vw;
-          padding-right: 2rem;
-          font-size: 1rem; } }
+    width: 100vw;
+    top: 2rem;
+    left: 0.2rem;
+    padding-left: 1.7rem;
+    margin-bottom: 2rem; } }
+
+.intro-a .experts h1 {
+  margin: 0;
+  color: #4a3e53;
+  font-size: 10.5vw;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 10px; }
+
+@media screen and (max-width: 430px) {
+  .intro-a .experts h1 {
+    font-size: 10.8vw;
+    letter-spacing: 2px;
+    line-height: 3rem; } }
 
 .agency {
   height: 100%;
   position: relative;
-  top: -1rem;
   width: 99vw;
   padding: auto 2rem;
-  margin-bottom: 2rem;
   justify-content: center;
   align-items: center;
   align-content: space-around;
   overflow: hidden;
   cursor: none; }
-  @media screen and (max-width: 430px) {
-    .agency {
-      width: 100vw;
-      padding: auto 1rem;
-      margin-left: 0.2rem;
-      margin-top: 6rem; } }
+
+@media screen and (max-width: 430px) {
+  .agency {
+    width: 100vw;
+    padding: auto 1rem;
+    margin-left: 0.2rem;
+    margin-top: 6rem; } }
+
+.agency .box {
+  height: 200px;
+  width: 305px;
+  margin: 1.5rem 2.3rem;
+  text-align: center;
+  background-color: #7a6982;
+  border-radius: 5px;
+  align-self: center; }
+
+@media screen and (max-width: 430px) {
   .agency .box {
-    height: 190px;
-    width: 290px;
-    margin: 1.5rem 2.3rem;
-    text-align: center;
-    background-color: #61526d;
-    border-radius: 5px;
-    align-self: center; }
-    @media screen and (max-width: 430px) {
-      .agency .box {
-        margin: 1rem 2.3rem 2rem 2.3rem;
-        height: 200px;
-        width: 320px;
-        padding: 0 1rem;
-        background-color: #61526dda; } }
-    @media screen and (max-width: 430px) {
-      .agency .box a {
-        position: relative;
-        z-index: 300; } }
-    .agency .box:hover {
-      background-color: #42384a;
-      transition: all 500ms ease-in-out; }
-    .agency .box h3 {
-      color: #fdf3e4;
-      font-size: 1.5rem;
-      font-weight: 400;
-      position: relative;
-      top: 5rem; }
-    .agency .box .bigTxt {
-      position: relative;
-      top: 4.5rem; }
+    margin: 1rem 2.3rem 2rem 2.3rem;
+    height: 200px;
+    width: 320px;
+    padding: 0 1rem;
+    background-color: #61526dda; } }
+
+@media screen and (max-width: 430px) {
+  .agency .box a {
+    position: relative;
+    z-index: 300; } }
+
+.agency .box:hover {
+  background-color: #473c50;
+  transition: all 500ms ease-in-out; }
+
+.agency .box h3 {
+  color: #fdf3e4;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  top: 5rem; }
+
+.agency .box .bigTxt {
+  position: relative;
+  top: 4.5rem; }

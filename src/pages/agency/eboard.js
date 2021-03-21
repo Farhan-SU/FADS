@@ -56,7 +56,7 @@ if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
                <img src={member.agencyImg.url} alt={member.memberName} className="memImg"/>
                <Link to={`/agency/bio/${member.slug}`} className="memberDes">
               <h2>{member.memberName}</h2>
-              <h4><em>{member.memberPosition}</em></h4>
+              <h4>{member.memberPosition}</h4>
               </Link>
             </div>
           ))}

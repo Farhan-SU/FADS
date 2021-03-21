@@ -25,11 +25,8 @@ function Agency() {
     <div className="agency-home">
       <div className="intro-a">
         <div className="experts">
-        <Reveal wrapperElement='h1' direction="up">Our Expertise</Reveal>
-        <h3>We are more than just, we are also a fashion and digital creative agency. 
-          We have some of the most talented individuals on our team. From designers, 
-          photographers, models, to set designers, makeup artists, and more. Meet the members of each of our team and get to 
-          know them and their work.</h3>
+        <Reveal wrapperElement='h1' direction="up">Our</Reveal>
+        <Reveal wrapperElement='h1' direction="up" delay={0.7}>Expertise</Reveal>
         </div>
       </div>
       <Row className='agency'> 
@@ -40,7 +37,7 @@ function Agency() {
           <h3>Models</h3>
         </Col></Link>
         <Link to="./agency/fashionDesigners"><Col  className="box">
-         <h3 className="bigTxt">Fashion Designers</h3>
+         <h3>Fashion Designers</h3>
         </Col></Link>
         <Link to="./agency/graphicDesigners"><Col className="box">
          <h3 className="bigTxt">Graphic Designers</h3>

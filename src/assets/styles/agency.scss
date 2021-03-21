@@ -2,7 +2,7 @@
 @import 'breakpoints'; 
 
 .agency-home{
-    background: lighten($lightergraypurple, 8%) url('../images/agencyBgT2.gif') no-repeat 60px/ cover;
+    background: lighten($lightergraypurple, 8%) url('../images/agencyBgT2.gif') no-repeat left -570px/ 160%;
     height: 100%;
     width: 100vw;
     overflow: hidden;
@@ -14,10 +14,10 @@
 }
 
 .intro-a{
-    height: 100vh;
-    color: $text;
-    margin-top: 6rem;
-    margin-bottom: 4rem;
+    height: 100%;
+    padding-top: 12.4rem;
+    padding-bottom: 6rem;
+  
     @include media ("screen", "<=phone") {
         width: 100vw;
         height: 100%;
@@ -26,11 +26,10 @@
     }
 
    .experts{
+    padding-left: 5rem;
     position: relative;
-    top: 8rem;
-    left: 6rem;
     word-break: break-word;
-    width: 90%;
+    width: 100%;
 
     @include media ("screen", "<=phone") {
         width: 100vw;
@@ -41,38 +40,26 @@
     }
 
     h1{
-        font-size: 8rem;
-        padding-right: 3.3rem;
+        margin: 0;
+        color: darken($darkpurple, 9%);
+        font-size: 10.5vw;
+        overflow: hidden;
         text-transform: uppercase;
-        letter-spacing: 15px;
-        line-height: 7rem;
-        mix-blend-mode: hard-light;
+        letter-spacing: 10px;
+  
         @include media ("screen", "<=phone") {
             font-size: 10.8vw;
             letter-spacing: 2px;
             line-height: 3rem;
         }
     }
-    h3{
-      width: 54%;
-      margin-top: 0.5rem;
-      line-height: 2.3rem;
-      font-size: 1.5rem;
-      @include media ("screen", "<=phone") {
-        width: 90vw;
-        padding-right: 2rem;
-        font-size: 1rem;
-    }
-    }
    }
 }
 .agency{
     height: 100%;
     position: relative;
-    top: -1rem;
     width: 99vw;
     padding: auto 2rem;
-    margin-bottom: 2rem;
     justify-content: center;
     align-items: center;
     align-content: space-around;
@@ -87,11 +74,11 @@
     }
 
     .box{
-        height: 190px;
-        width: 290px;
+        height: 200px;
+        width: 305px;
         margin: 1.5rem 2.3rem;
         text-align: center;
-        background-color: $darkpurple;
+        background-color: darken($graypurple, 20%);
         border-radius: 5px;
         align-self: center;
 
@@ -109,7 +96,7 @@
             } 
         }
         &:hover{
-            background-color: darken($darkpurple, $amount: 12%);
+            background-color: darken($darkpurple, $amount: 10%);
             transition: all 500ms ease-in-out;
         }
        

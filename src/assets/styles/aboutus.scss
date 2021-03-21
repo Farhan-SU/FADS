@@ -18,18 +18,20 @@
         margin: 0 auto;
     }
     .abtheader{
-        padding: 0 4.5rem;
+        padding: 0 0 0 4.5rem;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         align-content: center;
         height: 100vh;
         overflow: hidden;
         background: url('../images/bGourstor.png') no-repeat top center/cover;
 
-        h1{
+        h2{
+            text-transform: uppercase;
+            font-size: 5rem;
+            color: $background;
             position: relative;
-            top: 2.5rem;
 
             @include media ("screen", "<=phone") {
                 font-size: 5rem;
@@ -75,6 +77,8 @@
         align-items: flex-start;
 
         h2{
+            position: relative;
+            z-index: 2;
             font-size: 4.3rem;
             margin-bottom: 0.5rem;
             color: darken($heading, 11%);
@@ -98,7 +102,7 @@
                 position: absolute;
                 margin-top: 5rem;
                 bottom: 0;
-                right: 4rem;
+                right: 3rem;
                 z-index: 1;
                 height: 70%;
                 mix-blend-mode: luminosity;

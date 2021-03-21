@@ -27,8 +27,7 @@
     height: 100%;
     padding-top: 6rem;
     padding-bottom: 8rem;
-    background: $graypurple;
-    background-blend-mode: multiply;
+    background: lighten($lightergraypurple, 8%);
     /*background: $graypurple url('../images/eboardbgl.svg') no-repeat right center/ cover;*/
  
     @include media ("screen", "<=phone") {
@@ -44,8 +43,7 @@
         justify-content: center;
         align-items: center;
         align-content: center;
-        color: $text;
-        mix-blend-mode: difference;
+        color: darken($darkpurple, 2%);
 
         @include media ("screen", "<=phone") {
             font-size: 4.2rem;
@@ -84,7 +82,8 @@
                 margin: 2rem 0 1rem 0;
             }
             img{
-                height: 420px;
+                filter: contrast(110%) saturate(1.15);
+                width: 100%;
                 border-radius: 5px;
                 max-width: 80%;
                 max-height: 80%;
@@ -97,7 +96,7 @@
         
         h2{
             letter-spacing: 0.2rem;
-            color: $heading;        
+            color: $purple;        
         }
         h4{
             line-height: 2.3rem;
