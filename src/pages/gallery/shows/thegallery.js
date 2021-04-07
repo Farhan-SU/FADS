@@ -5,9 +5,7 @@ import TheGallery from '../../../components/GalleryCom/TheGallery';
 const thegallery = () => {
     return(
         <>
-        <div style={{height: '100%'}}>
         <TheGallery/>
-        </div>
         </>
     )
 }

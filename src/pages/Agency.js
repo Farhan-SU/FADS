@@ -55,7 +55,7 @@ function Agency() {
           <h3>Communication</h3>
         </Col></Link>
         <Link to="/Aboutus"><Col className="box">
-          <h3>Set Design</h3>
+          <h3>Set Designers</h3>
         </Col></Link>
         </Row>
     </div>

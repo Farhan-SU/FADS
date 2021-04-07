@@ -25,57 +25,37 @@ if (typeof window !== `undefined`) {
 };
   
 function WinterEd () {
-   
+    
     const gshowtl = useRef();
     const portfolioRef = useRef();
     const panelRef = useRef();
     panelRef.current = [];
 
-    useEffect(() => {  
-    
-        const xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
-        const panelend =  Math.abs(xendvalue) * -1;
-    
-        if (portfolioRef.current) {
-            gshowtl.current = gsap.timeline({
-                scrollTrigger: {
-                    id: "containerWinter",
-                    duration: 2,
-                    scrub: 2,
-                    trigger: portfolioRef.current,
-                    pin: true,
-                    pinReparent: true,
-                    anticipatePin: 1,
-                    start: "top top",
-                    end: () => xendvalue
-                }
-            })
-            .to(panelRef.current, {x : () => panelend}, 0);
-
-        } else {
-            console.log("OOPS doesnt exist");
-        };
-
-            return () => {
-                if (ScrollTrigger.getById('containerWinter')) {
-                ScrollTrigger.getById('containerWinter').kill();
-                }
-            };
-    },[]);
-
     useEffect(() => {
-        gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.from(el, {
-                duration: 1,
-                autoAlpha: 0.8,
-                ease: "circ.Inout",
-            });
-          });
+        let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
+        let panelend =  (Math.abs(xendvalue)) * -1;
 
-          return () => {
-            if (ScrollTrigger.getById('panels')) {
-            ScrollTrigger.getById('panels').kill();
+        gshowtl.current = gsap.timeline({
+            scrollTrigger: {
+            id: "gallery",
+            scrub: 1.4,
+            trigger: portfolioRef.current,
+            pin: portfolioRef.current,
+            anticipatePin: 1,
+            start: 'top top',
+            end: xendvalue,
+            autoRemoveChildren: true
             }
+        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+       
+        gshowtl.current = panelRef.current.forEach((el, index) => {
+            gsap.to(el, {x : panelend, ease: "linear"});
+        });
+        
+          return () => {
+            if (ScrollTrigger.getById('gallery')) {
+                ScrollTrigger.getById('gallery').kill();
+            };
         };
     }, []);
 
@@ -83,7 +63,14 @@ function WinterEd () {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
-    }
+    };
+
+    useEffect(() => {
+        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
+        function delayedRefresedCall() {
+            ScrollTrigger.refresh();
+        };
+    }, []);
 
     return (
         <>
@@ -97,7 +84,7 @@ function WinterEd () {
          <div className="spacer">
             <h1 className="longTxtEd">December<br/>2018</h1>
          </div>
-        <section className="section">
+        <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioRef}>
              <h2>Winter</h2>
                     <div className="panel" ref={addPanels}>

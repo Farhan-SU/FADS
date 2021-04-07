@@ -1,24 +1,15 @@
-@import-normalize;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap");
 @import url("https://allfont.net/allfont.css?fonts=vipnagorgialla");
-*,
-*::after,
-*::before {
-  box-sizing: border-box; }
 
 html,
 body {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   scrollbar-width: none;
   cursor: none;
-
-  @media only screen and (max-width: 992px) {
-    cursor: default;
-  }
 }
 html::-webkit-scrollbar {
   display: none; }
@@ -30,15 +21,16 @@ html::-webkit-scrollbar {
   background: transparent; 
 }
 body {
-  width: 100vw;
+  width: inherit;
   height: 100%;
-  overflow-x: hidden;
-  background-color: #F9F6FD;
   color: #1A2632;}
 
+  .row{
+    margin: 0;
+  }
 .active {
-  color: #a67db0; 
-  mix-blend-mode: multiply;}
+  color: #621c72; 
+mix-blend-mode: difference;}
 
 p, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
@@ -50,7 +42,7 @@ h1, h2 {
   mix-blend-mode: normal; }
 
 a {
-  color: #0e1f33;
+  color: #2c0330;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
@@ -59,13 +51,14 @@ a {
   }
 
 a:hover {
-  color: #a67db0; 
+  color: #623f6b; 
   text-decoration: none;
 }
 
-  
-  @media only screen and (max-width: 470px) {
+  @media only screen and (max-width: 500px) {
     body {
       cursor: default;
+      width: 100vw;
+      overflow-x: inherit;
     }
   }

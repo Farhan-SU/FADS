@@ -6,11 +6,11 @@ import SEO from "./SEO";
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import LoadingScreen from './LoadingScreen';
-import Facebook from '../assets/images/facebook.png';
-import instagram from '../assets/images/instagram.png';
-import LinkedIn from '../assets/images/linkedin.png';
 import Slider from "react-slick";
-
+import {ReactComponent as EmailIcon} from '../assets/images/instagramDark.svg';
+import {ReactComponent as InstagramIcon} from '../assets/images/instagramDark.svg';
+import {ReactComponent as LinkedInIcon} from '../assets/images/linkedinDark.svg';
+ 
 const MEMBER = gql`
 query Member($slug: String) {
   member(where: {slug: $slug}) {
@@ -22,7 +22,7 @@ query Member($slug: String) {
       ... on Bio {
         description
         position
-        facebook
+        email
         linkedIn
         portfolioLink
         ig
@@ -108,21 +108,21 @@ function Bio(props) {
                         <div className="desBio">
                         <p>{ bio.description }</p>
                         </div>
-                        <Row style={{width: '84%', height: '100%'}}>
-                            <a className='not' href={ bio.facebook } target="_blank" rel="noopener noreferrer" >
-                              <img src={Facebook} alt="Facebook Icon" className="fb"/>
+                        <Row className="socialList">
+                            <a className="social" id="not" href={ bio.facebook } target="_blank" rel="noopener noreferrer" >
+                              <EmailIcon className="icon"/>
                             </a>
-                            <a href={bio.ig} target="_blank" rel="noopener noreferrer" >
-                              <img src={instagram} alt="Facebook Icon" className="social"/>
+                            <a href={bio.ig} className="social" target="_blank" rel="noopener noreferrer" >
+                              <InstagramIcon className="icon"/>
                             </a>
-                            <a href={ bio.linkedIn } target="_blank" rel="noopener noreferrer" >
-                             <img src={LinkedIn} alt="Facebook Icon" className="social"/>
+                            <a href={ bio.linkedIn } className="social" target="_blank" rel="noopener noreferrer" >
+                              <LinkedInIcon className="icon"/>
                             </a>
                         </Row>
                     </Col>
                 </Row>
                 <div className="portfolioTxt">
-                    <h2>Some of my most memorable work</h2>
+                    <h2>Noteable Work</h2>
                     <a href={bio.portfolioLink} target="_blank" rel="noopener noreferrer">
                     <div className="bioBttn">
                     <div className="biolinkbtn">

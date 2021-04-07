@@ -29,7 +29,7 @@ export default function AboutTest () {
                 <Reveal wrapperElement="h2" direction="up">A fashion collective</Reveal>
                 </Col>
                 <Col lg={12}>
-                <Reveal wrapperElement="h2" direction="up" delay={0.8}>and creative network agency</Reveal>
+                <Reveal wrapperElement="h2" direction="up" delay={0.8}>& creative network agency</Reveal>
                 </Col>
             </Row>
             <div className="abtdes">

@@ -27,22 +27,22 @@ function Navbar() {
               />
             </NavLink>
             </Col>
-            <Col lg={5} className="linkCol">
-              <Row noGutters={true}>
-                <Col data-order="1">
+            <Col lg={6} className="linkCol">
+              <Row className="linkRow">
+                <Col data-order="1" className="linkBoxNav">
                   <NavLink to="/gallery" exact className="navlinks" activeStyle={{color: "#875dfa"}}>Gallery</NavLink>
                 </Col>
-                <Col data-order="2">
+                <Col data-order="2" className="linkBoxNav">
                   <NavLink to="/aboutus" exact className="navlinks" activeStyle={{color: "#875dfa"}}>About Us</NavLink>
                 </Col>
-                <Col data-order="3">
+                <Col data-order="3" className="linkBoxNav">
                   <NavLink to="/agency" className="navlinks" activeStyle={{color: "#875dfa"}}>Agency</NavLink>
                 </Col>
-                <Col data-order="4">
+                <Col data-order="4" className="linkBoxNav">
                   <NavLink to="/press" exact className="navlinks" activeStyle={{color: "#875dfa"}}>Press</NavLink>
                 </Col>
-                <Col data-order="5">
-                  <NavLink to="/f4" className="navlinks" id="f4nav" activeStyle={{color: "#875dfa"}}>F*4</NavLink>
+                <Col data-order="5" className="linkBoxNav">
+                  <NavLink to="/f4" className="navlinks" activeStyle={{color: "#875dfa"}}>F*4</NavLink>
                 </Col>
               </Row>
             </Col>

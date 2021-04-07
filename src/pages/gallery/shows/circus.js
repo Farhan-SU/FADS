@@ -5,9 +5,7 @@ import Circus from '../../../components/GalleryCom/Circus';
 const circus = () => {
     return(
         <>
-        <div style={{height: '100%'}}>
         <Circus/>
-        </div>
         </>
     )
 }

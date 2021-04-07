@@ -26,6 +26,8 @@ import Vintage8w from '../../assets/images/workwear/student.webp';
 import Vintage8 from '../../assets/images/workwear/student.png';
 import Vintage9w from '../../assets/images/workwear/plaidshoot.webp';
 import Vintage9 from '../../assets/images/workwear/plaidshoot.png';
+import NextPageGallery from './NextPageGallery';
+
 
 
 if (typeof window !== `undefined`) {
@@ -101,7 +103,7 @@ function JerkEd () {
          <div className="spacer">
             <h1 className="longTxtEd">September<br/>2019</h1>
          </div>
-        <section className="section">
+        <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioRef}>
              <h2 className="wwv">WORK WEAR VINTAGE</h2>
                     <div className="panel" ref={addPanels}>
@@ -197,27 +199,7 @@ function JerkEd () {
             </div>
         </section>
         <div className="endsec">
-        <Row className="imgNext">
-            <Col lg={12} className="endSec1">
-                <h1 className="winterh1">Winter</h1>
-            </Col>
-             <Col lg={12} className="endseccontent">
-                <ImgWebp
-                    src={EndEsecW}
-                    fallback={EndEsec}
-                    alt="FADS Logo"
-                />
-            </Col>
-        </Row>
-            <div className="Endnext">
-            <Link className="link" to="/gallery/editorials/winter">
-            <span className="link__arrow">
-                <span></span>
-                <span></span>
-            </span>
-            <span className="link__line"></span>
-            </Link>
-            </div>
+            <NextPageGallery to='/gallery/editorials/winter' title1='Winter' title2=''/>
         </div>
     </div>
     </SEO>

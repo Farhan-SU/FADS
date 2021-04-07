@@ -8,12 +8,13 @@ const ImgWepb = ({
     src,
     fallback,
     type = 'image/webp',
+    typeFallBack = 'image/png',
     ...delegated
   }) => {
     return (
       <picture>
         <source srcSet={src} type={type} />
-        <img src={fallback} {...delegated} className={className} alt=""/>
+        <img src={fallback} {...delegated} className={className} type={typeFallBack} alt=""/>
       </picture>
     );
   };

@@ -8,18 +8,22 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 /**Images*/
-import TheGalLeft from "../../assets/images/the_gallery/closeup.png";
-import TheGalLeftW from "../../assets/images/the_gallery/closeup.webp";
-import TheGalRight from "../../assets/images/the_gallery/arch.png";
-import TheGalRightW from "../../assets/images/the_gallery/arch.webp";
+import BodySpaceLeft from '../../assets/images/bodyspace/bodyspace.png';
+import BodySpaceLeftW from '../../assets/images/bodyspace/bodyspace.webp';
+import BodySpaceRight from '../../assets/images/bodyspace/bodyspace1.png';
+import BodySpaceRightW from '../../assets/images/bodyspace/bodyspace1.webp';
+import TheGalLeft from "../../assets/images/the_gallery/thegalleryshootb.png";
+import TheGalLeftW from "../../assets/images/the_gallery/thegalleryshootb.webp";
+import TheGalRight from "../../assets/images/the_gallery/whitedress.png";
+import TheGalRightW from "../../assets/images/the_gallery/whitedress.webp";
 import CircusLeft from '../../assets/images/circus/bw.png';
 import CircusLeftW from '../../assets/images/circus/bw.webp';
-import CircusRight from '../../assets/images/circus/gold.png';
-import CircusRightW from '../../assets/images/circus/gold.webp';
-import TlandLeft from '../../assets/images/tomorrowland/fashionline.png';
-import TlandLeftW from '../../assets/images/tomorrowland/fashionline.webp';
-import TlandRight from '../../assets/images/tomorrowland/mask.png';
-import TlandRightW from '../../assets/images/tomorrowland/mask.webp';
+import CircusRight from '../../assets/images/circus/circus4.png';
+import CircusRightW from '../../assets/images/circus/circus4.webp';
+import TlandLeft from '../../assets/images/tomorrowland/tomorrowland11.png';
+import TlandLeftW from '../../assets/images/tomorrowland/tomorrowland11.webp';
+import TlandRight from '../../assets/images/tomorrowland/tomorrowland10.png';
+import TlandRightW from '../../assets/images/tomorrowland/tomorrowland10.webp';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger)

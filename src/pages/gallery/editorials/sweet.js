@@ -6,9 +6,7 @@ import  SweetEscape from '../../../components/GalleryCom/SweetEscape';
 const sweet = () => {
     return(
         <>
-        <div style={{height: '100%'}}>
         <SweetEscape/>
-        </div>
         </>
     )
 }

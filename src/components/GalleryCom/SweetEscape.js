@@ -20,6 +20,7 @@ import Sweet5w from '../../assets/images/sweetEscape/zu1.webp';
 import Sweet5 from '../../assets/images/sweetEscape/zu1.png';
 import Sweet6w from '../../assets/images/sweetEscape/zu2.webp';
 import Sweet6 from '../../assets/images/sweetEscape/zu2.png';
+import NextPageGallery from './NextPageGallery';
 
 
 
@@ -36,53 +37,46 @@ function SweetEscape () {
     const panelRef = useRef();
     panelRef.current = [];
 
-    useEffect(() => {  
-    
-        const xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.1;
-        const panelend =  Math.abs(xendvalue) * -1;
-    
-        if (portfolioRef.current) {
-            gshowtl.current = gsap.timeline({
-                scrollTrigger: {
-                    id: "container",
-                    duration: 2,
-                    scrub: 2,
-                    trigger: portfolioRef.current,
-                    pin: true,
-                    pinReparent: true,
-                    anticipatePin: 1,
-                    start: "top top",
-                    end: () => xendvalue
-                }
-            })
-            .to(panelRef.current, {x : () => panelend}, 0);
-
-        } else {
-            console.log("OOPS doesnt exist");
-        };
-
-            return () => {
-                if (ScrollTrigger.getById('container')) {
-                ScrollTrigger.getById('container').kill();
-                };
-            };
-    },[]);
-
     useEffect(() => {
+        let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
+        let panelend =  (Math.abs(xendvalue)) * -1;
+
+        gshowtl.current = gsap.timeline({
+            scrollTrigger: {
+            id: "gallery",
+            scrub: 1.4,
+            trigger: portfolioRef.current,
+            pin: portfolioRef.current,
+            anticipatePin: 1,
+            start: 'top top',
+            end: xendvalue,
+            autoRemoveChildren: true
+            }
+        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+       
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.from(el, {
-                duration: 1,
-                autoAlpha: 0.8,
-                ease: "circ.Inout"
-            });
-          });
+            gsap.to(el, {x : panelend, ease: "linear"});
+        });
+        
+          return () => {
+            if (ScrollTrigger.getById('gallery')) {
+                ScrollTrigger.getById('gallery').kill();
+            };
+        };
     }, []);
 
-    const addPanels = el => {
+    function addPanels(el) {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
     };
+
+    useEffect(() => {
+        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
+        function delayedRefresedCall() {
+            ScrollTrigger.refresh();
+        };
+    }, []);
 
 
     return (
@@ -97,7 +91,7 @@ function SweetEscape () {
          <div className="spacer">
             <h1 className="longTxtEd">10/2020</h1>
          </div>
-        <section className="section">
+        <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioRef}>
              <h2 className="biggerport">ESCAPE</h2>
                     <div className="panel" ref={addPanels}>
@@ -162,29 +156,9 @@ function SweetEscape () {
                 </div>
             </div>
         </section>
-        <Row className="endsec">
-        <Row className="imgNext">
-            <Col lg={12} className="endSec1">
-                <h1>Not a</h1><h2 className="ontopD"> Dream</h2>
-            </Col>
-            <Col lg={12} className="endseccontent">
-                <ImgWebp
-                    src={EndEsecW}
-                    fallback={EndEsec}
-                    alt="FADS Logo"
-                />
-            </Col>
-        </Row>
-            <Col xs={12} lg={12} className="Endnext">
-            <Link className="link" to="/gallery/editorials/galleryShoots">
-            <span className="link__arrow">
-                <span></span>
-                <span></span>
-            </span>
-            <span className="link__line"></span>
-            </Link>
-            </Col>
-        </Row>
+        <div className="endsec">
+            <NextPageGallery to='/gallery/editorials/galleryShoots' title1='Not A' title2='Dream'/>
+        </div>
     </div>
     </SEO>
     </>

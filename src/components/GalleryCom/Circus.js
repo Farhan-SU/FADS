@@ -1,81 +1,84 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useLayoutEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
+import Reveal from '../Reveal';
 import {Row, Col} from 'react-bootstrap';
 import Prev from '../../assets/images/prev.png';
-import Cir1w from '../../assets/images/circus/bw.webp';
-import Cir1 from '../../assets/images/circus/bw.png';
-import Cir2w from '../../assets/images/circus/redboots.webp';
-import Cir2 from '../../assets/images/circus/redboots.png';
-import Cir3w from '../../assets/images/circus/gold.webp';
-import Cir3 from '../../assets/images/circus/gold.png';
-import Cir4w from '../../assets/images/circus/reddress.webp';
-import Cir4 from '../../assets/images/circus/reddress.webp';
-import Cir5w from '../../assets/images/circus/pins.webp';
-import Cir5 from '../../assets/images/circus/pins.png';
-import Cir6w from '../../assets/images/circus/magic.webp';
-import Cir6 from '../../assets/images/circus/magic.png';
+import Cir1w from '../../assets/images/circus/redboots.webp';
+import Cir1 from '../../assets/images/circus/redboots.png';
+import Cir2w from '../../assets/images/circus/circus1.webp';
+import Cir2 from '../../assets/images/circus/circus1.png';
+import Cir3w from '../../assets/images/circus/circus8.webp';
+import Cir3 from '../../assets/images/circus/circus8.png';
+import Cir4w from '../../assets/images/circus/bw.webp';
+import Cir4 from '../../assets/images/circus/bw.webp';
+import Cir5w from '../../assets/images/circus/circus4.webp';
+import Cir5 from '../../assets/images/circus/circus4.png';
+import Cir6w from '../../assets/images/circus/circus3.webp';
+import Cir6 from '../../assets/images/circus/circus3.png';
+import Cir7w from '../../assets/images/circus/circus2.webp';
+import Cir7 from '../../assets/images/circus/circus2.png';
+import Cir8w from '../../assets/images/circus/circusline.webp';
+import Cir8 from '../../assets/images/circus/circusline.png';
+import Cir9w from '../../assets/images/circus/circus6.webp';
+import Cir9 from '../../assets/images/circus/circus6.png';
+import Cir10w from '../../assets/images/circus/circus7.webp';
+import Cir10 from '../../assets/images/circus/circus7.png';
+
+import CirposterW from '../../assets/images/circus/circusposter.webp';
+import Cirposter from '../../assets/images/circus/circusposter.png';
+import CirpDeckW from '../../assets/images/circus/circusDeck.webp';
+import CirpDecK from '../../assets/images/circus/circusDeck.png';
+import Circounter3w from '../../assets/images/circus/cirucscounter1.webp';
+import Circounter3 from '../../assets/images/circus/cirucscounter1.png';
+import Circounter2w from '../../assets/images/circus/circuscounter2.webp';
+import Circounter2 from '../../assets/images/circus/circuscounter2.png';
+import Circounter1w from '../../assets/images/circus/circuscounter3.webp';
+import Circounter1 from '../../assets/images/circus/circuscounter3.png';
+import {Video, Transformation} from 'cloudinary-react';
+import NextPageGallery from './NextPageGallery';
+
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
     gsap.core.globals("ScrollTrigger", ScrollTrigger);
 };
-  
+
 function Circus () {
     
-    const fashiontl = useRef();
-    const portfolioSRef = useRef();
-    const panelSRef = useRef();
+    let fashiontl = useRef();
+    let portfolioSRef = useRef();
+    let panelSRef = useRef();
     panelSRef.current = [];
 
-    useEffect(() => {  
-    
-        const xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.1;
-        const panelend =  Math.abs(xendvalue) * -1;
-    
-        if (portfolioSRef.current) {
-            fashiontl.current = gsap.timeline({
-                scrollTrigger: {
-                    id: "circusShow",
-                    duration: 2,
-                    scrub: 1.5,
-                    trigger: portfolioSRef.current,
-                    pin: true,
-                    pinReparent: true,
-                    anticipatePin: 1,
-                    start: "top top",
-                    end: () => xendvalue
-                }
-            })
-            .to(panelSRef.current, {x : () => panelend}, 0);
-
-        } else {
-            console.log("OOPS doesnt exist");
-        };
-
-            return () => {
-                if (ScrollTrigger.getById('circusShow')) {
-                ScrollTrigger.getById('circusShow').kill();
-                }; 
-            };
-    },[]);
-
     useEffect(() => {
+        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.08;
+        let panelend =  (Math.abs(xendvalue)) * -1;
+
+        fashiontl.current = gsap.timeline({
+            scrollTrigger: {
+            id: "circusShow",
+            scrub: 1.4,
+            trigger: portfolioSRef.current,
+            pin: portfolioSRef.current,
+            anticipatePin: 1,
+            start: 'top top',
+            end: xendvalue,
+            autoRemoveChildren: true,
+            }
+        }).to(panelSRef.current, {x : panelend,  ease: "linear"});
+       
         fashiontl.current = panelSRef.current.forEach((el, index) => {
-            gsap.from(el, {
-                duration: 1,
-                autoAlpha: 0.8,
-                ease: "circ.Inout"
-            });
-          });
+            gsap.to(el, {x : panelend, ease: "linear"});
+        })
 
           return () => {
-            if (ScrollTrigger.getById('panelsJerk')) {
-            ScrollTrigger.getById('panelsJerk').kill();
+            if (ScrollTrigger.getById('circusShow')) {
+                ScrollTrigger.getById('circusShow').kill();
             };
         };
     }, []);
@@ -84,23 +87,96 @@ function Circus () {
         if (el && !panelSRef.current.includes(el)) {
             panelSRef.current.push(el);
         };
-    }
+    };
+
+    useEffect(() => {
+        let timeout = gsap.delayedCall( 0.5, delayedRefresedCall);
+        function delayedRefresedCall() {
+            ScrollTrigger.refresh();
+        };
+    }, []);
 
     return (
         <>
         <SEO  
           pageMeta={{
           title: "Night Circus - Fall 2019 | FADS",
-          keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
+          keywords: ["Fashion", "Cirlery", "Agency", "Models", "Fashion Shows" ],
           description: "Night Circus is our Spring 2019 show"
         }}>
         <div className="yearlyShows">
-         <div className="spacer">
-             <div className="circusSpacer">
-            <h1>Night Circus <br/> <span>Spring 2019</span></h1>
-            </div>
-         </div>
-        <section className="section">
+        <Row className="spacer">
+            <Col lg={12}>
+            <Reveal wrapperElement="h1" direction="up" delay={0.1}>Night Circus</Reveal>
+            </Col>
+            <Col lg={12}>
+            <Reveal wrapperElement="h3" direction="up" delay={0.5}>Spring 2019</Reveal>
+            </Col>
+         </Row>
+
+        <section className="pitchWrap">
+        <Row noGutter={false} className="posterWrap">
+            <Col md={3} className="promotxt1">
+                <h1>Night Circus</h1>
+            </Col>
+            <Col md={5} className="posterimg">
+                <ImgWebp
+                    src={CirposterW}
+                    fallback={Cirposter}
+                    alt="Cirlery editorial shoots"
+                />
+            </Col>
+            <Col md={3} className="promotxt2">
+            <h1>Night Circus</h1>
+             </Col>
+        </Row>
+
+        <Row className="countdown">
+            <Col lg={10} className="counterColCircus">
+            <ImgWebp
+                    src={Circounter3w}
+                    fallback={Circounter3}
+                    alt="Cirlery pitch Deck"
+                    className="countpicCircus"
+                />
+            </Col>
+            <Col lg={10} className="counterColCircus">
+            <ImgWebp
+                    src={Circounter2w}
+                    fallback={Circounter2}
+                    alt="Cirlery pitch Deck"
+                    className="countpicCircus"
+                />
+            </Col>
+            <Col lg={10} className="counterColCircus">
+            <ImgWebp
+                    src={Circounter1w}
+                    fallback={Circounter1}
+                    alt="Cirlery pitch Deck"
+                    className="countpicCircus"
+                />
+            </Col>
+        </Row>
+        <Row noGutters={true} className="showVideo">
+        <Col lg={4} className="vidIntroTxt">
+        <h1>Night Circus</h1>
+        <h3>An Exhibition</h3>
+        <p>Drawing inspiration from the book, Night Circus by Erin Morgenstern, and 
+            from the deep reds and stylings of traditional circuses to make models 
+            look like fashionable ringmasters.</p>
+        </Col>
+         <Col lg={7} className="videoContainer">
+                <Video cloudName="fadscloud" width="100%" 
+                        publicId="CircusShowVid" controls="true" 
+                        loading="lazy" 
+                        fallbackContent="Your browser does not support HTML5 video tags." >
+                    <Transformation format="auto"/>
+                </Video>
+         </Col>
+        </Row>
+        </section>
+
+        <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioSRef}>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
@@ -149,7 +225,7 @@ function Circus () {
                         fallback={Cir5}
                         alt="picture from Night Circus shoots"
                         className="panel_img"
-                        />
+                    />
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
@@ -162,28 +238,58 @@ function Circus () {
                         />
                     </div>
                 </div>
+                <div className="panel" id="landscape" ref={addPanels}>
+                    <div className="panel_item">
+                    <ImgWebp
+                        src={Cir7w}
+                        fallback={Cir7}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
+                        />
+                    </div>
+                </div>
+                <div className="panel" ref={addPanels}>
+                    <div className="panel_item">
+                    <ImgWebp
+                        src={Cir8w}
+                        fallback={Cir8}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
+                        />
+                    </div>
+                </div>
+                <div className="panel" ref={addPanels}>
+                    <div className="panel_item">
+                    <ImgWebp
+                        src={Cir9w}
+                        fallback={Cir9}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
+                        />
+                    </div>
+                </div>
+                <div className="panel" id="landscape" ref={addPanels}>
+                    <div className="panel_item">
+                    <ImgWebp
+                        src={Cir10w}
+                        fallback={Cir10}
+                        alt="picture from Night Circus shoots"
+                        className="panel_img"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
-        <div className="endsec">
-        <Row className="imgNext">
-            <Col lg={12} className="endSec1">
-                <h1>Tomorr</h1><h2 className="ontopGshoots">ow</h2>
-            </Col>
-            <Col lg={12} className="endseccontent">
-              <img src={Prev} alt="relive it again design"/>
-            </Col>
+
+        <Row className="pDeck">
+             <ImgWebp
+                    src={CirpDeckW}
+                    fallback={CirpDecK}
+                    alt="Cirlery pitch Deck"
+                />
         </Row>
-            <div className="Endnext">
-            <div className="winterEndarrow">
-            <Link className="link" to="/gallery/shows/tomorrow-land">
-            <span className="link__arrow">
-                <span></span>
-                <span></span>
-            </span>
-            <span className="link__line"></span>
-            </Link>
-            </div>
-            </div>
+        <div className="endsec">
+            <NextPageGallery to='/gallery/shows/tomorrow-land' title1='Tomorrow' title2='Land'/>
         </div>
     </div>
     </SEO>

@@ -16,8 +16,6 @@ import Jerk3w from '../../assets/images/jerk/flower2.webp';
 import Jerk3 from '../../assets/images/jerk/flower2.png';
 import Jerk4w from '../../assets/images/jerk/skull.webp';
 import Jerk4 from '../../assets/images/jerk/skull.png';
-import Jerk5w from '../../assets/images/jerk/jerkfads.webp';
-import Jerk5 from '../../assets/images/jerk/jerkfads.png';
 import Jerk6w from '../../assets/images/jerk/threeppl.webp';
 import Jerk6 from '../../assets/images/jerk/threeppl.png';
 import Jerk7w from '../../assets/images/jerk/jerkshirtless.webp';
@@ -28,7 +26,7 @@ import Jerk9w from '../../assets/images/jerk/jolly.webp';
 import Jerk9 from '../../assets/images/jerk/jolly.png';
 import Jerk10w from '../../assets/images/jerk/pinkpants.webp';
 import Jerk10 from '../../assets/images/jerk/pinkpants.png';
-
+import NextPageGallery from './NextPageGallery';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -37,58 +35,52 @@ if (typeof window !== `undefined`) {
   
 function JerkEd () {
     
+        
     const gshowtl = useRef();
     const portfolioRef = useRef();
     const panelRef = useRef();
     panelRef.current = [];
 
-    useEffect(() => {  
-    
-        const xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.1;
-        const panelend =  Math.abs(xendvalue) * -1;
-    
-        if (portfolioRef.current) {
-            gshowtl.current = gsap.timeline({
-                scrollTrigger: {
-                    id: "containerJerk",
-                    duration: 3,
-                    scrub: 2,
-                    trigger: portfolioRef.current,
-                    pin: true,
-                    pinReparent: true,
-                    anticipatePin: 1,
-                    start: "top top",
-                    end: () => xendvalue
-                }
-            })
-            .to(panelRef.current, {x : () => panelend}, 0);
-
-        } else {
-            console.log("OOPS doesnt exist");
-        };
-
-            return () => {
-                if (ScrollTrigger.getById('containerJerk')) {
-                ScrollTrigger.getById('containerJerk').kill();
-                };
-            };
-    },[]);
-
     useEffect(() => {
+        let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
+        let panelend =  (Math.abs(xendvalue)) * -1;
+
+        gshowtl.current = gsap.timeline({
+            scrollTrigger: {
+            id: "gallery",
+            scrub: 1.4,
+            trigger: portfolioRef.current,
+            pin: portfolioRef.current,
+            anticipatePin: 1,
+            start: 'top top',
+            end: xendvalue,
+            autoRemoveChildren: true
+            }
+        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+       
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.from(el, {
-              duration: 1,
-              autoAlpha: 0.8,
-              ease: "circ.Inout",
-            });
-          });
+            gsap.to(el, {x : panelend, ease: "linear"});
+        });
+        
+          return () => {
+            if (ScrollTrigger.getById('gallery')) {
+                ScrollTrigger.getById('gallery').kill();
+            };
+        };
     }, []);
 
     function addPanels(el) {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
-    }
+    };
+
+    useEffect(() => {
+        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
+        function delayedRefresedCall() {
+            ScrollTrigger.refresh();
+        };
+    }, []);
 
 
     return (
@@ -149,18 +141,6 @@ function JerkEd () {
                         />
                     </div>
                 </div>
-
-                <div className="panel" ref={addPanels}>
-                    <div className="panel_item">
-                    <ImgWebp
-                        src={Jerk5w}
-                        fallback={Jerk5}
-                        alt="Jerk Photoshoot"
-                        className="panel_img"
-                        />
-                    </div>
-                </div>
-
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
                     <ImgWebp
@@ -217,28 +197,7 @@ function JerkEd () {
             </div>
         </section>
         <div className="endsec">
-        <Row className="imgNext">
-            <Col lg={12} className="endSec1">
-                <h1>Wint</h1><h2 className="ontop">er</h2>
-            </Col>
-            <Col lg={12} className="endseccontent">
-                <ImgWebp
-                    src={EndEsecW}
-                    fallback={EndEsec}
-                    alt="FADS Logo"
-                />
-            </Col>
-        </Row>
-        
-            <div className="Endnext">
-            <Link className="link" to="/gallery/editorials/winter">
-            <span className="link__arrow">
-                <span></span>
-                <span></span>
-            </span>
-            <span className="link__line"></span>
-            </Link>
-            </div>
+        <NextPageGallery to='/gallery/editorials/winter' title1='Wint' title2=''/>
         </div>
     </div>
     </SEO>

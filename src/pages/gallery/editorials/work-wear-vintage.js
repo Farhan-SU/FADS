@@ -4,9 +4,7 @@ import WorkwearEd from '../../../components/GalleryCom/WorkwearEd';
 const workWear = () => {
     return(
         <>
-        <div style={{height: '100%'}}>
         <WorkwearEd/>
-        </div>
         </>
     )
 }

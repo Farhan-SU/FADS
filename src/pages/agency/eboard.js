@@ -13,11 +13,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const MEMBERS = gql`
 query{
-  members{
+  members(where: {committee_contains_some: EBoard}) {
     id
     memberName
     memberPosition
     slug
+    committee
     agencyImg {
       url
     }

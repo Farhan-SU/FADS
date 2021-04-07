@@ -1,6 +1,12 @@
-@import-normalize;
+@import-normalize, node_modules/normalize.css;
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
 
 :root, body, html {
   min-height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;}

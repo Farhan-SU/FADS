@@ -37,13 +37,15 @@ const Reveal = ({
       fadeDirection = { x: 0 };
   }
   useEffect(() => {
-    gsap.from(compRef.current, {
-      ease: 'sine.InOut',
+    let revealTl = gsap.timeline();
+    revealTl.from(compRef.current, {
+      ease: 'expo.InOut',
       duration: 1.2,
       opacity: 0,
       delay,
       ...fadeDirection,
     });
+    revealTl.restart(true, false);
   }, []);
   return (
     <Component ref={compRef} {...props}>
@@ -62,6 +64,6 @@ Reveal.propTypes = {
 };
 Reveal.defaultProps = {
   direction : null,
-  duration : 1,
+  duration : 1.2,
   distance : 100,
 };
