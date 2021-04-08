@@ -1,0 +1,70 @@
+/*
+** Leave these unless you want
+** to open a whole can of worms
+*/
+.textanicontainer {
+  background-color: transparent;
+  margin-top: 6rem;
+  color: #757c97;
+  display: flex;
+  height: 100%; }
+
+/*
+** Apply styles to the parent element
+*/
+.Words {
+  margin: 0 auto;
+  padding: 80px 0;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: 3.8rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%; }
+
+.Words-line {
+  height: 68px;
+  overflow: hidden;
+  position: relative; }
+  .Words-line:nth-child(odd) {
+    transform: skew(60deg, -33deg) scaleY(0.66667); }
+  .Words-line:nth-child(even) {
+    transform: skew(0deg, -33deg) scaleY(1.33333); }
+  .Words-line:nth-child(1) {
+    left: 32px; }
+  .Words-line:nth-child(2) {
+    left: 64px; }
+  .Words-line:nth-child(3) {
+    left: 96px; }
+  .Words-line:nth-child(4) {
+    left: 128px; }
+  .Words-line:nth-child(5) {
+    left: 160px; }
+  .Words-line:nth-child(6) {
+    left: 192px; }
+  .Words-line:nth-child(7) {
+    left: 224px; }
+
+/*
+** Fine-grained text styles
+*/
+p {
+  height: 68px;
+  line-height: 63px;
+  padding: 0 10px;
+  transition: all .3s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, -68px, 0);
+  vertical-align: top;
+  white-space: nowrap;
+  text-transform: uppercase; }
+
+/*
+** The hover interaction
+*/
+.Words:hover p {
+  transform: translate3d(0, 0, 0);
+  transition-delay: 2s; }
