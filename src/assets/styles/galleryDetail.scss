@@ -8,59 +8,132 @@
   justify-content: center;
   overflow: hidden;
 }
+
 .galleryShows{
 position: relative;
-overflow-x: hidden;
+height: 100%;
 
-  .spacer {
+.gsapcolorchange{
+  height: max-content;
+}
+
+.spacer{
+  @extend %galintrostyle;
+  height: 100vh;
+  background: linear-gradient(0deg, lighten($lightergraypurple, 17%) 0%, lighten($pinkish, 1%) 100%);
+  padding: 3rem 0 0 0;
+
+  @include media ("screen", "<=phone") {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    padding: 2rem 3rem 4rem 3rem;
-    background-image: linear-gradient(180deg, #7e7491 0%, #ece6ee 100%);
-    background-blend-mode: lighten;
+    text-align: center;
+  }
+
+  h1{
+    font-size: 8vw;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #594a69;
+    margin: 0;
 
     @include media ("screen", "<=phone") {
-      padding: 5rem;
-      height: 100vh;
-      text-align: center;
-      background-position: center 55%;
+      font-size: 3.7rem;
+      color: $darkpurple;
     }
+  }
+  h3{
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $graypurple;
 
-    h1 {
-      font-size: 7rem;
-      opacity: 0.9;
-      letter-spacing: 0.5rem;
-      mix-blend-mode: difference;
-      color: rgb(231, 188, 236);
-      text-align: center;
+    @include media ("screen", "<=phone") {
+      font-size: 2rem;
+    }
+  }
 
-      @include media ("screen", "<=phone") {
-        font-size: 14vw;
+  .tmmrwsh1{
+    @include media ("screen", "<=phone") {
+      font-size: 2.7rem;
+      position: relative;
+      top: -1.5rem;
+    }
+  }
+} 
+.wrapperNonHoritzontal{
+  background: linear-gradient(180deg,#cfc6b517,#b1a898, rgb(92, 57, 4), #f0ecf11c 100%);
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+}
+  .videoContainerGal{
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+    padding: 4rem;
+    height: 100vh;
+    padding: 0 1rem;
+  } 
+  .boogieImg{
+    @extend %galintrostyle;
+    padding-top: 2rem;
+    height: 100vh;
+    .bstrike{
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .Halloween{
+    padding: 0 5rem;
+    display: flex;
+    align-items: space-between;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  .bothImages{
+    padding: 3rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .underImg{
+      padding: 3rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      overflow: hidden;
+
+      picture{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        img{
+          position: relative;
+          object-fit: contain;
+          width: 90%;
+        }
       }
     }
 
-    .longTxtEd{
-      @include media ("screen", "<=phone") {
-        font-size: 3.1rem;
-        letter-spacing: 0.2rem;
-      }
-    }
-  }    
+  }
+
 }
 
 .yearlyShows{
   position: relative;
-
   .spacer{
-    height: 99vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    background: linear-gradient(0deg, lighten($lightergraypurple, 17%) 0%, lighten($pinkish, 1%) 100%);
+    @extend %galintrostyle;
+    height: 100vh;
+    background: linear-gradient(0deg, lighten($lightergraypurple, 17%) 0%, lighten($pinkish, 1%) 100%), darken($darkpurple, 20%);
     padding: 3rem 0 0 0;
 
     @include media ("screen", "<=phone") {
@@ -122,7 +195,7 @@ overflow-x: hidden;
     align-items: flex-start;
     align-content: flex-start;
     justify-content: flex-start;
-    background: lighten($lightergraypurple, 20%);
+    background: lighten($lightergraypurple, 15%);
     overflow: hidden;
   }
   
@@ -418,8 +491,8 @@ overflow-x: hidden;
 /***Credits to https://codepen.io/sego/pen/bQZKwP for button effect**/
 .endsec {
   height: 115vh;
-  padding: 4rem 0;
-  background-color: lighten($darkpurple, $amount: 2%);
+  padding: 5rem 0 6rem 0;
+  background: linear-gradient(#d9cedf2a 0%, darken($darkpurple, 1%), darken($darkpurple, 20%));
   position: relative;
 
  /* .blurBg{
@@ -458,7 +531,7 @@ overflow-x: hidden;
        }
        img{
         width: 45%;
-        opacity: 0.7;
+        opacity: 0.6;
         mix-blend-mode: luminosity;
         background-blend-mode: luminosity;
 

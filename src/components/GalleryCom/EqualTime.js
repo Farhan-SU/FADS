@@ -4,33 +4,28 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
-import Gals1w from '../../assets/images/galleryShoots/galleryEditorial1.webp';
-import Gals1 from '../../assets/images/galleryShoots/galleryEditorial1.png';
-import Gals2w from '../../assets/images/galleryShoots/galleryEditorial2.webp';
-import Gals2 from '../../assets/images/galleryShoots/galleryEditorial2.png';
-import Gals3w from '../../assets/images/galleryShoots/galleryEditorial3.webp';
-import Gals3 from '../../assets/images/galleryShoots/galleryEditorial3.png';
-import Gals4w from '../../assets/images/galleryShoots/galleryEditorial4.webp';
-import Gals4 from '../../assets/images/galleryShoots/galleryEditorial4.png';
-import Gals5w from '../../assets/images/galleryShoots/galleryEditorial5.webp';
-import Gals5 from '../../assets/images/galleryShoots/galleryEditorial5.png';
-import Gals6w from '../../assets/images/galleryShoots/galleryEditorial6.webp';
-import Gals6 from '../../assets/images/galleryShoots/galleryEditorial6.png';
-import Gals7w from '../../assets/images/galleryShoots/galleryEditorial7.webp';
-import Gals7 from '../../assets/images/galleryShoots/galleryEditorial7.png';
-import Gals8w from '../../assets/images/galleryShoots/galleryEditorial8.webp';
-import Gals8 from '../../assets/images/galleryShoots/galleryEditorial8.png';
-import Gals9w from '../../assets/images/galleryShoots/galleryEditorial9.webp';
-import Gals9 from '../../assets/images/galleryShoots/galleryEditorial9.png';
-import Gals10w from '../../assets/images/galleryShoots/galleryEditorial10.webp';
-import Gals10 from '../../assets/images/galleryShoots/galleryEditorial10.png';
-import Gals11w from '../../assets/images/galleryShoots/galleryEditorial11.webp';
-import Gals11 from '../../assets/images/galleryShoots/galleryEditorial11.png';
+import EtEdit1w from '../../assets/images/equaltime/equaltime1.webp';
+import EtEdit1 from '../../assets/images/equaltime/equaltime1.png';
+import EtEdit2w from '../../assets/images/equaltime/equaltime2.webp';
+import EtEdit2 from '../../assets/images/equaltime/equaltime2.png';
+import EtEdit3w from '../../assets/images/equaltime/equaltime3.webp';
+import EtEdit3 from '../../assets/images/equaltime/equaltime3.png';
+import EtEdit4w from '../../assets/images/equaltime/equaltime4.webp';
+import EtEdit4 from '../../assets/images/equaltime/equaltime4.png';
+import EtEdit5w from '../../assets/images/equaltime/equaltime5.webp';
+import EtEdit5 from '../../assets/images/equaltime/equaltime5.png';
+import EtEdit6w from '../../assets/images/equaltime/equaltime6.webp';
+import EtEdit6 from '../../assets/images/equaltime/equaltime6.png';
+import EtEdit7w from '../../assets/images/equaltime/equaltime7.webp';
+import EtEdit7 from '../../assets/images/equaltime/equaltime7.png';
+import EtEdit8w from '../../assets/images/equaltime/equaltime8.webp';
+import EtEdit8 from '../../assets/images/equaltime/equaltime8.png';
+import EtEdit9w from '../../assets/images/equaltime/equaltime9.webp';
+import EtEdit9 from '../../assets/images/equaltime/equaltime9.png';
 import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -91,21 +86,26 @@ function GalleryShoots () {
         <>
         <SEO  
           pageMeta={{
-          title: "The Gallery | Editorial",
+          title: "Equal Time | Editorial",
           keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
           description: "Sepetember 2020 editorial photoshoot for The Gallery Fashion Show"
         }}>
         <div className="galleryShows">
-         <div className="spacer">
-            <h1>12/2019</h1>
-         </div>
+        <Row className="spacer">
+            <Col lg={12}>
+            <Reveal wrapperElement="h1" direction="up" delay={0.1}>Equal Time</Reveal>
+            </Col>
+            <Col lg={12}>
+            <Reveal wrapperElement="h3" direction="up" delay={0.5}>1/2019</Reveal>
+            </Col>
+         </Row>
          <section className="horizontalWrap">
             <div className="portfolio" ref={portfolioRef}>
             <div className="panel" ref={addGPanels}>
                 <div className="panel_item">
                 <ImgWebp
-                    src={Gals1w}
-                    fallback={Gals1}
+                    src={EtEdit1w}
+                    fallback={EtEdit1}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -114,8 +114,8 @@ function GalleryShoots () {
             <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals2w}
-                    fallback={Gals2}
+                    src={EtEdit2w}
+                    fallback={EtEdit2}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -124,8 +124,8 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals3w}
-                    fallback={Gals3}
+                    src={EtEdit3w}
+                    fallback={EtEdit3}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -134,8 +134,8 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals4w}
-                    fallback={Gals4}
+                    src={EtEdit4w}
+                    fallback={EtEdit4}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -144,8 +144,8 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals5w}
-                    fallback={Gals5}
+                    src={EtEdit5w}
+                    fallback={EtEdit5}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -154,8 +154,8 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
                 <div className="panel_item">
                 <ImgWebp
-                    src={Gals6w}
-                    fallback={Gals6}
+                    src={EtEdit6w}
+                    fallback={EtEdit6}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -164,8 +164,8 @@ function GalleryShoots () {
             <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals7w}
-                    fallback={Gals7}
+                    src={EtEdit7w}
+                    fallback={EtEdit7}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -174,8 +174,8 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals8w}
-                    fallback={Gals8}
+                    src={EtEdit8w}
+                    fallback={EtEdit8}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -184,8 +184,8 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals8w}
-                    fallback={Gals8}
+                    src={EtEdit8w}
+                    fallback={EtEdit8}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -194,35 +194,15 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals9w}
-                    fallback={Gals9}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals10w}
-                    fallback={Gals10}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals11w}
-                    fallback={Gals11}
+                    src={EtEdit9w}
+                    fallback={EtEdit9}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
             </div>
         </div>
     </div>
-</section>
+    </section>
         <div className="endsec">
             <NextPageGallery to='/gallery/editorials/halloween' title1='Halloween' title2=''/>
         </div>

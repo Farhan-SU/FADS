@@ -4,8 +4,6 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import Prev from '../../assets/images/prev.png';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
@@ -19,12 +17,13 @@ import Bsedit4w from '../../assets/images/bodyspaceeditorial/bodysedit4.webp';
 import Bsedit4 from '../../assets/images/bodyspaceeditorial/bodysedit4.png';
 import Bsedit5w from '../../assets/images/bodyspaceeditorial/bodysedit5.webp';
 import Bsedit5 from '../../assets/images/bodyspaceeditorial/bodysedit5.png';
+import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
     gsap.core.globals("ScrollTrigger", ScrollTrigger);
 };
-
 
 function BodySpaceEditorial() {
 
@@ -79,14 +78,20 @@ function BodySpaceEditorial() {
         <>
         <SEO  
           pageMeta={{
-          title: "The Gallery | Editorial",
+          title: "Body X Space | Editorial",
           keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
           description: "Sepetember 2020 editorial photoshoot for The Gallery Fashion Show"
         }}>
         <div className="galleryShows">
-         <div className="spacer">
-            <h1>12/2019</h1>
-         </div>
+        <Row className="spacer">
+            <Col lg={12}>
+            <Reveal wrapperElement="h1" direction="up" delay={0.1}>Body X Space</Reveal>
+            </Col>
+            <Col lg={12}>
+            <Reveal wrapperElement="h3" direction="up" delay={0.5}>11/20</Reveal>
+            </Col>
+         </Row>
+         
          <section className="horizontalWrap">
             <div className="portfolio" ref={portfolioRef}>
             <div className="panel" ref={addGPanels}>
@@ -141,29 +146,9 @@ function BodySpaceEditorial() {
         </div>
     </div>
 </section>
-        <Row className="endsec">
-        <Row className="imgNext">
-            <Col lg={12} className="endSec1">
-                <h1>Not A</h1><h2 className="ontopGshoots">Dream</h2>
-            </Col>
-            <Col lg={12} className="endseccontent">
-                <ImgWebp
-                    src={EndEsecW}
-                    fallback={EndEsec}
-                    alt="FADS Logo"
-                />
-            </Col>
-        </Row>
-            <Col xs={12} lg={12} className="Endnext">
-            <Link className="link" to="/gallery/editorials/halloween">
-            <span className="link__arrow">
-                <span></span>
-                <span></span>
-            </span>
-            <span className="link__line"></span>
-            </Link>
-            </Col>
-        </Row>
+        <div className="endsec">
+            <NextPageGallery to='/gallery/editorials/sweet' title1='Sweet' title2='Escape'/>
+        </div>
     </div>
     </SEO>
     </>

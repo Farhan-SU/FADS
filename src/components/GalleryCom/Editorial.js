@@ -43,10 +43,10 @@ import gallerySRightW from "../../assets/images/galleryShoots/galleryEditorial9.
 import gallerySLeft from "../../assets/images/galleryShoots/galleryEditorial11.png";
 import gallerySLeftW from "../../assets/images/galleryShoots/galleryEditorial11.webp";
 /***/
-import makeupRight from "../../assets/images/makeup/makeupJerk6.png";
-import makeupRightW from "../../assets/images/makeup/makeupJerk6.webp";
-import makeupLeft from "../../assets/images/makeup/makeupJerk2.png";
-import makeupLeftW from "../../assets/images/makeup/makeupJerk2.webp";
+import makeupRight from "../../assets/images/makeup/makeupJerk5.png";
+import makeupRightW from "../../assets/images/makeup/makeupJerk5.webp";
+import makeupLeft from "../../assets/images/makeup/makeupJerk6.png";
+import makeupLeftW from "../../assets/images/makeup/makeupJerk6.webp";
 /***/
 import SweetLeft from '../../assets/images/sweetEscape/aanya3.png';
 import SweetLeftW from '../../assets/images/sweetEscape/aanya3.webp';
@@ -91,7 +91,6 @@ const Editorial = () => {
       });
     }, []);
 
-
     function addToRefs(el) {
       if (el && !imagesLft.current.includes(el)) {
         imagesLft.current.push(el);
@@ -102,11 +101,13 @@ const Editorial = () => {
       edtl.current = imagesright.current.forEach((al, index) => {
         gsap.fromTo(al, {
           y: -300,
-          opacity: 0
+          opacity: 0,
+          scale: 1.03
         }, {
           duration: 1,
           opacity: 1, 
           y: 0,
+          scale: 1,
           ease: "circ.Inout",
           scrollTrigger: {
             trigger: al,
@@ -135,14 +136,14 @@ const Editorial = () => {
       <div className="editorialwrapper">
       <Row as="section" className="sectionBox">
         <Col md={4}className="left">
-          <picture className="img1">
-          <source srcset={RevivalLeftW} alt="Revival shoots" type="image/webp"/>
-          <source srcset={RevivalLeft} alt="Revival shoots" type="image/png"/>
-          <img src={RevivalLeft} alt="Revival shoots" ref={addToRefs}/>
+          <picture>
+          <source srcSet={RevivalLeftW} type="image/webp"/>
+          <source srcSet={RevivalLeft} type="image/png"/>
+          <img src={RevivalLeft} alt="Revival shoots" className="img1E"/>
         </picture>
         </Col>
         <Col md={4} className="description">
-        <Row  className="header">
+        <Row className="header">
           <Link to="/gallery/editorials/revival">
             <Col md={12}>
               <h1>Revival</h1>
@@ -159,25 +160,25 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={RevivalRightW} alt="Revival shoots" type="image/webp"/>
-          <source srcset={RevivalRight} alt="Revival shoots" type="image/png"/>
-          <img src={RevivalRight} alt="Revival shoots" ref={addToRefsright}/>
+          <picture className="img2E">
+          <source srcSet={RevivalRightW} alt="Revival shoots" type="image/webp"/>
+          <source srcSet={RevivalRight} alt="Revival shoots" type="image/png"/>
+          <img src={RevivalRight} alt="Revival shoots"/>
         </picture>
         </Col>
       </Row>
 
       <Row as="section" className="sectionBox">
         <Col md={4}className="left">
-          <picture className="img1">
-            <source srcset={BoogieStrikeLeftW} alt="BoogieStrike shoots" type="image/webp"/>
-            <source srcset={BoogieStrikeLeft} alt="BoogieStrike shoots" type="image/png"/>
-            <img src={BoogieStrikeLeft} alt="BoogieStrike shoots" ref={addToRefs}/>
+          <picture ref={addToRefs}>
+            <source srcSet={BoogieStrikeLeftW} alt="BoogieStrike shoots" type="image/webp"/>
+            <source srcSet={BoogieStrikeLeft} alt="BoogieStrike shoots" type="image/png"/>
+            <img src={BoogieStrikeLeft} alt="BoogieStrike shoots" className="img1E"/>
           </picture>
         </Col>
         <Col md={4} className="description">
         <Row  className="header">
-        <Link to="/gallery/editorials/revival">
+        <Link to="/gallery/editorials/boogieStrike">
           <Col md={12}>
             <h1>Boogie Strike</h1>
           </Col>
@@ -193,20 +194,20 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={BoogieStrikeRightW} alt="BoogieStrike shoots" type="image/webp"/>
-          <source srcset={BoogieStrikeRight} alt="BoogieStrike shoots" type="image/png"/>
-          <img src={BoogieStrikeRight} alt="BoogieStrike shoots" ref={addToRefsright}/>
+          <picture >
+          <source srcSet={BoogieStrikeRightW} alt="BoogieStrike shoots" type="image/webp"/>
+          <source srcSet={BoogieStrikeRight} alt="BoogieStrike shoots" type="image/png"/>
+          <img src={BoogieStrikeRight} alt="BoogieStrike shoots" className="img2E" ref={addToRefsright}/>
         </picture>
         </Col>
       </Row>
 
       <Row as="section" className="sectionBox">
-        <Col md={4}className="left">
-          <picture className="img1">
-          <source srcset={BodySeditorialLeftW} alt="Revival shoots" type="image/webp"/>
-          <source srcset={BodySeditorialLeft} alt="Revival shoots" type="image/png"/>
-          <img src={BodySeditorialLeft} alt="Revival shoots" ref={addToRefs}/>
+        <Col md={4} className="left">
+          <picture ref={addToRefs}>
+          <source srcSet={BodySeditorialLeftW} alt="Revival shoots" type="image/webp"/>
+          <source srcSet={BodySeditorialLeft} alt="Revival shoots" type="image/png"/>
+          <img src={BodySeditorialLeft} alt="Revival shoots" className="img1E"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -227,20 +228,20 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={BodySeditorialRightW} alt="Revival shoots" type="image/webp"/>
-          <source srcset={BodySeditorialRight} alt="Revival shoots" type="image/png"/>
-          <img src={BodySeditorialRight} alt="Revival shoots" ref={addToRefsright}/>
+          <picture ref={addToRefsright}>
+          <source srcSet={BodySeditorialRightW} alt="Revival shoots" type="image/webp"/>
+          <source srcSet={BodySeditorialRight} alt="Revival shoots" type="image/png"/>
+          <img src={BodySeditorialRight} alt="Revival shoots" className="img2E"/>
         </picture>
         </Col>
       </Row>
 
-      <Row as="section" className="sectionBox">
+      <Row noGutters={true}  as="section" className="sectionBox">
         <Col md={4} className="left">
-         <picture className="img1">
-          <source srcset={SweetLeftW} alt="Sweet Escape shoots" type="image/webp"/>
-          <source srcset={SweetLeft} alt="Sweet Escape  shoots"  type="image/png"/>
-          <img src={SweetLeft} alt="Sweet Escape  shoots"/>
+         <picture ref={addToRefs}>
+          <source srcSet={SweetLeftW} alt="Sweet Escape shoots" type="image/webp"/>
+          <source srcSet={SweetLeft} alt="Sweet Escape  shoots"  type="image/png"/>
+          <img src={SweetLeft} alt="Sweet Escape  shoots" className="img1E"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -261,19 +262,19 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-        <picture className="img2">
-          <source srcset={SweetRightW} alt="Sweet Escape shoots" type="image/webp"/>
-          <source srcset={SweetRight} alt="Sweet Escape  shoots"  type="image/png"/>
-          <img src={SweetRight} alt="Sweet Escape shoots"/>
+        <picture ref={addToRefsright}>
+          <source srcSet={SweetRightW} alt="Sweet Escape shoots" type="image/webp"/>
+          <source srcSet={SweetRight} alt="Sweet Escape  shoots"  type="image/png"/>
+          <img src={SweetRight} alt="Sweet Escape shoots" className="img2E"/>
         </picture>
         </Col>
       </Row>
-      <Row as="section" className="sectionBox">
+      <Row noGutters={true} as="section" className="sectionBox">
         <Col md={4} className="left">
-          <picture className="img1">
-          <source srcset={makeupLeftW} alt="makeup shoots" type="image/webp"/>
-          <source srcset={makeupLeft} alt="makeup shoots" type="image/png"/>
-          <img src={makeupLeft} alt="makeup shoots" ref={addToRefs}/>
+          <picture ref={addToRefs}>
+          <source srcSet={makeupLeftW} alt="makeup shoots" type="image/webp"/>
+          <source srcSet={makeupLeft} alt="makeup shoots" type="image/png"/>
+          <img src={makeupLeft} alt="makeup shoots" className="img1E"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -294,20 +295,20 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={makeupRightW} alt="makeup shoots" type="image/webp"/>
-          <source srcset={makeupRight} alt="makeup shoots" type="image/png"/>
-          <img src={makeupRight} alt="makeup shoots" ref={addToRefsright}/>
+          <picture ref={addToRefsright}>
+          <source srcSet={makeupRightW} alt="makeup shoots" type="image/webp"/>
+          <source srcSet={makeupRight} alt="makeup shoots" type="image/png"/>
+          <img src={makeupRight} alt="makeup shoots" className="img2E"/>
         </picture>
         </Col>
       </Row>
 
-      <Row as="section" className="sectionBox">
+      <Row noGutters={true} as="section" className="sectionBox">
         <Col md={4} className="left">
-        <picture className="img1">
-          <source srcset={gallerySLeftW} alt="gallery shoots" type="image/webp"/>
-          <source srcset={gallerySLeft} alt="gallery shoots"  type="image/png"/>
-          <img src={gallerySLeft} alt="gallery shoots" ref={addToRefs}/>
+        <picture ref={addToRefs}>
+          <source srcSet={gallerySLeftW} alt="gallery shoots" type="image/webp"/>
+          <source srcSet={gallerySLeft} alt="gallery shoots"  type="image/png"/>
+          <img src={gallerySLeft} alt="gallery shoots" className="img1E"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -328,20 +329,20 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={gallerySRightW} alt="gallery shoots" type="image/webp"/>
-          <source srcset={gallerySRight} alt="gallery shoots" type="image/png"/>
-          <img src={gallerySRight} ref={addToRefsright} alt="gallery shoots"/>
+          <picture ref={addToRefsright}>
+          <source srcSet={gallerySRightW} alt="gallery shoots" type="image/webp"/>
+          <source srcSet={gallerySRight} alt="gallery shoots" type="image/png"/>
+          <img src={gallerySRight} alt="gallery shoots"  className="img2E"/>
         </picture>
         </Col>
       </Row>
 
-      <Row as='section' className="sectionBox">
+      <Row noGutters={true} as='section' className="sectionBox">
         <Col md={4}className="left">
-          <picture className="img1">
-          <source srcset={HalloweenEditLeftW} alt="Jerk shoots" type="image/webp"/>
-          <source srcset={HalloweenEditLeft} alt="Jerk shoots" type="image/png"/>
-          <img src={HalloweenEditLeft} alt="Jerk shoots" ref={addToRefs}/>
+          <picture ref={addToRefs}>
+          <source srcSet={HalloweenEditLeftW} alt="Jerk shoots" type="image/webp"/>
+          <source srcSet={HalloweenEditLeft} alt="Jerk shoots" type="image/png"/>
+          <img src={HalloweenEditLeft} alt="Jerk shoots" className="img1E" />
         </picture>
         </Col>
         <Col md={4}>
@@ -352,61 +353,61 @@ const Editorial = () => {
               <h1>Halloween</h1>
             </Col>
             <Col md={12}>
-              <h3>12/2018</h3>
+              <h3>10/2019</h3>
             </Col>
           </Link>
         </Row>
         </Row>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={HalloweenEditRightW} alt="Jerk shoots" type="image/webp"/>
-          <source srcset={HalloweenEditRight} alt="Jerk shoots" type="image/png"/>
-          <img src={HalloweenEditRight} alt="Jerk shoots"ref={addToRefsright}/>
+          <picture ref={addToRefsright}>
+          <source srcSet={HalloweenEditRightW} alt="Jerk shoots" type="image/webp"/>
+          <source srcSet={HalloweenEditRight} alt="Jerk shoots" type="image/png"/>
+          <img src={HalloweenEditRight} alt="Jerk shoots" className="img2E"/>
         </picture>
         </Col>
       </Row>
 
-      <Row as='section' className="sectionBox">
+      <Row noGutters={true} as="section" className="sectionBox">
         <Col md={4}className="left">
-          <picture className="img1">
-          <source srcset={VintageLeftW} alt="work wear vintage shoots" type="image/webp"/>
-          <source srcset={VintageLeft} alt="work wear vintage shoots" type="image/png"/>
-          <img src={VintageLeft} alt="makeup shoots" ref={addToRefs}/>
-        </picture>
+          <picture ref={addToRefs}>
+            <source srcSet={VintageLeftW} alt="work wear vintage shoots" type="image/webp"/>
+            <source srcSet={VintageLeft} alt="work wear vintage shoots" type="image/png"/>
+            <img src={VintageLeft} alt="makeup shoots" className="img1E"/>
+          </picture>
         </Col>
         <Col md={4} className="description">
-        <Row  className="vintage-header">
-        <Link to="/gallery/editorials/work-wear-vintage">
+        <Row  className="header">
+        <Link to="/gallery/editorials/jerk-fads">
           <Col md={12}>
           <h1>Work<br/>wear Vintage</h1>
           </Col>
           <Col md={12}>
-           <h3>10/2019</h3>
+          <h3>10/2019</h3>
           </Col>
-        </Link>
+          </Link>
         </Row>
         <div className="svg-line">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
               <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
-        </div>
+          </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="exception-img2">
-          <source srcset={VintageRightW} alt="work wear vintage shoots" type="image/webp"/>
-          <source srcset={VintageRight} alt="work wear vintage shoots" type="image/png"/>
-          <img src={VintageRight} alt="makeup shoots" ref={addToRefsright} className="biggerImg2"/>
+        <picture ref={addToRefsright}>
+          <source srcSet={VintageRightW} alt="work wear vintage shoots" type="image/webp"/>
+          <source srcSet={VintageRight} alt="work wear vintage shoots" type="image/png"/>
+          <img src={VintageRight} alt="makeup shoots"  className="img2E"/>
         </picture>
         </Col>
       </Row>
 
-      <Row as="section" className="sectionBox">
+      <Row noGutters={true} as="section" className="sectionBox">
         <Col md={4}className="left">
-          <picture className="img1">
-          <source srcset={JerkLeftW} alt="Jerk shoots" type="image/webp"/>
-          <source srcset={JerkLeft} alt="Jerk shoots" type="image/png"/>
-          <img src={JerkLeft} alt="Jerk shoots" ref={addToRefs}/>
+          <picture ref={addToRefs}>
+          <source srcSet={JerkLeftW} alt="Jerk shoots" type="image/webp"/>
+          <source srcSet={JerkLeft} alt="Jerk shoots" type="image/png"/>
+          <img src={JerkLeft} alt="Jerk shoots" className="img1E"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -427,44 +428,39 @@ const Editorial = () => {
           </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={JerkRightW} alt="Jerk shoots"/>
-          <source srcset={JerkRight} alt="Jerk shoots"/>
-          <img src={JerkRight} alt="Jerk shoots" ref={addToRefsright}/>
+          <picture ref={addToRefsright}>
+          <source srcSet={JerkRightW} alt="Jerk shoots"/>
+          <source srcSet={JerkRight} alt="Jerk shoots"/>
+          <img src={JerkRight} alt="Jerk shoots" className="img2E"/>
         </picture>
         </Col>
       </Row>
 
-      <Row as="section" className="sectionBox">
+      <Row noGutters={true} as="section" className="sectionBox">
         <Col md={4}className="left">
-          <picture className="img1">
-          <source srcset={equaltimeLeftW}/>
-          <source srcset={equaltimeLeft}/>
-          <img src={equaltimeLeft} alt="equaltime shoots" ref={addToRefs}/>
+          <picture ref={addToRefs}>
+          <source srcSet={equaltimeLeftW}/>
+          <source srcSet={equaltimeLeft}/>
+          <img src={equaltimeLeft} alt="equaltime shoots" className="img1E"/>
         </picture>
         </Col>
         <Col md={4} className="description">
         <Row  className="header">
-        <Link to="/gallery/editorials/revival">
+        <Link to="/gallery/editorials/equalTime">
           <Col md={12}>
-            <h1>Boogie Strike</h1>
+            <h1>Equal Time</h1>
           </Col>
           <Col md={12}>
-            <h3>12/2020</h3>
+            <h3>1/2019</h3>
           </Col>
           </Link>
         </Row>
-          <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
-            </svg>
-          </div>
         </Col>
         <Col md={4} className="right">
-          <picture className="img2">
-          <source srcset={equaltimeRightW} alt="equaltime shoots" type="image/webp"/>
-          <source srcset={equaltimeRight} alt="equaltime shoots" type="image/png"/>
-          <img src={equaltimeRight} alt="equaltime shoots" ref={addToRefsright}/>
+          <picture ref={addToRefsright}>
+          <source srcSet={equaltimeRightW} alt="equaltime shoots" type="image/webp"/>
+          <source srcSet={equaltimeRight} alt="equaltime shoots" type="image/png"/>
+          <img src={equaltimeRight} alt="equaltime shoots" className="img2E"/>
         </picture>
         </Col>
       </Row>

@@ -45,7 +45,6 @@ export default function HomepgWrap ()  {
       return () => {
         if (ScrollTrigger.getById('homepgwrapperbg')) {
           ScrollTrigger.getById('homepgwrapperbg').kill();
-
         } 
       };
     },[]);

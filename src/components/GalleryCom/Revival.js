@@ -4,41 +4,27 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
-import Gals1w from '../../assets/images/galleryShoots/galleryEditorial1.webp';
-import Gals1 from '../../assets/images/galleryShoots/galleryEditorial1.png';
-import Gals2w from '../../assets/images/galleryShoots/galleryEditorial2.webp';
-import Gals2 from '../../assets/images/galleryShoots/galleryEditorial2.png';
-import Gals3w from '../../assets/images/galleryShoots/galleryEditorial3.webp';
-import Gals3 from '../../assets/images/galleryShoots/galleryEditorial3.png';
-import Gals4w from '../../assets/images/galleryShoots/galleryEditorial4.webp';
-import Gals4 from '../../assets/images/galleryShoots/galleryEditorial4.png';
-import Gals5w from '../../assets/images/galleryShoots/galleryEditorial5.webp';
-import Gals5 from '../../assets/images/galleryShoots/galleryEditorial5.png';
-import Gals6w from '../../assets/images/galleryShoots/galleryEditorial6.webp';
-import Gals6 from '../../assets/images/galleryShoots/galleryEditorial6.png';
-import Gals7w from '../../assets/images/galleryShoots/galleryEditorial7.webp';
-import Gals7 from '../../assets/images/galleryShoots/galleryEditorial7.png';
-import Gals8w from '../../assets/images/galleryShoots/galleryEditorial8.webp';
-import Gals8 from '../../assets/images/galleryShoots/galleryEditorial8.png';
-import Gals9w from '../../assets/images/galleryShoots/galleryEditorial9.webp';
-import Gals9 from '../../assets/images/galleryShoots/galleryEditorial9.png';
-import Gals10w from '../../assets/images/galleryShoots/galleryEditorial10.webp';
-import Gals10 from '../../assets/images/galleryShoots/galleryEditorial10.png';
-import Gals11w from '../../assets/images/galleryShoots/galleryEditorial11.webp';
-import Gals11 from '../../assets/images/galleryShoots/galleryEditorial11.png';
+import Revi1w from '../../assets/images/revival/revival1.webp';
+import Revi1 from '../../assets/images/revival/revival1.png';
+import Revi2w from '../../assets/images/revival/revival2.webp';
+import Revi2 from '../../assets/images/revival/revival2.png';
+import Revi3w from '../../assets/images/revival/revival3.webp';
+import Revi3 from '../../assets/images/revival/revival3.png';
+import Revi4w from '../../assets/images/revival/revival4.webp';
+import Revi4 from '../../assets/images/revival/revival4.png';
+import Revi5w from '../../assets/images/revival/revival5.webp';
+import Revi5 from '../../assets/images/revival/revival5.png';
 import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
     gsap.core.globals("ScrollTrigger", ScrollTrigger);
 };
 
-
-function GalleryShoots () {
+function Revival () {
 
     const gshowtl = useRef();
     const portfolioRef = useRef();
@@ -91,21 +77,26 @@ function GalleryShoots () {
         <>
         <SEO  
           pageMeta={{
-          title: "The Gallery | Editorial",
+          title: "Revival | Editorial",
           keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
           description: "Sepetember 2020 editorial photoshoot for The Gallery Fashion Show"
         }}>
         <div className="galleryShows">
-         <div className="spacer">
-            <h1>12/2019</h1>
-         </div>
+        <Row className="spacer">
+            <Col lg={12}>
+            <Reveal wrapperElement="h1" direction="up" delay={0.1}>Revival</Reveal>
+            </Col>
+            <Col lg={12}>
+            <Reveal wrapperElement="h3" direction="up" delay={0.5}>03/2021</Reveal>
+            </Col>
+         </Row>
          <section className="horizontalWrap">
             <div className="portfolio" ref={portfolioRef}>
             <div className="panel" ref={addGPanels}>
                 <div className="panel_item">
                 <ImgWebp
-                    src={Gals1w}
-                    fallback={Gals1}
+                    src={Revi1w}
+                    fallback={Revi1}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -114,8 +105,8 @@ function GalleryShoots () {
             <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals2w}
-                    fallback={Gals2}
+                    src={Revi2w}
+                    fallback={Revi2}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -124,8 +115,18 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals3w}
-                    fallback={Gals3}
+                    src={Revi3w}
+                    fallback={Revi3}
+                    alt="The Gallery editorial shoots"
+                    className="panel_img"
+                />
+            </div>
+        </div>
+        <div className="panel" id='landscape' ref={addGPanels}>
+            <div className="panel_item">
+            <ImgWebp
+                    src={Revi4w}
+                    fallback={Revi4}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -134,88 +135,8 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={Gals4w}
-                    fallback={Gals4}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals5w}
-                    fallback={Gals5}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-                <div className="panel_item">
-                <ImgWebp
-                    src={Gals6w}
-                    fallback={Gals6}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-                </div>
-            </div>
-            <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals7w}
-                    fallback={Gals7}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals8w}
-                    fallback={Gals8}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals8w}
-                    fallback={Gals8}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals9w}
-                    fallback={Gals9}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals10w}
-                    fallback={Gals10}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals11w}
-                    fallback={Gals11}
+                    src={Revi5w}
+                    fallback={Revi5}
                     alt="The Gallery editorial shoots"
                     className="panel_img"
                 />
@@ -224,7 +145,7 @@ function GalleryShoots () {
     </div>
 </section>
         <div className="endsec">
-            <NextPageGallery to='/gallery/editorials/halloween' title1='Halloween' title2=''/>
+            <NextPageGallery to='/gallery/editorials/boogieStrike' title1='Boogie' title2='Strike'/>
         </div>
     </div>
     </SEO>
@@ -232,4 +153,4 @@ function GalleryShoots () {
     )
 };
 
-export default withRouter(GalleryShoots);
+export default withRouter(Revival);

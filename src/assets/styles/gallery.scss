@@ -1,14 +1,6 @@
 @import 'colors'; 
 @import 'breakpoints'; 
 
-%gallerycontent {
-  height: 100vh;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
 
 %circle {
   height: 500px;
@@ -26,12 +18,9 @@
 /*****Gallery home****/
 
 .editorial{
+  @extend %centeralignMobile;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(41, 41, 41, 0.614)), url('../images/editorialCover.webp') no-repeat center center/ cover, url('../images/editorialCover.png') no-repeat center center/ cover;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   position: relative;
 
   @include media ("screen", "<=phone") {
@@ -41,12 +30,9 @@
 }
 
 .shows {
+  @extend %centeralignMobile;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(41, 41, 41, 0.614)),url('../images/the_gallery/galleryshowpat.webp') no-repeat center center/cover, url('../images/the_gallery/galleryshowpat.png') no-repeat center center/cover;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
 
    @include media ("screen", "<=phone") {
     height: 100%;
@@ -105,16 +91,20 @@
 .editorialwrapper, .show-wrapper{
   height: 100%;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-bottom: 4rem;
   padding-top: 8rem;
   background: lighten($lightergraypurple, 10%);
 
+  .sectionBox {
+    @extend %centeralignMobile;
+    height: 100vh;
+    width: 100vw;
+  }
+
+
   .left, .right, .sleft, .sright{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    @extend %centeralignMobile;
     height: 90%;
     overflow: hidden;
 
@@ -122,7 +112,6 @@
       height: 78%;
       position: relative;
       border-radius: 5px;
-      object-fit: contain;
     }
     .img1{
       position: relative;
@@ -133,7 +122,31 @@
       position: relative;
       align-self: flex-end;
     }
+    picture{
+      @extend %centeralignMobile;
+      height: 100%;
+      width: 40vw;
+      padding: 3rem 2rem;
+  
+      img{
+        border-radius: 5px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .img1E{
+        position: relative;
+        bottom: 8%;
+      }
+      .img2E{
+        position: relative;
+        top: 8%;
+      }
+    }
   }
+
+
   .description{
     height: 499px;
     width: 100%;
@@ -155,10 +168,6 @@
       height: 380px;
       width: 370px;
       overflow: hidden;
-
-      .bigTxtEd{
-        font-size: 2.7rem;
-      }
     }
   
     h1{
@@ -180,26 +189,13 @@
       position: relative;
       top: -0.8rem;
     }
-    .tmrLg{
-      h1{
-        font-size: 2.7rem;
-      }
-    }
+
     .svg-line{
       position: absolute;
       left: 50%;
       top: 93%
     }
   }
-    .sectionBox {
-      @extend %gallerycontent;
-      .notdream,.sweet{
-        img{
-          width: 85%;
-          margin-left: -6px;
-        }
-      }
-    }
 }
 
 

@@ -32,7 +32,6 @@ import TmpDeckW from '../../assets/images/tomorrowland/tmmrwpDeck.webp';
 import TmpDecK from '../../assets/images/tomorrowland/tmmrwpDeck.png';
 import Reveal from '../Reveal';
 import {Video, Transformation} from 'cloudinary-react';
-import NextPageGallery from './NextPageGallery';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);

@@ -26,6 +26,7 @@ const bodyspaceEditorial = lazy(() => import('./pages/gallery/editorials/bodyspa
 const boogieStrike = lazy(() => import('./pages/gallery/editorials/boogieStrike'));
 const revival = lazy(() => import('./pages/gallery/editorials/revival'));
 const equalTime = lazy(() => import('./pages/gallery/editorials/equalTime'));
+const halloween = lazy(() => import('./pages/gallery/editorials/halloween'));
 
 /*Shows*/
 const bodyxspace = lazy(() => import('./pages/gallery/shows/bodyxspace'));
@@ -93,6 +94,7 @@ function App () {
                     <RouteWithLayout exact path="/gallery/editorials/boogieStrike" component={boogieStrike}/>
                     <RouteWithLayout exact path="/gallery/editorials/revival" component={revival}/>
                     <RouteWithLayout exact path="/gallery/editorials/equalTime" component={equalTime}/>
+                    <RouteWithLayout exact path="/gallery/editorials/halloween" component={halloween}/>
                     <RouteWithLayout exact path="/gallery/shows/bodyxspace" component={bodyxspace}/>
                     <RouteWithLayout exact path="/gallery/shows/circus" component={circus}/>
                     <RouteWithLayout exact path="/gallery/shows/thegallery" component={thegallery}/>

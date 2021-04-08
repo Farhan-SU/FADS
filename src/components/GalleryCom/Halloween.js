@@ -4,33 +4,15 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryDetail.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
-import Gals1w from '../../assets/images/galleryShoots/galleryEditorial1.webp';
-import Gals1 from '../../assets/images/galleryShoots/galleryEditorial1.png';
-import Gals2w from '../../assets/images/galleryShoots/galleryEditorial2.webp';
-import Gals2 from '../../assets/images/galleryShoots/galleryEditorial2.png';
-import Gals3w from '../../assets/images/galleryShoots/galleryEditorial3.webp';
-import Gals3 from '../../assets/images/galleryShoots/galleryEditorial3.png';
-import Gals4w from '../../assets/images/galleryShoots/galleryEditorial4.webp';
-import Gals4 from '../../assets/images/galleryShoots/galleryEditorial4.png';
-import Gals5w from '../../assets/images/galleryShoots/galleryEditorial5.webp';
-import Gals5 from '../../assets/images/galleryShoots/galleryEditorial5.png';
-import Gals6w from '../../assets/images/galleryShoots/galleryEditorial6.webp';
-import Gals6 from '../../assets/images/galleryShoots/galleryEditorial6.png';
-import Gals7w from '../../assets/images/galleryShoots/galleryEditorial7.webp';
-import Gals7 from '../../assets/images/galleryShoots/galleryEditorial7.png';
-import Gals8w from '../../assets/images/galleryShoots/galleryEditorial8.webp';
-import Gals8 from '../../assets/images/galleryShoots/galleryEditorial8.png';
-import Gals9w from '../../assets/images/galleryShoots/galleryEditorial9.webp';
-import Gals9 from '../../assets/images/galleryShoots/galleryEditorial9.png';
-import Gals10w from '../../assets/images/galleryShoots/galleryEditorial10.webp';
-import Gals10 from '../../assets/images/galleryShoots/galleryEditorial10.png';
-import Gals11w from '../../assets/images/galleryShoots/galleryEditorial11.webp';
-import Gals11 from '../../assets/images/galleryShoots/galleryEditorial11.png';
+import halloweenEdit1w from '../../assets/images/halloweenEdit/cover1.webp';
+import halloweenEdit1 from '../../assets/images/halloweenEdit/cover1.png';
+import halloweenEdit2w from '../../assets/images/halloweenEdit/cover2.webp';
+import halloweenEdit2 from '../../assets/images/halloweenEdit/cover2.png';
 import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
+import {Video, Transformation} from 'cloudinary-react';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -38,193 +20,81 @@ if (typeof window !== `undefined`) {
 };
 
 
-function GalleryShoots () {
-
-    const gshowtl = useRef();
-    const portfolioRef = useRef();
-    const panelRef = useRef();
-    panelRef.current = [];
-
-    useEffect(() => {
-        let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
-        let panelend =  (Math.abs(xendvalue)) * -1;
-
-        gshowtl.current = gsap.timeline({
-            scrollTrigger: {
-            id: "gallery",
-            scrub: 1.4,
-            trigger: portfolioRef.current,
-            pin: portfolioRef.current,
-            anticipatePin: 1,
-            start: 'top top',
-            end: xendvalue,
-            autoRemoveChildren: true
-            }
-        }).to(panelRef.current, {x : panelend,  ease: "linear"});
-       
-        gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
-        });
-        
-          return () => {
-            if (ScrollTrigger.getById('gallery')) {
-                ScrollTrigger.getById('gallery').kill();
-            };
-        };
-    }, []);
-
-    function addGPanels(el) {
-        if (el && !panelRef.current.includes(el)) {
-            panelRef.current.push(el);
-        };
-    };
-
-    useEffect(() => {
-        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
-        function delayedRefresedCall() {
-            ScrollTrigger.refresh();
-        };
-    }, []);
-
+function Halloween () {
 
     return (
         <>
         <SEO  
           pageMeta={{
-          title: "The Gallery | Editorial",
+          title: "Halloween | Editorial",
           keywords: ["Fashion", "Gallery", "Agency", "Models", "Fashion Shows" ],
           description: "Sepetember 2020 editorial photoshoot for The Gallery Fashion Show"
         }}>
         <div className="galleryShows">
-         <div className="spacer">
-            <h1>12/2019</h1>
-         </div>
-         <section className="horizontalWrap">
-            <div className="portfolio" ref={portfolioRef}>
-            <div className="panel" ref={addGPanels}>
-                <div className="panel_item">
+            <Row className="spacer">
+                <Col lg={12}>
+                <Reveal wrapperElement="h1" direction="up" delay={0.1}>Halloween</Reveal>
+                </Col>
+                <Col lg={12}>
+                <Reveal wrapperElement="h3" direction="up" delay={0.5}>12/2020</Reveal>
+                </Col>
+            </Row>
+        <div className="wrapperNonHoritzontal">
+        <Row className="videoContainerGal">
+         <Col lg={10} className="halloweenVideo">
+            <Video cloudName="fadscloud" width="100%" 
+                publicId="HalloweenVid1" controls="true" 
+                loading="lazy" 
+                fallbackContent="Your browser does not support HTML5 video tags." >
+                <Transformation format="auto"/>
+                <Transformation background="#fbfbfb"/>
+            </Video>
+         </Col>
+         </Row>
+
+        <Row noGutters={true} className="Halloween">
+            <Col lg={4}>
+            <Video cloudName="fadscloud" width="100%" 
+                publicId="HalloweenVid2" autoPlay="true" controls="false" 
+                loading="lazy" 
+                fallbackContent="Your browser does not support HTML5 video tags." >
+                <Transformation format="auto"/>
+                <Transformation background="#fbfbfb"/>
+            </Video>
+            </Col>
+    
+            <Col lg={7}>
+            <Video cloudName="fadscloud" width="100%" 
+                publicId="HalloweenVid3" autoPlay="true" controls="false" 
+                loading="lazy" 
+                fallbackContent="Your browser does not support HTML5 video tags." >
+                <Transformation format="auto"/>
+                <Transformation background="#fbfbfb"/>
+            </Video>
+            </Col>
+        </Row>
+
+        <Row noGutters={true} className="bothImages">
+        <Col lg={4} className="underImg">
+            <ImgWebp
+                src={halloweenEdit1w}
+                fallback={halloweenEdit1}
+                alt="Boggiee Film"
+                className="halloween2"       
+                />
+            </Col>
+            <Col lg={4} className="underImg">
                 <ImgWebp
-                    src={Gals1w}
-                    fallback={Gals1}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
+                src={halloweenEdit2w}
+                fallback={halloweenEdit2}
+                alt="Boggiee Film"
+                className="halloween1"       
                 />
-                </div>
-            </div>
-            <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals2w}
-                    fallback={Gals2}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
+            </Col>
+        </Row>
         </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals3w}
-                    fallback={Gals3}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals4w}
-                    fallback={Gals4}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals5w}
-                    fallback={Gals5}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-                <div className="panel_item">
-                <ImgWebp
-                    src={Gals6w}
-                    fallback={Gals6}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-                </div>
-            </div>
-            <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals7w}
-                    fallback={Gals7}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals8w}
-                    fallback={Gals8}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals8w}
-                    fallback={Gals8}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals9w}
-                    fallback={Gals9}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals10w}
-                    fallback={Gals10}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
-                    src={Gals11w}
-                    fallback={Gals11}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-    </div>
-</section>
         <div className="endsec">
-            <NextPageGallery to='/gallery/editorials/halloween' title1='Halloween' title2=''/>
+            <NextPageGallery to='/gallery/editorials/jerk-fads' title1='Jerk X' title2='FADS'/>
         </div>
     </div>
     </SEO>
@@ -232,4 +102,4 @@ function GalleryShoots () {
     )
 };
 
-export default withRouter(GalleryShoots);
+export default withRouter(Halloween);
