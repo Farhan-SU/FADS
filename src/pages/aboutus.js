@@ -1,12 +1,12 @@
 import React from 'react';
-import WrapAboutPg from '../components/WrapAboutPg';
+import AboutFADS from '../components/AboutFADS';
 
   
 export default function Aboutus () {
 
     return (
         <>
-      <WrapAboutPg/>
+      <AboutFADS/>
         </>
     )
 };

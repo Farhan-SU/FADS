@@ -8,36 +8,55 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 /**Images*/
-import AlineLeft from '../../assets/images/aline/nojacket.png';
-import AlineRight from '../../assets/images/aline/jacket.png';
-import AlineLeftW from '../../assets/images/aline/nojacket.webp';
-import AlineRightW from '../../assets/images/aline/jacket.webp';
+import RevivalLeft from '../../assets/images/revival/revival3.png';
+import RevivalRight from '../../assets/images/revival/revival5.png';
+import RevivalLeftW from '../../assets/images/revival/revival3.webp';
+import RevivalRightW from '../../assets/images/revival/revival5.webp';
+/***/
+import BoogieStrikeLeft from '../../assets/images/boogieStrike/cover1boogie.png';
+import BoogieStrikeLeftW from '../../assets/images/boogieStrike/cover1boogie.webp';
+import BoogieStrikeRight from '../../assets/images/boogieStrike/cover2boogie.png';
+import BoogieStrikeRightW from '../../assets/images/boogieStrike/cover2boogie.webp';
+/***/
+import BodySeditorialLeft from '../../assets/images/bodyspaceeditorial/bodysedit1.png';
+import BodySeditorialLeftW from '../../assets/images/bodyspaceeditorial/bodysedit1.webp';
+import BodySeditorialRight from '../../assets/images/bodyspaceeditorial/bodysedit2.png';
+import BodySeditorialRightW from '../../assets/images/bodyspaceeditorial/bodysedit2.webp';
+/***/
+import HalloweenEditRight from "../../assets/images/halloweenEdit/cover2.png";
+import HalloweenEditLeft from "../../assets/images/halloweenEdit/cover1.png";
+import HalloweenEditRightW from "../../assets/images/halloweenEdit/cover2.webp";
+import HalloweenEditLeftW from "../../assets/images/halloweenEdit/cover1.webp";
+/***/
 import JerkRight from "../../assets/images/jerk/solei.png";
 import JerkLeft from "../../assets/images/jerk/jerkfads.png";
 import JerkRightW from "../../assets/images/jerk/solei.webp";
 import JerkLeftW from "../../assets/images/jerk/jerkfads.webp";
+/***/
 import VintageLeft from '../../assets/images/workwear/fuzzyhat.png';
 import VintageRight from '../../assets/images/workwear/suit.png';
 import VintageLeftW from '../../assets/images/workwear/fuzzyhat.webp';
 import VintageRightW from '../../assets/images/workwear/suit.webp';
-import WinterRight from "../../assets/images/winter/sky.png";
-import WinterLeft from "../../assets/images/winter/curve.png";
-import WinterRightW from "../../assets/images/winter/sky.webp";
-import WinterLeftW from "../../assets/images/winter/curve.webp";
+/***/
 import gallerySRight from "../../assets/images/galleryShoots/galleryEditorial9.png";
 import gallerySRightW from "../../assets/images/galleryShoots/galleryEditorial9.webp";
 import gallerySLeft from "../../assets/images/galleryShoots/galleryEditorial11.png";
 import gallerySLeftW from "../../assets/images/galleryShoots/galleryEditorial11.webp";
-import makeupRight from "../../assets/images/makeup/makeupJerk6.png";
-import makeupRightW from "../../assets/images/makeup/makeupJerk6.webp";
-import makeupLeft from "../../assets/images/makeup/makeupJerk2.png";
-import makeupLeftW from "../../assets/images/makeup/makeupJerk2.webp";
+/***/
+import makeupRight from "../../assets/images/makeup/makeupJerk5.png";
+import makeupRightW from "../../assets/images/makeup/makeupJerk5.webp";
+import makeupLeft from "../../assets/images/makeup/makeupJerk6.png";
+import makeupLeftW from "../../assets/images/makeup/makeupJerk6.webp";
+/***/
 import SweetLeft from '../../assets/images/sweetEscape/aanya3.png';
 import SweetLeftW from '../../assets/images/sweetEscape/aanya3.webp';
 import SweetRight from '../../assets/images/sweetEscape/aspen1.png';
 import SweetRightW from '../../assets/images/sweetEscape/aspen1.png';
-
-
+/** */
+import equaltimeLeft from '../../assets/images/equaltime/equaltime5.png';
+import equaltimeLeftW from '../../assets/images/equaltime/equaltime5.webp';
+import equaltimeRight from '../../assets/images/equaltime/equaltime1.png';
+import equaltimeRightW from '../../assets/images/equaltime/equaltime1.webp';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger)
@@ -61,7 +80,6 @@ const MobileEditorial = () => {
             start: '-97% 15%',
             once: true,
             toggleActions: 'play none none none',
-         
           }
         });
       });
@@ -87,6 +105,106 @@ const MobileEditorial = () => {
             <Col xs={12}><h1>Editorial</h1></Col>
             <Col xs={12}><p>Click on each names to view the photoshoot</p></Col>
         </Row>
+        <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
+                src={RevivalLeftW}
+                fallback={RevivalLeft}
+                alt="picture from Sweet Escape shoots"
+            />
+       </Col>
+       <Col>
+       <ImgWebp
+              src={RevivalRightW}
+              fallback={RevivalRight}
+              alt="picture from Sweet Escape shoots"
+            />
+       </Col>
+      </Row>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+      <Link to="/gallery/editorials/revival">
+          <Col>
+          <h1>Revival</h1>
+          </Col>
+          <Col>
+          <h3>02/2021</h3>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
+      </section>
+
+      <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
+                src={BoogieStrikeLeftW}
+                fallback={BoogieStrikeLeft}
+                alt="picture from Night Circus shoots"
+            />
+       </Col>
+       <Col>
+        <ImgWebp
+            src={BoogieStrikeRightW}
+            fallback={BoogieStrikeRight}
+            alt="picture from Night Circus shoots"
+        />
+       </Col>
+      </Row>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+      <Link to="/gallery/editorials/boogieStrike">
+          <Col>
+          <h1>Boogie Strike</h1>
+          </Col>
+          <Col>
+          <h3>03/2020</h3>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
+      </section>
+
+
+      <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
+                src={BodySeditorialLeftW}
+                fallback={BodySeditorialLeft}
+                alt="picture from Night Circus shoots"
+            />
+       </Col>
+       <Col>
+        <ImgWebp
+            src={BodySeditorialRightW}
+            fallback={BodySeditorialRight}
+            alt="picture from Night Circus shoots"
+        />
+       </Col>
+      </Row>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+      <Link to="/gallery/editorials/bodyspaceEditorial">
+          <Col>
+          <h1>Body X Space</h1>
+          </Col>
+          <Col>
+          <h3>11/2020</h3>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
+      </section>
+
       <section className="editorialSection">
       <Row noGutters={true} className="imgContainer">
        <Col>
@@ -190,6 +308,40 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="imgContainer">
        <Col>
             <ImgWebp
+                src={HalloweenEditLeftW}
+                fallback={HalloweenEditLeft}
+                alt="picture from Night Circus shoots"
+            />
+       </Col>
+       <Col>
+        <ImgWebp
+            src={HalloweenEditRightW}
+            fallback={HalloweenEditRight}
+            alt="picture from Night Circus shoots"
+        />
+       </Col>
+      </Row>
+        <div className="circleGallery" ref={showCircle}/>
+        <div className="title">
+        <Row noGutters={true} className="titleHeader">
+        <Link to="/gallery/editorials/halloween">
+            <Col>
+            <h1>Halloween</h1>
+            </Col>
+            <Col>
+            <h3>10/2019</h3>
+            </Col>
+            </Link>
+            </Row>
+        </div>
+        <div className="tlLine"/>
+      </section>
+
+
+      <section className="editorialSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
                 src={VintageLeftW}
                 fallback={VintageLeft}
                 alt="picture from Night Circus shoots"
@@ -223,39 +375,6 @@ const MobileEditorial = () => {
       <Row noGutters={true} className="imgContainer">
        <Col>
             <ImgWebp
-                src={AlineLeftW}
-                fallback={AlineLeft}
-                alt="picture from Night Circus shoots"
-            />
-       </Col>
-       <Col>
-        <ImgWebp
-            src={AlineRightW}
-            fallback={AlineRight}
-            alt="picture from Night Circus shoots"
-        />
-       </Col>
-      </Row>
-      <div className="circleGallery" ref={showCircle}/>
-      <div className="title">
-      <Row noGutters={true} className="titleHeader">
-        <Link to="/gallery/editorials/aline">
-          <Col>
-          <h1>Aline</h1>
-          </Col>
-          <Col>
-          <h3>05/2019</h3>
-          </Col>
-          </Link>
-        </Row>
-      </div>
-      <div className="tlLine"/>
-      </section>
-  
-      <section className="editorialSection">
-      <Row noGutters={true} className="imgContainer">
-       <Col>
-            <ImgWebp
                 src={JerkLeftW}
                 fallback={JerkLeft}
                 alt="picture from Night Circus shoots"
@@ -284,37 +403,41 @@ const MobileEditorial = () => {
       </div>
       <div className="tlLine"/>
       </section>
+
       <section className="editorialSection">
       <Row noGutters={true} className="imgContainer">
        <Col>
             <ImgWebp
-                src={WinterLeftW}
-                fallback={WinterLeft}
+                src={equaltimeLeftW}
+                fallback={equaltimeLeft}
                 alt="picture from Night Circus shoots"
             />
        </Col>
        <Col>
         <ImgWebp
-            src={WinterRightW}
-            fallback={WinterRight}
+            src={equaltimeRightW}
+            fallback={equaltimeRight}
             alt="picture from Night Circus shoots"
         />
        </Col>
       </Row>
-        <div className="circleGallery" ref={showCircle}/>
-        <div className="title">
-        <Row noGutters={true} className="titleHeader">
-            <Link to="/gallery/editorials/winter">
-            <Col>
-            <h1>Winter</h1>
-            </Col>
-            <Col>
-            <h3>12/2018</h3>
-            </Col>
-            </Link>
-            </Row>
-        </div>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+      <Link to="/gallery/editorials/equalTime">
+          <Col>
+          <h1>Equal Time</h1>
+          </Col>
+          <Col>
+          <h3>01/2019</h3>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
       </section>
+
+
         <Row className="navEdShow">
          <NavLink to="/gallery/shows">
             <Col className="nvLinkbox">

@@ -32,7 +32,6 @@ export default function HAgency()  {
         <div className="layerseven" id="agency">
           <div className="agencyHead">
             <h2>Join a Committe</h2>
-            <h5>We have some of the most talented individuals that can help you bring you ideas to life. Meet our team of:</h5>
           </div>
 
           <div className='marqueewrapper' >
