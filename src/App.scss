@@ -33,11 +33,15 @@ body {
 mix-blend-mode: difference;}
 
 p, h3, h4, h5 {
+  font-size: 100%;
+  vertical-align: baseline;
   font-family: 'Montserrat', sans-serif;
   white-space: normal;
   overflow-wrap: break-word; }
 
 h1, h2 {
+  font-size: 100%;
+  vertical-align: baseline;
   font-family: "Vipnagorgialla", "Raleway", sans-serif;
   mix-blend-mode: normal; }
 

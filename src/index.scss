@@ -1,5 +1,7 @@
-@import-normalize, node_modules/normalize.css;
-
+@import-normalize;
+@import 'normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap");
+@import url("https://allfont.net/allfont.css?fonts=vipnagorgialla");
 
 *,
 *::after,
@@ -10,3 +12,14 @@
   min-height: 100%;
   margin: 0;
   padding: 0;}
+
+
+@font-face{
+  font-family:'Vipnagorgialla';
+  font-weight:600; 
+  line-height: initial;
+  src: local('Vipnagorgialla'), url(../src/assets/fonts/vipnagorgialla_bd-webfont.woff) format('woff');
+  src: local('Vipnagorgialla'), url(../src/assets/fonts/vipnagorgialla_bd-webfont.woff2) format('woff2');
+  src: local('Vipnagorgialla'), url(../src/assets/fonts/vipnagorgialla-bd.ttf) format('truetype');
+  src:('Vipnagorgialla'), url(http://allfont.ru/cache/fonts/vipnagorgialla_5244417b4a2c25aadf549ae687197569.woff) format('woff');
+  src:('Vipnagorgialla'), url(http://allfont.ru/cache/fonts/vipnagorgialla_5244417b4a2c25aadf549ae687197569.ttf) format('truetype');}
