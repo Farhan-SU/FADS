@@ -61,11 +61,10 @@
 }
 
 %headingstyle{
-  font-size: 9rem;
+  font-size: 8rem;
   position: relative;
   text-transform: uppercase;
   color: $heading;
-  font-family: "Vipnagorgialla", "Raleway", sans-serif; 
   letter-spacing: 9px;
 }
 
@@ -79,12 +78,10 @@
 }
 
 .layerone{
-  background-color: $lightergraypurple;
   overflow: hidden;
- 
   display: flex;
   height: 105vh;
-  padding: 4rem 2rem 1rem 5rem;
+  padding: 2.5rem 1rem 1rem 5rem;
   justify-content: flex-start;
   align-items: flex-start;
   align-self: flex-start;
@@ -93,6 +90,7 @@
 
   @include media ("screen", "<=phone") {
     height: 110%;
+    font-family: inherit;
     background: rgb(78, 61, 109) url('../images/weareSM3.svg') no-repeat top center/ cover;
     background-blend-mode: multiply;
     padding: 2rem 2rem 8rem 2rem;
@@ -127,7 +125,7 @@
       
         h1{
           color: $purple;
-          font-size: 6rem;
+          font-size: 5.5rem;
           letter-spacing: 0.3rem;
           text-transform: capitalize;
 
@@ -272,7 +270,6 @@
 
 .layerfourSM{
   overflow: hidden;
- 
   height: 110%;
   background-color: #644a5d;
   position: relative;
@@ -283,7 +280,7 @@
       text-transform: uppercase;
       font-size: 4rem; 
       letter-spacing: 9px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       width: 97%;
       position: relative;
       z-index: 1;
@@ -308,7 +305,6 @@
   }
 
   .galbottom{
-
     .forMobile2{
       position: relative;
       left: 1.8rem;
@@ -329,8 +325,7 @@
 .aboutuswrapper{
   background-image: #61526d;
   overflow: hidden;
- 
-  height: 150vh;
+  height: 100%;
   padding-bottom: 2rem;
   overflow: hidden;
 
@@ -420,8 +415,7 @@
 .layerseven{
   background-image: #170524;
   overflow: hidden;
- 
-  height: 150vh;
+  height: 100%;
   padding: 3rem 0;
 
   @include media ("screen", "<=phone") {
@@ -441,14 +435,6 @@
       text-transform: uppercase;
       @include media ("screen", "<=phone") {
         font-size: 2.8rem;
-      }
-    }
-    h5{
-      color: rgb(214, 202, 231);
-      font-size: 2rem;
-      @include media ("screen", "<=phone") {
-        font-size: 1.4rem;
-        line-height: 1.4;
       }
     }
   }

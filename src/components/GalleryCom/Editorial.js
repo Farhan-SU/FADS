@@ -378,7 +378,7 @@ const Editorial = () => {
         </Col>
         <Col md={4} className="description">
         <Row  className="header">
-        <Link to="/gallery/editorials/jerk-fads">
+        <Link to="/gallery/editorials/work-wear-vintage">
           <Col md={12}>
           <h1>Work<br/>wear Vintage</h1>
           </Col>
