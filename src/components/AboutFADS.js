@@ -30,7 +30,7 @@ export default function AboutTest () {
                 <Reveal wrapperElement="h2" direction="up">A fashion collective</Reveal>
                 </Col>
                 <Col lg={12}>
-                <Reveal wrapperElement="h2" direction="up" delay={0.8}>& creative network agency</Reveal>
+                <Reveal wrapperElement="h2" direction="up" delay={1}>& creative network agency</Reveal>
                 </Col>
             </Row>
             <div className="abtdes">
@@ -38,21 +38,19 @@ export default function AboutTest () {
                  <p>
                  The Fashion and Design Society is a diverse group of career minded individuals at
                  Syracuse University who share a passion for creativity, design, and fashion
-                 FADS is an open environment for the discussion of new ideas that brings important 
-                 concerns of the global fashion industry to the forefront at Syracuse University.
                 <br/>
                 <br/>
                  FADS is an open environment for the discussion of
                 new ideas that brings important concerns of the
                 global fashion industry and the changing social
-                climate to the forefront of dialogue at SU.
+                climate to the forefront of dialogue at Syracuse University
               <br/>
               <br/>
                 We give our committed members an opportunity
                 to gain real-time experience in fields that are
                 potential career avenues for them in their future.
                 FADS has general member meetings, model training, and fashion design meetings 
-                each week to collaborate with on our work for our shows, photo shoots, and events.
+                each week to collaborate with on our work for our shows, photo shoots, and events
                 </p>
             </div>
             <div className="fadsBgAbt">
