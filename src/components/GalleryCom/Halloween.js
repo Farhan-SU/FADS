@@ -1,8 +1,8 @@
-import React, {useRef, useEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import React from 'react';
+import {withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
@@ -19,7 +19,6 @@ if (typeof window !== `undefined`) {
     gsap.core.globals("ScrollTrigger", ScrollTrigger);
 };
 
-
 function Halloween () {
 
     return (
@@ -32,8 +31,8 @@ function Halloween () {
         }}>
         <div className="galleryShows">
             <Row className="spacer">
-                <Col lg={12}>
-                <Reveal wrapperElement="h1" direction="up" delay={0.1}>Halloween</Reveal>
+                <Col lg={12} className="scaleDownTxt">
+                <Reveal wrapperElement="h1" direction="up" delay={0.1} style={{fontSize: '2.5rem'}}>Halloween</Reveal>
                 </Col>
                 <Col lg={12}>
                 <Reveal wrapperElement="h3" direction="up" delay={0.5}>12/2020</Reveal>
@@ -43,7 +42,7 @@ function Halloween () {
         <Row className="videoContainerGal">
          <Col lg={10} className="halloweenVideo">
             <Video cloudName="fadscloud" width="100%" 
-                publicId="HalloweenVid1" controls="true" 
+                publicId="HalloweenVid1" controls={true} 
                 loading="lazy" 
                 fallbackContent="Your browser does not support HTML5 video tags." >
                 <Transformation format="auto"/>
@@ -94,7 +93,9 @@ function Halloween () {
         </Row>
         </div>
         <div className="endsec">
-            <NextPageGallery to='/gallery/editorials/jerk-fads' title1='Jerk X' title2='FADS'/>
+        <div className="halloweenEndSec">
+            <NextPageGallery to='/gallery/editorials/work-wear-vintage' title1='Work Wear' title2='Vintage'/>
+        </div>
         </div>
     </div>
     </SEO>

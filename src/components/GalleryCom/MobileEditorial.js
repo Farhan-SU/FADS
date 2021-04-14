@@ -434,7 +434,6 @@ const MobileEditorial = () => {
           </Link>
         </Row>
       </div>
-      <div className="tlLine"/>
       </section>
 
 

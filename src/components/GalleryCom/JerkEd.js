@@ -1,11 +1,9 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useLayoutEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import SEO from "../SEO";
 import { Col, Row } from 'react-bootstrap';
 import Jerk1w from '../../assets/images/jerk/solei.webp';
@@ -27,6 +25,7 @@ import Jerk9 from '../../assets/images/jerk/jolly.png';
 import Jerk10w from '../../assets/images/jerk/pinkpants.webp';
 import Jerk10 from '../../assets/images/jerk/pinkpants.png';
 import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -40,6 +39,7 @@ function JerkEd () {
     const portfolioRef = useRef();
     const panelRef = useRef();
     panelRef.current = [];
+
 
     useEffect(() => {
         let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
@@ -56,10 +56,10 @@ function JerkEd () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {
@@ -93,11 +93,17 @@ function JerkEd () {
         }}>
         <div className="galleryShows">
          <div className="spacer">
-            <h1>April <br/>2019</h1>
+            <Row className="spacer">
+            <Col lg={12}>
+            <Reveal wrapperElement="h1" direction="up" delay={0.1}>Jerk X FADS</Reveal>
+            </Col>
+            <Col lg={12}>
+            <Reveal wrapperElement="h3" direction="up" delay={0.5}>04/2019</Reveal>
+            </Col>
+         </Row>
          </div>
-        <section className="section">
+        <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioRef}>
-             <h2 className="biggerport">JERK</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <ImgWebp
@@ -197,7 +203,7 @@ function JerkEd () {
             </div>
         </section>
         <div className="endsec">
-        <NextPageGallery to='/gallery/editorials/winter' title1='Wint' title2=''/>
+        <NextPageGallery to='/gallery/editorials/equalTime' title1='Equal' title2='Time'/>
         </div>
     </div>
     </SEO>

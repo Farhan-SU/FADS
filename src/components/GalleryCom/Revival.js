@@ -1,8 +1,8 @@
 import React, {useRef, useEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
@@ -46,10 +46,10 @@ function Revival () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {

@@ -48,13 +48,12 @@
     opacity: 0.8;
 
     .nav-inner {
-        margin: 5rem 1rem 1rem 0.5rem;
+        margin: 4rem 1rem 1rem 0.5rem;
     }
         
     .nav-item {
         list-style: none;
-        font-size: 2rem;
-        font-weight: 500;
+        font-size: 1.7rem;
         color:#eae0fd;
         font-family: "Vipnagorgialla", "Raleway", sans-serif;
 
@@ -65,21 +64,22 @@
         }
     }
     .nav-info{
-        margin: 2rem auto;
+        margin: 3rem auto 1rem auto;
     }
     .nav-info-item {
-        color:#d2c5eb;
+        color:#d9cfec;
         list-style: none;
-        font-size: 1rem;
+        font-size: 0.8rem;
         a{
             color:#e7b6f3;
             font-size: 0.9rem;
         }
     }
     .smNavsocial{
-        margin: 3rem auto auto 2.6rem;
+        margin: 2rem auto auto 2.6rem;
         width: 75%;
         .smSocial{
+            opacity: 0.8;
             margin-right: 3rem;
             img{
                height: 30px;

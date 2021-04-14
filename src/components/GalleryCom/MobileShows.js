@@ -8,14 +8,14 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 /**Images*/
-import BodySpaceLeft from '../../assets/images/bodyspace/bodyspace.png';
-import BodySpaceLeftW from '../../assets/images/bodyspace/bodyspace.webp';
-import BodySpaceRight from '../../assets/images/bodyspace/bodyspace1.png';
-import BodySpaceRightW from '../../assets/images/bodyspace/bodyspace1.webp';
-import TheGalLeft from "../../assets/images/the_gallery/thegalleryshootb.png";
-import TheGalLeftW from "../../assets/images/the_gallery/thegalleryshootb.webp";
-import TheGalRight from "../../assets/images/the_gallery/whitedress.png";
-import TheGalRightW from "../../assets/images/the_gallery/whitedress.webp";
+import BodySpaceLeft from '../../assets/images/bodyspace/bodyspace1.png';
+import BodySpaceLeftW from '../../assets/images/bodyspace/bodyspace1.webp';
+import BodySpaceRight from '../../assets/images/bodyspace/bodyspace.png';
+import BodySpaceRightW from '../../assets/images/bodyspace/bodyspace.webp';
+import TheGalLeft from "../../assets/images/the_gallery/galleryshowpat.png";
+import TheGalLeftW from "../../assets/images/the_gallery/galleryshowpat.webp";
+import TheGalRight from "../../assets/images/the_gallery/arch.png";
+import TheGalRightW from "../../assets/images/the_gallery/arch.webp";
 import CircusLeft from '../../assets/images/circus/bw.png';
 import CircusLeftW from '../../assets/images/circus/bw.webp';
 import CircusRight from '../../assets/images/circus/circus4.png';
@@ -73,6 +73,40 @@ const MobileShow = () => {
             <Col xs={12}><h1>Shows</h1></Col>
             <Col xs={12}><p>Click on each names to view our fashion shows</p></Col>
         </Row>
+
+      <section className="showSection">
+      <Row noGutters={true} className="imgContainer">
+       <Col>
+            <ImgWebp
+                src={BodySpaceLeft}
+                fallback={BodySpaceLeftW}
+                alt="BodyXSpace Fashion Show"
+            />
+       </Col>
+       <Col>
+        <ImgWebp
+            src={BodySpaceRight}
+            fallback={BodySpaceRightW}
+            alt="The Gallery Fashion Show"
+        />
+       </Col>
+      </Row>
+      <div className="circleGallery" ref={showCircle}/>
+      <div className="title">
+      <Row noGutters={true} className="titleHeader">
+         <Link to="/gallery/shows/bodyxspace"  onClick={() => history.push("/gallery/shows/thegallery")}>  
+          <Col>
+          <h1>Body X Space</h1>
+          </Col>
+          <Col>
+          <h3>Fall 2021</h3>
+          </Col>
+          </Link>
+        </Row>
+      </div>
+      <div className="tlLine"/>
+      </section>
+
       <section className="showSection">
       <Row noGutters={true} className="imgContainer">
        <Col>
@@ -160,10 +194,10 @@ const MobileShow = () => {
       <div className="title">
       <Row noGutters={true} className="titleHeader">
       <Link to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
-          <Col>
-          <h1>Tomorrow <br/> Land</h1>
+          <Col md={12}>
+          <h1 className="scaleDowntxtShow">Tomorrow <br/> Land</h1>
           </Col>
-          <Col>
+          <Col md={12}>
           <h3>Spring 2018</h3>
           </Col>
           </Link>
@@ -174,7 +208,7 @@ const MobileShow = () => {
         <Row className="navEdShow">
          <Link to="/gallery/shows">
             <Col className="nvLinkbox">
-            <h5>FADS Fashion Shows &#62;</h5>
+            <h5>Editorial &#62;</h5>
             </Col>
         </Link>
         </Row>

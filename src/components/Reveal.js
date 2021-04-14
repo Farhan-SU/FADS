@@ -18,7 +18,6 @@ const Reveal = ({
   const Component = wrapperElement;
   let compRef = useRef(null);
   const distance = 100;
-
   let fadeDirection;
   switch (direction) {
     case "left":

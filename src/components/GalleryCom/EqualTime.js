@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
@@ -24,7 +24,7 @@ import EtEdit8w from '../../assets/images/equaltime/equaltime8.webp';
 import EtEdit8 from '../../assets/images/equaltime/equaltime8.png';
 import EtEdit9w from '../../assets/images/equaltime/equaltime9.webp';
 import EtEdit9 from '../../assets/images/equaltime/equaltime9.png';
-import NextPageGallery from './NextPageGallery';
+import Reliveit from '../../assets/images/reliveit.png';
 import Reveal from '../Reveal';
 
 if (typeof window !== `undefined`) {
@@ -55,10 +55,10 @@ function GalleryShoots () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {
@@ -184,16 +184,6 @@ function GalleryShoots () {
         <div className="panel" ref={addGPanels}>
             <div className="panel_item">
             <ImgWebp
-                    src={EtEdit8w}
-                    fallback={EtEdit8}
-                    alt="The Gallery editorial shoots"
-                    className="panel_img"
-                />
-            </div>
-        </div>
-        <div className="panel" ref={addGPanels}>
-            <div className="panel_item">
-            <ImgWebp
                     src={EtEdit9w}
                     fallback={EtEdit9}
                     alt="The Gallery editorial shoots"
@@ -203,8 +193,28 @@ function GalleryShoots () {
         </div>
     </div>
     </section>
-        <div className="endsec">
-            <NextPageGallery to='/gallery/editorials/halloween' title1='Halloween' title2=''/>
+    <div className="endsec">
+            <Row noGutters={true} className="imgNext">
+            <Col lg={12} className="endSec1">
+                <div className="mobileBacktoGallery">
+                <h1>Back to</h1><h2 className="ontopLastOption">Gallery</h2>
+                </div>
+            </Col>
+            <Col lg={12} className="endseccontent">
+               <img src={Reliveit} alt="relive it again design"/>
+            </Col>
+            </Row>
+            <Row noGutters={true} className="endNext">
+            <Col lg={12} className="alignLinkBox">
+            <Link className="link" to="/gallery">
+            <span className="link__arrow">
+                <span></span>
+                <span></span>
+            </span>
+            <span className="link__line"></span>
+            </Link>
+            </Col>
+            </Row>
         </div>
     </div>
     </SEO>

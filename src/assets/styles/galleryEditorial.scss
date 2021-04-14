@@ -1,0 +1,351 @@
+@import 'colors';
+@import 'breakpoints'; 
+
+%galintrostyle{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.galleryShows{
+position: relative;
+.spacer{
+  @extend %galintrostyle;
+  height: 100vh;
+  background: linear-gradient(0deg, lighten($lightergraypurple, 17%) 0%, lighten($pinkish, 1%) 100%);
+  padding: 3rem 0 0 0;
+
+  @include media ("screen", "<=phone") {
+    height: 100vh;
+    text-align: center;
+  }
+
+  h1{
+    font-size: 8vw;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #594a69;
+    margin: 0;
+
+    @include media ("screen", "<=phone") {
+      font-size: 3.7rem;
+      color: $darkpurple;
+    }
+  }
+  h3{
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $graypurple;
+
+    @include media ("screen", "<=phone") {
+      font-size: 2rem;
+    }
+  }
+} 
+
+.wrapperNonHoritzontal{
+  background: linear-gradient(180deg,#cfc6b517,#b1a898, rgb(92, 57, 4), #f0ecf11c 100%);
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  @include media ("screen", "<=phone") {
+    padding-bottom: 5rem;
+  }
+}
+
+.videoContainerGal{
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+  padding: 4rem;
+  height: 100vh;
+  padding: 0 1rem;
+
+  @include media ("screen", "<=phone") {
+    height: 100%;
+    width: 100vw;
+    padding-bottom: 3rem;
+  }
+} 
+.boogieImg{
+  @extend %galintrostyle;
+  padding-top: 2rem;
+  height: 100vh;
+  @include media ("screen", "<=phone") {
+    height: 100%;
+    padding: 5rem 0;
+  }
+  .bstrike{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+      @include media ("screen", "<=phone") {
+        width: 100vw;
+        left: -1rem;
+      }
+    }
+  }
+.Halloween{
+  padding: 0 5rem;
+  display: flex;
+  align-items: space-between;
+  align-content: space-between;
+  justify-content: space-between;
+    @include media ("screen", "<=phone") {
+      padding: 0 2rem;
+    }
+  video{
+      @include media ("screen", "<=phone") {
+      padding-bottom: 2rem;
+      }
+    }
+  }
+
+  .bothImages{
+    padding: 3rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    @include media ("screen", "<=phone") {
+      width: 100vw;
+      height: 100%;
+    }
+
+    .underImg{
+      padding: 3rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      overflow: hidden;
+      @include media ("screen", "<=phone") {
+        padding: 0 2rem;
+      }
+      picture{
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        img{
+          position: relative;
+          object-fit: contain;
+          width: 90%;
+
+          @include media ("screen", "<=phone") {
+            padding-bottom: 2rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+.horizontalWrap{
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .portfolio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    background: lighten($lightergraypurple, 15%);
+    overflow: hidden;
+
+    @include media ("screen", "<=phone") {
+      padding-left: 1rem;
+    }
+  }
+  
+  .panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include media ("screen", "<=phone") {
+      flex: 0 0 95%;
+      margin-right: 1rem;
+    }
+  }
+  #landscape{
+    flex: 0 0 78%;
+    @include media ("screen", "<=phone") {
+      flex: 0 0 200%;
+     }
+  }
+  .panel_item {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .panel_img{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+
+    @include media ("screen", "<=phone") {
+      padding: 0.5rem 0;
+      object-position: bottom;
+      object-fit: cover;
+     }
+  }
+}
+.endsec {
+  height: 115vh;
+  padding: 5rem 0 8rem 0;
+  background: linear-gradient(rgba(253, 251, 253, 0), #180725 100%);
+  position: relative;
+
+  @include media ("screen", "<=phone") {
+    position: relative;
+    height: 100%;
+    padding: 4rem 1rem;
+  }
+
+  .imgNext{
+    @extend %galintrostyle;
+    position: relative;
+    z-index: 10;
+    mix-blend-mode: luminosity;
+    background-blend-mode: luminosity;
+
+    @include media ("screen", "<=phone") {
+      margin-top: 2rem;
+      top: 0;
+     }
+     .endseccontent{
+      position: absolute;
+      top: 1rem;
+      left: 26%;
+       @include media ("screen", "<=phone") {
+        left: 4%;
+       }
+       img{
+        width: 45%;
+        opacity: 0.6;
+        mix-blend-mode: luminosity;
+        background-blend-mode: luminosity;
+
+      
+        @include media ("screen", "<=phone") {
+          width: 90%;
+         }
+      }
+     }
+     .endSec1{
+      @extend %galintrostyle;
+      height: 115vh;
+      width: 100vw;
+      text-align: center;
+      position: relative;
+      top: -5rem;
+      @include media ("screen", "<=phone") {
+        height: 60vh;
+  
+        top: 0;
+        left: 0;
+       }
+       h1, h2{
+        font-size: 6rem;
+        display: inline-flex;
+        color: $lightergraypurple;
+        @include media ("screen", "<=phone") {
+          font-size: 2.5rem;
+         }
+       }
+       .ontop{
+        position: relative;
+        z-index: 20;
+        margin-right: 1.5rem;
+      }
+      .ontopD{
+        position: relative;
+        z-index: 20;
+        margin-right: 3rem;
+      }
+      .ontopGshoots{
+        position: relative;
+        z-index: 20;
+        margin-right: 0;
+      }
+
+      .circusEndSecOnly{
+        h1, h2{
+          @include media ("screen", "<=phone") {
+            font-size: 2.1rem;
+           }
+         }
+      }
+      .mobileBacktoGallery{
+        @include media ("screen", "<=phone") {
+          h1, h2{
+            font-size: 2.2rem;
+          }
+          .ontopLastOption{
+            position: relative;
+            z-index: 20;
+            margin-left: 1rem;
+           }
+         }
+       }
+
+     }
+  }
+}
+.endNext{
+ @extend %galintrostyle;
+ overflow: hidden;
+  height: 115vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  @include media ("screen", "<=phone") {
+    height: 80vh;
+   }
+
+  .alignLinkBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 45%;
+    position: relative;
+    top: 5rem;
+    @include media ("screen", "<=phone") {
+      left: -1rem;
+     }
+  }
+}

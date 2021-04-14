@@ -4,9 +4,9 @@ import '../assets/styles/Mobilenav.scss';
 import navLogo from '../assets/images/navLogo.gif';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Facebook from '../assets/images/facebook.png';
-import instagram from '../assets/images/instagram.png';
-import LinkedIn from '../assets/images/linkedin.png';
+import Facebook from '../assets/images/fbHome.png';
+import Instagram from '../assets/images/igHome.png';
+import LinkedIn from '../assets/images/linkedinHome.png';
 
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
@@ -32,6 +32,7 @@ function MobileNav() {
   const aboutSm = useRef(null);
   const agencySm = useRef(null);
   const pressSm = useRef(null);
+  const ffour = useRef(null);
   const info = useRef(null);
   const socialSm = useRef(null);
 
@@ -45,7 +46,7 @@ function MobileNav() {
     .fromTo(navwrap.current, {height: intialheightNav}, {height: openheightNav})
     .fromTo(nav.current, {autoAlpha: 0}, {autoAlpha: 1}, '-=0.8')
     .fromTo(navContent.current, {autoAlpha: 0, y: 200}, {autoAlpha: 1, y: 0, display: 'grid'})
-    .fromTo([homeSm.current, gallerySm.current, aboutSm.current, agencySm.current, pressSm.current],
+    .fromTo([homeSm.current, gallerySm.current, aboutSm.current, agencySm.current, pressSm.current, ffour.current],
       {autoAlpha: 0, y: 40}, {autoAlpha: 1, y: 0, stagger: {each: .5}}, "-=1")
     .fromTo(info.current, {duration: 1, autoAlpha: 0, y: 60}, {autoAlpha: 1, y: 0}, "-=0.9")
     .fromTo(socialSm.current, {duration: 0.5, autoAlpha: 0, y: 80}, {duration: 0.5, autoAlpha: 1, y: 0}, "-=0.7")
@@ -87,6 +88,7 @@ function MobileNav() {
               <NavLink to="/aboutus" exact  className="nav-item" ref={aboutSm} activeStyle={{color: "#ffe2bc"}}><li>About Us</li></NavLink>
               <NavLink to="/agency" className="nav-item" ref={agencySm} activeStyle={{color: "#ffe2bc"}}><li>Agency</li></NavLink>
               <NavLink to="/press" exact className="nav-item" ref={pressSm} activeStyle={{color: "#ffe2bc"}}><li>Press</li></NavLink>
+              <NavLink to="/f4" exact className="nav-item" ref={ffour} activeStyle={{color: "#ffe2bc"}}><li>F4 Speakers</li></NavLink>
             </ul>
   
             <ul className="nav-info" ref={info}>
@@ -101,7 +103,7 @@ function MobileNav() {
                 <img src={Facebook} alt="facebook icon"/>
               </a>
               <a className='smSocial' href="https://www.instagram.com/fashiondesignsociety/" target="_blank" rel="noopener noreferrer" >
-                <img src={instagram} alt="Instagram Icon"/>
+                <img src={Instagram} alt="Instagram Icon"/>
               </a>
               <a className='smSocial' href="https://www.linkedin.com/company/fashion-and-design-society/" target="_blank" rel="noopener noreferrer" >
                <img src={LinkedIn} alt="LinkedIn Icon"/>

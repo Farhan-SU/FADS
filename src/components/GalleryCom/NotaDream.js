@@ -1,11 +1,9 @@
 import React, {useRef, useEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
 import Dream1w from '../../assets/images/makeup/makeupJerk1.webp';
@@ -20,6 +18,8 @@ import Dream5w from '../../assets/images/makeup/makeupJerk5.webp';
 import Dream5 from '../../assets/images/makeup/makeupJerk5.png';
 import Dream6w from '../../assets/images/makeup/makeupJerk6.webp';
 import Dream6 from '../../assets/images/makeup/makeupJerk6.png';
+import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
 
 
 if (typeof window !== `undefined`) {
@@ -49,10 +49,10 @@ function NotaDream () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {
@@ -84,12 +84,16 @@ function NotaDream () {
           description: "June 2020 editorial photoshoot"
         }}>
         <div className="galleryShows">
-         <div className="spacer">
-            <h1>June <br/>2020</h1>
-         </div>
+        <Row className="spacer">
+                <Col lg={12}>
+                <Reveal wrapperElement="h1" direction="up" delay={0.1}>Not a Dream</Reveal>
+                </Col>
+                <Col lg={12}>
+                <Reveal wrapperElement="h3" direction="up" delay={0.5}>6/2020</Reveal>
+                </Col>
+            </Row>
         <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioRef}>
-             <h2>Not a Dream</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <ImgWebp
@@ -152,29 +156,9 @@ function NotaDream () {
                 </div>
             </div>
         </section>
-        <Row className="endsec">
-        <Row className="imgNext">
-            <Col lg={12} className="endSec1">
-                <h1>Work Wear</h1><h2 className="ontop">Vintage</h2>
-            </Col>
-            <Col lg={12} className="endseccontent">
-                <ImgWebp
-                    src={EndEsecW}
-                    fallback={EndEsec}
-                    alt="FADS Logo"
-                />
-            </Col>
-        </Row>
-            <Col xs={12} lg={12} className="Endnext">
-            <Link className="link" to="/gallery/editorials/work-wear-vintage">
-            <span className="link__arrow">
-                <span></span>
-                <span></span>
-            </span>
-            <span className="link__line"></span>
-            </Link>
-            </Col>
-        </Row>
+        <div className="endsec">
+            <NextPageGallery to="/gallery/editorials/galleryShoots" title1='The' title2='Gallery'/>
+        </div>
     </div>
     </SEO>
     </>

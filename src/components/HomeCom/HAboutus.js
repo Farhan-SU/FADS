@@ -1,9 +1,8 @@
-import React, {useRef,useEffect, useState} from 'react';
+import React, {useRef,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import '../../assets/styles/pages.scss'
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import joinFadsvid from '../../assets/images/fadsfam.mp4';
 
 
 if (typeof window !== `undefined`) {
@@ -45,13 +44,13 @@ export default function HAboutus()  {
               scrollTrigger: {
                 id: 'about-ref',
                 trigger: aboutRef.current,
-                scrub: 0.2,
-                start: "-30% 40%" ,
-                end: "100%",
-                once: true
+                scrub: 0.3,
+                start: "-90% 80%" ,
+                end: "0px",
+                once: true,
               }
             })
-            .to(overlayref.current, {duration: 0.5, width:'100%', ease: 'sine.in'});
+            .to(overlayref.current, {duration: 0.1, width:'100%', ease: 'sine.in'});
         }
       });
    }, []);

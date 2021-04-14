@@ -1,8 +1,8 @@
-import React, {useRef, useEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import React from 'react';
+import {withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
@@ -61,7 +61,7 @@ function BoogieStrike () {
             </Row>
         </div>
         <div className="endsec">
-            <NextPageGallery to='/gallery/editorials/halloween' title1='Hallow' title2='een'/>
+            <NextPageGallery to='/gallery/editorials/bodyspaceEditorial' title1='Body X' title2='Space'/>
         </div>
     </div>
     </SEO>

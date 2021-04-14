@@ -1,13 +1,12 @@
-import React, {useRef, useEffect, useLayoutEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryShows.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import Reveal from '../Reveal';
 import {Row, Col} from 'react-bootstrap';
-import Prev from '../../assets/images/prev.png';
 import Cir1w from '../../assets/images/circus/redboots.webp';
 import Cir1 from '../../assets/images/circus/redboots.png';
 import Cir2w from '../../assets/images/circus/circus1.webp';
@@ -56,7 +55,7 @@ function Circus () {
     panelSRef.current = [];
 
     useEffect(() => {
-        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.08;
+        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.03;
         let panelend =  (Math.abs(xendvalue)) * -1;
 
         fashiontl.current = gsap.timeline({
@@ -70,10 +69,10 @@ function Circus () {
             end: xendvalue,
             autoRemoveChildren: true,
             }
-        }).to(panelSRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelSRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         fashiontl.current = panelSRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         })
 
           return () => {
@@ -282,14 +281,19 @@ function Circus () {
         </section>
 
         <Row className="pDeck">
+        <Col lg={12} className="mobileExplorepDeck"><h3>Drag to explore the Program Card</h3></Col>
+        <Col lg={12}>
              <ImgWebp
                     src={CirpDeckW}
                     fallback={CirpDecK}
                     alt="Cirlery pitch Deck"
                 />
+        </Col>
         </Row>
         <div className="endsec">
+        <div className="circusEndSec">
             <NextPageGallery to='/gallery/shows/tomorrow-land' title1='Tomorrow' title2='Land'/>
+        </div>
         </div>
     </div>
     </SEO>

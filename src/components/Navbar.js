@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import {NavLink, Link, withRouter, useHistory} from "react-router-dom";
+import React from 'react';
+import {NavLink, withRouter, useHistory} from "react-router-dom";
 import {Row, Col} from 'react-bootstrap'
-import Nav from 'react-bootstrap/Nav';
 import '../assets/styles/layout.scss';
 import ImgWepb from './ImgWebp';
 import navLogo from '../assets/images/navLogo.gif';

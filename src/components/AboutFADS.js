@@ -5,11 +5,12 @@ import Reveal from './Reveal';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {Row, Col} from 'react-bootstrap';
-import ImgWebp from './ImgWebp';
-import membersCom from '../assets/images/memberscom.png';
-import execCom from '../assets/images/exec.png';
-import modelCom from '../assets/images/modelcom.png';
-import designersCom from '../assets/images/designerscom.png';
+import membersCom from '../assets/images/committees.jpg';
+import execCom from '../assets/images/executiveboardmembers.jpg';
+import modelCom from '../assets/images/models.jpg';
+import designersCom from '../assets/images/designers.jpg';
+import FADSBg from '../assets/images/abtdesimg.png';
+import FADSBgM from '../assets/images/mobileAbt.png'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,17 +55,21 @@ export default function AboutTest () {
                 each week to collaborate with on our work for our shows, photo shoots, and events.
                 </p>
             </div>
+            <div className="fadsBgAbt">
+                <img src={FADSBg} alt=""/>
             </div>
-        <div className="joinHeader">
-            <h1>Join Us</h1>
+            </div>
+        <Row className="joinHeader">
+            <Col lg={12}><h2>Join Us</h2></Col>
+            <Col lg={12}>
             <p>At FADS, you will have the opportunity to work with our team  on projects and shows in 
                 a dynamic and energizing environment that will inspire, challenge and excite you as you 
                 develop and improve on your skills alongside the FADS family.  Explore the positions we 
                 offer below.
             </p>
-
-        </div>
-        <Row noGutter={true} className="comitWrap">
+            </Col>
+        </Row>
+        <Row noGutters={true} className="comitWrap">
         <Col md={6} className="comitBox">
         <div className="exec">
             <h2>EXECUTIVE BOARD MEMBERS</h2>
@@ -72,12 +77,7 @@ export default function AboutTest () {
                professional leadership experience</p>
         </div>
         <div className="figurecom">
-            <ImgWebp
-                src={execCom}
-                fallback={execCom}
-                className="imgfig"
-                alt="3D illustration by by Cabeza Patata at https://theinspirationgrid.com/spotify-premium-campaign-by-cabeza-patata/"
-            />
+        <img src={execCom} className="imgfig" alt="members illustration"/>
         </div>
         </Col>
         <Col md={6} className="comitBox">
@@ -87,12 +87,7 @@ export default function AboutTest () {
                 photographers and local media coverage. Have your work photographed for your portfolio</p>
         </div>
         <div className="figurecom">
-            <ImgWebp
-                src={designersCom}
-                fallback={designersCom}
-                className="imgfig"
-                alt="3D illustration by ZHUAIRUI2011 on Behance at https://www.behance.net/gallery/93743927/Color-Fantasy"
-            />
+        <img src={designersCom} className="imgfig" alt="members illustration"/>
         </div>
         </Col>
         <Col md={6} className="comitBox">
@@ -103,12 +98,7 @@ export default function AboutTest () {
             Fashion Week</p>
         </div>
         <div className="figurecom">
-            <ImgWebp
-                src={modelCom}
-                fallback={modelCom}
-                className="imgfig"
-                alt="3D illustration by ZHUAIRUI2011 on Behance at https://www.behance.net/gallery/93743927/Color-Fantasy"
-            />
+        <img src={modelCom} className="imgfig" alt="members illustration"/>
         </div>
         </Col>
         <Col md={6} className="comitBox">
@@ -118,12 +108,9 @@ export default function AboutTest () {
                 and production of a fashion show</p>
         </div>
         <div className="figurecom">
-            <ImgWebp
-                src={membersCom}
-                fallback={membersCom}
-                className="imgfig"
-                alt="3D illustration by ZHUAIRUI2011 on Behance at  https://www.behance.net/gallery/100089591/3D-fashion-Summer-shows"
-            />
+        <div className="figurecom">
+            <img src={membersCom} className="imgfig" alt="members illustration"/>
+        </div>
         </div>
         </Col>
         </Row>

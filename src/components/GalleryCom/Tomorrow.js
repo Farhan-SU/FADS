@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryShows.scss';
 import ImgWebp from '../ImgWebp';
 import Reliveit from '../../assets/images/reliveit.png';
 import SEO from '../SEO';
@@ -60,10 +60,10 @@ function Tomorrow () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelSRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelSRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         fashiontl.current = panelSRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {
@@ -97,20 +97,16 @@ function Tomorrow () {
         <div className="yearlyShows">
         <Row className="spacer">
             <Col lg={12}>
-            <Reveal wrapperElement="h1" direction="up" delay={0.1}>Tomorrow Land</Reveal>
+            <Reveal wrapperElement="h1" direction="up" delay={0.1}><span className="scaleDownTxtTomorrow">Tomorrow Land</span></Reveal>
             </Col>
             <Col lg={12}>
             <Reveal wrapperElement="h3" direction="up" delay={0.5}>Fall 2018</Reveal>
             </Col>
          </Row>
          
-        <section style={{padding: '3rem 0'}} className="pitchWrap">
+        <section className="pitchWrap">
         <Row noGutters={true} className="showVideo">
-        <Col lg={5} className="vidIntroTxt">
-        <h1 style={{fontSize: '4rem'}}>Tomorrow Land</h1>
-        <h3>An Exhibition</h3>
-        </Col>
-         <Col lg={6} className="videoContainer">
+         <Col lg={10} className="videoContainer">
          <Video cloudName="fadscloud" width="100%" 
                         publicId="tmmrShowVid" controls="true" 
                         loading="lazy" 
@@ -120,6 +116,7 @@ function Tomorrow () {
          </Col>
         </Row>
         </section>
+
         <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioSRef}>
                     <div className="panel" ref={addPanels}>
@@ -133,7 +130,7 @@ function Tomorrow () {
                         />
                     </div>
                 </div>
-                <div className="panel" id="landscape" ref={addPanels}>
+                <div className="panel"  ref={addPanels}>
                     <div className="panel_item">
                     <ImgWebp
                             src={Tmmrw2w}
@@ -144,7 +141,7 @@ function Tomorrow () {
                         />
                     </div>
                 </div>
-                <div className="panel" id="landscape" ref={addPanels}>
+                <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <ImgWebp
                             src={Tmmrw3w}
@@ -166,7 +163,7 @@ function Tomorrow () {
                         />
                     </div>
                 </div>
-                <div className="panel" id="landscape" ref={addPanels}>
+                <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <ImgWebp
                             src={Tmmrw5w}
@@ -235,17 +232,22 @@ function Tomorrow () {
         </section>
         <>
         <Row className="pDeck">
+        <Col lg={12} className="mobileExplorepDeck"><h3>Drag to explore the Program Card</h3></Col>
+        <Col lg={12}>
              <ImgWebp
                     src={TmpDeckW}
                     fallback={TmpDecK}
                     alt="Gallery pitch Deck"
                 />
+        </Col>
         </Row>
         </>
         <div className="endsec">
             <Row noGutters={true} className="imgNext">
                 <Col lg={12} className="endSec1">
+                    <div className="circusEndSecOnly">
                     <h1>Back to</h1><h2 className="ontop" style={{marginLeft: '1rem'}}> Gallery</h2>
+                    </div>
                 </Col>
                 <Col lg={12} className="endseccontent">
                 <img src={Reliveit} alt="relive it again design"/>

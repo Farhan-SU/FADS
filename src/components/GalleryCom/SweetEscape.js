@@ -1,13 +1,10 @@
 import React, {useRef, useEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import SEO from '../SEO';
-import { Col, Row } from 'react-bootstrap';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import Sweet1w from '../../assets/images/sweetEscape/aanya2.webp';
 import Sweet1 from '../../assets/images/sweetEscape/aanya2.png';
 import Sweet2w from '../../assets/images/sweetEscape/aspen2.webp';
@@ -21,9 +18,6 @@ import Sweet5 from '../../assets/images/sweetEscape/zu1.png';
 import Sweet6w from '../../assets/images/sweetEscape/zu2.webp';
 import Sweet6 from '../../assets/images/sweetEscape/zu2.png';
 import NextPageGallery from './NextPageGallery';
-
-
-
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -52,10 +46,10 @@ function SweetEscape () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {
@@ -157,7 +151,7 @@ function SweetEscape () {
             </div>
         </section>
         <div className="endsec">
-            <NextPageGallery to='/gallery/editorials/galleryShoots' title1='Not A' title2='Dream'/>
+            <NextPageGallery to='/gallery/editorials/notadream' title1='Not A' title2='Dream'/>
         </div>
     </div>
     </SEO>

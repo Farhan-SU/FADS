@@ -47,7 +47,9 @@ if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
         description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
       }}>
       <div className="eboardwrapper">
-      <h1>Fashion Designers</h1>
+      <div className="positionIntro">
+        <h1>Fashion Designers</h1>
+      </div>
         <div className="members">
           {data.members.map(member => (
             <div key={member.id} className="member-intro">

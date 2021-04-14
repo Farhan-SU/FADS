@@ -1,12 +1,11 @@
-import React, {useRef, useEffect, useLayoutEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import React, {useRef, useEffect} from 'react';
+import { withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryShows.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
-import Prev from '../../assets/images/prev.png';
 import Gallery1w from '../../assets/images/the_gallery/galleryshowpat.webp';
 import Gallery1 from '../../assets/images/the_gallery/galleryshowpat.png';
 import Gallery2w from '../../assets/images/the_gallery/arch.webp';
@@ -45,6 +44,7 @@ import Gcounter1 from '../../assets/images/the_gallery/counterGroup1.png';
 import Gcounter2w from '../../assets/images/the_gallery/counterGroup2.webp';
 import Gcounter2 from '../../assets/images/the_gallery/counterGroup2.png';
 import Reveal from '../Reveal';
+
 import {Video, Transformation} from 'cloudinary-react';
 import NextPageGallery from './NextPageGallery';
 
@@ -75,10 +75,10 @@ function TheGallery () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelSRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelSRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
         fashiontl.current = panelSRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {
@@ -318,11 +318,14 @@ function TheGallery () {
         </section>
         <>
         <Row className="pDeck">
-             <ImgWebp
-                    src={GalpDeckW}
-                    fallback={GalpDecK}
-                    alt="Gallery pitch Deck"
-                />
+        <Col lg={12} className="mobileExplorepDeck"><h3>Drag to explore the Program Card</h3></Col>
+        <Col lg={12}>
+            <ImgWebp
+                src={GalpDeckW}
+                fallback={GalpDecK}
+                alt="Gallery pitch Deck"
+            />
+        </Col>
         </Row>
         </>
         <div className="endsec">

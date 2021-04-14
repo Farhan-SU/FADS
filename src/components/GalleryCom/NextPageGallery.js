@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter} from 'react-router-dom';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryShows.scss';
 import Prev from '../../assets/images/prev.png';
 import {Row, Col} from 'react-bootstrap';
 
@@ -21,7 +21,9 @@ function NextPageGallery (props) {
         <>
         <Row noGutters={true} className="imgNext">
             <Col lg={12} className="endSec1">
+                <div className="circusEndSecOnly">
                 <h1 className="ontop">{props.title1}</h1><h2>{props.title2}</h2>
+                </div>
             </Col>
             <Col lg={12} className="endseccontent">
             <img src={Prev} alt="relive it again design"/>
@@ -30,6 +32,7 @@ function NextPageGallery (props) {
         <Row noGutters={true} className="endNext">
         <Col lg={12} className="alignLinkBox">
         <Link {...rest} 
+            to={props.to}
             className="link"
             onClick={(event) => {
                 onClick && onClick(event)

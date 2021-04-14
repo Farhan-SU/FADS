@@ -1,12 +1,11 @@
-import React, {useRef, useEffect, useLayoutEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import React, {useRef, useEffect} from 'react';
+import { withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryShows.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
 import {Row, Col} from 'react-bootstrap';
-import Prev from '../../assets/images/prev.png';
 import Bodyspace1w from '../../assets/images/bodyspace/bodyspace.webp';
 import Bodyspace1 from '../../assets/images/bodyspace/bodyspace.png';
 import Bodyspace2w from '../../assets/images/bodyspace/bodyspace1.webp';
@@ -27,22 +26,14 @@ import Bodyspace9w from '../../assets/images/bodyspace/bodyspace7.webp';
 import Bodyspace9 from '../../assets/images/bodyspace/bodyspace7.png';
 import Bodyspace10w from '../../assets/images/bodyspace/bodyspace10.webp';
 import Bodyspace10 from '../../assets/images/bodyspace/bodyspace10.png';
-
 import Bodyposter from '../../assets/images/bodyspace/bsposter.png';
 import Bodyposter1 from '../../assets/images/bodyspace/bsposter1.png';
 import BodyosterVid from '../../assets/images/bodyspace/bsPosterVid.mp4';
 import BSDeckW from '../../assets/images/bodyspace/bodyspaceDeck.webp';
 import BSDecK from '../../assets/images/bodyspace/bodyspaceDeck.png';
-import BodymPW from '../../assets/images/the_gallery/galleryShowP.webp';
-import BodymP from '../../assets/images/the_gallery/galleryShowP.png';
-import BodymPW2 from '../../assets/images/the_gallery/galleryShowP2.webp';
-import BodymP2 from '../../assets/images/the_gallery/galleryShowP2.png';
-import Gcounter1w from '../../assets/images/the_gallery/counterGroup1.webp';
-import Gcounter1 from '../../assets/images/the_gallery/counterGroup1.png';
-import Gcounter2w from '../../assets/images/the_gallery/counterGroup2.webp';
-import Gcounter2 from '../../assets/images/the_gallery/counterGroup2.png';
 import Reveal from '../Reveal';
 import BodylerySVid from '../../assets/images/the_gallery/galleryShowVid.mp4';
+import NextPageGallery from './NextPageGallery';
 
 
 if (typeof window !== `undefined`) {
@@ -52,19 +43,19 @@ if (typeof window !== `undefined`) {
   
 function BodyXSpace () {
  
-    let fashiontl = useRef();
-    let portfolioSRef = useRef();
-    let panelSRef = useRef();
-    panelSRef.current = [];
+    const fashiontl = useRef();
+    const portfolioSRef = useRef();
+    const panelRef = useRef();
+    panelRef.current = [];
 
     useEffect(() => {
-        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
+        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.12;
         let panelend =  (Math.abs(xendvalue)) * -1;
 
         fashiontl.current = gsap.timeline({
             scrollTrigger: {
-            id: "galleryShow",
-            scrub: 1.4,
+            id: "bodyXSpace",
+            scrub: 1.5,
             trigger: portfolioSRef.current,
             pin: portfolioSRef.current,
             anticipatePin: 1,
@@ -72,31 +63,31 @@ function BodyXSpace () {
             end: xendvalue,
             autoRemoveChildren: true
             }
-        }).to(panelSRef.current, {x : panelend,  ease: "linear"});
+        }).fromTo(panelRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
-        fashiontl.current = panelSRef.current.forEach((el, index) => {
-            gsap.to(el, {x : panelend, ease: "linear"});
+        fashiontl.current = panelRef.current.forEach((el, index) => {
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
           return () => {
-            if (ScrollTrigger.getById('galleryShow')) {
-                ScrollTrigger.getById('galleryShow').kill();
+            if (ScrollTrigger.getById('bodyXSpace')) {
+                ScrollTrigger.getById('bodyXSpace').kill();
             };
         };
-    }, []);
+    }, [])
 
     function addPanels(el) {
-        if (el && !panelSRef.current.includes(el)) {
-            panelSRef.current.push(el);
+        if (el && !panelRef.current.includes(el)) {
+            panelRef.current.push(el);
         };
     };
 
     useEffect(() => {
-        let timeout = gsap.delayedCall( 0.5, delayedRefresedCall);
+        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
         function delayedRefresedCall() {
             ScrollTrigger.refresh();
         };
-    });
+    }, []);
 
     return (
         <>
@@ -151,11 +142,15 @@ function BodyXSpace () {
           </div>
             </Col>
         </Row>
-        
         <Row noGutters={true} className="showVideo">
         <Col lg={4} className="vidIntroTxt">
         <h1>Body X Space</h1>
         <h3>A Virtual Exhibition</h3>
+        <p>Body & Space is a fashion show presented by the Fashion and Design Society and the School
+            of Architecture. This show is a part of a larger discourse amongst the intersection of body, clothing,
+            and space. This digital showcase, featuring 30 pieces by student designers, challenges the viewer
+            to consider how a garment changes meaning in different spaces
+        </p>
         </Col>
          <Col lg={7} className="videoContainer">
          <video width="100%" controls>
@@ -270,35 +265,19 @@ function BodyXSpace () {
                 </div>
             </div>
         </section>
-
         <Row className="pDeck">
-             <ImgWebp
+            <Col lg={12} className="mobileExplorepDeck"><h3>Drag to explore the Program Card</h3></Col>
+            <Col lg={12}>
+                <ImgWebp
                     src={BSDeckW}
                     fallback={BSDecK}
                     alt="Cirlery pitch Deck"
                 />
+            </Col>
         </Row>
 
         <div className="endsec">
-            <Row noGutters={true} className="imgNext">
-                <Col lg={12} className="endSec1">
-                    <h1 className="ontop">The</h1><h2>Gallery</h2>
-                </Col>
-                <Col lg={12} className="endseccontent">
-                <img src={Prev} alt="relive it again design"/>
-                </Col>
-            </Row>
-            <Row noGutters={true} className="endNext">
-            <Col lg={12} className="alignLinkBox">
-            <Link className="link" to="/gallery/shows/the_gallery">
-            <span className="link__arrow">
-                <span></span>
-                <span></span>
-            </span>
-            <span className="link__line"></span>
-            </Link>
-            </Col>
-            </Row>
+            <NextPageGallery to='/gallery/shows/thegallery' title1='The' title2='Gallery'/>
         </div>
     </div>
         </SEO>

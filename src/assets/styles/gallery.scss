@@ -19,13 +19,13 @@
 
 .editorial{
   @extend %centeralignMobile;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(41, 41, 41, 0.614)), url('../images/editorialCover.webp') no-repeat center center/ cover, url('../images/editorialCover.png') no-repeat center center/ cover;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.614)), url('../images/editorialCover.webp') no-repeat center center/ cover, url('../images/editorialCover.png') no-repeat center center/ cover;
   height: 100vh;
   position: relative;
 
   @include media ("screen", "<=phone") {
     height: 100%;
-    padding: 10rem 0;
+    padding: 14rem 0;
   }
 }
 
@@ -36,7 +36,7 @@
 
    @include media ("screen", "<=phone") {
     height: 100%;
-    padding: 10rem 0;
+    padding: 14rem 0;
   }
 }
 
@@ -212,6 +212,7 @@
 
   .introE{
     @extend %centeralignMobile;
+    padding: 2rem 0;
     text-align: center;
     width: 95vw;
     margin-left: 0.5rem;
@@ -233,6 +234,7 @@
   .editorialSection{
     @extend %centeralignMobile;
     overflow: hidden;
+    padding: 1rem 0;
   }
   .imgContainer{
     position: relative;
@@ -240,7 +242,7 @@
     img{
       height: 480px;
       width: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
   .showSection{
@@ -253,6 +255,7 @@
     img{
       height: 480px;
       width: 100%;
+      object-position: center;
       object-fit: cover;
 
     }
@@ -264,7 +267,6 @@
     border-radius: 50%;
     position: absolute;
     z-index: 200;
-    /*background-color: #7a4c7ae8;*/
     background-color: #7a4c65b2;
     mix-blend-mode: difference;
   } 
@@ -284,32 +286,33 @@
     text-align: center;
     position: relative;
     z-index: 200;
+
     h1, h3{
       color: $heading;
       mix-blend-mode: normal;
     }
     h3{
       position: relative;
-      top: 0.8rem;
       margin-bottom: 10px;
       font-size: 1.3rem;
+      font-weight: 300;
     }
     h1{
       font-size: 2rem;
+      margin-bottom: 0.3rem;
       position: relative;
-      top: -0.5rem;
     }
-    .longTxtEd{
-      font-size: 1.6rem;
+    .scaleDowntxtShow{
+      font-size: 1.5rem;
   }
   }
   .tlLine{
-    border: 1px solid $graypurple;
-    background-color: $graypurple;
+    border: 1px solid $purple;
+    background-color: white;
     position: absolute;
-    transform: translate(0, 240px);
+    transform: translate(0, 260px);
     width: 3px;
-    height: 180px;
+    height: 220px;
     padding: 8.82rem 0;
     z-index: 2;
   }

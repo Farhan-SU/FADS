@@ -26,9 +26,11 @@ const NewsCard = () => {
         <Reveal className="cardDeck" wrapperElement="div" direction="up">
         <CardDeck>
         <Card bsPrefix="card">
+            <a href="http://dailyorange.com/2020/11/virtual-fashion-show-looks-intersection-body-clothing-space/" target="_blank" rel="noopener noreferrer" >
             <div className="imgWrapNews">
             <Card.Img variant="top" src="http://s3.amazonaws.com/dailyorange/wp-content/uploads/2020/11/13235643/Image-from-iOS-5-copy.jpg" alt=""/>
             </div>
+            </a>
             <Card.Body>
             <Card.Title>Virtual fashion show looks at intersection of body, clothing and space</Card.Title>
             <Card.Text>
@@ -38,18 +40,18 @@ const NewsCard = () => {
             <small className="text-muted">November 2020 - Gavi Azoff</small>
             </Card.Text>
             </Card.Body>
-            <a href="http://dailyorange.com/2020/11/virtual-fashion-show-looks-intersection-body-clothing-space/" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
             <Card.Link href="http://dailyorange.com/2020/11/virtual-fashion-show-looks-intersection-body-clothing-space/" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on The Daily Orange &#10230;</b></small></Card.Link>
             </Card.Footer>
-            </a>
         </Card>
 
         <Card bsPrefix="card">
+            <a href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank" rel="noopener noreferrer" >
             <div className="imgWrapNews">
             <Card.Img as="img" variant="top" src="https://www.thenewshouse.com/wp-content/uploads/IMG_5149.JPG.jpeg" />
             </div>
+            </a>
             <Card.Body>
             <Card.Title>Syracuse FADS project shows the power of virtual fashion</Card.Title>
             <Card.Text>
@@ -60,13 +62,11 @@ const NewsCard = () => {
              </small>
             </Card.Text>
             </Card.Body>
-            <a href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank" rel="noopener noreferrer" >
             <Card.Footer>
             <Card.Link className="cardLink" href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank" rel="noopener noreferrer" >
                 <small className="text-muted"><b>Read the full story on The NewsHouse &#10230;</b></small>
             </Card.Link>
             </Card.Footer>
-            </a>
         </Card>
 
         <Card bsPrefix="card">

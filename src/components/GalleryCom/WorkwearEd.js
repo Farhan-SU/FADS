@@ -1,11 +1,9 @@
 import React, {useRef, useEffect} from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../assets/styles/galleryDetail.scss';
+import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
-import EndEsec from '../../assets/images/endE.png';
-import EndEsecW from '../../assets/images/endE.webp';
 import SEO from '../SEO';
 import { Col, Row } from 'react-bootstrap';
 import Vintage1w from '../../assets/images/workwear/doubles.webp';
@@ -27,6 +25,7 @@ import Vintage8 from '../../assets/images/workwear/student.png';
 import Vintage9w from '../../assets/images/workwear/plaidshoot.webp';
 import Vintage9 from '../../assets/images/workwear/plaidshoot.png';
 import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
 
 
 
@@ -42,54 +41,46 @@ function JerkEd () {
     const panelRef = useRef();
     panelRef.current = [];
 
-    useEffect(() => {  
-    
-        const xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.1;
-        const panelend =  Math.abs(xendvalue) * -1;
-    
-        if (portfolioRef.current) {
-            gshowtl.current = gsap.timeline({
-                scrollTrigger: {
-                    id: "containerWork",
-                    duration: 2,
-                    scrub: 1.5,
-                    trigger: portfolioRef.current,
-                    pin: true,
-                    pinReparent: true,
-                    anticipatePin: 1,
-                    start: "top top",
-                    end: () => xendvalue
-                }
-            })
-            .to(panelRef.current, {x : () => panelend}, 0);
-
-        } else {
-            console.log("OOPS doesnt exist");
-        };
-
-            return () => {
-                if (ScrollTrigger.getById('containerWork')) {
-                ScrollTrigger.getById('containerWork').kill();
-                }
-            };
-    },[]);
-
     useEffect(() => {
+        let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
+        let panelend =  (Math.abs(xendvalue)) * -1;
+
+        gshowtl.current = gsap.timeline({
+            scrollTrigger: {
+            id: "wwvTl",
+            scrub: 1.4,
+            trigger: portfolioRef.current,
+            pin: portfolioRef.current,
+            anticipatePin: 1,
+            start: 'top top',
+            end: xendvalue,
+            autoRemoveChildren: true
+            }
+        }).fromTo(panelRef.current, {x : 0}, {x : panelend,  ease: "linear"});
+       
         gshowtl.current = panelRef.current.forEach((el, index) => {
-            gsap.from(el, {
-                duration: 1,
-                autoAlpha: 0.8,
-                ease: "circ.Inout"
-            });
-          });
+            gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
+        });
+        
+          return () => {
+            if (ScrollTrigger.getById('wwvTl')) {
+                ScrollTrigger.getById('wwvTl').kill();
+            };
+        };
     }, []);
 
     function addPanels(el) {
         if (el && !panelRef.current.includes(el)) {
             panelRef.current.push(el);
         };
-    }
+    };
 
+    useEffect(() => {
+        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
+        function delayedRefresedCall() {
+            ScrollTrigger.refresh();
+        };
+    }, []);
 
     return (
         <>
@@ -100,12 +91,16 @@ function JerkEd () {
           description: "Our May 2019 editorial photoshoot"
         }}>
         <div className="galleryShows">
-         <div className="spacer">
-            <h1 className="longTxtEd">September<br/>2019</h1>
-         </div>
+            <Row className="spacer">
+                <Col lg={12}>
+                <Reveal wrapperElement="h1" direction="up" delay={0.1}>Work wear Vintage</Reveal>
+                </Col>
+                <Col lg={12}>
+                <Reveal wrapperElement="h3" direction="up" delay={0.5}>09/19</Reveal>
+                </Col>
+            </Row>
         <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioRef}>
-             <h2 className="wwv">WORK WEAR VINTAGE</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <ImgWebp
@@ -199,7 +194,7 @@ function JerkEd () {
             </div>
         </section>
         <div className="endsec">
-            <NextPageGallery to='/gallery/editorials/winter' title1='Winter' title2=''/>
+            <NextPageGallery to='/gallery/editorials/jerk-fads' title1='Jerk X' title2='FADS'/>
         </div>
     </div>
     </SEO>
