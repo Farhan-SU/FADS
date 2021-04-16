@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
@@ -17,12 +22,43 @@
 
   [[redirects]]
   from = "/gallery"
-  to = "/gallery"
+  to = "/gallery.js"
   status = 200
+
+   [[redirects]]
+  from = "/gallery"
+  to = "/gallery.js"
+  status = 200
+
+   [[redirects]]
+  from = "/agency"
+  to = "/agency.js"
+  status = 200
+
+   [[redirects]]
+  from = "/press"
+  to = "/press.js"
+  status = 200
+
+  [[redirects]]
+  from = "/f4"
+  to = "/f4.js"
+  status = 200
+
 
   [[redirects]]
   from = "/gallery/*"
   to = "/gallery/:splat"
+  status = 200
+
+    [[redirects]]
+  from = "/gallery/editorial"
+  to = "/gallery/editorial.js"
+  status = 200
+
+  [[redirects]]
+  from = "/gallery/shows"
+  to = "/gallery/shows.js"
   status = 200
 
   [[redirects]]
