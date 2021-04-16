@@ -4,9 +4,33 @@
   status = 200
 
 [[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
   from = "https://fashiondesignsociety.netlify.app/"
   to = "https://fashiondesignsociety.com/"
   status = 301
-  force = false
-  query = {path = ":path"} #  apply this rule for /old-path?path=example
-  conditions = {Language = ["en","es"], Country = ["US"]}
+  force = true
+
+
+  [[redirects]]
+  from = "/gallery"
+  to = "/gallery"
+  status = 200
+
+  [[redirects]]
+  from = "/gallery/*"
+  to = "/gallery/:splat"
+  status = 200
+
+  [[redirects]]
+  from = "/agency"
+  to = "/agency/:splat"
+  status = 200
+
+  [[redirects]]
+  from = "/agency/*"
+  to = "/agency/:splat"
+  status = 200
