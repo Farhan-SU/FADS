@@ -19,8 +19,15 @@
   font-size: 4rem;
   text-align: center;
   width: 80%;
-  color: #666e9c;
-  margin-top: 4rem;
+  color: #ffffff;
+  mix-blend-mode: multiply;
+}
+
+.error-bio p {
+  font-size: 4rem;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
   mix-blend-mode: multiply;
 }
 
@@ -37,7 +44,8 @@
 
 @media screen and (max-width: 430px) {
   .eboardwrapper {
-    background: #ac9fb2 url("../images/eboardbgsm1.svg") no-repeat left center/cover;
+    background: #e4dee9 url("https://i.pinimg.com/564x/1a/aa/59/1aaa593b5cba6d743ac075f323304c61.jpg") repeat-y bottom center/contain;
+    background-blend-mode: screen;
   }
 }
 
@@ -124,16 +132,56 @@
 }
 
 .eboardwrapper .members .member-intro img {
-  -webkit-filter: contrast(110%) saturate(1.15);
-          filter: contrast(110%) saturate(1.15);
+  -webkit-filter: brightness(105%) saturate(105%);
+          filter: brightness(105%) saturate(105%);
   width: 100%;
   border-radius: 5px;
   max-width: 80%;
   max-height: 80%;
-  opacity: 0.8;
   margin: 0 auto 2rem auto;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+.eboardwrapper .members .models-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding: 1.2rem;
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 430px) {
+  .eboardwrapper .members .models-intro {
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+.eboardwrapper .members .models-intro img {
+  -webkit-filter: brightness(105%) saturate(105%);
+          filter: brightness(105%) saturate(105%);
+  height: 700px;
+  width: 100%;
+  border-radius: 15px;
+  margin: 0 auto 2rem auto;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  position: relative;
+  z-index: 10;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .eboardwrapper .members h2 {

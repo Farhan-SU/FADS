@@ -33,9 +33,6 @@ function Agency() {
       <Link to="/agency/eboard"><Col className="box">
          <h3>E-Board</h3>
         </Col></Link>
-        <Link to="/agency/models"><Col className="box">
-          <h3>Models</h3>
-        </Col></Link>
         <Link to="/agency/fashionDesigners"><Col  className="box">
          <h3>Fashion Designers</h3>
         </Col></Link>
@@ -44,6 +41,9 @@ function Agency() {
         </Col></Link>
         <Link to="/agency/videoPhoto"><Col className="box">
           <h3 className="bigTxt">Videographers & Photographers</h3>
+        </Col></Link>
+        <Link to="/agency/models"><Col className="box">
+          <h3>Models</h3>
         </Col></Link>
         <Link to="/agency/makeupArtists"><Col className="box">
          <h3 className="bigTxt">Makeup Artists</h3>

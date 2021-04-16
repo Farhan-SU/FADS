@@ -18,7 +18,7 @@ query ModelHome($slug: String) {
       modelName
       slug
       modelBios {
-        ... on ModelBio {
+        ... on modelBio {
           modelHeight
           modelBust
           modelWaist
@@ -41,7 +41,7 @@ query ModelHome($slug: String) {
   }
 `;
 
-function Bio(props) {
+function ModelsBio(props) {
 
   let settings = {
     dots: true,
@@ -80,9 +80,12 @@ function Bio(props) {
           });
     
     if (loading) return <LoadingScreen/>;
-    if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
+    if (error) return <Row className="error-bio">
+        <Col lg={12}><h1>Looks Like Something went wrong</h1></Col>
+        <Col lg={12}><h3>{error.message}</h3></Col>
+        </Row>
 
-    const modelsH = data.MODELS_BIO;
+    const modelsH = data.modelsH;
     let mbio = null;
 
     if (modelsH.mbio.length > 0) {
@@ -108,7 +111,7 @@ function Bio(props) {
                         <div className="desBio">
                         <table>
                             <tr>
-                                <td>Height: </td>
+                                <td>Height:</td>
                                 <td>{mbio.modelheight}</td>
                             </tr>
                             <tr>
@@ -165,4 +168,4 @@ function Bio(props) {
       );
 };
 
-export default withRouter(Bio);
+export default withRouter(ModelsBio);

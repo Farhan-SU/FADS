@@ -2,20 +2,26 @@
 @import 'breakpoints'; 
 
 .error-bio{
+  background: #dfdcee url('../images/loading3.gif') no-repeat center center / contain;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   height: 100vh;
-  background-color: $bluegray;
+  padding: 4rem;
 
    h1{
-     font-size: 4rem;
-     color: $heading;
-     letter-spacing: 0.4rem;
-     position: relative;
-     top: 20%;
-     left: 18%;
-     line-height: 4rem;
-     width: 60%;
-     text-align: center;
+     width: 70%;
+    font-size: 4rem;
+    color: #2a066b;
    }
+
+   h3{
+    width: 70%;
+    font-size: 2rem;
+    color: #7f70a1;
+ }
 }
 .biowrapper{
     height: 100%;

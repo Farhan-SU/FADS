@@ -257,7 +257,7 @@
 }
 
 .layerfour {
-  background: #644a5d;
+  background-image: #644a5d;
   overflow: hidden;
   height: 140vh;
   display: -webkit-box;
@@ -515,7 +515,7 @@
 }
 
 .layerseven {
-  background-color: #170524;
+  background-image: #170524;
   overflow: hidden;
   height: 100%;
   padding: 3rem 0;

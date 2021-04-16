@@ -14,8 +14,7 @@
         font-size: 4rem;
         text-align: center;
         width: 80%;
-        color: #666e9c;
-        margin-top: 4rem;
+        color: #ffffff;
         mix-blend-mode: multiply;
      }
   }
@@ -96,6 +95,32 @@
                 transition: all 400ms ease-in-out;
                 position: relative;
                 z-index: 10;
+            }
+        }
+        .models-intro{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 1.2rem;
+            margin: 2rem 0;
+
+
+            @include media ("screen", "<=phone") {
+                width: 100%;
+                transition: none;
+                margin: 2rem 0 1rem 0;
+            }
+            img{
+                filter: brightness(105%) saturate(105%);
+                height: 700px;
+                width: 100%;
+                border-radius: 15px;
+                margin: 0 auto 2rem auto;
+                transition: all 400ms ease-in-out;
+                position: relative;
+                z-index: 10;
+                object-fit: cover;
+                object-position: top;
             }
         }
         

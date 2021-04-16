@@ -1,18 +1,31 @@
 .error-bio {
+  background: #dfdcee url("../images/loading3.gif") no-repeat center center/contain;
+  background-blend-mode: multiply;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   height: 100vh;
-  background-color: #6b728d;
+  padding: 4rem;
 }
 
 .error-bio h1 {
+  width: 70%;
   font-size: 4rem;
-  color: #fdf3e4;
-  letter-spacing: 0.4rem;
-  position: relative;
-  top: 20%;
-  left: 18%;
-  line-height: 4rem;
-  width: 60%;
-  text-align: center;
+  color: #2a066b;
+}
+
+.error-bio h3 {
+  width: 70%;
+  font-size: 2rem;
+  color: #7f70a1;
 }
 
 .biowrapper {
@@ -153,6 +166,18 @@
 
 .actualbio .biocontent .desBio {
   margin-top: -2.5rem;
+}
+
+.actualbio .biocontent .desBio table, .actualbio .biocontent .desBio th, .actualbio .biocontent .desBio td {
+  border: none;
+}
+
+.actualbio .biocontent .desBio tr {
+  margin-bottom: 0.5rem;
+}
+
+.actualbio .biocontent .desBio td {
+  margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 430px) {
