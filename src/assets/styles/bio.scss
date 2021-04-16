@@ -123,6 +123,17 @@
         .desBio{
           margin-top: -2.5rem;
 
+          table, th, td {
+            border: none;
+          }
+          tr{
+            margin-bottom: 0.5rem;
+          }
+          td{
+            margin-right: 0.5rem;
+          }
+
+
           @include media ("screen", "<=phone") {
             margin-top: 1rem;
           }

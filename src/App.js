@@ -50,7 +50,11 @@ const fashionD = lazy(() => import('./pages/agency/fashionDesigners'));
 const graphicD = lazy(() => import('./pages/agency/graphicDesigners'));
 const makeupArtists = lazy(() => import('./pages/agency/makeupArtists'));
 const videoPhoto = lazy(() => import('./pages/agency/videoPhoto'));
+const stylists = lazy(() => import('./pages/agency/stylists'));
+const communication = lazy(() => import('./pages/agency/communication'));
+const models = lazy(() => import('./pages/agency/models'));
 const bio = lazy(() => import('./pages/agency/bio'));
+const models_bio = lazy(() => import('./pages/agency/models_bio'));
 
 
 function App () {
@@ -103,11 +107,15 @@ function App () {
                     <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
                     <RouteWithLayout exact path="/gallery/shows" component={shows}/>
                     <RouteWithLayout path="/agency/bio/:slug" component={bio}/>
+                    <RouteWithLayout path="/agency/models_bio/:slug" component={models_bio}/>
                     <RouteWithLayout exact path="/agency/eboard" component={eboard}/>
+                    <RouteWithLayout exact path="/agency/models" component={models}/>
                     <RouteWithLayout exact path="/agency/fashionDesigners" component={fashionD}/>
                     <RouteWithLayout exact path="/agency/graphicDesigners" component={graphicD}/>
                     <RouteWithLayout exact path="/agency/makeupArtists" component={makeupArtists}/>
                     <RouteWithLayout exact path="/agency/videoPhoto" component={videoPhoto}/>
+                    <RouteWithLayout exact path="/agency/stylists" component={stylists}/>
+                    <RouteWithLayout exact path="/agency/communication" component={communication}/>
                     <RouteWithLayout exact path="/agency" component={agency} />
                     <RouteWithLayout exact path="/aboutus" component={aboutus} />
                     <RouteWithLayout exact path="/press" component={press} />

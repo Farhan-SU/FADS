@@ -11,7 +11,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const MEMBERS = gql`
 query{
-  members(where: {committee_contains_some: MakeupArtists}) {
+  members(where: {committee_contains_some: Communication}) {
     id
     memberName
     memberPosition
@@ -24,15 +24,15 @@ query{
 }
 `;
 
-export default function MakeupArtists() {
+export default function GraphicDesigners() {
  
   const { loading, error, data } = useQuery(MEMBERS);
-  const [ makeupArtists, setMakeupArtists ] = useState();
+  const [ communication, setCommunication ] = useState();
 
 
   useEffect(() => {
     if(loading === false && data){
-        setMakeupArtists(data);
+        setCommunication(data);
     }
 }, [loading, data])
 
@@ -42,13 +42,13 @@ if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
       return (
         <SEO
         pageMeta={{
-        title: "Makeup Artists | Agency",
+        title: "Communication | Agency",
         keywords: ["Fashion", "Gallery", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
         description: "We are Fashion and Design Society. We are also a Fashion Agency that can help you in any creative projects you have"
       }}>
       <div className="eboardwrapper">
       <div className="positionIntro">
-      <h1>Makeup Artists</h1>
+      <h1>communications</h1>
       </div>
         <div className="members">
           {data.members.map(member => (

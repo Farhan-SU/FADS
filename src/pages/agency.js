@@ -30,32 +30,29 @@ function Agency() {
         </div>
       </div>
       <Row className='agency'> 
-      <Link to="./agency/eboard"><Col className="box">
+      <Link to="/agency/eboard"><Col className="box">
          <h3>E-Board</h3>
         </Col></Link>
-        <Link to="./agency/models"><Col className="box">
+        <Link to="/agency/models"><Col className="box">
           <h3>Models</h3>
         </Col></Link>
-        <Link to="./agency/fashionDesigners"><Col  className="box">
+        <Link to="/agency/fashionDesigners"><Col  className="box">
          <h3>Fashion Designers</h3>
         </Col></Link>
-        <Link to="./agency/graphicDesigners"><Col className="box">
+        <Link to="/agency/graphicDesigners"><Col className="box">
          <h3 className="bigTxt">Graphic Designers</h3>
         </Col></Link>
-        <Link to="./agency/videoPhoto"><Col className="box">
+        <Link to="/agency/videoPhoto"><Col className="box">
           <h3 className="bigTxt">Videographers & Photographers</h3>
         </Col></Link>
-        <Link to="./agency/makeupArtists"><Col className="box">
+        <Link to="/agency/makeupArtists"><Col className="box">
          <h3 className="bigTxt">Makeup Artists</h3>
         </Col></Link>
-        <Link to="/Aboutus"><Col className="box">
+        <Link to="/agency/stylists"><Col className="box">
           <h3>Stylists</h3>
         </Col></Link>
-        <Link to="/Aboutus"><Col className="box">
+        <Link to="/agency/communcation"><Col className="box">
           <h3>Communication</h3>
-        </Col></Link>
-        <Link to="/Aboutus"><Col className="box">
-          <h3>Set Designers</h3>
         </Col></Link>
         </Row>
     </div>

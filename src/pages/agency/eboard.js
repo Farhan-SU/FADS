@@ -5,11 +5,6 @@ import SEO from '../../components/SEO';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import LoadingScreen from '../../components/LoadingScreen';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-
-
 
 const MEMBERS = gql`
 query{
