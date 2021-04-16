@@ -178,7 +178,7 @@ const Shows = () => {
         <Row className="header">
         <Link  to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
           <Col md={12} className="tmrLg">
-          <h1>Tomorrow<br/>Land</h1>
+          <h1 style={{fontSize: '2.75rem'}}>Tomorrow<br/>Land</h1>
           </Col>
           <Col  md={12}>
            <h3>Spring 2018</h3>

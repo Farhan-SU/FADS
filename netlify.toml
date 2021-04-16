@@ -57,8 +57,18 @@
   status = 200
 
   [[redirects]]
+  from = "/gallery/editorial/*"
+  to = "/gallery/editorial/:splat"
+  status = 200
+
+  [[redirects]]
   from = "/gallery/shows"
   to = "/gallery/shows.js"
+  status = 200
+
+  [[redirects]]
+  from = "/gallery/shows/*"
+  to = "/gallery/shows/:splat"
   status = 200
 
   [[redirects]]

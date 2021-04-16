@@ -71,7 +71,7 @@ const NewsCard = () => {
 
         <Card bsPrefix="card">
             <div className="imgWrapNews">
-            <Card.Img variant="top" src="http://dailyorange.com/resize/800/wp-content/uploads/2020/08/17152455/FADS-dom.jpg" />
+            <Card.Img as="img" variant="top" src="http://dailyorange.com/resize/800/wp-content/uploads/2020/08/17152455/FADS-dom.jpg" />
             </div>
             <Card.Body>
             <Card.Title>SU Fashion and Design Society hosts F*4 Zoom Series</Card.Title>

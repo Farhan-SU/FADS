@@ -18,7 +18,7 @@ query ModelHome($slug: String) {
       modelName
       slug
       modelBios {
-        ... on modelBio {
+        ... on ModelBio {
           modelHeight
           modelBust
           modelWaist
@@ -85,27 +85,27 @@ function ModelsBio(props) {
         <Col lg={12}><h3>{error.message}</h3></Col>
         </Row>
 
-    const modelsH = data.modelsH;
+    const models = data.models;
     let mbio = null;
 
-    if (modelsH.mbio.length > 0) {
-      mbio = modelsH.mbio[0];
+    if (models.mbio.length > 0) {
+      mbio = models.mbio[0];
     }
       return (
         <SEO
         pageMeta={{
-        title: ''+ modelsH.modelName +' | Models',
+        title: ''+ models.modelName +' | Models',
         keywords: ["Fashion", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
         description: "FADS MOdels"
       }}>
         <div className="biowrapper">
             <div className="bio-header">
-                <h1>{modelsH.modelName}</h1>
+                <h1>{models.modelName}</h1>
             </div>
             <>
                 <Row className="actualbio" noGutters={true}>
                     <Col md={6} className="bioPic">
-                        <img src={modelsH.modelHeadshot.url} alt={"picture of" + modelsH.modelsName}/>
+                        <img src={models.modelHeadshot.url} alt={"picture of" + models.modelsName}/>
                     </Col>
                     <Col md={5} className="biocontent">
                         <div className="desBio">
@@ -155,7 +155,7 @@ function ModelsBio(props) {
                     {mbio.modelingWork.map((item) => {
                         return (
                         <ul>
-                        <img src={item.url} key={mbio.id} alt={"Portfolio work by" + modelsH.modelsName}/>
+                        <img src={item.url} key={mbio.id} alt={"Portfolio work by" + models.modelsName}/>
                         </ul>
                         );
                     })}
