@@ -345,19 +345,22 @@ const Editorial = () => {
           <img src={HalloweenEditLeft} alt="Jerk shoots" className="img1E" />
         </picture>
         </Col>
-        <Col md={4}>
-        <Row className="description">
+        <Col md={4} className="description">
         <Row  className="header">
-          <Link to="/gallery/editorials/halloween">
-            <Col md={12}>
-              <h1>Halloween</h1>
-            </Col>
-            <Col md={12}>
-              <h3>10/2019</h3>
-            </Col>
+        <Link to="/gallery/editorials/halloween">
+          <Col md={12}>
+          <h1 className="halloweenH1">Halloween</h1>
+          </Col>
+          <Col md={12}>
+          <h3>10/2019</h3>
+          </Col>
           </Link>
         </Row>
-        </Row>
+          <div className="svg-line">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
+              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            </svg>
+          </div>
         </Col>
         <Col md={4} className="right">
           <picture ref={addToRefsright}>

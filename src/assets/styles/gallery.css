@@ -212,6 +212,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.editorialwrapper .description .HalloweenH1, .show-wrapper .description .HalloweenH1 {
+  font-size: 3rem;
+}
+
 .editorialwrapper .description h3, .show-wrapper .description h3 {
   font-weight: 400;
   font-size: 2rem;
