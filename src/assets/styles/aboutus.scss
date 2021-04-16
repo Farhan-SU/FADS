@@ -157,11 +157,11 @@
         }
 
         h2{
+            color: $background;
             position: relative;
             z-index: 2;
             font-size: 4.3rem;
             margin-bottom: 0.5rem;
-            color: darken($heading, 11%);
             mix-blend-mode: luminosity;
 
             @include media ("screen", "<=phone") {
@@ -173,7 +173,8 @@
             z-index: 2;
             font-size: 1.5rem;
             color: $background;
-            mix-blend-mode: hard-light;
+            mix-blend-mode: luminosity;
+            opacity: 0.8;
         }
 
         .comitBox{
@@ -198,7 +199,7 @@
             background-color: #302b41;
         }
         .comitBox:nth-of-type(2){
-            background-color: #38335a;
+            background-color: #322e51;
         }
         .comitBox:nth-of-type(3){
             background-color: #53435e;
