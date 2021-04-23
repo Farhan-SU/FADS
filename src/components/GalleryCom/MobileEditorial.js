@@ -4,8 +4,8 @@ import { NavLink, Link, withRouter} from 'react-router-dom';
 import ImgWebp from '../ImgWebp';
 import '../../assets/styles/gallery.scss';
 import SEO from '../SEO';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 /**Images*/
 import RevivalLeft from '../../assets/images/revival/revival3.png';
@@ -64,8 +64,8 @@ if (typeof window !== `undefined`) {
     } 
 
 const MobileEditorial = () => {
-    const edtl = useRef();
-    const circleRef = useRef();
+    let edtl = useRef();
+    let circleRef = useRef();
     circleRef.current = [];
 
     useEffect(() => {

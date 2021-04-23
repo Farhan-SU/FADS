@@ -1,7 +1,5 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
@@ -11,12 +9,6 @@ import Reveal from '../Reveal';
 import {Video, Transformation} from 'cloudinary-react';
 import BoogieStrike1W from '../../assets/images/boogieStrike/boogiestrike1.webp';
 import BoogieStrike1 from '../../assets/images/boogieStrike/boogiestrike1.png';
-
-if (typeof window !== `undefined`) {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.core.globals("ScrollTrigger", ScrollTrigger);
-};
-
 
 function BoogieStrike () {
 

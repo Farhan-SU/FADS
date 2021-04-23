@@ -16,6 +16,7 @@ query{
     committee
     agencyImg {
       url
+      id
     }
   }
 }

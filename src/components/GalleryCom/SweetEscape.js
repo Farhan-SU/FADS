@@ -1,8 +1,8 @@
 import React, {useRef, useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
 import SEO from '../SEO';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import Sweet1w from '../../assets/images/sweetEscape/aanya2.webp';
@@ -18,6 +18,8 @@ import Sweet5 from '../../assets/images/sweetEscape/zu1.png';
 import Sweet6w from '../../assets/images/sweetEscape/zu2.webp';
 import Sweet6 from '../../assets/images/sweetEscape/zu2.png';
 import NextPageGallery from './NextPageGallery';
+import Reveal from '../Reveal';
+import { Col, Row } from 'react-bootstrap';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger);
@@ -26,9 +28,9 @@ if (typeof window !== `undefined`) {
   
 function SweetEscape () {
 
-    const gshowtl = useRef();
-    const portfolioRef = useRef();
-    const panelRef = useRef();
+    let gshowtl = useRef();
+    let portfolioRef = useRef();
+    let panelRef = useRef();
     panelRef.current = [];
 
     useEffect(() => {
@@ -82,12 +84,16 @@ function SweetEscape () {
           description: "October 2020 editorial photoshoot"
         }}>
         <div className="galleryShows">
-         <div className="spacer">
-            <h1 className="longTxtEd">10/2020</h1>
-         </div>
+        <Row className="spacer">
+                <Col lg={12}>
+                <Reveal wrapperElement="h1" direction="up" delay={0.1}>Sweet Escape</Reveal>
+                </Col>
+                <Col lg={12}>
+                <Reveal wrapperElement="h3" direction="up" delay={0.5}>10/20</Reveal>
+                </Col>
+            </Row>
         <section className="horizontalWrap">
         <div className="portfolio" ref={portfolioRef}>
-             <h2 className="biggerport">ESCAPE</h2>
                     <div className="panel" ref={addPanels}>
                         <div className="panel_item">
                         <ImgWebp

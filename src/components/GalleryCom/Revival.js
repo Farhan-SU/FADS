@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import { withRouter} from 'react-router-dom';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from '../SEO';
@@ -26,9 +26,9 @@ if (typeof window !== `undefined`) {
 
 function Revival () {
 
-    const gshowtl = useRef();
-    const portfolioRef = useRef();
-    const panelRef = useRef();
+    let gshowtl = useRef();
+    let portfolioRef = useRef();
+    let panelRef = useRef();
     panelRef.current = [];
 
     useEffect(() => {

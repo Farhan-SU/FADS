@@ -51,8 +51,8 @@ if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
           {data.modelHomes.map(model => (
             <div key={model.id} className="models-intro">
                {/*image goes below this comment*/}
-               <img src={model.modelHeadshot.url} alt={model.modelName} className="modelImg"/>
                <Link to={`/agency/models_bio/${model.slug}`} className="memberDes">
+               <img src={model.modelHeadshot.url} alt={model.modelName} className="modelImg"/>
               <h2>{model.modelName}</h2>
               </Link>
             </div>

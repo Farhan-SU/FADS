@@ -4,8 +4,8 @@ import { Link, withRouter, useHistory} from 'react-router-dom';
 import ImgWebp from '../ImgWebp';
 import '../../assets/styles/gallery.scss';
 import SEO from '../SEO';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 /**Images*/
 import BodySpaceLeft from '../../assets/images/bodyspace/bodyspace1.png';
@@ -31,9 +31,9 @@ if (typeof window !== `undefined`) {
     } 
 
 const MobileShow = () => {
-    const history = useHistory();
-    const showtl = useRef();
-    const circleRef = useRef();
+    let history = useHistory();
+    let showtl = useRef();
+    let circleRef = useRef();
     circleRef.current = [];
 
     useEffect(() => {

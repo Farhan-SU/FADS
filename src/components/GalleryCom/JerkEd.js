@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useLayoutEffect} from 'react';
 import { Link, withRouter} from 'react-router-dom';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import '../../assets/styles/galleryEditorial.scss';
 import ImgWebp from '../ImgWebp';
 import SEO from "../SEO";
