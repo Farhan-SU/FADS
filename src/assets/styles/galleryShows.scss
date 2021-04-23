@@ -400,12 +400,12 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
   height: 100%;
   padding: 8rem 0;
   background-color: lighten($lightergraypurple, 18%);
   @include media ("screen", "<=phone") {
+    overflow-x: scroll;
+    overflow-y: hidden;
     padding: 5rem 2rem 3rem 2rem;
   }
   .mobileExplorepDeck{
@@ -426,7 +426,8 @@
     }
   }  
   img{
-    width: 80vw;
+    width: 99vw;
+    padding: 2rem;
     position: relative;
     @include media ("screen", "<=phone") {
         width: 270%;

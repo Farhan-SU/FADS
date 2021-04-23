@@ -56,7 +56,6 @@ const models = lazy(() => import('./pages/agency/models'));
 const bio = lazy(() => import('./pages/agency/bio'));
 const models_bio = lazy(() => import('./pages/agency/models_bio'));
 
-
 function App () {
 
   const RouteWithLayout = ({ component, ...rest }) => {

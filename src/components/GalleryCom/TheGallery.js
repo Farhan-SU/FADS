@@ -61,7 +61,7 @@ function TheGallery () {
     panelSRef.current = [];
 
     useEffect(() => {
-        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
+        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.03;
         let panelend =  (Math.abs(xendvalue)) * -1;
 
         fashiontl.current = gsap.timeline({

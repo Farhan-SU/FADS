@@ -33,10 +33,11 @@
   }
 
   .navlinks {
-    color: #0e1f33;
+    word-wrap: break-word;
+    font-size: 1.3vw;
+    color: #080c11;
     font-weight: 300;
     transition: all 600ms ease-in-out;
-    position: relative;
     z-index: 500;
     mix-blend-mode: normal;
    

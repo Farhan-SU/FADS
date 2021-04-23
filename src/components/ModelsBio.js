@@ -40,7 +40,6 @@ query ModelHome($slug: String) {
 `;
 
 function ModelsBio(props) {
-
   let settings = {
     dots: true,
     lazyLoad: true,
@@ -76,7 +75,7 @@ function ModelsBio(props) {
     const { loading, error, data } = useQuery(MODELS_BIO, {
             variables: { slug: props.match.params.slug},
           });
-          const [ modelsBio, setModelsBio ] = useState();
+          const [modelsBio, setModelsBio ] = useState();
 
 
           useEffect(() => {
@@ -97,7 +96,7 @@ function ModelsBio(props) {
       return (
         <SEO
         pageMeta={{
-        title: ''+ models.modelName +' | Models',
+        title: 'Models | Models',
         keywords: ["Fashion", "Agency", "Models", "Photographers", "Videographers", "Makeup Artists", "Fashion Designers", "Graphic Designers" ],
         description: "FADS MOdels"
       }}>
@@ -110,50 +109,48 @@ function ModelsBio(props) {
                     <Col md={6} className="bioPic">
                         <img src={models.modelHeadshot.url} alt={"picture of" + models.modelsName}/>
                     </Col>
-                    <Col md={5} className="biocontent">
-                        <div className="desBio">
-                        <table>
-                            <tr>
-                                <td>Height:</td>
-                                <td>{models.modelheight}</td>
-                            </tr>
-                            <tr>
-                                <td>Bust: </td>
-                                <td>{models.modelBust}</td>
-                            </tr>
-                            <tr>
-                                <td>Waist: </td>
-                                <td>{models.modelWaist}</td>
-                            </tr>
-                            <tr>
-                                <td>Hips: </td>
-                                <td>{models.modelHips}</td>
-                            </tr>
-                            <tr>
-                                <td>Hair: </td>
-                                <td>{models.modelHair}</td>
-                            </tr>
-                            <tr>
-                                <td>Eye: </td>
-                                <td>{models.modelEyesColor}</td>
-                            </tr>
-                            <tr>
-                                <td>Shoe Size: </td>
-                                <td>{models.modelShoeSize}</td>
-                            </tr>
-                        </table>
-                        </div>
-                        <Row className="socialList">
-                            <a href={models.modelIg} className="social" target="_blank" rel="noopener noreferrer" >
+                    <Col md={5} className="modelcontent">
+                    {data.modelHome.modelBios.map(modelInfo => (
+                        <div className="modelBioC">
+                        <tr className="modelBioC">
+                              <td><h2>Height:</h2></td>
+                              <td>{modelInfo.modelBust}</td>
+                          </tr>
+                          <tr className="measurements">
+                              <td><h2>Bust:</h2></td>
+                              <td>{modelInfo.modelBust}</td>
+                          </tr>
+                          <tr className="measurements">
+                              <td><h2>Waist:</h2></td>
+                              <td>{modelInfo.modelWaist}</td>
+                          </tr>
+                          <tr className="measurements">
+                              <td><h2>Hips:</h2></td>
+                              <td>{modelInfo.modelHips}</td>
+                          </tr>
+                          <tr className="measurements">
+                              <td><h2>Hair:</h2></td>
+                              <td>{modelInfo.modelHair}</td>
+                          </tr>
+                          <tr className="measurements">
+                              <td><h2>Eye:</h2></td>
+                              <td>{modelInfo.modelEyesColor}</td>
+                          </tr>
+                          <tr className="measurements">
+                              <td><h2>Shoe Size:</h2></td>
+                              <td>{modelInfo.modelShoeSize}</td>
+                          </tr>
+                          <div className="socialListModels">
+                            <a href={modelInfo.modelIg} className="social" target="_blank" rel="noopener noreferrer" >
                               <InstagramIcon className="icon"/>
                             </a>
-                        </Row>
+                          </div>
+                        </div>
+                    ))}
                     </Col>
                 </Row>
-                <div className="portfolioTxt">
-                    <h2>Modeling Work</h2>
-                </div>
-                <div className="showcase">
+                
+                {/*<div className="showcase">
                   <Slider {...settings}>
                     {models.modelingWork.map((item) => {
                         return (
@@ -163,7 +160,7 @@ function ModelsBio(props) {
                         );
                     })}
                   </Slider>
-                </div>
+                  </div>*/}
                 
             </>
         </div>

@@ -32,7 +32,7 @@ import BodyosterVid from '../../assets/images/bodyspace/bsPosterVid.mp4';
 import BSDeckW from '../../assets/images/bodyspace/bodyspaceDeck.webp';
 import BSDecK from '../../assets/images/bodyspace/bodyspaceDeck.png';
 import Reveal from '../Reveal';
-import BodylerySVid from '../../assets/images/the_gallery/galleryShowVid.mp4';
+import BodylerySVid from '../../assets/images/bodyspacedraft.mp4';
 import NextPageGallery from './NextPageGallery';
 
 

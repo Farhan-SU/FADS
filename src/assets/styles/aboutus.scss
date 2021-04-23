@@ -182,6 +182,9 @@
             height: 750px;
             padding: 2rem;
             overflow: hidden;
+            @include media ("screen", "<=phone") {
+                padding: 3rem 2rem;
+             }
 
             .figurecom{
                 position: absolute;
@@ -212,15 +215,29 @@
         }
         .exec, .models{
             padding: 2.5rem;
+            @include media ("screen", "<=phone") {
+                padding: 1rem;
+                text-align: left;
+             }
             p{
              padding-right: 4.8rem;
+             @include media ("screen", "<=phone") {
+                padding: 0;
+             }
             }
         }
         .design, .members{
             padding: 2.5rem;
             text-align: right;
+            @include media ("screen", "<=phone") {
+                padding: 1rem;
+                text-align: left;
+             }
             p{
                 padding-left: 4rem;
+                @include media ("screen", "<=phone") {
+                    padding: 0;
+                 }
             }
         }
     }
@@ -228,105 +245,3 @@
    
 }
 
-.wrapabtjoinSM{
-    width: 100vw;
-    height: 100%;
-    overflow: hidden;
-    
-    .bgMobile{
-        position: absolute;
-        transform: translate(0,0);
-        z-index: -1;
-        .aboutSMimg{
-            width: 100vw;
-            object-fit: contain;
-        }
-    }
-    h1{
-        font-size: 5rem;
-        text-transform: uppercase;
-        color: #a284c9;
-        mix-blend-mode: exclusion;
-    }
-    p{
-        color: $heading;
-        font-size: 0.9rem;
-        font-weight: 500;
-        white-space: normal;
-        line-height: 1.4rem;
-        mix-blend-mode: difference;
-    }
-    .headersecSM{
-        position: relative;
-        top: 11%;
-        padding: 5rem 2rem 0.4rem 2rem;
-    }
-    .toprightSM{
-        padding: 0 2rem;
-        position: relative;
-        top: -0.5rem;
-    }
-    .joinHeaderSM{
-        padding: 0 2rem;
-        position: relative;
-        top: -1.3rem;
-
-        h1{
-            font-size: 7rem;
-            line-height: 7rem;
-        }
-    }
-    .joinusTextSM{
-        padding: 0 3rem;
-        position: relative;
-        top: -5.3rem;
-        p{
-            color: $heading;
-            mix-blend-mode: normal;
-        }
-    }
-    h4{
-        font-size: 4rem;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-    .roletextSM{
-        padding-bottom: 3rem;
-        position: relative;
-        top: -0.5rem;
-     p{
-        font-size: 1rem;
-        color: $heading;
-        mix-blend-mode: normal;
-     }
-     h4{font-size: 3.7rem;}
-    }
-    .exmemberSM{
-        text-align: right;
-        padding: 0 1rem;
-        position: relative;
-        top: -2.3rem;
-        h4{color: #2c1061;}
-        p{padding: 0 0 0 4rem;}
-    }
-    .designersSM{
-        text-align: left;
-        padding: 0 0.8rem 2.5rem 0.8rem;
-        h4{color: #f5915e;}
-        p{padding: 0 4.5rem 0 0.5rem;}
-    }
-    .modelsSM{
-        text-align: right;
-        padding: 0 1rem;
-        margin-bottom: 2.7rem;
-        h4{color:#5A95B4;}
-        p{padding: 0 0 0 3.5rem;}
-    }
-    .committeeSM{
-        text-align: left;
-        padding: 0 0.8rem 3rem 0.8rem;
-        h4{color: #f5915e; font-size: 3.7rem;}
-        p{padding: 0 4.5rem 0 0.5rem;}
-    }
-
-}

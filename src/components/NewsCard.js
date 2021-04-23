@@ -6,7 +6,7 @@ import TheGallery from '../assets/images/gallerypos.webp';
 import TheGalleryBackup from '../assets/images/gallerypos.png';
 import galleryBTS from '../assets/images/galleryBTS.jpg'; 
 import Reveal from '../components/Reveal';
-
+import dof4Fads from '../assets/images/dof4Fads.jpg';
 
 const NewsCard = () => {
 
@@ -71,7 +71,7 @@ const NewsCard = () => {
 
         <Card bsPrefix="card">
             <div className="imgWrapNews">
-            <Card.Img as="img" variant="top" src="http://dailyorange.com/resize/800/wp-content/uploads/2020/08/17152455/FADS-dom.jpg" />
+            <Card.Img as="img" variant="top" src={dof4Fads} />
             </div>
             <Card.Body>
             <Card.Title>SU Fashion and Design Society hosts F*4 Zoom Series</Card.Title>
