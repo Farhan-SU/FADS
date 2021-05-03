@@ -28,6 +28,47 @@
 .biowrapper{
     height: 100%;
     overflow-x: hidden;
+    h1{
+      margin: 0 0 0.5rem 0;
+      font-size: 11.5vw;
+      letter-spacing: 0.3rem;
+      color: darken($darkpurple, 1%);
+      letter-spacing: 2px;
+      -webkit-text-stroke: 2px darken($darkpurple, 1%);
+      -webkit-text-fill-color: transparent;
+
+      @include media ("screen", "<=phone") {
+        font-size: 4rem;
+        line-height: normal;
+        color: darken($darkpurple, 5%);
+        -webkit-text-stroke: 0.1px transparent;
+        -webkit-text-fill-color: darken($darkpurple, 5%); 
+        font-size: 2.5rem;
+        margin-top: -1rem;
+      }
+    }
+    h4{
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #3c343d;
+      letter-spacing: 4px;
+
+      @include media ("screen", "<=phone") {
+        margin-left: 0;
+        font-size: 1.2rem;
+        letter-spacing: normal;
+        padding: 0 3rem;
+        color: #625164;
+        font-weight: 500;
+    }
+  }
+    .model-header{
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
     .bio-header{
         justify-content: center;
@@ -42,43 +83,6 @@
           padding: 2rem 0.5rem;
           text-align: center;
       }
-
-        h1{
-            margin: 0 0 0.5rem 0;
-            font-size: 11.5vw;
-            letter-spacing: 0.3rem;
-            color: darken($darkpurple, 1%);
-            letter-spacing: 2px;
-            -webkit-text-stroke: 2px darken($darkpurple, 1%);
-            -webkit-text-fill-color: transparent;
-  
-            @include media ("screen", "<=phone") {
-              font-size: 4rem;
-              line-height: normal;
-              color: darken($darkpurple, 5%);
-              -webkit-text-stroke: 0.1px transparent;
-              -webkit-text-fill-color: darken($darkpurple, 5%); 
-              font-size: 2.5rem;
-              margin-top: -1rem;
-            }
-        }
-        h4{
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #3c343d;
-            letter-spacing: 4px;
-
-            @include media ("screen", "<=phone") {
-              margin-left: 0;
-              font-size: 1.2rem;
-              letter-spacing: normal;
-              padding: 0 3rem;
-              color: #625164;
-              font-weight: 500;
-          }
-        }
-
     }
 }
 .actualbio{
@@ -114,7 +118,6 @@
             @include media ("screen", "<=phone") {
               border-radius: 1px;
             }
-      
         }
     }
     .biocontent{
@@ -200,14 +203,14 @@
           margin-left: 1rem;
           width: 100%;
           .icon{
-            width: 15%;
+            width: 10%;
           }
         }
         tr{
           padding: 1rem 0.5rem;
           h2{
             font-size: 2rem;
-            color: rgb(58, 58, 90);;
+            color: rgb(67, 58, 90);;
           }
         }
         td{

@@ -26,12 +26,12 @@ query ModelHome($slug: String) {
       modelShoeSize
       modelIg
       modelingWork {
+        id
         url
       }
     }
     modelHeadshot {
-      handle
-      fileName
+      id
       url
     }
   }
@@ -74,19 +74,19 @@ function ModelsBio(props) {
     const { loading, error, data } = useQuery(MODELS_BIO, {
             variables: { slug: props.match.params.slug},
           });
-          const [modelsBio, setModelsBio ] = useState();
+    const [modelsBio, setModelsBio ] = useState();
 
 
-          useEffect(() => {
-            if(loading === false && data){
-                setModelsBio(data);
-            }
-        }, [loading, data])
+    useEffect(() => {
+      if(loading === false && data){
+        setModelsBio(data);
+      }
+    }, [loading, data])
     
     if (loading) return <LoadingScreen/>;
     if (error) return <Row className="error-bio">
         <Col lg={12}><h1>Looks Like Something went wrong</h1></Col>
-        <Col lg={12}><h3>{error.message}</h3></Col>
+        <Col lg={12} style={{fontSize: '1rem'}}><h3>{error.message}</h3></Col>
         </Row>
 
     const models = data.modelHome;
@@ -100,9 +100,9 @@ function ModelsBio(props) {
         description: "FADS MOdels"
       }}>
         <div className="biowrapper">
-            <div className="bio-header">
-                <h1>{models.modelName}</h1>
-            </div>
+            <Row className="bio-header">
+              <Col><h1>{models.modelName}</h1></Col>
+            </Row>
             <>
                 <Row className="actualbio" noGutters={true}>
                     <Col md={6} className="bioPic">
@@ -148,18 +148,22 @@ function ModelsBio(props) {
                     ))}
                     </Col>
                 </Row>
-                
-                {/*<div className="showcase">
-                  <Slider {...settings}>
-                    {models.modelingWork.map((item) => {
-                        return (
-                        <ul>
-                        <img src={item.url} key={models.id} alt={"Portfolio work by" + models.modelsName}/>
-                        </ul>
-                        );
-                    })}
-                  </Slider>
-                  </div>*/}
+
+                <div className="portfolioTxt">
+                    <h2>Modeling Work</h2>
+                </div>
+                <div className="showcase">
+                {data.modelHome.modelBios.map(modelshow => (
+                      <div className="showcaseImg">
+                        <Slider {...settings}>
+                        <img src={modelshow.modelingWork[0].url} alt=""/>
+                        <img src={modelshow.modelingWork[1].url} alt=""/>
+                        <img src={modelshow.modelingWork[2].url} alt=""/>
+                        <img src={modelshow.modelingWork[3].url} alt=""/>
+                        </Slider>
+                      </div>
+                    ))}    
+                </div>
                 
             </>
         </div>
