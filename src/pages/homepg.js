@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import '../assets/styles/pages.scss';
 import SEO from '../components/SEO';
 import HomepgWrap from '../components/HomeCom/HomepgWrap';

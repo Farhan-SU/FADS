@@ -37,7 +37,7 @@ const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
 
 
 /*Agency Routes*/
-const agency = lazy(() => import(/* webpackPrefetch: true */ './pages/agency'));
+const agency = lazy(() => import('./pages/agency'));
 /*const eboard = lazy(() => {
   return Promise.all([
     import("./pages/agency/eboard"),
@@ -73,21 +73,21 @@ function App () {
     return isDesktop ? children : null
   }
  
-  let location = useLocation();
-
         return (
           <>
-          <Desktop><AnimatedCursor
+          <Desktop>
+            <AnimatedCursor
             innerSize={10}
             outerSize={15}
             color='47, 14, 71'
             outerAlpha={0.2}
             innerScale={1}
-            outerScale={4}/></Desktop>
+            outerScale={4}/>
+          </Desktop>
   
             <div className="routes">
             <Suspense fallback={<LoadingScreen/>}>
-                  <Switch location={location}>
+                  <Switch>
                     <RouteWithLayout exact path="/gallery/editorials/jerk-fads" component={jerkFads}/>
                     <RouteWithLayout exact path="/gallery/editorials/work-wear-vintage" component={workWear}/>
                     <RouteWithLayout exact path="/gallery/editorials/galleryShoots" component={galleryShoots}/>

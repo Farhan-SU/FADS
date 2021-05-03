@@ -5,13 +5,10 @@ import SEO from '../../components/SEO';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import LoadingScreen from '../../components/LoadingScreen';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 
 const MEMBERS = gql`
 query{
-  members(where: {committee_contains_some: GraphicDesigners}) {
+  members(where: {committee_contains_some: GraphicDesigners}, orderBy: displayOrder_ASC) {
     id
     memberName
     memberPosition
@@ -54,8 +51,8 @@ if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
           {data.members.map(member => (
             <div key={member.id} className="member-intro">
                {/*image goes below this comment*/}
-               <img src={member.agencyImg.url} alt={member.memberName} className="memImg"/>
                <Link to={`/agency/bio/${member.slug}`} className="memberDes">
+               <img src={member.agencyImg.url} alt={member.memberName} className="memImg"/>
               <h2>{member.memberName}</h2>
               <h4>{member.memberPosition}</h4>
               </Link>

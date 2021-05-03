@@ -5,9 +5,6 @@ import SEO from '../../components/SEO';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import LoadingScreen from '../../components/LoadingScreen';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 
 const MEMBERS = gql`
 query{
@@ -29,15 +26,14 @@ export default function GraphicDesigners() {
   const { loading, error, data } = useQuery(MEMBERS);
   const [ communication, setCommunication ] = useState();
 
-
   useEffect(() => {
     if(loading === false && data){
         setCommunication(data);
     }
 }, [loading, data])
 
-if (loading) return <LoadingScreen/>;
-if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
+  if (loading) return <LoadingScreen/>;
+  if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
   if (data) {
       return (
         <SEO
@@ -54,8 +50,8 @@ if (error) return <div className="error-bio"><h1>{error.message}</h1></div>;
           {data.members.map(member => (
             <div key={member.id} className="member-intro">
                {/*image goes below this comment*/}
-               <img src={member.agencyImg.url} alt={member.memberName} className="memImg"/>
                <Link to={`/agency/bio/${member.slug}`} className="memberDes">
+               <img src={member.agencyImg.url} alt={member.memberName} className="memImg"/>
               <h2>{member.memberName}</h2>
               <h4>{member.memberPosition}</h4>
               </Link>

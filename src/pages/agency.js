@@ -1,17 +1,10 @@
-import React, { useRef, useEffect} from 'react';
-import { Link, useRouteMatch} from 'react-router-dom';
+import React from 'react';
+import { Link} from 'react-router-dom';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/agency.scss';
-import {gsap} from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO';
 import Reveal from "../components/Reveal";
    
-if (typeof window !== `undefined`) {
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.core.globals("ScrollTrigger", ScrollTrigger);
-};
-
 function Agency() {
 
   return (

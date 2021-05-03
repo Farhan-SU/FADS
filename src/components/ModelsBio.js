@@ -7,9 +7,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import LoadingScreen from './LoadingScreen';
 import Slider from "react-slick";
-import {ReactComponent as EmailIcon} from '../assets/images/instagramDark.svg';
 import {ReactComponent as InstagramIcon} from '../assets/images/instagramDark.svg';
-import {ReactComponent as LinkedInIcon} from '../assets/images/linkedinDark.svg';
  
 const MODELS_BIO = gql`
 query ModelHome($slug: String) {
@@ -18,6 +16,7 @@ query ModelHome($slug: String) {
     modelName
     slug
     modelBios {
+      id
       modelHeight
       modelBust
       modelWaist

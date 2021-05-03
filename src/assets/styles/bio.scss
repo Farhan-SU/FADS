@@ -2,7 +2,7 @@
 @import 'breakpoints'; 
 
 .error-bio{
-  background: #dfdcee url('../images/loading3.gif') no-repeat center center / contain;
+  background: #c2bbdf url('../images/loading3.gif') no-repeat center center / contain;
   background-blend-mode: multiply;
   display: flex;
   justify-content: center;
@@ -10,11 +10,13 @@
   align-content: center;
   height: 100vh;
   padding: 4rem;
+  overflow: hidden;
 
    h1{
-     width: 70%;
-    font-size: 4rem;
-    color: #2a066b;
+    width: 70%;
+    max-height: 80vh;
+    font-size: 5.2vw;
+    color: #261b3b;
    }
 
    h3{
@@ -26,11 +28,14 @@
 .biowrapper{
     height: 100%;
     overflow-x: hidden;
-    margin-top: 8rem;
 
     .bio-header{
-        margin: -2.3rem 4.3rem 2.3rem 4.3rem;
-        height: 80vh;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin: 2rem 4rem;
+        height: 100vh;
+        
         @include media ("screen", "<=phone") {
           height: 100%;
           margin: 1rem 0 0 0;
@@ -39,16 +44,14 @@
       }
 
         h1{
+            margin: 0 0 0.5rem 0;
             font-size: 11.5vw;
             letter-spacing: 0.3rem;
-            margin-bottom: 1rem;
-            color: darken($darkpurple, 5%);
-            line-height: 12rem;
+            color: darken($darkpurple, 1%);
             letter-spacing: 2px;
-            -webkit-text-stroke: 2px darken($darkpurple, 5%);
+            -webkit-text-stroke: 2px darken($darkpurple, 1%);
             -webkit-text-fill-color: transparent;
   
-
             @include media ("screen", "<=phone") {
               font-size: 4rem;
               line-height: normal;
@@ -60,8 +63,8 @@
             }
         }
         h4{
+            margin: 0;
             font-size: 2.5rem;
-            margin-left: 0.7rem;
             font-weight: 600;
             color: #3c343d;
             letter-spacing: 4px;
@@ -151,25 +154,32 @@
           justify-content: center;
           align-items: flex-start;
           align-content: center;
-          margin: 5rem 0;
+          margin: 4rem 0;
 
           .social{
             display: flex;
             flex-direction: column;
+            align-self: center;
             flex: 1;
-            padding: 0 4rem;
-
+            padding: 0.1rem 3.2rem;
+            height: 55px;
+            
             .icon{
-              width: 70%;
+              height: 100%;
+              width: 100%;
+              transition: all 400ms ease-in-out;
+              &:hover{
+                transform: translate3d(0, -6px, 0);
+                -webkit-transform: translate3d(0, -6px, 0);
+                -moz-transform: translate3d(0, -6px, 0);
+              }
             }
           }
-  
           a{
             height: 100%;
             transition: all 300ms ease-in-out;
-    
             &:not(#not){
-              border-left: 0.5px solid rgb(190, 157, 212);
+              border-left: 0.5px solid rgba(190, 157, 212, 0.288);
             }
           }
         }

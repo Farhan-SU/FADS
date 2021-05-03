@@ -2,13 +2,14 @@
 @import 'breakpoints'; 
 
 .error-bio{
-    background: #dfdcee url('../images/loading3.gif') no-repeat center center / contain;
+    background: #d6d2eb url('../images/loading3.gif') no-repeat center center / contain;
     background-blend-mode: multiply;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     height: 100vh;
+    overflow: hidden;
 
      h1{
         font-size: 4rem;
@@ -27,7 +28,6 @@
     padding-top: 6rem;
     padding-bottom: 8rem;
     background: lighten($lightergraypurple, 8%);
-    /*background: $graypurple url('../images/eboardbgl.svg') no-repeat right center/ cover;*/
  
     @include media ("screen", "<=phone") {
         background: #e4dee9 url('https://i.pinimg.com/564x/1a/aa/59/1aaa593b5cba6d743ac075f323304c61.jpg') repeat-y bottom center/ contain;
@@ -57,10 +57,10 @@
 
     .members{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         align-content: center;
-        margin: -3rem 2rem 0 2rem;
+        margin: -2rem 1.8rem 0 1.8rem;
         text-align: center;
         flex-wrap: wrap;
         
@@ -75,6 +75,7 @@
         .member-intro{
             display: flex;
             flex-direction: column;
+            align-self: center;
             width: 33%;
             height: 600px;
             padding: 1.2rem;
@@ -86,7 +87,7 @@
                 margin: 2rem 0 1rem 0;
             }
             img{
-                filter: brightness(105%) saturate(105%);
+                
                 width: 100%;
                 border-radius: 5px;
                 max-width: 80%;
