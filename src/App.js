@@ -78,11 +78,9 @@ function App () {
           <Desktop>
             <AnimatedCursor
             innerSize={10}
-            outerSize={15}
             color='47, 14, 71'
             outerAlpha={0.2}
-            innerScale={1}
-            outerScale={4}/>
+            innerScale={1.5}/>
           </Desktop>
   
             <div className="routes">
