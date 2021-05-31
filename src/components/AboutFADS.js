@@ -40,7 +40,7 @@ export default function AboutTest () {
                  Syracuse University who share a passion for creativity, design, and fashion
                 <br/>
                 <br/>
-                 FADS is an open environment for the discussion of
+                FADS is an open environment for the discussion of
                 new ideas that brings important concerns of the
                 global fashion industry and the changing social
                 climate to the forefront of dialogue at Syracuse University
