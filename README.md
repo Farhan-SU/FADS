@@ -1,5 +1,3 @@
-FADS Website is Live!
-
 ![image](https://res.cloudinary.com/fadscloud/image/upload/v1620911979/SocialMediaBanner.png)
 
 
