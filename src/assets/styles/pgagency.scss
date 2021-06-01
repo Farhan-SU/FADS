@@ -30,8 +30,8 @@
     background: lighten($lightergraypurple, 8%);
  
     @include media ("screen", "<=phone") {
-        background: #e4dee9 url('https://i.pinimg.com/564x/1a/aa/59/1aaa593b5cba6d743ac075f323304c61.jpg') repeat-y bottom center/ contain;
-        background-blend-mode: screen;
+        padding-top: 9rem;
+        cursor: pointer;
     }
     a{
         position: relative;
@@ -66,6 +66,9 @@
         
         a{
             cursor: none;
+            @include media ("screen", "<=phone") {
+                cursor: default;
+            }
         }
 
         @include media ("screen", "<=phone") {
@@ -78,7 +81,7 @@
             width: 33%;
             height: 600px;
             padding: 1.2rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
 
             @include media ("screen", "<=phone") {
                 width: 100%;
