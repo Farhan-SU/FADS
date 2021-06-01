@@ -14,7 +14,7 @@ const FooterSM = () => {
         <Row className="footer_row-sm">
             <Col md={6} className='first-sm'>
             <div className="fads">
-                <h4>Fashion And Design Society</h4>
+                <h4>Fashion and Design Society</h4>
                 <span><i>Syracuse, NY</i></span>
             </div>
             <Row className="media">

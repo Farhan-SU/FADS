@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router} from "react-router-dom";
-import ScrollToTop from './components/ScrollToTop';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -18,7 +17,6 @@ ReactDOM.render(
   <React.StrictMode>
   <ApolloProvider client={client}>
   <Router>
-  <ScrollToTop/>
     <App/>  
   </Router>
   </ApolloProvider>

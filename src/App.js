@@ -1,5 +1,6 @@
 import React, {Suspense, lazy} from 'react';
 import {Switch, Route, useLocation} from "react-router-dom";
+import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/Layout';
 import LoadingScreen from './components/LoadingScreen';
 import './App.scss';
@@ -75,6 +76,7 @@ function App () {
  
         return (
           <>
+          <ScrollToTop/>
           <Desktop>
             <AnimatedCursor
             innerSize={10}
@@ -82,7 +84,6 @@ function App () {
             outerAlpha={0.2}
             innerScale={1.5}/>
           </Desktop>
-  
             <div className="routes">
             <Suspense fallback={<LoadingScreen/>}>
                   <Switch>

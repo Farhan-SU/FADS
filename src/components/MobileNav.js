@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import {NavLink, withRouter, useHistory} from "react-router-dom";
 import '../assets/styles/Mobilenav.scss';
 import navLogo from '../assets/images/navLogo.gif';
-import {gsap} from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Facebook from '../assets/images/fbHome.png';
 import Instagram from '../assets/images/igHome.png';
@@ -36,8 +36,8 @@ function MobileNav() {
   const info = useRef(null);
   const socialSm = useRef(null);
 
-  const intialheightNav = window.innerHeight/6;
-  const openheightNav = window.innerHeight;
+  const intialheightNav = window.innerHeight/8.5;
+  const openheightNav = window.innerHeight * 1.02;
 
 
   useEffect(() => {
@@ -47,7 +47,7 @@ function MobileNav() {
     .fromTo(nav.current, {autoAlpha: 0}, {autoAlpha: 1}, '-=0.8')
     .fromTo(navContent.current, {autoAlpha: 0, y: 200}, {autoAlpha: 1, y: 0, display: 'grid'})
     .fromTo([homeSm.current, gallerySm.current, aboutSm.current, agencySm.current, pressSm.current, ffour.current],
-      {autoAlpha: 0, y: 40}, {autoAlpha: 1, y: 0, stagger: {each: .5}}, "-=1")
+      {autoAlpha: 0, y: 40}, {autoAlpha: 1, y: 0, stagger: {each: 0.32}}, "-=1")
     .fromTo(info.current, {duration: 1, autoAlpha: 0, y: 60}, {autoAlpha: 1, y: 0}, "-=0.9")
     .fromTo(socialSm.current, {duration: 0.5, autoAlpha: 0, y: 80}, {duration: 0.5, autoAlpha: 1, y: 0}, "-=0.7")
     .reverse();
@@ -83,18 +83,18 @@ function MobileNav() {
         <div className="nav-content" ref={navContent}>
           <div className="nav-inner">
             <ul className="nav-items">
-              <NavLink to="/" exact className="nav-item" ref={homeSm} onClick={goHome} activeStyle={{color: "#ffe2bc"}}><li>Home</li></NavLink>
-              <NavLink to="/gallery" className="nav-item" ref={gallerySm} activeStyle={{color: "#ffe2bc"}}><li>Gallery</li></NavLink>
-              <NavLink to="/aboutus" exact  className="nav-item" ref={aboutSm} activeStyle={{color: "#ffe2bc"}}><li>About Us</li></NavLink>
-              <NavLink to="/agency" className="nav-item" ref={agencySm} activeStyle={{color: "#ffe2bc"}}><li>Agency</li></NavLink>
-              <NavLink to="/press" exact className="nav-item" ref={pressSm} activeStyle={{color: "#ffe2bc"}}><li>Press</li></NavLink>
-              <NavLink to="/f4" exact className="nav-item" ref={ffour} activeStyle={{color: "#ffe2bc"}}><li>F4 Speakers</li></NavLink>
+              <NavLink to="/" exact className="nav-item" ref={homeSm} onClick={toggleNav} activeStyle={{color: "#ffe2bc"}}><li>Home</li></NavLink>
+              <NavLink to="/gallery" className="nav-item" ref={gallerySm} onClick={toggleNav} activeStyle={{color: "#ffe2bc"}}><li>Gallery</li></NavLink>
+              <NavLink to="/aboutus" exact  className="nav-item" ref={aboutSm} onClick={toggleNav} activeStyle={{color: "#ffe2bc"}}><li>About Us</li></NavLink>
+              <NavLink to="/agency" className="nav-item" ref={agencySm} onClick={toggleNav} activeStyle={{color: "#ffe2bc"}}><li>Agency</li></NavLink>
+              <NavLink to="/press" exact className="nav-item" ref={pressSm} onClick={toggleNav} activeStyle={{color: "#ffe2bc"}}><li>Press</li></NavLink>
+              <NavLink to="/f4" exact className="nav-item" ref={ffour} onClick={toggleNav} activeStyle={{color: "#ffe2bc"}}><li>F4 Speakers</li></NavLink>
             </ul>
   
             <ul className="nav-info" ref={info}>
               <li className="nav-info-item"><em>Fashion And Design Society</em></li>
               <li className="nav-info-item"><em>Syracuse, NY</em></li> 
-              <li className="nav-info-item">Collaboration or Inquires:</li> 
+              <li className="nav-info-item">Inquires at:</li> 
               <li className="nav-info-item">
               <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank" rel="noopener noreferrer">syracusefads@gmail.com</a></li>  
             </ul>

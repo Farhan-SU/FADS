@@ -84,7 +84,7 @@
 
   @include media ("screen", "<=phone") {
     background-size: cover;
-    padding: 1rem 0.4rem 2rem 0.4rem;
+    padding: 1.5rem 0.4rem;
     height: 100%;
   }
 } 
@@ -96,6 +96,11 @@
   justify-content: center;
   align-content: space-between;
   align-items: center;
+
+  @include media ("screen", "<=phone") {
+    padding: 0;
+    margin-top: 0;
+  }
 }
 .first-sm{
   height: 100%;
@@ -111,12 +116,22 @@
       font-weight: 400;
       font-size: 1.4rem;
       color: #1A2632;
+
+      @include media ("screen", "<=phone") {
+        font-size: 6.5vw;
+        line-height: 150%;
+        margin-bottom: 0.5rem;
+      }
     }
     span{
       font-weight: 200;
       position: relative;
       font-size: 1.1rem;
       color: #1A2632;
+
+      @include media ("screen", "<=phone") {
+        font-size: 5.5vw;
+      }
     }
 }}
 .media{
@@ -125,6 +140,10 @@
   justify-content: space-evenly;
   align-self: space-between;
   align-content: space-between;
+
+  @include media ("screen", "<=phone") {
+    display: none;
+  }
 
   .social-sm{
     display: flex;
@@ -140,11 +159,6 @@
     img{
       height: 30px;
       width: 30px;
-
-      @include media ("screen", "<=phone") {
-        height: 28px;
-        width: 28px;
-      }
     }
   }
 }

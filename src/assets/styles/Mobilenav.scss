@@ -1,22 +1,20 @@
 .mobilenavWrapper{
-    will-change: transform;
     position: fixed;
-    top: 10px;
     padding-top: 0.5rem;
-    margin-top: -0.8rem;
-    z-index: 400;
+    z-index: 800;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     justify-items: center;
-    align-items: flex-start;
-    height: inherit;
-    max-height: 100vh;
+    align-items: center;
     width: 100vw;
+    backdrop-filter: blur(3px);
 
     .smLogo{
-        margin: 1.5rem;
         position: fixed;
+        margin: 1.5rem;
+        top: 1rem;
+
         img{
         width: 23%;
         }
@@ -25,11 +23,10 @@
   .nav {
     width: 100vw;
     position: absolute;
-    margin-top: -0.5rem;
     padding-top: 0.5rem;
     z-index: 100;
     visibility: hidden;
-    background-color: #917d9b;
+    background-color: #867091;
     will-change: transform;
 
     .showmenu & {
@@ -45,10 +42,10 @@
     height: 102vh;
     overflow: hidden;
     color:#fff4e4;
-    opacity: 0.8;
 
     .nav-inner {
-        margin: 4rem 1rem 1rem 0.5rem;
+        height: 100vh;
+        margin: 7rem 1rem 2rem 0.5rem;
     }
         
     .nav-item {
@@ -56,30 +53,31 @@
         font-size: 1.7rem;
         color:#eae0fd;
         font-family: "Vipnagorgialla", "Raleway", sans-serif;
+        width: 100%;
 
         li{
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.4rem;
             text-decoration: underline;
-            text-decoration-color: #ffe4d8;
+            text-decoration-color: #d0b5ee;
         }
     }
     .nav-info{
         margin: 3rem auto 1rem auto;
     }
     .nav-info-item {
-        color:#d9cfec;
+        color:#ede3ff;
         list-style: none;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        line-height: 170%;
+
         a{
-            color:#e7b6f3;
-            font-size: 0.9rem;
+            color:#fff4df;
         }
     }
     .smNavsocial{
-        margin: 2rem auto auto 2.6rem;
+        margin: 2.5rem auto auto 2.6rem;
         width: 75%;
         .smSocial{
-            opacity: 0.8;
             margin-right: 3rem;
             img{
                height: 30px;
@@ -90,10 +88,11 @@
 }
 .burger {
     margin-top: 2.5rem;
+    position: absolute;
     right: 2.5rem;
+    top: 1.2rem;
     display: grid;
     justify-self: end;
-    position: fixed;
     z-index: 200;
     cursor: pointer;
 
@@ -111,7 +110,7 @@
                 .open & {
                     transform: rotate(44deg) translate3d(-2px,0,0);
                     background-color: #eae0fd;
-                    opacity: 0.5;
+                    opacity: 0.8;
                 }
             }
 
@@ -126,7 +125,7 @@
                 .open & {
                     transform: rotate(-44deg) translate3d(-4px, 0, 0);
                     background-color: #eae0fd;
-                    opacity: 0.5;
+                    opacity: 0.8;
                 }
             }
         }

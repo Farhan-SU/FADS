@@ -27,7 +27,7 @@ export default function HomepgWrap ()  {
       const colorChange = gsap.timeline({defaults: {duration: 1, ease: "linear", }})
       colorChange
       .fromTo(arrowHpg.current, {opacity: 1},{duration: 0.8,opacity: 0, y: -200, ease: "back.inOut(1.4)"}, "-=1.5")
-      .fromTo(homePgBgWrapper.current, { backgroundColor: "#f4eef7"}, { backgroundColor: "#867794"}, "-=1.5")
+      .fromTo(homePgBgWrapper.current, { backgroundColor: "#4e3d6d"}, { backgroundColor: "#867794"}, "-=1.5")
       .to(homePgBgWrapper.current, { backgroundColor: "#644a5d"})
       .to(homePgBgWrapper.current, { backgroundColor: "#61526d"})
       .to(homePgBgWrapper.current, { backgroundColor: "#170524"})
@@ -38,7 +38,7 @@ export default function HomepgWrap ()  {
         id: 'homepgwrapperbg',
         start: "top top",
         end: endColorchange,
-        scrub: 0.3,
+        scrub: 0.01,
         animation: colorChange,
         toggleActions: "play none play reverse"
       });
