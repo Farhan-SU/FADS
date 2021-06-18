@@ -197,7 +197,7 @@ function GalleryShoots () {
             <Row noGutters={true} className="imgNext">
             <Col lg={12} className="endSec1">
                 <div className="mobileBacktoGallery">
-                <h1>Back to</h1><h2 className="ontopLastOption">Gallery</h2>
+                <h1>Back to</h1><h2 className="ontop" style={{marginLeft: '1rem'}}>Gallery</h2>
                 </div>
             </Col>
             <Col lg={12} className="endseccontent">
