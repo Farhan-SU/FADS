@@ -32,7 +32,7 @@ function Halloween () {
         <div className="galleryShows">
             <Row className="spacer">
                 <Col lg={12} className="scaleDownTxt">
-                <Reveal wrapperElement="h1" direction="up" delay={0.1} style={{fontSize: '2.5rem'}}>Halloween</Reveal>
+                <Reveal wrapperElement="h1" direction="up" delay={0.1}>Halloween</Reveal>
                 </Col>
                 <Col lg={12}>
                 <Reveal wrapperElement="h3" direction="up" delay={0.5}>12/2020</Reveal>

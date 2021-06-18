@@ -275,25 +275,31 @@
 }
 .sliderBio{
   outline: none;
-  height: 100%;
+  height: 130vh;
+  position: relative;
+  object-fit: contain;
   
   .slick-dots{
     width: 100%;
     height: 100px;
-    position: relative;
+    position: absolute;
+    bottom: -4rem;
   }
   img{
-    max-height: 100vh;
-    width: 100%;
+    width: 80%;
+    height: 100%;
     border-radius: 20px;
+    object-fit: contain;
   }
 }
 .slick-slide {
-  padding: none;
-  margin: 0.5rem;
+  height: 110vh;
+  width: 100vw;
+  object-fit: contain;
 }
 .slick-slide, .slick-slide *{ 
   outline: none;
+  margin: 0;
  }
  .slick-list{
   height: 105%;

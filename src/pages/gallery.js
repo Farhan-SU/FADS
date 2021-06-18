@@ -1,17 +1,13 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import '../assets/styles/gallery.scss';
-import { NavLink, useRouteMatch} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import SEO from '../components/SEO';
 
-
- 
 export default function Gallery () {
-  let { path, url } = useRouteMatch();
-  console.log({url, path});
-
+ 
   return (
-  <>
+  <>  
   <SEO
     pageMeta={{
       title: "Gallery",

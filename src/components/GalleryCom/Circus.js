@@ -55,7 +55,7 @@ function Circus () {
     panelSRef.current = [];
 
     useEffect(() => {
-        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.03;
+        let xendvalue = (portfolioSRef.current.scrollWidth - document.documentElement.clientWidth) * 1.05;
         let panelend =  (Math.abs(xendvalue)) * -1;
 
         fashiontl.current = gsap.timeline({

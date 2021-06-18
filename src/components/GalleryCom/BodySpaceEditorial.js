@@ -32,7 +32,7 @@ function BodySpaceEditorial() {
     panelRef.current = [];
 
     useEffect(() => {
-        let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.04;
+        let xendvalue = (portfolioRef.current.scrollWidth - document.documentElement.clientWidth) * 1.05;
         let panelend =  (Math.abs(xendvalue)) * -1;
 
         gshowtl.current = gsap.timeline({

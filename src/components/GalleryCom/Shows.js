@@ -15,6 +15,8 @@ import CircusLeft from '../../assets/images/circus/bw.png';
 import CircusRight from '../../assets/images/circus/circus4.png';
 import TlandLeft from '../../assets/images/tomorrowland/tomorrowland11.png';
 import TlandRight from '../../assets/images/tomorrowland/tomorrowland10.png';
+import revivalShowRight from '../../assets/images/revival7.jpg';
+import revivalShowLeft from '../../assets/images/revival16.jpg';
 
 
 if (typeof window !== `undefined`) {
@@ -91,14 +93,39 @@ const Shows = () => {
         }}>
       <>
       <div className="show-wrapper">
-        
       <Row as="section" className="sectionBox">
         <Col md={4}className="sleft">
-          <img src={BodySpaceLeft} alt="jerkphotos" className="img1"/>
+          <img src={revivalShowLeft} alt="jerkphotos" className="img1"/>
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-          <Link to="/gallery/shows/bodyxspace" onClick={() => history.push("/gallery/shows/bodyxspace")}>
+          <Link to="/gallery/shows/revival_show">
+          <Col md={12}>
+          <h1>Revival</h1>
+          </Col>
+          <Col md={12}>
+          <h3>Spring 2021</h3>
+          </Col>
+          </Link>
+        </Row>
+          <div className="svg-line">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
+              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </Col>
+        <Col md={4} className="sright">
+          <img src={revivalShowRight} alt="jerkphotos" className="img2" style={{width: '80%'}}/>
+        </Col>
+      </Row>
+
+      <Row as="section" className="sectionBox">
+        <Col md={4}className="sleft">
+          <img src={BodySpaceLeft} ref={addSImgRefs} alt="jerkphotos" className="img1"/>
+        </Col>
+        <Col md={4} className="description">
+        <Row className="header">
+          <Link to="/gallery/shows/bodyxspace">
           <Col md={12}>
           <h1>Body X Space</h1>
           </Col>
@@ -114,7 +141,7 @@ const Shows = () => {
           </div>
         </Col>
         <Col md={4} className="sright">
-          <img src={BodySpaceRight} alt="jerkphotos" className="img2" style={{width: '80%'}}/>
+          <img src={BodySpaceRight} ref={addSImgRefsRight} alt="jerkphotos" className="img2" style={{width: '80%'}}/>
         </Col>
       </Row>
 
@@ -124,7 +151,7 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-          <Link to="/gallery/shows/thegallery" onClick={() => history.push("/gallery/shows/thegallery")}>
+          <Link to="/gallery/shows/thegallery">
           <Col md={12}>
           <h1>The Gallery</h1>
           </Col>
@@ -150,7 +177,7 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-        <Link  to="/gallery/shows/circus" onClick={() => history.push("/gallery/shows/circus")}>
+        <Link  to="/gallery/shows/circus">
           <Col md={12}>
           <h1>Night Circus</h1>
           </Col>
@@ -176,7 +203,7 @@ const Shows = () => {
         </Col>
         <Col md={4} className="description">
         <Row className="header">
-        <Link  to="/gallery/shows/tomorrow-land" onClick={() => history.push("/gallery/shows/tomorrow-land")}>
+        <Link  to="/gallery/shows/tomorrow-land">
           <Col md={12} className="tmrLg">
           <h1 style={{fontSize: '2.75rem'}}>Tomorrow<br/>Land</h1>
           </Col>

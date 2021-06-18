@@ -64,12 +64,6 @@
         text-align: center;
         flex-wrap: wrap;
         
-        a{
-            cursor: none;
-            @include media ("screen", "<=phone") {
-                cursor: default;
-            }
-        }
 
         @include media ("screen", "<=phone") {
             margin: 2rem 0;

@@ -1,3 +1,6 @@
+[[plugins]]
+package = "netlify-plugin-checklinks"
+
 [[redirects]]
   from = "/"
   to = "/index.html"
@@ -25,7 +28,7 @@
   to = "/gallery.js"
   status = 200
 
-   [[redirects]]
+  [[redirects]]
   from = "/gallery"
   to = "/gallery.js"
   status = 200
@@ -44,7 +47,6 @@
   from = "/f4"
   to = "/f4.js"
   status = 200
-
 
   [[redirects]]
   from = "/gallery/*"

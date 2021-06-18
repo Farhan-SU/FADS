@@ -67,7 +67,7 @@ export default function HAboutus()  {
         <div className="aboutuswrapper" id="about-ref" ref={aboutRef}>
           <div  className="ab-img-con" ref={overlayref}>
               <video className='videoTag' controls autoPlay loop muted playsInline>
-                  <source src='https://res.cloudinary.com/fadscloud/video/upload/v1617763685/fadsfam.mp4' type='video/mp4'/>
+                  <source src='https://res.cloudinary.com/fadscloud/video/upload/q_auto/v1617763685/fadsfam.mp4' type='video/mp4'/>
                   Sorry! Your browser does not support this video file.
               </video>
           </div>

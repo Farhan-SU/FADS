@@ -59,6 +59,7 @@ import equaltimeRight from '../../assets/images/equaltime/equaltime1.png';
 import equaltimeRightW from '../../assets/images/equaltime/equaltime1.webp';
 
 
+
 if (typeof window !== `undefined`) {
   gsap.registerPlugin(ScrollTrigger)
   gsap.core.globals('ScrollTrigger', ScrollTrigger)

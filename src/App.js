@@ -34,6 +34,7 @@ const bodyxspace = lazy(() => import('./pages/gallery/shows/bodyxspace'));
 const circus = lazy(() => import('./pages/gallery/shows/circus'));
 const thegallery = lazy(() => import('./pages/gallery/shows/thegallery'));
 const tomorrow = lazy(() => import('./pages/gallery/shows/tomorrow-land'));
+const revival_show = lazy(() => import('./pages/gallery/shows/revival_show'));
 
 
 
@@ -77,13 +78,6 @@ function App () {
         return (
           <>
           <ScrollToTop/>
-          <Desktop>
-            <AnimatedCursor
-            innerSize={10}
-            color='47, 14, 71'
-            outerAlpha={0.2}
-            innerScale={1.5}/>
-          </Desktop>
             <div className="routes">
             <Suspense fallback={<LoadingScreen/>}>
                   <Switch>
@@ -101,6 +95,7 @@ function App () {
                     <RouteWithLayout exact path="/gallery/shows/circus" component={circus}/>
                     <RouteWithLayout exact path="/gallery/shows/thegallery" component={thegallery}/>
                     <RouteWithLayout exact path="/gallery/shows/tomorrow-land" component={tomorrow}/>
+                    <RouteWithLayout exact path="/gallery/shows/revival_show" component={revival_show}/>
                     <RouteWithLayout exact path="/gallery" component={gallery} />  
                     <RouteWithLayout exact path="/gallery/editorial" component={editorial}/>
                     <RouteWithLayout exact path="/gallery/shows" component={shows}/>
