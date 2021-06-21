@@ -28,7 +28,7 @@ const NewsCard = () => {
         <Card bsPrefix="card">
             <a href="http://dailyorange.com/2020/11/virtual-fashion-show-looks-intersection-body-clothing-space/" target="_blank" rel="noopener noreferrer" >
             <div className="imgWrapNews">
-            <Card.Img variant="top" src="http://s3.amazonaws.com/dailyorange/wp-content/uploads/2020/11/13235643/Image-from-iOS-5-copy.jpg" alt=""/>
+            <Card.Img variant="top" src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1624254213/bodyspace1_g8kkqr.png" alt="body space png"/>
             </div>
             </a>
             <Card.Body>
@@ -49,7 +49,7 @@ const NewsCard = () => {
         <Card bsPrefix="card">
             <a href="https://www.thenewshouse.com/life-and-style/syracuse-fadss-project-shows-the-power-of-virtual-fashion/" target="_blank" rel="noopener noreferrer" >
             <div className="imgWrapNews">
-            <Card.Img as="img" variant="top" src="https://www.thenewshouse.com/wp-content/uploads/IMG_5149.JPG.jpeg" />
+            <Card.Img as="img" variant="top" src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1624254831/bodyspacePoster_berage.jpg" />
             </div>
             </a>
             <Card.Body>
@@ -121,7 +121,7 @@ const NewsCard = () => {
         </Card>
         <Card bsPrefix="card">
             <div className="imgWrapNews">
-            <Card.Img variant="top" srcset={TheGallery} src={TheGalleryBackup} alt="SU Student in a dress designed by a student for FADS"/>
+            <Card.Img variant="top" src={TheGalleryBackup} alt="SU Student in a dress designed by a student for FADS"/>
             </div>
             <Card.Body>
             <Card.Title>Fashion and Design Society show presents students’ looks</Card.Title>
@@ -144,7 +144,7 @@ const NewsCard = () => {
         </Card>
         <Card bsPrefix="card">
             <div className="imgWrapNews">
-            <Card.Img variant="top" src="https://expo.advance.net/img/66b185f74b/width960/976_20180330mjgfashion2.jpeg" />
+            <Card.Img variant="top" src="https://res.cloudinary.com/fadscloud/image/upload/v1624254938/976_20180330mjgfashion2_pnrviu.jpg" />
             </div>
             <Card.Body>
             <Card.Title>Fashion of tomorrow hits the runway at SU</Card.Title>

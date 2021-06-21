@@ -83,7 +83,7 @@ function BodyXSpace () {
     };
 
     useEffect(() => {
-        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
+        let timeoutGallery = gsap.delayedCall( 2, delayedRefresedCall);
         function delayedRefresedCall() {
             ScrollTrigger.refresh();
         };
@@ -133,7 +133,7 @@ function BodyXSpace () {
                 obstructing space, shifting space, remaking space, forcing a 
                 re-establishment of how we understand bodies in space.</p>
             <div className="bodySpaceLink">
-            <a href='https://bodyxspace.squarespace.com/mission' target="blank">
+            <a href='https://bodyxspace.com/' target="blank">
               <div className="linkbtn">
                 <div className="circlelink"/>
                 <p className="linktext">Our Mission &#10230;</p>
@@ -143,21 +143,28 @@ function BodyXSpace () {
             </Col>
         </Row>
         <Row noGutters={true} className="showVideo">
-        <Col lg={4} className="vidIntroTxt">
+        <Col lg={6} className="videoContainer">
+         <video width="100%" controls>
+            <source src={BodylerySVid} type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+        </Col>
+        <Col lg={5} className="vidIntroTxt">
         <h1>Body X Space</h1>
-        <h3>A Virtual Exhibition</h3>
         <p>Body & Space is a fashion show presented by the Fashion and Design Society and the School
             of Architecture. This show is a part of a larger discourse amongst the intersection of body, clothing,
             and space. This digital showcase, featuring 30 pieces by student designers, challenges the viewer
             to consider how a garment changes meaning in different spaces
         </p>
+        <div className="bodySpaceLink">
+            <a href='https://www.instagram.com/tv/CHjbMCcFJqx/' target="blank">
+              <div className="linkbtn">
+                <div className="circlelink"/>
+                <p className="linktext">Full Show &#10230;</p>
+              </div>
+            </a>
+          </div>
         </Col>
-         <Col lg={7} className="videoContainer">
-         <video width="100%" controls>
-            <source src={BodylerySVid} type="video/mp4"/>
-            Your browser does not support the video tag.
-        </video>
-         </Col>
         </Row>
         </section>
 

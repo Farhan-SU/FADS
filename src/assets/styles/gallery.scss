@@ -15,6 +15,20 @@
   align-content: center;
 }
 
+.navlinks {
+  word-wrap: break-word;
+  font-size: 1.3vw;
+  color: #dcdfe4;
+  font-weight: 300;
+  transition: all 600ms ease-in-out;
+  z-index: 500;
+  mix-blend-mode: normal;
+ 
+  &:hover{
+  font-weight: 500;
+  }
+}
+
 /*****Gallery home****/
 
 .editorial{

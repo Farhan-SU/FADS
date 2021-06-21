@@ -237,18 +237,25 @@
            background-color: rgb(255, 247, 232);
            border: none;
            min-height: 720px;
+           width: 100%;
 
            @include media ("screen", "<=phone") {
             margin-bottom: 3.5rem;
           }
+          .card-body{
+              overflow: hidden;
+          }
           .imgWrapNews{
-            height: 430px;
+            height: 480px;
             overflow: hidden;
           }
+          .card-img, .card-img-top{
+            height: 480px;
+            width: 450px; 
+           }
            img{
                object-fit: cover;
-               object-position: center;
-            
+               object-position: top center;     
            }
         }
         .cardDeck2{

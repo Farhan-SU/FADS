@@ -39,7 +39,8 @@ function RevivalShow () {
             anticipatePin: 1,
             start: 'top top',
             end: xendvalue,
-            autoRemoveChildren: true
+            autoRemoveChildren: true,
+            markers: true
             }
         }).fromTo(panelSRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        
@@ -47,7 +48,7 @@ function RevivalShow () {
             gsap.fromTo(el, {x : 0}, {x : panelend, ease: "linear"});
         });
         
-          return () => {
+        return () => {
             if (ScrollTrigger.getById('galleryShow')) {
                 ScrollTrigger.getById('galleryShow').kill();
             };
@@ -61,7 +62,7 @@ function RevivalShow () {
     };
 
     useEffect(() => {
-        let timeout = gsap.delayedCall( 0.5, delayedRefresedCall);
+        let timeout = gsap.delayedCall( 2, delayedRefresedCall);
         function delayedRefresedCall() {
             ScrollTrigger.refresh();
         };
@@ -98,10 +99,11 @@ function RevivalShow () {
 
         <Row noGutters={true} className="showVideoBodySpace">
             <Col lg={6} className="videoContainerBody">
-            <video autoPlay loop muted playsinline>
-                <source src="https://res.cloudinary.com/fadscloud/video/upload/q_auto/v1623974732/revival/revivialTeaser_ujkvtr.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
+            <Video cloudName="fadscloud" width="100%" 
+                publicId="revival/revivialTeaser_ujkvtr" controls="true" 
+                loading="lazy" fallbackContent="Your browser does not support HTML5 video tags." >
+                <Transformation format="auto"/>
+            </Video>
             </Col>
             <Col lg={5} className="vidIntroTxt">
             <h1>Revival</h1>
@@ -122,122 +124,122 @@ function RevivalShow () {
         <div className="portfolio" ref={portfolioSRef}>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969032/revival/revival7_zarqoc.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969032/revival/revival7_zarqoc.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival5_a5lpsa.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival5_a5lpsa.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival4_rufbiz.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival4_rufbiz.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival3_sgdhfg.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival3_sgdhfg.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival16_pgmanh.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival16_pgmanh.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969034/revival/revival32_e6lkt5.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969034/revival/revival32_e6lkt5.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival29_tnhma0.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival29_tnhma0.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                         <div className="panel_item">
-                        <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival27_Land_ccwkcq.jpg" allt="revival Picture" className="panel_img"/>
+                        <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival27_Land_ccwkcq.jpg" alt="revival Picture" className="panel_img"/>
                         </div>
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival8_n29xqr.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival8_n29xqr.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                         <div className="panel_item">
-                        <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival2_cyrhf6.jpg" allt="revival Picture" className="panel_img"/>
+                        <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival2_cyrhf6.jpg" alt="revival Picture" className="panel_img"/>
                         </div>
                     </div>
                     <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival15_zd384e.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival15_zd384e.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival14_pvjgja.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival14_pvjgja.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969032/revival/revival10_rmi1zs.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969032/revival/revival10_rmi1zs.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969032/revival/revival18_e06pck.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969032/revival/revival18_e06pck.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969034/revival/revival37_gm9if4.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969034/revival/revival37_gm9if4.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969034/revival/revival31_juafw1.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969034/revival/revival31_juafw1.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival13_gfq4r8.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival13_gfq4r8.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969032/revival/revival9_q0cnfn.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969032/revival/revival9_q0cnfn.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969031/revival/revival17_ayl1k6.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969031/revival/revival17_ayl1k6.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival21_rcwq8b.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival21_rcwq8b.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" id="landscape" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival23_tt5pmn.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival23_tt5pmn.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival24_axcavc.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival24_axcavc.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival22_yhfgqv.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival22_yhfgqv.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
-                    <img src="https://res.cloudinary.com/fadscloud/image/upload/v1623969033/revival/revival25_fmuvsk.jpg" allt="revival Picture" className="panel_img"/>
+                    <img src="https://res.cloudinary.com/fadscloud/image/upload/q_auto/v1623969033/revival/revival25_fmuvsk.jpg" alt="revival Picture" className="panel_img"/>
                     </div>
                 </div>
             </div>

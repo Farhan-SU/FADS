@@ -157,13 +157,6 @@ function Circus () {
             </Col>
         </Row>
         <Row noGutters={true} className="showVideo">
-        <Col lg={4} className="vidIntroTxt">
-        <h1>Night Circus</h1>
-        <h3>An Exhibition</h3>
-        <p>Drawing inspiration from the book, Night Circus by Erin Morgenstern, and 
-            from the deep reds and stylings of traditional circuses to make models 
-            look like fashionable ringmasters.</p>
-        </Col>
          <Col lg={7} className="videoContainer">
                 <Video cloudName="fadscloud" width="100%" 
                         publicId="CircusShowVid" controls="true" 
@@ -172,6 +165,13 @@ function Circus () {
                     <Transformation format="auto"/>
                 </Video>
          </Col>
+            <Col lg={4} className="vidIntroTxt">
+            <h1>Night Circus</h1>
+            <h3>An Exhibition</h3>
+            <p>Drawing inspiration from the book, Night Circus by Erin Morgenstern, and 
+                from the deep reds and stylings of traditional circuses to make models 
+                look like fashionable ringmasters.</p>
+            </Col>
         </Row>
         </section>
 
