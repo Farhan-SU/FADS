@@ -20,7 +20,7 @@ const FooterSM = () => {
             <Row className="media">
             <Col xs={4} className="linkbox">
                 <a className='social-sm except' href="https://www.facebook.com/syracusefads" target="_blank" rel="noopener noreferrer" >
-                <img src={Facebook} alt="facebook icon"/>
+                <img src={Facebook} className="facebook" alt="facebook icon"/>
                 </a>
             </Col>
             <Col xs={4} className="linkbox">
@@ -37,7 +37,7 @@ const FooterSM = () => {
             </Col>
             <Col md={6} className='second-sm'>
             <div className="contact">
-                <h3>INQUIRIES at</h3>
+                <h3>Inquires at</h3>
                 <a key="Email" component="a" href="mailto:syracusefads@gmail.com" target="_blank" rel="noopener noreferrer" >syracusefads@gmail.com</a>
             </div>
             </Col>

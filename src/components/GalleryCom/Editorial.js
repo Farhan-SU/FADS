@@ -139,8 +139,7 @@ const Editorial = () => {
         <Col md={4}className="left">
           <picture>
           <source srcSet={RevivalLeftW} type="image/webp"/>
-          <source srcSet={RevivalLeft} type="image/png"/>
-          <img src={RevivalLeft} alt="Revival shoots" className="img1E"/>
+          <img src={RevivalLeft} alt="Revival shoots" className="img1E" type="image/png"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -155,16 +154,15 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 280">
+              <line y2="280" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
           <picture className="img2E">
           <source srcSet={RevivalRightW} alt="Revival shoots" type="image/webp"/>
-          <source srcSet={RevivalRight} alt="Revival shoots" type="image/png"/>
-          <img src={RevivalRight} alt="Revival shoots"/>
+          <img src={RevivalRight} alt="Revival shoots" type="image/png"/>
         </picture>
         </Col>
       </Row>
@@ -173,8 +171,7 @@ const Editorial = () => {
         <Col md={4}className="left">
           <picture ref={addToRefs}>
             <source srcSet={BoogieStrikeLeftW} alt="BoogieStrike shoots" type="image/webp"/>
-            <source srcSet={BoogieStrikeLeft} alt="BoogieStrike shoots" type="image/png"/>
-            <img src={BoogieStrikeLeft} alt="BoogieStrike shoots" className="img1E"/>
+            <img src={BoogieStrikeLeft} alt="BoogieStrike shoots" className="img1E" type="image/png"/>
           </picture>
         </Col>
         <Col md={4} className="description">
@@ -189,16 +186,15 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
-          <picture >
+          <picture ref={addToRefsright}>
           <source srcSet={BoogieStrikeRightW} alt="BoogieStrike shoots" type="image/webp"/>
-          <source srcSet={BoogieStrikeRight} alt="BoogieStrike shoots" type="image/png"/>
-          <img src={BoogieStrikeRight} alt="BoogieStrike shoots" className="img2E" ref={addToRefsright}/>
+          <img src={BoogieStrikeRight} alt="BoogieStrike shoots" className="img2E" type="image/png"/>
         </picture>
         </Col>
       </Row>
@@ -207,8 +203,7 @@ const Editorial = () => {
         <Col md={4} className="left">
           <picture ref={addToRefs}>
           <source srcSet={BodySeditorialLeftW} alt="Revival shoots" type="image/webp"/>
-          <source srcSet={BodySeditorialLeft} alt="Revival shoots" type="image/png"/>
-          <img src={BodySeditorialLeft} alt="Revival shoots" className="img1E"/>
+          <img src={BodySeditorialLeft} alt="Revival shoots" className="img1E" type="image/png"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -223,16 +218,15 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
           <picture ref={addToRefsright}>
           <source srcSet={BodySeditorialRightW} alt="Revival shoots" type="image/webp"/>
-          <source srcSet={BodySeditorialRight} alt="Revival shoots" type="image/png"/>
-          <img src={BodySeditorialRight} alt="Revival shoots" className="img2E"/>
+          <img src={BodySeditorialRight} alt="Revival shoots" className="img2E" type="image/png"/>
         </picture>
         </Col>
       </Row>
@@ -241,8 +235,7 @@ const Editorial = () => {
         <Col md={4} className="left">
          <picture ref={addToRefs}>
           <source srcSet={SweetLeftW} alt="Sweet Escape shoots" type="image/webp"/>
-          <source srcSet={SweetLeft} alt="Sweet Escape  shoots"  type="image/png"/>
-          <img src={SweetLeft} alt="Sweet Escape  shoots" className="img1E"/>
+          <img src={SweetLeft} alt="Sweet Escape  shoots" className="img1E" type="image/png"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -257,16 +250,15 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
         <picture ref={addToRefsright}>
           <source srcSet={SweetRightW} alt="Sweet Escape shoots" type="image/webp"/>
-          <source srcSet={SweetRight} alt="Sweet Escape  shoots"  type="image/png"/>
-          <img src={SweetRight} alt="Sweet Escape shoots" className="img2E"/>
+          <img src={SweetRight} alt="Sweet Escape shoots" className="img2E" type="image/png"/>
         </picture>
         </Col>
       </Row>
@@ -274,8 +266,7 @@ const Editorial = () => {
         <Col md={4} className="left">
           <picture ref={addToRefs}>
           <source srcSet={makeupLeftW} alt="makeup shoots" type="image/webp"/>
-          <source srcSet={makeupLeft} alt="makeup shoots" type="image/png"/>
-          <img src={makeupLeft} alt="makeup shoots" className="img1E"/>
+          <img src={makeupLeft} alt="makeup shoots" className="img1E" type="image/png"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -290,16 +281,15 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
           <picture ref={addToRefsright}>
           <source srcSet={makeupRightW} alt="makeup shoots" type="image/webp"/>
-          <source srcSet={makeupRight} alt="makeup shoots" type="image/png"/>
-          <img src={makeupRight} alt="makeup shoots" className="img2E"/>
+          <img src={makeupRight} alt="makeup shoots" className="img2E" type="image/png"/>
         </picture>
         </Col>
       </Row>
@@ -308,8 +298,7 @@ const Editorial = () => {
         <Col md={4} className="left">
         <picture ref={addToRefs}>
           <source srcSet={gallerySLeftW} alt="gallery shoots" type="image/webp"/>
-          <source srcSet={gallerySLeft} alt="gallery shoots"  type="image/png"/>
-          <img src={gallerySLeft} alt="gallery shoots" className="img1E"/>
+          <img src={gallerySLeft} alt="gallery shoots" className="img1E" type="image/png"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -324,16 +313,15 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
           <picture ref={addToRefsright}>
           <source srcSet={gallerySRightW} alt="gallery shoots" type="image/webp"/>
-          <source srcSet={gallerySRight} alt="gallery shoots" type="image/png"/>
-          <img src={gallerySRight} alt="gallery shoots"  className="img2E"/>
+          <img src={gallerySRight} alt="gallery shoots"  className="img2E" type="image/png"/>
         </picture>
         </Col>
       </Row>
@@ -342,8 +330,7 @@ const Editorial = () => {
         <Col md={4}className="left">
           <picture ref={addToRefs}>
           <source srcSet={HalloweenEditLeftW} alt="Jerk shoots" type="image/webp"/>
-          <source srcSet={HalloweenEditLeft} alt="Jerk shoots" type="image/png"/>
-          <img src={HalloweenEditLeft} alt="Jerk shoots" className="img1E" />
+          <img src={HalloweenEditLeft} alt="Jerk shoots" className="img1E" type="image/png"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -358,16 +345,15 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
           <picture ref={addToRefsright}>
           <source srcSet={HalloweenEditRightW} alt="Jerk shoots" type="image/webp"/>
-          <source srcSet={HalloweenEditRight} alt="Jerk shoots" type="image/png"/>
-          <img src={HalloweenEditRight} alt="Jerk shoots" className="img2E"/>
+          <img src={HalloweenEditRight} alt="Jerk shoots" type="image/png" className="img2E"/>
         </picture>
         </Col>
       </Row>
@@ -376,8 +362,7 @@ const Editorial = () => {
         <Col md={4}className="left">
           <picture ref={addToRefs}>
             <source srcSet={VintageLeftW} alt="work wear vintage shoots" type="image/webp"/>
-            <source srcSet={VintageLeft} alt="work wear vintage shoots" type="image/png"/>
-            <img src={VintageLeft} alt="makeup shoots" className="img1E"/>
+            <img src={VintageLeft} alt="makeup shoots" type="image/png" className="img1E"/>
           </picture>
         </Col>
         <Col md={4} className="description">
@@ -392,16 +377,15 @@ const Editorial = () => {
           </Link>
         </Row>
         <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
         <picture ref={addToRefsright}>
           <source srcSet={VintageRightW} alt="work wear vintage shoots" type="image/webp"/>
-          <source srcSet={VintageRight} alt="work wear vintage shoots" type="image/png"/>
-          <img src={VintageRight} alt="makeup shoots"  className="img2E"/>
+          <img src={VintageRight} alt="makeup shoots" type="image/png" className="img2E"/>
         </picture>
         </Col>
       </Row>
@@ -410,8 +394,7 @@ const Editorial = () => {
         <Col md={4}className="left">
           <picture ref={addToRefs}>
           <source srcSet={JerkLeftW} alt="Jerk shoots" type="image/webp"/>
-          <source srcSet={JerkLeft} alt="Jerk shoots" type="image/png"/>
-          <img src={JerkLeft} alt="Jerk shoots" className="img1E"/>
+          <img src={JerkLeft} alt="Jerk shoots" className="img1E" type="image/png"/>
         </picture>
         </Col>
         <Col md={4} className="description">
@@ -426,16 +409,15 @@ const Editorial = () => {
           </Link>
         </Row>
         <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="281" viewBox="0 0 1.5 281">
-              <line y2="281" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
+              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
         <Col md={4} className="right">
           <picture ref={addToRefsright}>
           <source srcSet={JerkRightW} alt="Jerk shoots"/>
-          <source srcSet={JerkRight} alt="Jerk shoots"/>
-          <img src={JerkRight} alt="Jerk shoots" className="img2E"/>
+          <img src={JerkRight} alt="Jerk shoots" type="image/png" className="img2E"/>
         </picture>
         </Col>
       </Row>
@@ -444,7 +426,6 @@ const Editorial = () => {
         <Col md={4}className="left">
           <picture ref={addToRefs}>
           <source srcSet={equaltimeLeftW}/>
-          <source srcSet={equaltimeLeft}/>
           <img src={equaltimeLeft} alt="equaltime shoots" className="img1E"/>
         </picture>
         </Col>
@@ -463,8 +444,7 @@ const Editorial = () => {
         <Col md={4} className="right">
           <picture ref={addToRefsright}>
           <source srcSet={equaltimeRightW} alt="equaltime shoots" type="image/webp"/>
-          <source srcSet={equaltimeRight} alt="equaltime shoots" type="image/png"/>
-          <img src={equaltimeRight} alt="equaltime shoots" className="img2E"/>
+          <img src={equaltimeRight} alt="equaltime shoots" type="image/png" className="img2E"/>
         </picture>
         </Col>
       </Row>

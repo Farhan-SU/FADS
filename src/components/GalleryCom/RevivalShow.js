@@ -39,8 +39,7 @@ function RevivalShow () {
             anticipatePin: 1,
             start: 'top top',
             end: xendvalue,
-            autoRemoveChildren: true,
-            markers: true
+            autoRemoveChildren: true
             }
         }).fromTo(panelSRef.current, {x : 0}, {x : panelend,  ease: "linear"});
        

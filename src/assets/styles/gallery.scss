@@ -33,7 +33,7 @@
 
 .editorial{
   @extend %centeralignMobile;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.614)), url('../images/editorialCover.webp') no-repeat center center/ cover, url('../images/editorialCover.png') no-repeat center center/ cover;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.644)), url('../images/editorialCover.webp') no-repeat center center/ cover, url('../images/editorialCover.png') no-repeat center center/ cover;
   height: 100vh;
   position: relative;
 
@@ -61,9 +61,6 @@
   @include media ("screen", "<=phone") {
     height: 100%;
     width: 105vw;
-  }
-  a{
-    cursor: default;
   }
   .linkbox{
     position: relative;
@@ -114,6 +111,16 @@
     @extend %centeralignMobile;
     height: 100vh;
     width: 100vw;
+    position: relative;
+
+    .svg-line{
+      position: absolute;
+      right: 50%;
+      top: 93%;
+      height:50vh;
+      overflow: hidden;
+      z-index: -1;
+    }
   }
 
 
@@ -163,6 +170,7 @@
 
   .description{
     height: 499px;
+    background: lighten($lightergraypurple, 10%);
     width: 100%;
     background: url('../images/gallery-circle.svg') no-repeat center center/ 90%;
     border-radius: 50%;
@@ -171,6 +179,8 @@
     align-items: center;
     align-content: center;
     text-align: center;
+    position: relative;
+    z-index: 3;
 
     .header{
       display: flex;
@@ -181,7 +191,7 @@
       border-radius: 50%;
       height: 380px;
       width: 370px;
-      overflow: hidden;
+      z-index: 3;
     }
   
     h1{
@@ -206,12 +216,6 @@
       position: relative;
       font-family: 'Montserrat', sans-serif;
       top: -0.8rem;
-    }
-
-    .svg-line{
-      position: absolute;
-      left: 50%;
-      top: 93%
     }
   }
 }
@@ -326,11 +330,11 @@
   }
   .tlLine{
     border: 1px solid $purple;
-    background-color: white;
+    background-color: $purple;
     position: absolute;
     transform: translate(0, 260px);
     width: 3px;
-    height: 220px;
+    height: 300px;
     padding: 8.82rem 0;
     z-index: 2;
   }

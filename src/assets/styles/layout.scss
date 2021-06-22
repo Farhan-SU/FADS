@@ -128,18 +128,19 @@
       position: relative;
       font-size: 1.1rem;
       color: #1A2632;
+      margin-bottom: 1rem;
 
       @include media ("screen", "<=phone") {
         font-size: 5.5vw;
+        margin-bottom: 0.5rem;
       }
     }
 }}
 .media{
-  width: 50%;
-  margin-top: 1.5rem;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-self: space-between;
   align-content: space-between;
+  width: 40%;
 
   @include media ("screen", "<=phone") {
     display: none;
@@ -148,26 +149,23 @@
   .social-sm{
     display: flex;
     flex-direction: column;
-    padding-left: 1.3rem;
-    width: 100px;
-
-    &:not(.except){
-      border-left: 0.5px solid rgba(190, 157, 212, 0.527);
-      width: 25px;
-    }
-
+    align-self: flex-start;
+    margin-top: 1rem;
     img{
       height: 30px;
       width: 30px;
     }
+    .facebook{
+      width: 20px;
+    }
+
   }
 }
 .second-sm{
-  width: 90%;
-  padding-right: 3.5rem;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  padding-right: 3.5rem;;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 100%;
   text-transform: uppercase;
 

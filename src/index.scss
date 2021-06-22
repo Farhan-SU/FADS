@@ -11,8 +11,12 @@
 :root, body, html {
   min-height: 100%;
   margin: 0;
-  padding: 0;}
+  padding: 0;
+cursor: unset;}
 
+a{
+  cursor: unset;
+}
 
 @font-face{
   font-family:'Vipnagorgialla';
@@ -23,3 +27,14 @@
   src: local('Vipnagorgialla'), url(../src/assets/fonts/vipnagorgialla-bd.ttf) format('truetype');
   src:('Vipnagorgialla'), url(http://allfont.ru/cache/fonts/vipnagorgialla_5244417b4a2c25aadf549ae687197569.woff) format('woff');
   src:('Vipnagorgialla'), url(http://allfont.ru/cache/fonts/vipnagorgialla_5244417b4a2c25aadf549ae687197569.ttf) format('truetype');}
+
+
+  @media only screen and (max-width: 500px) {
+    :root, body, html {
+    cursor: default;}
+    
+    a{
+      cursor: default;
+    }
+    
+  }

@@ -7,11 +7,9 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   scrollbar-width: none;
-  cursor: default;
 }
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none; }
 
 ::-webkit-scrollbar-track {
@@ -62,7 +60,6 @@ a:hover {
 
   @media only screen and (max-width: 500px) {
     body {
-      cursor: default;
       width: 100vw;
       overflow-x: inherit;
     }

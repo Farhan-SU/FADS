@@ -78,6 +78,13 @@ function App () {
         return (
           <>
           <ScrollToTop/>
+          <Desktop>
+            <AnimatedCursor
+            innerSize={9}
+            color='47, 14, 71'
+            outerAlpha={0.2}
+            innerScale={1.4}/>
+          </Desktop>
             <div className="routes">
             <Suspense fallback={<LoadingScreen/>}>
                   <Switch>
