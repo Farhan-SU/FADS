@@ -154,8 +154,8 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 280">
-              <line y2="280" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -186,8 +186,8 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -218,8 +218,8 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -250,8 +250,8 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -281,8 +281,8 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -313,8 +313,8 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -345,8 +345,8 @@ const Editorial = () => {
           </Link>
         </Row>
           <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -377,8 +377,8 @@ const Editorial = () => {
           </Link>
         </Row>
         <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
@@ -409,8 +409,8 @@ const Editorial = () => {
           </Link>
         </Row>
         <div className="svg-line">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="275" viewBox="0 0 1.5 270">
-              <line y2="270" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="400" viewBox="0 0 1.5 400">
+              <line y2="400" transform="translate(0.75)" fill="none" stroke="#907597" stroke-width="1.5"/>
             </svg>
           </div>
         </Col>
