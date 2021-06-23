@@ -147,17 +147,6 @@ function JerkEd () {
                         />
                     </div>
                 </div>
-                <div className="panel" id="landscape" ref={addPanels}>
-                    <div className="panel_item">
-                    <ImgWebp
-                            src={Jerk6w}
-                            fallback={Jerk6}
-                            alt="Jerk Photoshoot"
-                            className="panel_img"
-                        />
-                    </div>
-                </div>
-
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <ImgWebp
@@ -179,7 +168,6 @@ function JerkEd () {
                         />
                     </div>
                 </div>
-
                 <div className="panel" ref={addPanels}>
                     <div className="panel_item">
                     <ImgWebp
@@ -187,6 +175,16 @@ function JerkEd () {
                         fallback={Jerk9}
                         alt="Jerk Photoshoot"
                         className="panel_img"
+                        />
+                    </div>
+                </div>
+                <div className="panel" id="landscape" ref={addPanels}>
+                    <div className="panel_item">
+                    <ImgWebp
+                            src={Jerk6w}
+                            fallback={Jerk6}
+                            alt="Jerk Photoshoot"
+                            className="panel_img"
                         />
                     </div>
                 </div>
@@ -202,6 +200,43 @@ function JerkEd () {
                 </div>
             </div>
         </section>
+<section className="creditsSec">
+   <Row noGutters={true} className="credits">
+       <Col lg={5} sm={12} className="creditsMember">
+               <h2>Videographers</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/jessie-zhai">
+               <p className="linkBio">Jessi Zhai &#8594;</p>
+           </a>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Clothing</h2>
+           <p>Boom Babies</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Makeup Artist</h2>
+           <p>Angelee Clause</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Stylist</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+         <h2>Photographer</h2>
+           <p>Sam Bloom</p>
+           <p>Sam Berlin</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Models</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+           <p>Aspen Taylor</p>
+           <p>Soli Rhodes</p>
+       </Col>
+   </Row>
+</section>
         <div className="endsec">
         <NextPageGallery to='/gallery/editorials/equalTime' title1='Equal' title2='Time'/>
         </div>

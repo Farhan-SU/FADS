@@ -193,6 +193,29 @@ function GalleryShoots () {
         </div>
     </div>
     </section>
+<section className="creditsSec">
+   <Row noGutters={true} className="credits">
+       <Col lg={5} sm={12} className="creditsMember">
+         <h2>Photographer</h2>
+           <p>Sam Bloom</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+               <h2>Videographers</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/jessie-zhai">
+               <p className="linkBio">Jessi Zhai &#8594;</p>
+           </a>
+           <p>Catalina Giraldo</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Models</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+           <p>Izmailia Sougoufara</p>
+           <p>Adianna Williams</p>
+       </Col>
+   </Row>
+</section>
     <div className="endsec">
             <Row noGutters={true} className="imgNext">
             <Col lg={12} className="endSec1">

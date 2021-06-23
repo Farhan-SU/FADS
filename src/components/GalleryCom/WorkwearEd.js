@@ -193,6 +193,43 @@ function JerkEd () {
                 </div>
             </div>
         </section>
+<section className="creditsSec">
+   <Row noGutters={true} className="credits">
+       <Col lg={5} sm={12} className="creditsMember">
+            <h2>Photographer</h2>
+           <p>Sam Bloom</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Clothing</h2>
+           <p>Boom Babies</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Styling</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+           <a href="https://fashiondesignsociety.com/agency/bio/jackson-ensley">
+           <p className="linkBio">Jackson Ensely  &#8594;</p>
+           </a>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Makeup Artist</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/annie-grace">
+            <p className="linkBio">Anne Horstein  &#8594;</p>
+            </a>
+           <p>Angelee Clause</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Models</h2>
+           <p>Joelle Wright</p>
+           <p>Caroline Crouch</p>
+           <p>Izmalia Sougoufara</p>
+           <p>Caroline Francis</p>
+       </Col>
+   </Row>
+</section>
+
+
         <div className="endsec">
             <NextPageGallery to='/gallery/editorials/jerk-fads' title1='Jerk X' title2='FADS'/>
         </div>

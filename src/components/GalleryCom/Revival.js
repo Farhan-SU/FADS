@@ -144,6 +144,38 @@ function Revival () {
         </div>
     </div>
 </section>
+<section className="creditsSec">
+    <Row noGutters={true} className="credits">
+        <Col lg={5} sm={12} className="creditsMember">
+                <h2>Photographer</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/jessie-zhai">
+                <p className="linkBio">Jessi Zhai &#8594;</p>
+            </a>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Makeup Artist</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/annie-grace">
+            <p className="linkBio">Anne Horstein  &#8594;</p>
+            </a>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Stylist</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/emily-goldberg">
+            <p className="linkBio">Emily Goldberg  &#8594;</p>
+            </a>
+            <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+            <p className="linkBio">Aanya Singh  &#8594;</p>
+            </a>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Models</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/toby_cole">
+            <p className="linkBio">Toby Cole  &#8594;</p>
+            </a>
+            <p>Ibby Fischer</p>
+        </Col>
+    </Row>
+</section>
         <div className="endsec">
             <NextPageGallery to='/gallery/editorials/boogieStrike' title1='Boogie' title2='Strike'/>
         </div>

@@ -156,6 +156,27 @@ function NotaDream () {
                 </div>
             </div>
         </section>
+        <section className="creditsSec">
+    <Row noGutters={true} className="credits">
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Photographer</h2>
+            <p>Sam Bloom</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Makeup Artist</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/annie-grace">
+            <p className="linkBio">Anne Horstein  &#8594;</p>
+            </a>
+            <p>Emma Lehr</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Models</h2>
+            <p>Mina Gurkan</p>
+            <p>Angelique Bey</p>
+            <p>Coumba Kanté</p>
+        </Col>
+    </Row>
+</section>
         <div className="endsec">
             <NextPageGallery to="/gallery/editorials/galleryShoots" title1='The' title2='Gallery'/>
         </div>

@@ -223,7 +223,7 @@ position: relative;
 .endsec {
   height: 115vh;
   padding: 5rem 0 8rem 0;
-  background: linear-gradient(rgba(253, 251, 253, 0), #180725 100%);
+  background: linear-gradient(lighten($lightergraypurple, 12%) 0%, #180725 100%);
   position: relative;
 
   @include media ("screen", "<=phone") {
@@ -321,6 +321,64 @@ position: relative;
 
      }
   }
+}
+.creditsSec{
+  height: 103%;
+  width: 100vw;
+  padding: 5rem 0.5rem 2rem 0.5rem;
+
+  h2{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: #594a69;
+  }
+  h3{
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    color: #645970;
+  }
+  h4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $purple;
+  }
+  p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $purple;
+  }
+
+  .credits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .creditsMember{
+      margin: 1.5rem;
+      align-self: center;
+      box-shadow: 0 0.5px 30px lighten($lightergraypurple, 12%);
+      padding: 2rem;
+      border-radius: 15px;
+      transition: transform 100ms ease-in-out;
+      -webkit-transition: transform 500ms ease-in-out;
+      -moz-transition: transform 500ms ease-in-out;
+    }
+    .linkBio{
+      transition: transform 100ms ease-in-out;
+      -webkit-transition: transform 500ms ease-in-out;
+      -moz-transition: transform 500ms ease-in-out;
+
+      &:hover{
+        transform: translate3d(6px, 0, 0);
+        -webkit-transform: translate3d(6px, 0, 0);
+        -moz-transform: translate3d(6px, 0, 0);
+      }
+    }
+  }
+  
 }
 .endNext{
  @extend %galintrostyle;

@@ -52,6 +52,41 @@ function BoogieStrike () {
             </Col>
             </Row>
         </div>
+        <section className="creditsSec">
+    <Row noGutters={true} className="credits">
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Director & Cinematographe</h2>
+            <p>Maria Raad</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Producer</h2>
+            <p>Laura Bawol</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Camera Operator</h2>
+            <p>Sophie Penn</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Makeup Artist</h2>
+            <p>Anastacia Puertas</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Grip and Gaffer</h2>
+            <p>Lucas Morse</p>
+            <p>Shikhar Kapadia</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Models</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/jessie-zhai">
+                <p className="linkBio">Jessi Zhai &#8594;</p>
+            </a>
+            <p>Anish Ghosh</p>
+            <p>Aspen Taylor</p>
+            <p>Duda Carvalho</p>
+            <p>Leigh Vo</p>
+        </Col>
+    </Row>
+</section>
         <div className="endsec">
             <NextPageGallery to='/gallery/editorials/bodyspaceEditorial' title1='Body X' title2='Space'/>
         </div>

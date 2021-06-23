@@ -92,6 +92,43 @@ function Halloween () {
             </Col>
         </Row>
         </div>
+<section className="creditsSec">
+    <Row noGutters={true} className="credits">
+        <Col lg={5} sm={12} className="creditsMember">
+                <h2>Videographer</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/jessie-zhai">
+                <p className="linkBio">Jessi Zhai &#8594;</p>
+            </a>
+            <p>Catalina Giraldo</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Makeup Artist</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/annie-grace">
+            <p className="linkBio">Anne Horstein  &#8594;</p>
+            </a>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Stylist</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/emily-goldberg">
+            <p className="linkBio">Emily Goldberg  &#8594;</p>
+            </a>
+            <a href="https://fashiondesignsociety.com/agency/bio/jackson-ensley">
+            <p className="linkBio">Jackson Ensely  &#8594;</p>
+            </a>
+            <p>Maya Campos</p>
+            <p>Lily Tubman</p>
+        </Col>
+        <Col lg={5} sm={12} className="creditsMember">
+            <h2>Models</h2>
+            <a href="https://fashiondesignsociety.com/agency/bio/zuzanna-mlynarczyk">
+            <p className="linkBio">Zuzanna Mlynarczyk  &#8594;</p>
+            </a>
+            <p>Katie Nehring</p>
+            <p> Axelle Azoulay</p>
+        </Col>
+    </Row>
+</section>
+ 
         <div className="endsec">
         <div className="halloweenEndSec">
             <NextPageGallery to='/gallery/editorials/work-wear-vintage' title1='Work Wear' title2='Vintage'/>

@@ -227,6 +227,56 @@ function GalleryShoots () {
         </div>
     </div>
 </section>
+<section className="creditsSec">
+   <Row noGutters={true} className="credits">
+       <Col lg={5} sm={12} className="creditsMember">
+            <h2>Videographer</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/jessie-zhai">
+               <p className="linkBio">Jessi Zhai &#8594;</p>
+           </a>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Clothing</h2>
+           <p>Boom Babies</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+               <h2>Photographer</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+           <p>Sam Bloom</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Stylist</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/emily-goldberg">
+           <p className="linkBio">Emily Goldberg  &#8594;</p>
+           </a>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+           <a href="https://fashiondesignsociety.com/agency/bio/jackson-ensley">
+           <p className="linkBio">Jackson Ensely  &#8594;</p>
+           </a>
+       </Col>
+
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Makeup Artist</h2>
+           <p>Angelee Clause</p>
+           <p>Fjolla Arifi</p>
+           <p>Emma Lehr</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Models</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/ifetayo-dudley">
+           <p className="linkBio">Ifetayo Dudley  &#8594;</p>
+           </a>
+           <p>Shaleigh Harrington</p>
+           <p>Danielle Corsan</p>
+           <p>Alvin Chan</p>
+       </Col>
+   </Row>
+</section>
+
         <div className="endsec">
             <NextPageGallery to='/gallery/editorials/halloween' title1='Halloween' title2=''/>
         </div>

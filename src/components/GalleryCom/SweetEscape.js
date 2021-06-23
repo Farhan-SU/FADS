@@ -68,7 +68,7 @@ function SweetEscape () {
     };
 
     useEffect(() => {
-        let timeoutGallery = gsap.delayedCall( 0.5, delayedRefresedCall);
+        let timeoutGallery = gsap.delayedCall( 1.5, delayedRefresedCall);
         function delayedRefresedCall() {
             ScrollTrigger.refresh();
         };
@@ -156,6 +156,55 @@ function SweetEscape () {
                 </div>
             </div>
         </section>
+        <section className="creditsSec">
+   <Row noGutters={true} className="credits">
+       <Col lg={5} sm={12} className="creditsMember">
+               <h2>Photographer</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/jessie-zhai">
+               <p className="linkBio">Jessi Zhai &#8594;</p>
+           </a>
+           <h3>Photo Assistant</h3>
+           <h4>Nicole Hopwood</h4>
+           <h4>Sydney May</h4>
+           <h4>Paola Manzano</h4>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Stylist</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/adore-ellis">
+           <p className="linkBio">Adore Ellis  &#8594;</p>
+           </a>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+           <h3>Styling Assistant</h3>
+           <a href="https://fashiondesignsociety.com/agency/bio/jackson-ensley">
+           <p className="linkBio" style={{fontSize: '1.1rem'}}>Jackson Ensely  &#8594;</p>
+           </a>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Videographer</h2>
+           <p>Jennifer Levin</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Makeup Artist</h2>
+           <p>Joelle Wright</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Clothing</h2>
+           <p>Boom Babies</p>
+       </Col>
+       <Col lg={5} sm={12} className="creditsMember">
+           <h2>Models</h2>
+           <a href="https://fashiondesignsociety.com/agency/bio/aanya-singh">
+           <p className="linkBio">Aanya Singh  &#8594;</p>
+           </a>
+           <a href="https://fashiondesignsociety.com/agency/bio/zuzanna-mlynarczyk">
+           <p className="linkBio">Zuzanna Mlynarczyk  &#8594;</p>
+           </a>
+           <p>Aspen Taylor</p>
+       </Col>
+   </Row>
+</section>
         <div className="endsec">
             <NextPageGallery to='/gallery/editorials/notadream' title1='Not A' title2='Dream'/>
         </div>
